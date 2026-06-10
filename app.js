@@ -6,7 +6,7 @@ const modalTitle = document.querySelector("#modalTitle");
 const modalDescription = document.querySelector("#modalDescription");
 const modalLink = document.querySelector("#modalLink");
 
-const SITE_VERSION = "1.1.0";
+const SITE_VERSION = "1.1.1";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
