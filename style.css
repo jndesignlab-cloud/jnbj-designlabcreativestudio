@@ -449,12 +449,8 @@ h3 {
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.testimonial-grid-two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .testimonial-card {
@@ -669,7 +665,7 @@ input:focus, textarea:focus {
     grid-template-columns: repeat(2, minmax(120px, 1fr));
   }
 
-  .project-grid, .testimonial-grid, .testimonial-grid-two {
+  .project-grid, .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
