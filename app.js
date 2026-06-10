@@ -6,7 +6,27 @@ const modalTitle = document.querySelector("#modalTitle");
 const modalDescription = document.querySelector("#modalDescription");
 const modalLink = document.querySelector("#modalLink");
 
+const SITE_VERSION = "1.1.0";
+
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+const versionElement = document.querySelector("#siteVersion");
+const lastEditElement = document.querySelector("#lastEdit");
+
+if (versionElement) {
+  versionElement.textContent = SITE_VERSION;
+}
+
+if (lastEditElement) {
+  const lastModified = new Date(document.lastModified);
+  lastEditElement.textContent = lastModified.toLocaleString("en-PH", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
 
 const fallbackProjects = [
   {
