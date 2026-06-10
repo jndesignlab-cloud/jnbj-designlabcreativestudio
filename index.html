@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jann Nathaniel Jaravata | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" class="brand">
+      <span class="brand-mark">DL</span>
+      <span>
+        <strong>Jann Nathaniel</strong>
+        <small>Graphic Designer Portfolio</small>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#links">Links</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="hero-bg-glow glow-one"></div>
+      <div class="hero-bg-glow glow-two"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">DesignLab Creative Studio / Portfolio</p>
+        <h1>I create visual systems that make brands look professional, trusted, and easier to remember.</h1>
+        <p class="hero-copy">
+          Graphic designer, social media creative, photo retoucher, and visual storyteller focused on clean,
+          strategic, and polished designs for schools, brands, businesses, and digital products.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#links" class="btn btn-soft">Contact Me</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>7+</strong><span>Years Experience</span></div>
+          <div><strong>Adobe</strong><span>Photoshop Certified</span></div>
+          <div><strong>DesignLab</strong><span>Creative Studio</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="floating-window">
+          <div class="window-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mock-poster-grid">
+            <div class="mock-poster large"></div>
+            <div class="mock-poster"></div>
+            <div class="mock-poster blue"></div>
+            <div class="mock-poster violet"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad about-grid">
+      <div>
+        <p class="eyebrow">Quick Introduction</p>
+        <h2>Hi, I’m Jann — a graphic designer focused on clean, strategic visuals.</h2>
+        <p class="body-copy">
+          I help brands, schools, and businesses turn messages into visuals that are easier to understand,
+          more professional, and more recognizable. My work covers social media design, campaign visuals,
+          publication materials, branding assets, photo retouching, and digital product design.
+        </p>
+      </div>
+
+      <div class="skills-card">
+        <h3>Skills & Specialties</h3>
+        <div class="skill-tags">
+          <span>Social Media Design</span>
+          <span>Brand Identity</span>
+          <span>Poster Design</span>
+          <span>Marketing Flyers</span>
+          <span>Photo Retouching</span>
+          <span>Publication Layout</span>
+          <span>Canva Templates</span>
+          <span>Adobe Photoshop</span>
+          <span>Visual Campaigns</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected Works</p>
+          <h2>Projects</h2>
+        </div>
+        <p>Click a card to view a larger 16:9 project preview.</p>
+      </div>
+
+      <div id="projectGrid" class="project-grid">
+        <div class="loading-card">Loading projects...</div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section-pad">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Client Feedback</p>
+          <h2>Testimonials</h2>
+        </div>
+      </div>
+
+      <div id="testimonialGrid" class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>“Jann consistently delivers polished and professional designs with excellent attention to detail.”</p>
+          <strong>Sample Client</strong>
+          <span>Marketing / Communications</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“The visuals are clean, premium, and aligned with the campaign direction.”</p>
+          <strong>Sample Client</strong>
+          <span>Creative Project</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Easy to work with, fast, and strategic when it comes to improving layouts.”</p>
+          <strong>Sample Client</strong>
+          <span>Design Support</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section-pad links-section">
+      <p class="eyebrow">Let’s Connect</p>
+      <h2>Links</h2>
+      <div class="link-buttons">
+        <a href="https://bit.ly/JNBJ-Porfolio" target="_blank" rel="noopener">Main Portfolio</a>
+        <a href="mailto:jannjaravata@gmail.com">Email Me</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="projectModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-preview">
+        <img id="modalImage" src="" alt="">
+      </div>
+      <div class="modal-content">
+        <p id="modalCategory" class="eyebrow"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <a id="modalLink" href="#" target="_blank" rel="noopener" class="btn btn-primary">Open Project</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

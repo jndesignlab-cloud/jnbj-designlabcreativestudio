@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Admin | DesignLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-page">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">DL</span>
+      <span>
+        <strong>Portfolio Admin</strong>
+        <small>Add projects to Google Sheets</small>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">View Site</a>
+    </nav>
+  </header>
+
+  <main class="section-pad admin-wrap">
+    <section class="admin-panel">
+      <p class="eyebrow">Admin Client</p>
+      <h1>Add New Project</h1>
+      <p class="body-copy">Add a new project card. The viewer site will read it from Google Sheets through Apps Script.</p>
+
+      <form id="projectForm" class="admin-form">
+        <label>
+          Project Title
+          <input type="text" name="title" placeholder="Recent University Postings" required>
+        </label>
+
+        <label>
+          Category
+          <input type="text" name="category" placeholder="Social Media Campaign" required>
+        </label>
+
+        <label>
+          Preview Image URL
+          <input type="url" name="image" placeholder="Google Drive direct image URL or hosted image link" required>
+        </label>
+
+        <label>
+          Project Link
+          <input type="url" name="link" placeholder="Portfolio link, Behance link, Google Drive folder, etc.">
+        </label>
+
+        <label>
+          Description
+          <textarea name="description" rows="5" placeholder="Briefly describe the project, goal, and design direction." required></textarea>
+        </label>
+
+        <label>
+          Admin Password
+          <input type="password" name="password" placeholder="Enter admin password" required>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Add Project</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </section>
+
+    <section class="admin-guide">
+      <h2>Recommended project image format</h2>
+      <div class="guide-card">
+        <strong>Best preview size:</strong>
+        <p>Use 16:9 images such as 1920×1080, 1600×900, or 1280×720.</p>
+      </div>
+      <div class="guide-card">
+        <strong>Image hosting:</strong>
+        <p>You can use GitHub images, Google Drive direct image links, or any public image URL.</p>
+      </div>
+      <div class="guide-card">
+        <strong>Project card display:</strong>
+        <p>The card uses the same image as the modal preview, but cropped nicely in the grid.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
