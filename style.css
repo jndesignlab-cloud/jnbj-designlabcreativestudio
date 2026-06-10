@@ -311,9 +311,39 @@ h3 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 0.95fr;
+  grid-template-columns: 1.12fr 0.88fr;
   gap: 38px;
   align-items: start;
+}
+
+.about-intro-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.about-profile {
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.82);
+  box-shadow: 0 20px 60px rgba(7, 27, 58, 0.08);
+}
+
+.about-profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.about-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  margin-bottom: 18px;
+  max-width: 720px;
 }
 
 .skills-card, .admin-panel, .admin-guide, .testimonial-card, .project-card, .links-section {
@@ -615,6 +645,15 @@ input:focus, textarea:focus {
 
   .hero, .about-grid, .admin-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .about-intro-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-profile {
+    max-width: 300px;
   }
 
   .hero {
