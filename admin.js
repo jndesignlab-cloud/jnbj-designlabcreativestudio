@@ -11,6 +11,13 @@ projectForm.addEventListener("submit", async (event) => {
 
   const formData = new FormData(projectForm);
   const payload = Object.fromEntries(formData.entries());
+
+  payload.galleryImages = (payload.galleryImages || "")
+    .split("\n")
+    .map((url) => url.trim())
+    .filter(Boolean)
+    .join("\n");
+
   payload.action = "addProject";
 
   formStatus.textContent = "Adding project...";

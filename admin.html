@@ -42,12 +42,17 @@
 
         <label>
           Preview Image URL
-          <input type="url" name="image" placeholder="Google Drive direct image URL or hosted image link" required>
+          <input type="url" name="image" placeholder="Main 16:9 cover image URL" required>
+        </label>
+
+        <label>
+          Project Gallery Image URLs
+          <textarea name="galleryImages" rows="6" placeholder="Paste one 16:9 image URL per line. These will appear in the project page carousel."></textarea>
         </label>
 
         <label>
           Project Link
-          <input type="url" name="link" placeholder="Portfolio link, Behance link, Google Drive folder, etc.">
+          <input type="url" name="link" placeholder="Optional external link: Behance, Google Drive folder, live site, etc.">
         </label>
 
         <label>
@@ -77,7 +82,11 @@
       </div>
       <div class="guide-card">
         <strong>Project card display:</strong>
-        <p>The card uses the same image as the modal preview, but cropped nicely in the grid.</p>
+        <p>The card uses the main preview image. The project detail page uses your gallery images as a carousel.</p>
+      </div>
+      <div class="guide-card">
+        <strong>Gallery images:</strong>
+        <p>Paste one image URL per line. Recommended size is 1920×1080 or 1600×900.</p>
       </div>
     </section>
   </main>

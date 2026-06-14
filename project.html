@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Preview | Jann Nathaniel Jaravata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">DL</span>
+      <span>
+        <strong>Jann Nathaniel</strong>
+        <small>Project Preview</small>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html#projects">Back to Projects</a>
+      <a href="index.html#links">Contact</a>
+    </nav>
+  </header>
+
+  <main class="project-page section-pad">
+    <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+    <section class="project-detail-hero">
+      <div>
+        <p id="projectCategory" class="eyebrow">Project</p>
+        <h1 id="projectTitle">Loading project...</h1>
+        <p id="projectDescription" class="project-detail-copy"></p>
+        <div class="project-detail-actions">
+          <a id="projectExternalLink" href="#" target="_blank" rel="noopener" class="btn btn-primary">Open External Link</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-shell">
+      <div class="carousel-top">
+        <div>
+          <p class="eyebrow">Project Gallery</p>
+          <h2>Visual Preview</h2>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevSlide" aria-label="Previous image">←</button>
+          <span id="slideCounter">1 / 1</span>
+          <button id="nextSlide" aria-label="Next image">→</button>
+        </div>
+      </div>
+
+      <div class="project-carousel">
+        <img id="carouselImage" src="" alt="">
+      </div>
+
+      <div id="carouselDots" class="carousel-dots"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
+    <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
