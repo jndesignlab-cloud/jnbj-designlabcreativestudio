@@ -7,7 +7,7 @@ const modalDescription = document.querySelector("#modalDescription");
 const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
 
-const SITE_VERSION = "1.3.0";
+const SITE_VERSION = "1.4.1";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -34,6 +34,8 @@ const fallbackProjects = [
     id: "sample-university-postings",
     title: "Recent University Postings",
     category: "Social Media Design",
+    filterCategory: "Social Media",
+    featured: true,
     skills: "Campaign Posters - Social Media Management - Graphic Design",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
     description: "A curated presentation of campaign visuals, announcements, and social media postings designed for university communications.",
@@ -50,6 +52,8 @@ const fallbackProjects = [
     id: "sample-designlab-downloads",
     title: "DesignLab Downloads",
     category: "Digital Products",
+    filterCategory: "DesignLab",
+    featured: true,
     skills: "Canva Templates - Digital Product Design - Content Systems",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
     description: "Editable Canva template collections for professionals, business owners, and content creators.",
@@ -66,6 +70,8 @@ const fallbackProjects = [
     id: "sample-brand-identity",
     title: "Brand Identity Projects",
     category: "Logo & Branding",
+    filterCategory: "Branding",
+    featured: true,
     skills: "Logo Design - Brand Identity - Visual Systems",
     image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
     description: "Logo concepts, visual systems, and brand direction projects for different clients and small businesses.",
@@ -94,11 +100,22 @@ async function loadProjects() {
       throw new Error("Invalid project response.");
     }
 
-    renderProjects(data.projects.length ? data.projects : fallbackProjects);
+    const featuredProjects = getFeaturedProjects(data.projects);
+    renderProjects(featuredProjects.length ? featuredProjects : fallbackProjects.slice(0, 6));
   } catch (error) {
     console.error(error);
-    renderProjects(fallbackProjects);
+    renderProjects(fallbackProjects.slice(0, 6));
   }
+}
+
+function getFeaturedProjects(projects = []) {
+  return projects
+    .filter((project) => isFeatured(project))
+    .slice(0, 6);
+}
+
+function isFeatured(project) {
+  return project.featured === true || String(project.featured).toLowerCase() === "true" || String(project.featured).toLowerCase() === "yes";
 }
 
 function renderProjects(projects) {

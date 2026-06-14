@@ -166,3 +166,58 @@ In the admin page, paste one 16:9 image URL per line in the Gallery Image URLs f
   - Result / Outcome
 - Added case study cards on `project.html`.
 - Updated Apps Script with new sheet columns for case study content.
+
+
+## Update v1.4.0
+
+- Homepage now displays only up to 6 projects marked as Featured.
+- Added `projects.html`, a full project archive page.
+- Added `projects.js` for the archive page and category filters.
+- Added admin fields:
+  - Filter Category
+  - Featured Project checkbox
+- Added filters:
+  - All
+  - Social Media
+  - Branding
+  - Web / Digital
+  - Publications
+  - DesignLab
+  - University
+- Updated Apps Script with new columns:
+  - Filter Category
+  - Featured
+
+### Upload these frontend files to GitHub
+
+```txt
+index.html
+admin.html
+projects.html
+project.html
+style.css
+app.js
+admin.js
+projects.js
+project.js
+```
+
+### Update Apps Script
+
+Replace `Code.gs`, set your admin password again, and redeploy as a new Web App version.
+
+
+## Update v1.4.1
+
+- Updated project filter categories to better match actual portfolio work.
+- Replaced `Publications` with `Print & Publications`.
+- Added `Client Work` as a filter category.
+- Final filters:
+  - All
+  - Social Media
+  - Branding
+  - Web / Digital
+  - Print & Publications
+  - DesignLab
+  - University
+  - Client Work

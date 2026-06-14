@@ -1,10 +1,12 @@
-const SITE_VERSION = "1.3.0";
+const SITE_VERSION = "1.4.1";
 
 const fallbackProjects = [
   {
     id: "sample-university-postings",
     title: "Recent University Postings",
     category: "Social Media Design",
+    filterCategory: "Social Media",
+    featured: true,
     skills: "Campaign Posters - Social Media Management - Graphic Design",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
     description: "A curated presentation of campaign visuals, announcements, and social media postings designed for university communications.",
@@ -21,6 +23,8 @@ const fallbackProjects = [
     id: "sample-designlab-downloads",
     title: "DesignLab Downloads",
     category: "Digital Products",
+    filterCategory: "DesignLab",
+    featured: true,
     skills: "Canva Templates - Digital Product Design - Content Systems",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
     description: "Editable Canva template collections for professionals, business owners, and content creators.",
@@ -37,6 +41,8 @@ const fallbackProjects = [
     id: "sample-brand-identity",
     title: "Brand Identity Projects",
     category: "Logo & Branding",
+    filterCategory: "Branding",
+    featured: true,
     skills: "Logo Design - Brand Identity - Visual Systems",
     image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
     description: "Logo concepts, visual systems, and brand direction projects for different clients and small businesses.",

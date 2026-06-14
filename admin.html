@@ -41,6 +41,24 @@
         </label>
 
         <label>
+          Filter Category
+          <select name="filterCategory" required>
+            <option value="Social Media">Social Media</option>
+            <option value="Branding">Branding</option>
+            <option value="Web / Digital">Web / Digital</option>
+            <option value="Print & Publications">Print & Publications</option>
+            <option value="DesignLab">DesignLab</option>
+            <option value="University">University</option>
+            <option value="Client Work">Client Work</option>
+          </select>
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="featured" value="TRUE">
+          Mark as Featured Project
+        </label>
+
+        <label>
           Preview Image URL
           <input type="url" name="image" placeholder="Main 16:9 cover image URL" required>
         </label>
@@ -102,7 +120,7 @@
       </div>
       <div class="guide-card">
         <strong>Project card display:</strong>
-        <p>The card uses the main preview image. The project detail page uses your gallery images as a carousel.</p>
+        <p>The homepage shows up to 6 projects marked as Featured. The full projects page shows all published projects.</p>
       </div>
       <div class="guide-card">
         <strong>Gallery images:</strong>
@@ -115,6 +133,10 @@
       <div class="guide-card">
         <strong>Case study fields:</strong>
         <p>Use Problem / Goal, What I Did, and Result / Outcome to make each project page feel more professional and recruiter-friendly.</p>
+      </div>
+      <div class="guide-card">
+        <strong>Featured projects:</strong>
+        <p>Only the first 6 projects marked Featured will appear on the homepage. Use the full projects page for everything else.</p>
       </div>
     </section>
   </main>

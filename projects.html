@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Projects | Jann Nathaniel Jaravata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">DL</span>
+      <span>
+        <strong>Jann Nathaniel</strong>
+        <small>All Portfolio Projects</small>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#links">Contact</a>
+    </nav>
+  </header>
+
+  <main class="projects-page section-pad">
+    <section class="projects-page-hero">
+      <p class="eyebrow">Portfolio Archive</p>
+      <h1>All Projects</h1>
+      <p class="project-detail-copy">Browse selected works across social media design, branding, web and digital projects, print and publications, DesignLab, university campaigns, and client work.</p>
+    </section>
+
+    <section class="filter-shell">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="active" data-filter="All">All</button>
+        <button data-filter="Social Media">Social Media</button>
+        <button data-filter="Branding">Branding</button>
+        <button data-filter="Web / Digital">Web / Digital</button>
+        <button data-filter="Print & Publications">Print & Publications</button>
+        <button data-filter="DesignLab">DesignLab</button>
+        <button data-filter="University">University</button>
+        <button data-filter="Client Work">Client Work</button>
+      </div>
+    </section>
+
+    <section>
+      <div id="allProjectGrid" class="project-grid">
+        <div class="loading-card">Loading projects...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
+    <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>

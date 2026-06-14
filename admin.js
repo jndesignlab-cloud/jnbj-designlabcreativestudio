@@ -19,6 +19,7 @@ projectForm.addEventListener("submit", async (event) => {
     .join("\n");
 
   payload.skills = (payload.skills || "").trim();
+  payload.featured = payload.featured === "TRUE" ? "TRUE" : "FALSE";
   payload.problem = (payload.problem || "").trim();
   payload.solution = (payload.solution || "").trim();
   payload.outcome = (payload.outcome || "").trim();
