@@ -815,3 +815,28 @@ input:focus, textarea:focus {
     margin-top: 16px;
   }
 }
+
+
+/* Project skills / services tags */
+
+.project-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 12px 0 18px;
+}
+
+.project-skill-tags span {
+  color: var(--blue-700);
+  background: var(--blue-50);
+  border: 1px solid rgba(24,119,242,0.14);
+  padding: 9px 12px;
+  border-radius: 999px;
+  font-weight: 850;
+  font-size: 0.78rem;
+}
+
+.project-detail-skills {
+  margin-top: -6px;
+  margin-bottom: 22px;
+}

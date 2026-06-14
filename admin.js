@@ -18,6 +18,8 @@ projectForm.addEventListener("submit", async (event) => {
     .filter(Boolean)
     .join("\n");
 
+  payload.skills = (payload.skills || "").trim();
+
   payload.action = "addProject";
 
   formStatus.textContent = "Adding project...";

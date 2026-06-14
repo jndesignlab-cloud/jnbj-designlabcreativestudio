@@ -4,9 +4,10 @@ const modalImage = document.querySelector("#modalImage");
 const modalCategory = document.querySelector("#modalCategory");
 const modalTitle = document.querySelector("#modalTitle");
 const modalDescription = document.querySelector("#modalDescription");
+const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
 
-const SITE_VERSION = "1.2.0";
+const SITE_VERSION = "1.2.1";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -33,6 +34,7 @@ const fallbackProjects = [
     id: "sample-university-postings",
     title: "Recent University Postings",
     category: "Social Media Design",
+    skills: "Campaign Posters - Social Media Management - Graphic Design",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
     description: "A curated presentation of campaign visuals, announcements, and social media postings designed for university communications.",
     link: "https://bit.ly/JNBJ-Porfolio",
@@ -45,6 +47,7 @@ const fallbackProjects = [
     id: "sample-designlab-downloads",
     title: "DesignLab Downloads",
     category: "Digital Products",
+    skills: "Canva Templates - Digital Product Design - Content Systems",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
     description: "Editable Canva template collections for professionals, business owners, and content creators.",
     link: "https://bit.ly/JNBJ-Porfolio",
@@ -57,6 +60,7 @@ const fallbackProjects = [
     id: "sample-brand-identity",
     title: "Brand Identity Projects",
     category: "Logo & Branding",
+    skills: "Logo Design - Brand Identity - Visual Systems",
     image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
     description: "Logo concepts, visual systems, and brand direction projects for different clients and small businesses.",
     link: "https://bit.ly/JNBJ-Porfolio",
@@ -116,6 +120,7 @@ function openModal(project) {
   modalCategory.textContent = project.category || "Project";
   modalTitle.textContent = project.title;
   modalDescription.textContent = project.description || "";
+  renderSkillTags(modalSkills, project.skills);
   const projectId = project.id || createSlug(project.title);
   modalLink.href = `project.html?id=${encodeURIComponent(projectId)}`;
   modal.classList.add("active");
@@ -134,6 +139,37 @@ document.querySelectorAll("[data-close-modal]").forEach((element) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeModal();
 });
+
+function renderSkillTags(container, skills = "") {
+  if (!container) return;
+
+  const skillList = parseSkills(skills);
+  container.innerHTML = "";
+
+  if (!skillList.length) {
+    container.style.display = "none";
+    return;
+  }
+
+  container.style.display = "flex";
+
+  skillList.forEach((skill) => {
+    const tag = document.createElement("span");
+    tag.textContent = skill;
+    container.appendChild(tag);
+  });
+}
+
+function parseSkills(skills = "") {
+  if (Array.isArray(skills)) {
+    return skills.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  return String(skills)
+    .split(/\n|-|,/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
 
 function createSlug(value = "") {
   return String(value)

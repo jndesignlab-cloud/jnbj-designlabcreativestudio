@@ -147,3 +147,11 @@ profile-photo.png
 Replace your current `Code.gs` with the new `Code.gs`, set your admin password again, and redeploy as a new Web App version.
 
 In the admin page, paste one 16:9 image URL per line in the Gallery Image URLs field.
+
+
+## Update v1.2.1
+
+- Added Skills / Services Used field to the admin project form.
+- Added project skill tags under the project title in the modal preview and project detail page.
+- Updated Apps Script with the new `Skills / Services Used` sheet column.
+- Example format: `Social Media Management - Graphic Design - Campaign Posters`.
