@@ -1,4 +1,4 @@
-const SITE_VERSION = "1.4.1";
+const SITE_VERSION = "1.4.2";
 
 const fallbackProjects = [
   {
@@ -78,7 +78,7 @@ async function loadProjects() {
 function renderProjects() {
   const projects = activeFilter === "All"
     ? allProjects
-    : allProjects.filter((project) => (project.filterCategory || project.category) === activeFilter);
+    : allProjects.filter((project) => projectMatchesFilter(project, activeFilter));
 
   grid.innerHTML = "";
 
@@ -120,6 +120,22 @@ filterTabs.addEventListener("click", (event) => {
 
   renderProjects();
 });
+
+function projectMatchesFilter(project, activeFilter) {
+  const categories = parseFilterCategories(project.filterCategory || project.category);
+  return categories.includes(activeFilter);
+}
+
+function parseFilterCategories(value = "") {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  return String(value)
+    .split(/\n|,/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
 
 function renderSkillsInline(skills = "") {
   return parseSkills(skills)
