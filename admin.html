@@ -40,18 +40,39 @@
           <input type="text" name="category" placeholder="Social Media Campaign" required>
         </label>
 
-        <label>
-          Filter Category
-          <select name="filterCategory" required>
-            <option value="Social Media">Social Media</option>
-            <option value="Branding">Branding</option>
-            <option value="Web / Digital">Web / Digital</option>
-            <option value="Print & Publications">Print & Publications</option>
-            <option value="DesignLab">DesignLab</option>
-            <option value="University">University</option>
-            <option value="Client Work">Client Work</option>
-          </select>
-        </label>
+        <div class="multi-filter-group">
+          <span class="field-label">Filter Categories</span>
+          <div class="multi-filter-grid">
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="Social Media">
+              Social Media
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="Branding">
+              Branding
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="Web / Digital">
+              Web / Digital
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="Print & Publications">
+              Print & Publications
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="DesignLab">
+              DesignLab
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="University">
+              University
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="filterCategory" value="Client Work">
+              Client Work
+            </label>
+          </div>
+        </div>
 
         <label class="checkbox-label">
           <input type="checkbox" name="featured" value="TRUE">
@@ -136,7 +157,7 @@
       </div>
       <div class="guide-card">
         <strong>Featured projects:</strong>
-        <p>Only the first 6 projects marked Featured will appear on the homepage. Use the full projects page for everything else.</p>
+        <p>Only the first 6 projects marked Featured will appear on the homepage. A project can now belong to multiple filter categories on the full projects page.</p>
       </div>
     </section>
   </main>

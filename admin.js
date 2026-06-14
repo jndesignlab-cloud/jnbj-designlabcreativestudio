@@ -18,11 +18,21 @@ projectForm.addEventListener("submit", async (event) => {
     .filter(Boolean)
     .join("\n");
 
+  const selectedFilters = Array.from(projectForm.querySelectorAll('input[name="filterCategory"]:checked'))
+    .map((input) => input.value.trim())
+    .filter(Boolean);
+
+  payload.filterCategory = selectedFilters.join(", ");
   payload.skills = (payload.skills || "").trim();
   payload.featured = payload.featured === "TRUE" ? "TRUE" : "FALSE";
   payload.problem = (payload.problem || "").trim();
   payload.solution = (payload.solution || "").trim();
   payload.outcome = (payload.outcome || "").trim();
+
+  if (!payload.filterCategory) {
+    formStatus.textContent = "Please select at least one filter category.";
+    return;
+  }
 
   payload.action = "addProject";
 

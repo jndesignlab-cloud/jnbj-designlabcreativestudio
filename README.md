@@ -221,3 +221,22 @@ Replace `Code.gs`, set your admin password again, and redeploy as a new Web App 
   - DesignLab
   - University
   - Client Work
+
+
+## Update v1.4.2
+
+- Added multi-filter category support.
+- A single project can now appear under multiple filters.
+- Admin now uses multiple checkboxes for Filter Categories instead of a single dropdown.
+- Selected categories are saved in the same `Filter Category` column as comma-separated values.
+- Archive page filters now correctly match projects with multiple categories.
+
+### Example
+
+A project can now be saved like:
+
+```txt
+DesignLab, Social Media
+```
+
+This means it will appear under both filters on `projects.html`.

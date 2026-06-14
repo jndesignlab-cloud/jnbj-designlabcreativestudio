@@ -953,3 +953,28 @@ select {
   background: linear-gradient(135deg, var(--blue-500), var(--violet));
   box-shadow: 0 12px 26px rgba(24,119,242,0.20);
 }
+
+
+/* Multi filter categories */
+
+.multi-filter-group {
+  display: grid;
+  gap: 10px;
+}
+
+.field-label {
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.multi-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .multi-filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
