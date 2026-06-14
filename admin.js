@@ -19,6 +19,9 @@ projectForm.addEventListener("submit", async (event) => {
     .join("\n");
 
   payload.skills = (payload.skills || "").trim();
+  payload.problem = (payload.problem || "").trim();
+  payload.solution = (payload.solution || "").trim();
+  payload.outcome = (payload.outcome || "").trim();
 
   payload.action = "addProject";
 

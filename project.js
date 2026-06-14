@@ -1,4 +1,4 @@
-const SITE_VERSION = "1.2.1";
+const SITE_VERSION = "1.3.0";
 
 const fallbackProjects = [
   {
@@ -8,6 +8,9 @@ const fallbackProjects = [
     skills: "Campaign Posters - Social Media Management - Graphic Design",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
     description: "A curated presentation of campaign visuals, announcements, and social media postings designed for university communications.",
+    problem: "The university needed clear, consistent, and professional campaign visuals for announcements and enrollment-related communications.",
+    solution: "I created organized social media layouts with strong hierarchy, clean typography, and brand-aligned visuals to make each announcement easier to understand.",
+    outcome: "The final outputs created a more consistent and polished online presence for university communications.",
     link: "https://bit.ly/JNBJ-Porfolio",
     galleryImages: [
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
@@ -21,6 +24,9 @@ const fallbackProjects = [
     skills: "Canva Templates - Digital Product Design - Content Systems",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
     description: "Editable Canva template collections for professionals, business owners, and content creators.",
+    problem: "Business owners and professionals needed ready-made content templates that looked professional without starting from scratch.",
+    solution: "I designed editable Canva templates with structured layouts, reusable visual systems, and clear content sections.",
+    outcome: "The template sets helped users save time, post more consistently, and maintain a more professional brand presence.",
     link: "https://bit.ly/JNBJ-Porfolio",
     galleryImages: [
       "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
@@ -34,6 +40,9 @@ const fallbackProjects = [
     skills: "Logo Design - Brand Identity - Visual Systems",
     image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
     description: "Logo concepts, visual systems, and brand direction projects for different clients and small businesses.",
+    problem: "Clients needed brand visuals that felt more recognizable, credible, and aligned with their business identity.",
+    solution: "I developed logo concepts, visual directions, and supporting brand elements based on each client’s positioning and audience.",
+    outcome: "The final brand assets gave each client a clearer and more professional visual identity.",
     link: "https://bit.ly/JNBJ-Porfolio",
     galleryImages: [
       "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
@@ -49,6 +58,9 @@ const titleElement = document.querySelector("#projectTitle");
 const categoryElement = document.querySelector("#projectCategory");
 const descriptionElement = document.querySelector("#projectDescription");
 const skillsElement = document.querySelector("#projectSkills");
+const problemElement = document.querySelector("#projectProblem");
+const solutionElement = document.querySelector("#projectSolution");
+const outcomeElement = document.querySelector("#projectOutcome");
 const externalLink = document.querySelector("#projectExternalLink");
 const carouselImage = document.querySelector("#carouselImage");
 const slideCounter = document.querySelector("#slideCounter");
@@ -106,6 +118,9 @@ function renderProject(project) {
   categoryElement.textContent = project.category || "Project";
   renderSkillTags(skillsElement, project.skills);
   descriptionElement.textContent = project.description || "";
+  problemElement.textContent = project.problem || "This project focused on solving a communication, branding, or presentation need through clearer and more strategic visuals.";
+  solutionElement.textContent = project.solution || "I handled the design direction, layout structure, visual hierarchy, and final creative execution based on the project requirements.";
+  outcomeElement.textContent = project.outcome || "The final output provided a more polished, organized, and professional visual presentation.";
 
   if (project.link) {
     externalLink.href = project.link;

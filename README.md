@@ -155,3 +155,14 @@ In the admin page, paste one 16:9 image URL per line in the Gallery Image URLs f
 - Added project skill tags under the project title in the modal preview and project detail page.
 - Updated Apps Script with the new `Skills / Services Used` sheet column.
 - Example format: `Social Media Management - Graphic Design - Campaign Posters`.
+
+
+## Update v1.3.0
+
+- Turned the individual project page into a case study style layout.
+- Added admin fields:
+  - The Problem / Goal
+  - What I Did
+  - Result / Outcome
+- Added case study cards on `project.html`.
+- Updated Apps Script with new sheet columns for case study content.

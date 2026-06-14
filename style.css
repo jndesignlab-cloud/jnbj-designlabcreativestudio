@@ -840,3 +840,33 @@ input:focus, textarea:focus {
   margin-top: -6px;
   margin-bottom: 22px;
 }
+
+
+/* Case study project sections */
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.case-study-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.78);
+  box-shadow: 0 20px 60px rgba(7, 27, 58, 0.08);
+  border-radius: var(--radius-xl);
+}
+
+.case-study-card p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+}
