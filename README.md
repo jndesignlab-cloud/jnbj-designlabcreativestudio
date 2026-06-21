@@ -280,3 +280,11 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
   - DesignLab Creative Studio
   - DesignLab Downloads
 - Updated the section to a balanced 2×2 layout.
+
+
+## Update v1.5.2
+
+- Moved the Site Visits counter from the bottom section to a compact floating badge.
+- Positioned the badge at the lower-left corner of the homepage.
+- Added a smaller mobile version to avoid covering important content.
+- No Apps Script changes are required if the v1.5.1 visitor counter backend is already deployed.
