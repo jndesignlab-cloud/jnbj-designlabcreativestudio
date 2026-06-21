@@ -6,7 +6,7 @@
   <title>Jann Nathaniel Jaravata | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -122,6 +122,54 @@
       </div>
     </section>
 
+    <section id="managed-pages" class="section-pad managed-pages-section">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="eyebrow">Pages I Help Manage</p>
+          <h2>Managed Pages</h2>
+        </div>
+        <p>Selected pages and brands supported through visual content, campaigns, and page management.</p>
+      </div>
+
+      <div class="managed-pages-grid">
+        <a class="managed-page-card" href="https://www.facebook.com/panpacificu" target="_blank" rel="noopener">
+          <div class="managed-page-icon">PU</div>
+          <div>
+            <h3>Panpacific University</h3>
+            <p>Institutional campaigns, announcements, enrollment content, and university social media visuals.</p>
+            <span>Urdaneta Campus · Visit Page ↗</span>
+          </div>
+        </a>
+
+        <a class="managed-page-card" href="https://www.facebook.com/officialpunptayug" target="_blank" rel="noopener">
+          <div class="managed-page-icon">PT</div>
+          <div>
+            <h3>Panpacific University Tayug</h3>
+            <p>Campus-specific announcements, enrollment campaigns, event visuals, and student-focused content.</p>
+            <span>Tayug Campus · Visit Page ↗</span>
+          </div>
+        </a>
+
+        <a class="managed-page-card" href="https://www.facebook.com/DesignLabCreativeStudio" target="_blank" rel="noopener">
+          <div class="managed-page-icon">DL</div>
+          <div>
+            <h3>DesignLab Creative Studio</h3>
+            <p>Daily content, service promotions, client work, educational posts, and brand development.</p>
+            <span>Creative Studio · Visit Page ↗</span>
+          </div>
+        </a>
+
+        <a class="managed-page-card" href="https://www.facebook.com/profile.php?id=61573673860829" target="_blank" rel="noopener">
+          <div class="managed-page-icon">DD</div>
+          <div>
+            <h3>DesignLab Downloads</h3>
+            <p>Digital product campaigns, template promotions, launch content, and customer-facing visuals.</p>
+            <span>Digital Products · Visit Page ↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section id="testimonials" class="section-pad">
       <div class="section-heading">
         <div>
@@ -168,7 +216,7 @@
     <div class="modal-card">
       <button class="modal-close" data-close-modal>&times;</button>
       <div class="modal-preview">
-        <img id="modalImage" src="" alt="">
+        <img id="modalImage" src="" alt="" loading="lazy" decoding="async">
       </div>
       <div class="modal-content">
         <p id="modalCategory" class="eyebrow"></p>
@@ -180,12 +228,18 @@
     </div>
   </div>
 
+  <section class="visitor-strip" aria-label="Portfolio visitor count">
+    <span class="visitor-label">Portfolio Visits</span>
+    <strong id="visitorCount">—</strong>
+    <small>Recorded visits</small>
+  </section>
+
   <footer class="footer">
     <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+  <script src="config.js?v=1.5.1"></script>
+  <script src="app.js?v=1.5.1"></script>
 </body>
 </html>

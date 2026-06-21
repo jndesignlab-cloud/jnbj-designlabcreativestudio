@@ -1,4 +1,4 @@
-const SITE_VERSION = "1.4.2";
+const SITE_VERSION = "1.5.1";
 
 const fallbackProjects = [
   {
@@ -94,7 +94,7 @@ function renderProjects() {
     card.href = `project.html?id=${encodeURIComponent(projectId)}`;
     card.innerHTML = `
       <div class="project-thumb">
-        <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}">
+        <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}" loading="lazy" decoding="async">
       </div>
       <div class="project-info">
         <p class="eyebrow">${escapeHtml(project.category || "Project")}</p>
@@ -123,7 +123,7 @@ filterTabs.addEventListener("click", (event) => {
 
 function projectMatchesFilter(project, activeFilter) {
   const categories = parseFilterCategories(project.filterCategory || project.category);
-  return categories.includes(activeFilter);
+  return categories.some((category) => normalizeFilter(category) === normalizeFilter(activeFilter));
 }
 
 function parseFilterCategories(value = "") {
@@ -132,9 +132,19 @@ function parseFilterCategories(value = "") {
   }
 
   return String(value)
-    .split(/\n|,/)
+    .split(/\n|,|;/)
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+function normalizeFilter(value = "") {
+  return String(value)
+    .toLowerCase()
+    .replace(/&amp;/g, "&")
+    .replace(/\s*\/\s*/g, " / ")
+    .replace(/\s*&\s*/g, " & ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function renderSkillsInline(skills = "") {

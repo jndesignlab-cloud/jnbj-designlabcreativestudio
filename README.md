@@ -240,3 +240,43 @@ DesignLab, Social Media
 ```
 
 This means it will appear under both filters on `projects.html`.
+
+
+## Update v1.4.3
+
+- Added cache-busting query strings to JavaScript files in the HTML pages.
+- This helps GitHub Pages/browser cache load the newest scripts immediately.
+- Made project archive filter matching more robust for comma-separated multi-filter categories.
+- Filter values like `DesignLab, Social Media` now match both `DesignLab` and `Social Media`.
+
+
+## Update v1.5.0
+
+- Added a compact Managed Pages section below the homepage Projects section.
+- Added managed page cards for Panpacific University, DesignLab Creative Studio, and DesignLab Downloads.
+- Added an active visitor counter on the homepage.
+- Visitor count is stored in a new `Site Analytics` Google Sheet tab.
+- Reduced loaded Inter font weights.
+- Softened heavy font weights and tight letter spacing.
+- Added lazy loading and asynchronous image decoding.
+- Added lightweight off-screen rendering optimizations.
+
+### Required Apps Script update
+
+Replace your current `Code.gs` with the new version, set your admin password again, and redeploy the Web App.
+
+The script automatically creates a `Site Analytics` sheet with Total Visits and Last Visit.
+
+Each homepage load records one visit. Reloads, bots, and repeat visits may also increase the count.
+
+
+## Update v1.5.1
+
+- Added clickable Facebook links to all Managed Pages cards.
+- Added Panpacific University Tayug as a separate managed page.
+- Managed Pages now include:
+  - Panpacific University
+  - Panpacific University Tayug
+  - DesignLab Creative Studio
+  - DesignLab Downloads
+- Updated the section to a balanced 2×2 layout.

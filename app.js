@@ -6,8 +6,9 @@ const modalTitle = document.querySelector("#modalTitle");
 const modalDescription = document.querySelector("#modalDescription");
 const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
+const visitorCountElement = document.querySelector("#visitorCount");
 
-const SITE_VERSION = "1.4.2";
+const SITE_VERSION = "1.5.1";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -126,7 +127,7 @@ function renderProjects(projects) {
     card.className = "project-card";
     card.innerHTML = `
       <div class="project-thumb">
-        <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}">
+        <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}" loading="lazy" decoding="async">
       </div>
       <div class="project-info">
         <p class="eyebrow">${escapeHtml(project.category || "Project")}</p>
@@ -214,4 +215,31 @@ function escapeHtml(value = "") {
     .replaceAll("'", "&#039;");
 }
 
+
+async function recordVisitor() {
+  if (!visitorCountElement) return;
+
+  if (!API_URL || API_URL.includes("PASTE_YOUR")) {
+    visitorCountElement.textContent = "—";
+    return;
+  }
+
+  try {
+    const response = await fetch(`${API_URL}?action=recordVisit&t=${Date.now()}`, {
+      cache: "no-store"
+    });
+    const data = await response.json();
+
+    if (!data.success) {
+      throw new Error(data.message || "Unable to record visit.");
+    }
+
+    visitorCountElement.textContent = Number(data.visits || 0).toLocaleString("en-PH");
+  } catch (error) {
+    console.error("Visitor counter error:", error);
+    visitorCountElement.textContent = "—";
+  }
+}
+
 loadProjects();
+recordVisitor();
