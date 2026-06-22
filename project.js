@@ -1,4 +1,4 @@
-const SITE_VERSION = "1.5.2";
+const SITE_VERSION = "1.6.0";
 
 const fallbackProjects = [
   {
@@ -139,7 +139,38 @@ function renderProject(project) {
   currentSlide = 0;
   renderDots();
   renderSlide();
+  requestAnimationFrame(setupCaseStudyToggles);
 }
+
+
+function setupCaseStudyToggles() {
+  document.querySelectorAll(".case-study-card").forEach((card) => {
+    const text = card.querySelector(".case-study-text");
+    const button = card.querySelector(".case-study-toggle");
+    if (!text || !button) return;
+
+    text.classList.remove("is-expanded");
+    button.setAttribute("aria-expanded", "false");
+    button.textContent = "Read more";
+
+    const needsToggle = text.scrollHeight > text.clientHeight + 4;
+    button.hidden = !needsToggle;
+
+    if (!button.dataset.ready) {
+      button.addEventListener("click", () => {
+        const expanded = text.classList.toggle("is-expanded");
+        button.setAttribute("aria-expanded", String(expanded));
+        button.textContent = expanded ? "Show less" : "Read more";
+      });
+      button.dataset.ready = "true";
+    }
+  });
+}
+
+window.addEventListener("resize", () => {
+  window.clearTimeout(window.caseStudyResizeTimer);
+  window.caseStudyResizeTimer = window.setTimeout(setupCaseStudyToggles, 150);
+});
 
 function normalizeGallery(project) {
   if (Array.isArray(project.galleryImages) && project.galleryImages.length) {

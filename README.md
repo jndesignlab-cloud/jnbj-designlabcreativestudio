@@ -288,3 +288,15 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Positioned the badge at the lower-left corner of the homepage.
 - Added a smaller mobile version to avoid covering important content.
 - No Apps Script changes are required if the v1.5.1 visitor counter backend is already deployed.
+
+
+## Update v1.6.0
+
+- Redesigned the individual project case-study page with a premium, more compact layout.
+- Moved the project gallery beside the project introduction on desktop.
+- Replaced the tall three-column text layout with an asymmetric editorial grid.
+- Added numbered case-study sections for clearer visual hierarchy.
+- Added automatic Read more / Show less controls for lengthy project descriptions.
+- Improved image presentation with `object-fit: contain` to avoid cropping portfolio visuals.
+- Added responsive tablet and mobile layouts.
+- No Apps Script update is required for this version.
