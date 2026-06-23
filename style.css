@@ -2457,3 +2457,83 @@ select {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+
+
+/* =========================================================
+   v2.3.2 — Exact Case Study Component Fix
+   ========================================================= */
+
+.signal-theme .case-study-editorial {
+  background: transparent !important;
+}
+
+.signal-theme .case-study-editorial .case-study-card,
+.signal-theme .case-study-card,
+.signal-theme .case-study-problem,
+.signal-theme .case-study-process,
+.signal-theme .case-study-outcome {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.025), rgba(255,255,255,.008)),
+    var(--signal-surface) !important;
+  border: 1px solid var(--signal-line) !important;
+  color: var(--signal-text) !important;
+  box-shadow: none !important;
+}
+
+.signal-theme .case-study-outcome {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(156,255,24,.065), transparent 30%),
+    var(--signal-surface) !important;
+}
+
+.signal-theme .case-study-card .eyebrow,
+.signal-theme .case-study-card h2,
+.signal-theme .case-study-card h3,
+.signal-theme .case-study-card h4 {
+  color: var(--signal-lime) !important;
+}
+
+.signal-theme .case-study-card p,
+.signal-theme .case-study-card li,
+.signal-theme .case-study-text {
+  color: var(--signal-muted) !important;
+}
+
+.signal-theme .case-study-number {
+  background: var(--signal-lime-soft) !important;
+  border: 1px solid rgba(156,255,24,.3) !important;
+  color: var(--signal-lime) !important;
+  box-shadow: none !important;
+}
+
+.signal-theme .case-study-toggle {
+  color: var(--signal-lime) !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.signal-theme .case-study-toggle:hover {
+  color: #c3ff70 !important;
+  text-decoration: underline;
+}
+
+.signal-theme .case-study-card::before,
+.signal-theme .case-study-card::after {
+  opacity: .16 !important;
+}
+
+.signal-theme .case-study-card.is-loading,
+.signal-theme .case-study-card.loading {
+  background: var(--signal-surface) !important;
+}
+
+.signal-theme .case-study-card .loading-text,
+.signal-theme .case-study-card [class*="loading"] {
+  color: var(--signal-muted) !important;
+}
+
+@media (max-width: 760px) {
+  .signal-theme .case-study-editorial .case-study-card {
+    border-radius: 18px;
+  }
+}

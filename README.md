@@ -341,3 +341,12 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Added dark input fields, scrollbars, and footer styling.
 - Preserved all existing project content, layout, and API integration.
 - No `Code.gs` update is required.
+
+
+## Update v2.3.2
+
+- Fixed the exact `.case-study-card` component selectors.
+- Converted Problem / Goal, What I Did, and Result / Outcome cards to the dark theme.
+- Updated case-study headings, numbers, body text, loading text, and Read More controls.
+- Removed the remaining inherited white and lavender backgrounds.
+- No `Code.gs` update is required.
