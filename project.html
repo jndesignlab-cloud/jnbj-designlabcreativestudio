@@ -28,36 +28,43 @@
   <main class="project-page section-pad">
     <a href="index.html#projects" class="back-link">← Back to Projects</a>
 
-    <section class="project-premium-hero">
+    <section class="project-premium-hero cinematic-project-intro">
       <div class="project-hero-copy">
         <p id="projectCategory" class="eyebrow">Project</p>
         <h1 id="projectTitle">Loading project...</h1>
-        <div id="projectSkills" class="project-skill-tags project-detail-skills"></div>
         <p id="projectDescription" class="project-detail-copy"></p>
+      </div>
+
+      <aside class="project-hero-meta">
+        <div>
+          <p class="eyebrow">Skills & Services</p>
+          <div id="projectSkills" class="project-skill-tags project-detail-skills"></div>
+        </div>
+
         <div class="project-detail-actions">
           <a id="projectExternalLink" href="#" target="_blank" rel="noopener" class="btn btn-primary">Open Project Link</a>
         </div>
+      </aside>
+    </section>
+
+    <section class="project-hero-gallery cinematic-gallery">
+      <div class="carousel-top compact-carousel-top">
+        <div>
+          <p class="eyebrow">Project Gallery</p>
+          <h2>Visual Preview</h2>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevSlide" aria-label="Previous image">←</button>
+          <span id="slideCounter">1 / 1</span>
+          <button id="nextSlide" aria-label="Next image">→</button>
+        </div>
       </div>
 
-      <div class="project-hero-gallery">
-        <div class="carousel-top compact-carousel-top">
-          <div>
-            <p class="eyebrow">Project Gallery</p>
-            <h2>Visual Preview</h2>
-          </div>
-          <div class="carousel-controls">
-            <button id="prevSlide" aria-label="Previous image">←</button>
-            <span id="slideCounter">1 / 1</span>
-            <button id="nextSlide" aria-label="Next image">→</button>
-          </div>
-        </div>
-
-        <div class="project-carousel premium-carousel">
-          <img id="carouselImage" src="" alt="" decoding="async">
-        </div>
-
-        <div id="carouselDots" class="carousel-dots"></div>
+      <div class="project-carousel premium-carousel cinematic-carousel">
+        <img id="carouselImage" src="" alt="" decoding="async">
       </div>
+
+      <div id="carouselDots" class="carousel-dots"></div>
     </section>
 
     <section class="case-study-editorial" aria-label="Project case study">
@@ -95,7 +102,7 @@
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js?v=1.6.0"></script>
-  <script src="project.js?v=1.6.0"></script>
+  <script src="config.js?v=1.6.1"></script>
+  <script src="project.js?v=1.6.1"></script>
 </body>
 </html>

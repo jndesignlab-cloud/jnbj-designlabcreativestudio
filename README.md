@@ -300,3 +300,15 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Improved image presentation with `object-fit: contain` to avoid cropping portfolio visuals.
 - Added responsive tablet and mobile layouts.
 - No Apps Script update is required for this version.
+
+
+## Update v1.6.1
+
+- Reworked the project case-study page into a cinematic presentation.
+- Moved the project gallery into a full-width 16:9 section.
+- Separated the project introduction from the visual gallery.
+- Added a compact metadata panel for skills and project links.
+- Improved image visibility using `object-fit: contain`.
+- Increased the project page width on larger screens.
+- Kept the layout fully responsive on tablet and mobile.
+- Included the production Web App API URL in `config.js`.
