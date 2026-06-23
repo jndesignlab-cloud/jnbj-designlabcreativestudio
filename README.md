@@ -314,8 +314,20 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Included the production Web App API URL in `config.js`.
 
 
-## Experimental Redesign v2.1.0
-- No-card layout using dividers, spacing, aligned columns, and full-width image rows.
-- Restrained heading sizes and lightweight presentation.
-- Built from v1.6.1 with production API URL preserved.
-- No Code.gs update required.
+## Experimental Redesign v2.2.0
+
+### Direction
+- Swiss-inspired visual system
+- Monochrome base with red accent
+- Strong 12-column alignment
+- Restrained headings and clear hierarchy
+- Numbered project rows
+- Grayscale portrait treatment
+- Minimal dividers instead of cards
+- Consistent structure across homepage and case studies
+
+### Technical
+- Built from v1.6.1
+- Production API URL included in config.js
+- Existing Apps Script integration retained
+- No Code.gs update required
