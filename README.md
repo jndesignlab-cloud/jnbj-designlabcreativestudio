@@ -314,21 +314,8 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Included the production Web App API URL in `config.js`.
 
 
-## Experimental Redesign v2.0.0
-
-This is a separate experimental UI direction based on the v1.6.1 functional system.
-
-### Design direction
-- Editorial creative-studio layout
-- Warm paper background with a subtle grid
-- Large expressive Inter typography
-- Asymmetric bento-style project grid
-- Dark studio information panel
-- Simplified profile presentation
-- Reduced gradients, shadows, and glass effects
-- Consistent styling across homepage, projects, project case studies, and admin
-
-### Important
-- v1.6.1 remains the recommended backup/base version.
-- This package preserves the existing Apps Script integration and production API URL.
-- No Code.gs update is required.
+## Experimental Redesign v2.1.0
+- No-card layout using dividers, spacing, aligned columns, and full-width image rows.
+- Restrained heading sizes and lightweight presentation.
+- Built from v1.6.1 with production API URL preserved.
+- No Code.gs update required.
