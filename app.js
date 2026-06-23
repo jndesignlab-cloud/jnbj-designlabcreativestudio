@@ -8,7 +8,7 @@ const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
 const visitorCountElement = document.querySelector("#visitorCount");
 
-const SITE_VERSION = "2.2.0";
+const SITE_VERSION = "2.3.0";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 

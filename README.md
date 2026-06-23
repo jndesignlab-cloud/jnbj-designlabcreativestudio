@@ -314,20 +314,21 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Included the production Web App API URL in `config.js`.
 
 
-## Experimental Redesign v2.2.0
+## Experimental Redesign v2.3.0
 
-### Direction
-- Swiss-inspired visual system
-- Monochrome base with red accent
-- Strong 12-column alignment
-- Restrained headings and clear hierarchy
-- Numbered project rows
-- Grayscale portrait treatment
-- Minimal dividers instead of cards
-- Consistent structure across homepage and case studies
+### Visual direction
+- Dark creative-agency interface
+- High-contrast black, off-white, and lime palette
+- Compact sticky navigation
+- Bold but controlled typography
+- Split hero with service panel
+- Project-led homepage presentation
+- Strong image treatment and hover interactions
+- Consistent dark styling across portfolio and case-study pages
 
-### Technical
+### Technical notes
 - Built from v1.6.1
-- Production API URL included in config.js
-- Existing Apps Script integration retained
-- No Code.gs update required
+- Existing project content and data structure are preserved
+- Production Web App API URL is included in `config.js`
+- Existing Apps Script integration is retained
+- No `Code.gs` update is required
