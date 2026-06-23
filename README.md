@@ -378,3 +378,13 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 ### Files
 - Added `theme.js`.
 - No `Code.gs` update is required.
+
+
+## Update v2.4.1
+
+- Fixed the project detail header in Dark, Blue, and Light modes.
+- Removed inherited hardcoded dark backgrounds from the title and Skills & Services panels.
+- Corrected project title, description, eyebrow, skills tags, and project button colors.
+- Added proper theme-aware surfaces for all three themes.
+- Reduced project title scaling slightly for improved balance.
+- No `Code.gs` update is required.

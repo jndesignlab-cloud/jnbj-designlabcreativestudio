@@ -3060,3 +3060,130 @@ html[data-theme] ::-webkit-scrollbar-thumb {
     height: 11px;
   }
 }
+
+
+/* =========================================================
+   v2.4.1 — Project Header Theme Fix
+   ========================================================= */
+
+/* Neutralize inherited hardcoded project header colors */
+html[data-theme] .signal-theme .cinematic-project-intro,
+html[data-theme] .signal-theme .project-premium-hero {
+  background: var(--theme-surface) !important;
+  border: 1px solid var(--theme-line) !important;
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .cinematic-project-intro .project-hero-copy,
+html[data-theme] .signal-theme .cinematic-project-intro .project-hero-meta,
+html[data-theme] .signal-theme .project-premium-hero .project-hero-copy,
+html[data-theme] .signal-theme .project-premium-hero .project-hero-meta {
+  background: transparent !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-text) !important;
+  box-shadow: none !important;
+}
+
+/* Light theme requires a proper light title area */
+html[data-theme="light"] .signal-theme .cinematic-project-intro .project-hero-copy,
+html[data-theme="light"] .signal-theme .project-premium-hero .project-hero-copy {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(125,184,234,.16), transparent 32%),
+    var(--theme-surface-2) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+html[data-theme="light"] .signal-theme .cinematic-project-intro .project-hero-meta,
+html[data-theme="light"] .signal-theme .project-premium-hero .project-hero-meta {
+  background: var(--theme-surface-2) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+/* Blue theme uses brand surfaces */
+html[data-theme="blue"] .signal-theme .cinematic-project-intro .project-hero-copy,
+html[data-theme="blue"] .signal-theme .project-premium-hero .project-hero-copy {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(125,184,234,.16), transparent 30%),
+    var(--theme-surface-2) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+html[data-theme="blue"] .signal-theme .cinematic-project-intro .project-hero-meta,
+html[data-theme="blue"] .signal-theme .project-premium-hero .project-hero-meta {
+  background: var(--theme-surface-2) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+/* Dark theme stays dark but no mismatched nested blocks */
+html[data-theme="dark"] .signal-theme .cinematic-project-intro .project-hero-copy,
+html[data-theme="dark"] .signal-theme .project-premium-hero .project-hero-copy {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(156,255,24,.055), transparent 30%),
+    var(--theme-surface) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+html[data-theme="dark"] .signal-theme .cinematic-project-intro .project-hero-meta,
+html[data-theme="dark"] .signal-theme .project-premium-hero .project-hero-meta {
+  background: var(--theme-surface-2) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+/* Project title and supporting text */
+html[data-theme] .signal-theme .project-hero-copy h1,
+html[data-theme] .signal-theme .project-hero-copy h2,
+html[data-theme] .signal-theme .project-hero-copy h3,
+html[data-theme] .signal-theme .project-hero-meta h2,
+html[data-theme] .signal-theme .project-hero-meta h3 {
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .project-hero-copy p,
+html[data-theme] .signal-theme .project-hero-meta p {
+  color: var(--theme-muted) !important;
+}
+
+html[data-theme] .signal-theme .project-hero-copy .eyebrow,
+html[data-theme] .signal-theme .project-hero-meta .eyebrow {
+  color: var(--theme-accent) !important;
+}
+
+/* Skills pills */
+html[data-theme] .signal-theme .project-hero-meta .project-skill-tags span,
+html[data-theme] .signal-theme .project-hero-meta .skill-tags span {
+  background: var(--theme-accent-soft) !important;
+  border: 1px solid color-mix(in srgb, var(--theme-accent) 35%, transparent) !important;
+  color: var(--theme-accent) !important;
+}
+
+/* Project link button */
+html[data-theme] .signal-theme .project-hero-meta .btn,
+html[data-theme] .signal-theme .project-detail-actions .btn {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+  border-color: var(--theme-accent) !important;
+}
+
+/* Layout cleanup */
+html[data-theme] .signal-theme .cinematic-project-intro {
+  gap: 22px !important;
+}
+
+html[data-theme] .signal-theme .cinematic-project-intro .project-hero-copy,
+html[data-theme] .signal-theme .cinematic-project-intro .project-hero-meta {
+  border-radius: 22px !important;
+  padding: 28px !important;
+}
+
+html[data-theme] .signal-theme .cinematic-project-intro .project-hero-copy h1 {
+  margin-bottom: 18px !important;
+  font-size: clamp(2.6rem, 5vw, 5.2rem) !important;
+  line-height: .98 !important;
+}
+
+@media (max-width: 900px) {
+  html[data-theme] .signal-theme .cinematic-project-intro .project-hero-copy,
+  html[data-theme] .signal-theme .cinematic-project-intro .project-hero-meta {
+    padding: 22px !important;
+  }
+}
