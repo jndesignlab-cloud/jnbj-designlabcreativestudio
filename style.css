@@ -3187,3 +3187,101 @@ html[data-theme] .signal-theme .cinematic-project-intro .project-hero-copy h1 {
     padding: 22px !important;
   }
 }
+
+
+/* =========================================================
+   v2.4.2 — Theme Accent + Project Navigation Cleanup
+   ========================================================= */
+
+/* Service panel numbers 01–04 must follow the selected theme */
+html[data-theme] .signal-theme .signal-panel-list span,
+html[data-theme] .signal-theme .signal-panel-list div > span,
+html[data-theme] .signal-theme .signal-stat-row strong {
+  color: var(--theme-accent) !important;
+}
+
+/* Make the service panel divider and text theme-aware */
+html[data-theme] .signal-theme .signal-panel-list,
+html[data-theme] .signal-theme .signal-panel-list div {
+  border-color: var(--theme-line) !important;
+}
+
+html[data-theme] .signal-theme .signal-panel-list p {
+  color: var(--theme-text) !important;
+}
+
+/* Fully theme-aware contact / Let's Connect section */
+html[data-theme] .signal-theme #links,
+html[data-theme] .signal-theme .links-section,
+html[data-theme] .signal-theme .contact-section,
+html[data-theme] .signal-theme .connect-section,
+html[data-theme] .signal-theme .links-card,
+html[data-theme] .signal-theme .contact-card {
+  background:
+    radial-gradient(circle at 50% 0%, var(--theme-hero-glow-1), transparent 36%),
+    var(--theme-surface) !important;
+  border: 1px solid var(--theme-line) !important;
+  color: var(--theme-text) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme] .signal-theme #links .eyebrow,
+html[data-theme] .signal-theme .links-section .eyebrow,
+html[data-theme] .signal-theme .contact-section .eyebrow,
+html[data-theme] .signal-theme .connect-section .eyebrow {
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme #links h2,
+html[data-theme] .signal-theme #links h3,
+html[data-theme] .signal-theme .links-section h2,
+html[data-theme] .signal-theme .links-section h3,
+html[data-theme] .signal-theme .contact-section h2,
+html[data-theme] .signal-theme .connect-section h2 {
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme #links p,
+html[data-theme] .signal-theme .links-section p,
+html[data-theme] .signal-theme .contact-section p,
+html[data-theme] .signal-theme .connect-section p {
+  color: var(--theme-muted) !important;
+}
+
+/* Contact buttons follow active theme instead of staying lime */
+html[data-theme] .signal-theme #links a,
+html[data-theme] .signal-theme .links-section a,
+html[data-theme] .signal-theme .contact-section a,
+html[data-theme] .signal-theme .connect-section a,
+html[data-theme] .signal-theme .link-buttons a {
+  background: var(--theme-accent-soft) !important;
+  border: 1px solid color-mix(in srgb, var(--theme-accent) 38%, transparent) !important;
+  color: var(--theme-accent) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme] .signal-theme #links a:hover,
+html[data-theme] .signal-theme .links-section a:hover,
+html[data-theme] .signal-theme .contact-section a:hover,
+html[data-theme] .signal-theme .connect-section a:hover,
+html[data-theme] .signal-theme .link-buttons a:hover {
+  background: var(--theme-accent) !important;
+  border-color: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+/* Ensure blue mode never retains dark-mode green */
+html[data-theme="blue"] .signal-theme .signal-panel-list span,
+html[data-theme="blue"] .signal-theme .signal-stat-row strong,
+html[data-theme="blue"] .signal-theme #links .eyebrow,
+html[data-theme="blue"] .signal-theme .links-section .eyebrow {
+  color: var(--brand-light-blue) !important;
+}
+
+/* Light mode keeps clear royal-blue accents */
+html[data-theme="light"] .signal-theme .signal-panel-list span,
+html[data-theme="light"] .signal-theme .signal-stat-row strong,
+html[data-theme="light"] .signal-theme #links .eyebrow,
+html[data-theme="light"] .signal-theme .links-section .eyebrow {
+  color: var(--brand-blue) !important;
+}

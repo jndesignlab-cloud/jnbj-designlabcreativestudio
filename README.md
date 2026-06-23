@@ -388,3 +388,12 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Added proper theme-aware surfaces for all three themes.
 - Reduced project title scaling slightly for improved balance.
 - No `Code.gs` update is required.
+
+
+## Update v2.4.2
+
+- Fixed the 01–04 service number colors so they follow Dark, Blue, and Light Mode.
+- Fixed the Let's Connect section background, border, heading, and button colors.
+- Removed remaining lime accents from Blue and Light Mode.
+- Changed both Back to Projects links on project case studies to open `projects.html`.
+- No `Code.gs` update is required.
