@@ -406,3 +406,23 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Reduced unnecessary empty vertical space.
 - Improved alignment for icon, title, description, and link rows.
 - No `Code.gs` update is required.
+
+
+## Update v2.5.0
+
+### New page: Services & Packages
+- Added `services.html` and `services.js`.
+- Added three collapsed service categories:
+  - Design Packages
+  - Flexible Design Services
+  - Static Website Packages
+- Only one category expands at a time.
+- Added direct inquiry email links for every tier and service group.
+- Added a Services link to the homepage, All Projects, project case studies, and admin navigation.
+- Added three suggested static website tiers:
+  - Launch Landing Page — ₱12,000
+  - Business Landing Page — ₱18,000
+  - Premium Landing System — ₱25,000
+- Existing Dark, Blue, and Light themes are fully supported.
+- The production Web App API URL remains included in `config.js`.
+- No `Code.gs` update is required.
