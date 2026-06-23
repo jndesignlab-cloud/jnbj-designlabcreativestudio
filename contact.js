@@ -1,4 +1,4 @@
-const SITE_VERSION = "2.6.0";
+const SITE_VERSION = "2.6.1";
 const LAST_EDIT = "June 23, 2026";
 
 const inquiryForm = document.querySelector("#inquiryForm");
@@ -80,6 +80,9 @@ async function submitInquiry(event) {
     formIntro.hidden = true;
     successPanel.hidden = false;
     referenceElement.textContent = data.inquiryId || "Submitted";
+    if (data.notificationSent === false) {
+      console.warn("Inquiry saved, but notification email failed:", data.notificationError || "Unknown error");
+    }
     successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
   } catch (error) {
     console.error(error);

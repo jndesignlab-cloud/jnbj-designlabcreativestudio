@@ -95,7 +95,7 @@ For best results, use 16:9 images such as 1920×1080, 1600×900, or 1280×720.
 - Replaced sample testimonials with two real client highlights.
 - Removed Main Portfolio and Facebook links.
 - Updated LinkedIn link.
-- Replaced conversion-focused email links with the centralized project inquiry page.
+- Kept email as mailto:jannjaravata@gmail.com.
 
 
 ## Update v1.1.3
@@ -458,3 +458,37 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Preserves the existing Projects and Site Analytics functions.
 
 After replacing `Code.gs`, set your admin password again and redeploy the Apps Script Web App as a new version.
+
+
+## Update v2.6.1 — Inquiry Email Notification Fix
+
+- Added a required one-time email authorization test function: `authorizeInquiryEmail`.
+- Added `Notification Status` and `Notification Error` columns to the Inquiries sheet.
+- Email failures are now recorded instead of being silently hidden.
+- Added daily mail quota checking.
+- Added a formatted HTML notification email and reply-to support.
+- Inquiry records remain saved even when the notification email fails.
+
+### Required setup after replacing Code.gs
+
+1. Open the Apps Script editor.
+2. Select `authorizeInquiryEmail` from the function dropdown.
+3. Click Run and approve the requested email permission.
+4. Confirm the test email arrives at `jannjaravata@gmail.com`.
+5. Go to Deploy → Manage deployments → Edit.
+6. Choose New version and deploy it.
+7. Keep Execute as set to Me and access set to Anyone.
+
+No change to the Web App URL is required when editing the existing deployment.
+
+
+## Update v2.7.0 — Static Studio Notes
+
+- Added `insights.html`.
+- Added three complete static, SEO-ready articles.
+- Added unique titles, meta descriptions, canonical URLs, Open Graph tags, and BlogPosting structured data.
+- Added `sitemap.xml` and `robots.txt`.
+- Added `blog-posts.csv` for Google Sheets import.
+- Added `BLOG_SETUP.md` and a starter `generate_blog.py`.
+- Added Insights links across the site navigation.
+- No `Code.gs` update is required.

@@ -1,4 +1,4 @@
-const SITE_VERSION = "2.6.0";
+const SITE_VERSION = "2.7.0";
 
 const fallbackProjects = [
   {
@@ -73,7 +73,6 @@ const slideCounter = document.querySelector("#slideCounter");
 const dotsWrapper = document.querySelector("#carouselDots");
 const prevButton = document.querySelector("#prevSlide");
 const nextButton = document.querySelector("#nextSlide");
-const similarProjectCta = document.querySelector("#similarProjectCta");
 
 let gallery = [];
 let currentSlide = 0;
@@ -122,14 +121,6 @@ async function loadProject() {
 
 function renderProject(project) {
   titleElement.textContent = project.title || "Untitled Project";
-  if (similarProjectCta) {
-    const inquiryParams = new URLSearchParams({
-      source: "project-case-study",
-      service: "General Inquiry",
-      package: `Similar to: ${project.title || "Portfolio Project"}`
-    });
-    similarProjectCta.href = `contact.html?${inquiryParams.toString()}`;
-  }
   categoryElement.textContent = project.category || "Project";
   renderSkillTags(skillsElement, project.skills);
   descriptionElement.textContent = project.description || "";

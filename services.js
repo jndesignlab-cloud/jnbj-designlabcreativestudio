@@ -1,4 +1,4 @@
-const SITE_VERSION = "2.6.0";
+const SITE_VERSION = "2.6.1";
 const LAST_EDIT = "June 23, 2026";
 
 const triggers = [...document.querySelectorAll("[data-service-target]")];
