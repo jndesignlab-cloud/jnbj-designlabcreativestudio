@@ -2537,3 +2537,526 @@ select {
     border-radius: 18px;
   }
 }
+
+
+/* =========================================================
+   v2.4.0 — Persistent Dark / Blue / Light Theme System
+   DesignLab brand palette:
+   White, Royal Blue, Light Blue, Charcoal, Indigo, Coral
+   ========================================================= */
+
+:root {
+  --brand-white: #ffffff;
+  --brand-blue: #2d63d7;
+  --brand-light-blue: #7db8ea;
+  --brand-charcoal: #3f4652;
+  --brand-indigo: #3b388d;
+  --brand-coral: #f66d70;
+}
+
+/* Default theme values: Dark Mode */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: #080a08;
+  --theme-bg-alt: #0c0f0c;
+  --theme-surface: #111411;
+  --theme-surface-2: #171b17;
+  --theme-surface-3: #202520;
+  --theme-text: #f7f8f5;
+  --theme-muted: #a9b1a5;
+  --theme-soft-muted: #7f887b;
+  --theme-line: rgba(255,255,255,.12);
+  --theme-accent: #9cff18;
+  --theme-accent-2: #c5ff75;
+  --theme-accent-soft: rgba(156,255,24,.12);
+  --theme-on-accent: #080a08;
+  --theme-shadow: 0 22px 62px rgba(0,0,0,.30);
+  --theme-hero-glow-1: rgba(156,255,24,.08);
+  --theme-hero-glow-2: rgba(45,99,215,.08);
+}
+
+/* DesignLab Blue Mode */
+html[data-theme="blue"] {
+  color-scheme: dark;
+  --theme-bg: #07162f;
+  --theme-bg-alt: #091d3e;
+  --theme-surface: #0d2854;
+  --theme-surface-2: #123367;
+  --theme-surface-3: #183f79;
+  --theme-text: #ffffff;
+  --theme-muted: #b9d3ec;
+  --theme-soft-muted: #89acd2;
+  --theme-line: rgba(125,184,234,.22);
+  --theme-accent: #7db8ea;
+  --theme-accent-2: #f66d70;
+  --theme-accent-soft: rgba(125,184,234,.15);
+  --theme-on-accent: #07162f;
+  --theme-shadow: 0 22px 62px rgba(1,10,29,.34);
+  --theme-hero-glow-1: rgba(125,184,234,.16);
+  --theme-hero-glow-2: rgba(59,56,141,.22);
+}
+
+/* Light Mode */
+html[data-theme="light"] {
+  color-scheme: light;
+  --theme-bg: #f7f9fc;
+  --theme-bg-alt: #eef3f9;
+  --theme-surface: #ffffff;
+  --theme-surface-2: #f1f5fa;
+  --theme-surface-3: #e7eef7;
+  --theme-text: #172033;
+  --theme-muted: #647086;
+  --theme-soft-muted: #8b96a8;
+  --theme-line: rgba(63,70,82,.15);
+  --theme-accent: #2d63d7;
+  --theme-accent-2: #3b388d;
+  --theme-accent-soft: rgba(45,99,215,.10);
+  --theme-on-accent: #ffffff;
+  --theme-shadow: 0 20px 54px rgba(24,45,79,.12);
+  --theme-hero-glow-1: rgba(125,184,234,.24);
+  --theme-hero-glow-2: rgba(59,56,141,.12);
+}
+
+/* Global theme application */
+html[data-theme] body.signal-theme {
+  color: var(--theme-text) !important;
+  background:
+    radial-gradient(circle at 88% 7%, var(--theme-hero-glow-1), transparent 28%),
+    radial-gradient(circle at 8% 36%, var(--theme-hero-glow-2), transparent 25%),
+    var(--theme-bg) !important;
+}
+
+html[data-theme] body.signal-theme::before {
+  background:
+    radial-gradient(circle at 88% 8%, var(--theme-hero-glow-1), transparent 27%),
+    radial-gradient(circle at 10% 38%, var(--theme-hero-glow-2), transparent 24%) !important;
+}
+
+html[data-theme] .signal-theme,
+html[data-theme] .signal-theme h1,
+html[data-theme] .signal-theme h2,
+html[data-theme] .signal-theme h3,
+html[data-theme] .signal-theme h4,
+html[data-theme] .signal-theme h5,
+html[data-theme] .signal-theme h6,
+html[data-theme] .signal-theme strong,
+html[data-theme] .signal-theme label {
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme p,
+html[data-theme] .signal-theme li,
+html[data-theme] .signal-theme small,
+html[data-theme] .signal-theme .body-copy,
+html[data-theme] .signal-theme .project-detail-copy {
+  color: var(--theme-muted) !important;
+}
+
+html[data-theme] .signal-theme .eyebrow,
+html[data-theme] .signal-theme .signal-kicker,
+html[data-theme] .signal-theme .back-link {
+  color: var(--theme-accent) !important;
+}
+
+/* Header */
+html[data-theme] .signal-theme .site-header,
+html[data-theme] .signal-theme .signal-header {
+  background: color-mix(in srgb, var(--theme-bg) 88%, transparent) !important;
+  border-color: var(--theme-line) !important;
+  box-shadow: var(--theme-shadow) !important;
+}
+
+html[data-theme] .signal-theme .brand-mark {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-indigo)) !important;
+  color: white !important;
+}
+
+html[data-theme="dark"] .signal-theme .signal-brand .brand-mark {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+html[data-theme] .signal-theme .site-header .brand strong,
+html[data-theme] .signal-theme .site-header .brand small,
+html[data-theme] .signal-theme .site-header .nav-links a {
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .site-header .nav-links a:hover {
+  color: var(--theme-accent) !important;
+  background: var(--theme-accent-soft) !important;
+}
+
+html[data-theme] .signal-theme .signal-header-cta {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+/* Hero, cards, panels, sections */
+html[data-theme] .signal-theme .signal-hero-copy,
+html[data-theme] .signal-theme .signal-hero-panel,
+html[data-theme] .signal-theme .project-card,
+html[data-theme] .signal-theme .managed-page-card,
+html[data-theme] .signal-theme .testimonial-card,
+html[data-theme] .signal-theme .links-section,
+html[data-theme] .signal-theme .project-premium-hero,
+html[data-theme] .signal-theme .project-hero-gallery,
+html[data-theme] .signal-theme .case-study-card,
+html[data-theme] .signal-theme .projects-page-hero,
+html[data-theme] .signal-theme .projects-toolbar,
+html[data-theme] .signal-theme .admin-panel,
+html[data-theme] .signal-theme .admin-guide,
+html[data-theme] .signal-theme .admin-card,
+html[data-theme] .signal-theme .admin-shell,
+html[data-theme] .signal-theme .modal-card,
+html[data-theme] .signal-theme .modal-content {
+  background: var(--theme-surface) !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-text) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme] .signal-theme .signal-hero-copy {
+  background:
+    radial-gradient(circle at 90% 8%, var(--theme-hero-glow-1), transparent 30%),
+    var(--theme-surface) !important;
+}
+
+html[data-theme] .signal-theme .signal-hero-panel {
+  background: var(--theme-surface-2) !important;
+}
+
+html[data-theme] .signal-theme .signal-panel-list,
+html[data-theme] .signal-theme .signal-panel-list div,
+html[data-theme] .signal-theme .signal-stat-row,
+html[data-theme] .signal-theme .signal-stat-row div,
+html[data-theme] .signal-theme .signal-marquee,
+html[data-theme] .signal-theme .signal-projects,
+html[data-theme] .signal-theme .signal-managed,
+html[data-theme] .signal-theme .signal-testimonials,
+html[data-theme] .signal-theme .footer {
+  border-color: var(--theme-line) !important;
+}
+
+/* Buttons */
+html[data-theme] .signal-theme .btn-primary,
+html[data-theme] .signal-theme .link-buttons a,
+html[data-theme] .signal-theme .filter-tabs button.active {
+  background: var(--theme-accent) !important;
+  border-color: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme] .signal-theme .btn-soft {
+  background: transparent !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .btn-soft:hover {
+  background: var(--theme-accent-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+/* Exact projects archive cleanup */
+html[data-theme] .signal-theme .projects-page-hero {
+  background:
+    radial-gradient(circle at 92% 12%, var(--theme-hero-glow-2), transparent 30%),
+    radial-gradient(circle at 10% 12%, var(--theme-hero-glow-1), transparent 30%),
+    var(--theme-surface) !important;
+  border: 1px solid var(--theme-line) !important;
+}
+
+html[data-theme] .signal-theme .projects-page-hero h1 {
+  color: var(--theme-text) !important;
+  font-size: clamp(2.8rem, 5.4vw, 5rem) !important;
+}
+
+html[data-theme] .signal-theme .projects-page-hero .eyebrow {
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .projects-page-hero p {
+  color: var(--theme-muted) !important;
+}
+
+html[data-theme] .signal-theme .filter-tabs button {
+  background: var(--theme-surface) !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-accent) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme] .signal-theme .filter-tabs button:hover {
+  background: var(--theme-accent-soft) !important;
+  border-color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .filter-tabs button.active {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+/* Testimonials exact text fix */
+html[data-theme] .signal-theme .testimonial-card p {
+  color: var(--theme-muted) !important;
+}
+
+html[data-theme] .signal-theme .testimonial-card strong {
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .testimonial-card span {
+  color: var(--theme-accent) !important;
+}
+
+/* Project and managed page cards */
+html[data-theme] .signal-theme .project-info h3,
+html[data-theme] .signal-theme .managed-page-card h3 {
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .project-info p,
+html[data-theme] .signal-theme .managed-page-card p {
+  color: var(--theme-muted) !important;
+}
+
+html[data-theme] .signal-theme .managed-page-card span {
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .managed-page-icon {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+/* Tags and chips */
+html[data-theme] .signal-theme .project-tags span,
+html[data-theme] .signal-theme .project-skill-tags span,
+html[data-theme] .signal-theme .skill-tags span,
+html[data-theme] .signal-theme .tag,
+html[data-theme] .signal-theme .chip {
+  background: var(--theme-accent-soft) !important;
+  border-color: color-mix(in srgb, var(--theme-accent) 30%, transparent) !important;
+  color: var(--theme-accent) !important;
+}
+
+/* Project gallery and case study */
+html[data-theme] .signal-theme .project-carousel,
+html[data-theme] .signal-theme .premium-carousel,
+html[data-theme] .signal-theme .cinematic-carousel,
+html[data-theme] .signal-theme .modal-preview {
+  background:
+    radial-gradient(circle at 85% 10%, var(--theme-hero-glow-1), transparent 32%),
+    var(--theme-bg-alt) !important;
+  border-color: var(--theme-line) !important;
+}
+
+html[data-theme] .signal-theme .carousel-controls button,
+html[data-theme] .signal-theme .carousel-dots button,
+html[data-theme] .signal-theme .modal-close {
+  background: var(--theme-surface-2) !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme .carousel-controls button:hover,
+html[data-theme] .signal-theme .carousel-dots button.active,
+html[data-theme] .signal-theme .modal-close:hover {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+html[data-theme] .signal-theme .case-study-outcome {
+  background:
+    radial-gradient(circle at 100% 0%, var(--theme-hero-glow-1), transparent 30%),
+    var(--theme-surface) !important;
+}
+
+html[data-theme] .signal-theme .case-study-number {
+  background: var(--theme-accent-soft) !important;
+  border-color: color-mix(in srgb, var(--theme-accent) 30%, transparent) !important;
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .case-study-card .eyebrow,
+html[data-theme] .signal-theme .case-study-toggle {
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .case-study-card p,
+html[data-theme] .signal-theme .case-study-card li,
+html[data-theme] .signal-theme .case-study-text {
+  color: var(--theme-muted) !important;
+}
+
+/* Contact section */
+html[data-theme] .signal-theme .links-section {
+  background: var(--theme-surface) !important;
+}
+
+html[data-theme] .signal-theme .links-section .eyebrow {
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .link-buttons a {
+  background: var(--theme-accent-soft) !important;
+  border: 1px solid color-mix(in srgb, var(--theme-accent) 30%, transparent) !important;
+  color: var(--theme-accent) !important;
+}
+
+html[data-theme] .signal-theme .link-buttons a:hover {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+}
+
+/* Forms and admin */
+html[data-theme] .signal-theme input,
+html[data-theme] .signal-theme textarea,
+html[data-theme] .signal-theme select {
+  background: var(--theme-surface-2) !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-text) !important;
+}
+
+html[data-theme] .signal-theme input::placeholder,
+html[data-theme] .signal-theme textarea::placeholder {
+  color: var(--theme-soft-muted) !important;
+}
+
+/* Footer */
+html[data-theme] .signal-theme .footer,
+html[data-theme] .signal-theme .footer p,
+html[data-theme] .signal-theme .footer small,
+html[data-theme] .signal-theme .footer a {
+  color: var(--theme-muted) !important;
+}
+
+/* Visitor counter and theme control dock */
+.theme-dock {
+  position: fixed;
+  left: 16px;
+  bottom: 62px;
+  z-index: 90;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--theme-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--theme-surface) 92%, transparent);
+  box-shadow: var(--theme-shadow);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.theme-switcher button {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--theme-muted);
+  font: inherit;
+  font-size: .66rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .18s ease;
+}
+
+.theme-switcher button:hover {
+  color: var(--theme-text);
+  background: var(--theme-surface-2);
+}
+
+.theme-switcher button.active {
+  background: var(--theme-accent);
+  color: var(--theme-on-accent);
+}
+
+.theme-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.3);
+}
+
+.theme-swatch-dark {
+  background: #080a08;
+}
+
+.theme-swatch-blue {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-light-blue));
+}
+
+.theme-swatch-light {
+  background: #ffffff;
+  border-color: rgba(63,70,82,.25);
+}
+
+html[data-theme] .signal-theme .visitor-float {
+  background: color-mix(in srgb, var(--theme-surface) 92%, transparent) !important;
+  border-color: var(--theme-line) !important;
+  color: var(--theme-text) !important;
+  box-shadow: var(--theme-shadow) !important;
+}
+
+html[data-theme] .signal-theme .visitor-float-dot {
+  background: var(--theme-accent) !important;
+  box-shadow: 0 0 0 4px var(--theme-accent-soft) !important;
+}
+
+html[data-theme] .signal-theme .visitor-float-label {
+  color: var(--theme-muted) !important;
+}
+
+html[data-theme] .signal-theme .visitor-float strong {
+  color: var(--theme-accent) !important;
+}
+
+/* Scrollbars */
+html[data-theme] {
+  scrollbar-color: var(--theme-surface-3) var(--theme-bg);
+}
+
+html[data-theme] ::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+
+html[data-theme] ::-webkit-scrollbar-thumb {
+  background: var(--theme-surface-3);
+  border: 3px solid var(--theme-bg);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .theme-dock {
+    left: 10px;
+    bottom: 53px;
+  }
+
+  .theme-switcher {
+    padding: 4px;
+  }
+
+  .theme-switcher button {
+    min-height: 28px;
+    padding: 4px 7px;
+    font-size: .62rem;
+  }
+
+  .theme-switcher button span:last-child {
+    display: none;
+  }
+
+  .theme-swatch {
+    width: 11px;
+    height: 11px;
+  }
+}

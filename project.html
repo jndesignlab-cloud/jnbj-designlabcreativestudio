@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("designlab-theme");
+      const validThemes = ["dark", "blue", "light"];
+      document.documentElement.dataset.theme =
+        validThemes.includes(savedTheme) ? savedTheme : "dark";
+    })();
+  </script>
 </head>
 <body class="signal-theme">
   <header class="site-header">
@@ -97,12 +105,30 @@
     </section>
   </main>
 
+  <div class="theme-dock" aria-label="Portfolio appearance">
+    <div class="theme-switcher" role="group" aria-label="Choose website theme">
+      <button type="button" data-theme-choice="dark" aria-label="Use Dark Mode" title="Dark Mode">
+        <span class="theme-swatch theme-swatch-dark"></span>
+        <span>Dark</span>
+      </button>
+      <button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode">
+        <span class="theme-swatch theme-swatch-blue"></span>
+        <span>Blue</span>
+      </button>
+      <button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode">
+        <span class="theme-swatch theme-swatch-light"></span>
+        <span>Light</span>
+      </button>
+    </div>
+  </div>
+
   <footer class="footer">
     <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js?v=2.3.2"></script>
-  <script src="project.js?v=2.3.2"></script>
+  <script src="config.js?v=2.4.0"></script>
+  <script src="theme.js?v=2.4.0"></script>
+  <script src="project.js?v=2.4.0"></script>
 </body>
 </html>

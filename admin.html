@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("designlab-theme");
+      const validThemes = ["dark", "blue", "light"];
+      document.documentElement.dataset.theme =
+        validThemes.includes(savedTheme) ? savedTheme : "dark";
+    })();
+  </script>
 </head>
 <body class="admin-page">
   <header class="site-header">
@@ -162,7 +170,8 @@
     </section>
   </main>
 
-  <script src="config.js?v=2.3.2"></script>
-  <script src="admin.js?v=2.3.2"></script>
+  <script src="config.js?v=2.4.0"></script>
+  <script src="theme.js?v=2.4.0"></script>
+  <script src="admin.js?v=2.4.0"></script>
 </body>
 </html>

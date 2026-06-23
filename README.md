@@ -350,3 +350,31 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Updated case-study headings, numbers, body text, loading text, and Read More controls.
 - Removed the remaining inherited white and lavender backgrounds.
 - No `Code.gs` update is required.
+
+
+## Update v2.4.0
+
+### New theme system
+- Added persistent Dark, Blue, and Light modes.
+- Added a compact theme selector above the Site Visits counter.
+- Theme selection is stored using browser local storage.
+- The chosen theme remains active when moving between the homepage, project archive, individual case studies, and admin page.
+
+### Brand palette
+- Royal Blue
+- Light Blue
+- Charcoal
+- Indigo
+- Coral
+- White
+
+### Final UI cleanup
+- Fixed the remaining light Projects archive hero.
+- Fixed project filter buttons.
+- Fixed testimonial names, roles, and quotation colors.
+- Unified project cards, managed pages, contact section, modal, gallery, tags, forms, and case-study cards across all themes.
+- Reduced the maximum Projects archive heading size.
+
+### Files
+- Added `theme.js`.
+- No `Code.gs` update is required.
