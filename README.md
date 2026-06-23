@@ -397,3 +397,12 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Removed remaining lime accents from Blue and Light Mode.
 - Changed both Back to Projects links on project case studies to open `projects.html`.
 - No `Code.gs` update is required.
+
+
+## Update v2.4.3
+
+- Refined spacing for testimonial cards.
+- Refined spacing for Managed Pages cards.
+- Reduced unnecessary empty vertical space.
+- Improved alignment for icon, title, description, and link rows.
+- No `Code.gs` update is required.
