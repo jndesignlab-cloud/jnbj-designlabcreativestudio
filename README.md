@@ -95,7 +95,7 @@ For best results, use 16:9 images such as 1920×1080, 1600×900, or 1280×720.
 - Replaced sample testimonials with two real client highlights.
 - Removed Main Portfolio and Facebook links.
 - Updated LinkedIn link.
-- Kept email as mailto:jannjaravata@gmail.com.
+- Replaced conversion-focused email links with the centralized project inquiry page.
 
 
 ## Update v1.1.3
@@ -426,3 +426,35 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Existing Dark, Blue, and Light themes are fully supported.
 - The production Web App API URL remains included in `config.js`.
 - No `Code.gs` update is required.
+
+
+## Update v2.6.0
+
+### New lead / inquiry system
+- Added `contact.html` as the central conversion page.
+- Added `contact.js` for contextual prefilling, validation, submission, character counting, and success handling.
+- Redirected conversion-oriented CTAs from the homepage, services page, project archive, and project case studies to the new inquiry page.
+- Service and package buttons automatically prefill the relevant inquiry fields.
+- Added a "Start a Similar Project" CTA to individual project case studies.
+
+### Inquiry information collected
+- First and last name
+- Email address
+- Contact number
+- Company or brand
+- Service and package interest
+- Budget range
+- Preferred timeline
+- Preferred contact method
+- Referral source
+- Project message
+- CTA/source page and active theme
+
+### Apps Script update required
+- Added `submitInquiry` support to `Code.gs`.
+- Automatically creates an `Inquiries` sheet.
+- Generates a unique inquiry reference number.
+- Sends a notification email to `jannjaravata@gmail.com`.
+- Preserves the existing Projects and Site Analytics functions.
+
+After replacing `Code.gs`, set your admin password again and redeploy the Apps Script Web App as a new version.

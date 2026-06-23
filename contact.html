@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Start a project with DesignLab Creative Studio. Share your contact details, project goals, budget, and preferred timeline." />
+  <title>Start a Project | DesignLab Creative Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("designlab-theme");
+      const validThemes = ["dark", "blue", "light"];
+      document.documentElement.dataset.theme = validThemes.includes(savedTheme) ? savedTheme : "dark";
+    })();
+  </script>
+</head>
+<body class="signal-theme">
+  <header class="site-header signal-header">
+    <a href="index.html" class="brand signal-brand">
+      <span class="brand-mark">DL</span>
+      <span>
+        <strong>Jann Nathaniel</strong>
+        <small>DesignLab Creative Studio</small>
+      </span>
+    </a>
+
+    <nav class="nav-links signal-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <a href="#inquiryForm" class="signal-header-cta">Start Brief ↘</a>
+  </header>
+
+  <main class="contact-page section-pad">
+    <section class="contact-hero">
+      <div>
+        <p class="signal-kicker">Project Inquiry</p>
+        <h1>Tell me what you’re planning.</h1>
+      </div>
+      <p>
+        Share the project details, your preferred timeline, and the best way to contact you.
+        The information helps me understand the scope before I respond.
+      </p>
+    </section>
+
+    <section class="contact-layout">
+      <aside class="contact-intro-panel">
+        <div>
+          <p class="eyebrow">A clearer first conversation</p>
+          <h2>Your project starts with a useful brief.</h2>
+          <p>
+            Choose the service you are interested in, provide the essential details, and describe the result you need.
+          </p>
+        </div>
+
+        <ol class="contact-process-list">
+          <li><span>01</span><div><strong>Share your details</strong><p>Name, email, contact number, and business information.</p></div></li>
+          <li><span>02</span><div><strong>Describe the project</strong><p>Service, package, budget range, timeline, and goals.</p></div></li>
+          <li><span>03</span><div><strong>Receive a response</strong><p>I’ll review the inquiry and contact you using your preferred method.</p></div></li>
+        </ol>
+
+        <div class="contact-direct-option">
+          <span>Prefer another channel?</span>
+          <a href="https://www.linkedin.com/in/jaenjaravata/" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
+        </div>
+      </aside>
+
+      <section class="contact-form-shell">
+        <div id="contactFormIntro" class="contact-form-heading">
+          <p class="eyebrow">Project Details</p>
+          <h2>Start your inquiry</h2>
+          <p>Fields marked with * are required.</p>
+        </div>
+
+        <form id="inquiryForm" novalidate>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <input type="hidden" name="source" id="inquirySource" value="contact-page">
+          <input type="hidden" name="sourcePage" id="inquirySourcePage">
+          <input type="hidden" name="theme" id="inquiryTheme">
+
+          <div class="contact-form-grid two-column">
+            <label>
+              <span>First name *</span>
+              <input type="text" name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Your first name">
+            </label>
+            <label>
+              <span>Last name *</span>
+              <input type="text" name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Your last name">
+            </label>
+          </div>
+
+          <div class="contact-form-grid two-column">
+            <label>
+              <span>Email address *</span>
+              <input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@example.com">
+            </label>
+            <label>
+              <span>Contact number *</span>
+              <input type="tel" name="contactNumber" autocomplete="tel" required maxlength="40" placeholder="+63 9XX XXX XXXX">
+            </label>
+          </div>
+
+          <div class="contact-form-grid two-column">
+            <label>
+              <span>Company / brand</span>
+              <input type="text" name="company" autocomplete="organization" maxlength="140" placeholder="Optional">
+            </label>
+            <label>
+              <span>How did you find DesignLab?</span>
+              <select name="referralSource">
+                <option value="">Select one</option>
+                <option>LinkedIn</option>
+                <option>Facebook</option>
+                <option>Referral</option>
+                <option>Portfolio website</option>
+                <option>Existing client</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="contact-form-grid two-column">
+            <label>
+              <span>Service interested in *</span>
+              <select name="service" id="serviceInterest" required>
+                <option value="">Choose a service</option>
+                <option>Design Packages</option>
+                <option>Flexible Design Services</option>
+                <option>Static Website / Landing Page</option>
+                <option>Brand Identity / Logo</option>
+                <option>Social Media Design</option>
+                <option>Web App / Dashboard</option>
+                <option>Publication / Print Design</option>
+                <option>General Inquiry</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span>Package or project type</span>
+              <input type="text" name="package" id="packageInterest" maxlength="160" placeholder="Example: Brand Growth Package">
+            </label>
+          </div>
+
+          <div class="contact-form-grid two-column">
+            <label>
+              <span>Estimated budget *</span>
+              <select name="budget" required>
+                <option value="">Choose a range</option>
+                <option>Below ₱3,500</option>
+                <option>₱3,500–₱7,500</option>
+                <option>₱7,500–₱12,000</option>
+                <option>₱12,000–₱20,000</option>
+                <option>₱20,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label>
+              <span>Preferred timeline *</span>
+              <select name="timeline" required>
+                <option value="">Choose a timeline</option>
+                <option>ASAP / Rush</option>
+                <option>Within 1–2 weeks</option>
+                <option>Within 3–4 weeks</option>
+                <option>Within 1–2 months</option>
+                <option>Flexible / Planning stage</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="contact-choice-group">
+            <legend>Preferred contact method *</legend>
+            <label><input type="radio" name="preferredContact" value="Email" required><span>Email</span></label>
+            <label><input type="radio" name="preferredContact" value="Phone call"><span>Phone call</span></label>
+            <label><input type="radio" name="preferredContact" value="Text message"><span>Text message</span></label>
+            <label><input type="radio" name="preferredContact" value="LinkedIn"><span>LinkedIn</span></label>
+          </fieldset>
+
+          <label class="contact-message-field">
+            <span>Tell me about the project *</span>
+            <textarea name="message" required minlength="20" maxlength="3000" rows="7" placeholder="What do you need, what is the goal, and what should the finished output help you accomplish?"></textarea>
+            <small><span id="messageCount">0</span> / 3000 characters</small>
+          </label>
+
+          <label class="contact-consent">
+            <input type="checkbox" name="consent" value="Yes" required>
+            <span>I agree to be contacted about this inquiry using the details I provided. *</span>
+          </label>
+
+          <div class="contact-submit-row">
+            <button id="inquirySubmit" class="btn btn-primary" type="submit">Send Project Inquiry ↗</button>
+            <p id="inquiryStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div id="inquirySuccess" class="inquiry-success" hidden>
+          <span class="inquiry-success-icon">✓</span>
+          <p class="eyebrow">Inquiry received</p>
+          <h2>Thank you for reaching out.</h2>
+          <p>Your reference number is <strong id="inquiryReference"></strong>. I’ll review your details and respond through your preferred contact method.</p>
+          <div class="hero-actions">
+            <a href="index.html" class="btn btn-soft">Return Home</a>
+            <a href="projects.html" class="btn btn-primary">View Projects</a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="theme-dock" aria-label="Portfolio appearance">
+    <div class="theme-switcher" role="group" aria-label="Choose website theme">
+      <button type="button" data-theme-choice="dark" aria-label="Use Dark Mode" title="Dark Mode"><span class="theme-swatch theme-swatch-dark"></span><span>Dark</span></button>
+      <button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
+      <button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
+    <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
+  </footer>
+
+  <script src="config.js?v=2.6.0"></script>
+  <script src="theme.js?v=2.6.0"></script>
+  <script src="contact.js?v=2.6.0"></script>
+</body>
+</html>

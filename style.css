@@ -3890,3 +3890,393 @@ html[data-theme] .signal-theme .managed-page-card .managed-page-link {
     align-items: flex-start;
   }
 }
+
+
+/* =========================================================
+   v2.6.0 — Conversion / Project Inquiry System
+   ========================================================= */
+
+.contact-page {
+  width: min(1240px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+.contact-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+  gap: 48px;
+  align-items: end;
+  padding: 64px 0 34px;
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.contact-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+
+.contact-hero > p {
+  margin: 0;
+  color: var(--theme-muted) !important;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr);
+  gap: 24px;
+  padding: 30px 0 60px;
+}
+
+.contact-intro-panel,
+.contact-form-shell {
+  border: 1px solid var(--theme-line);
+  background: var(--theme-surface);
+  color: var(--theme-text);
+  border-radius: 24px;
+}
+
+.contact-intro-panel {
+  position: sticky;
+  top: 104px;
+  align-self: start;
+  padding: 30px;
+}
+
+.contact-intro-panel h2,
+.contact-form-shell h2,
+.inquiry-success h2 {
+  margin: 8px 0 14px;
+  color: var(--theme-text) !important;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
+.contact-intro-panel > div > p:last-child,
+.contact-form-heading > p:last-child,
+.inquiry-success > p {
+  color: var(--theme-muted) !important;
+  line-height: 1.7;
+}
+
+.contact-process-list {
+  display: grid;
+  gap: 0;
+  margin: 34px 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--theme-line);
+}
+
+.contact-process-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.contact-process-list li > span {
+  color: var(--theme-accent) !important;
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.contact-process-list strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--theme-text) !important;
+  font-size: .9rem;
+}
+
+.contact-process-list p {
+  margin: 0;
+  color: var(--theme-muted) !important;
+  font-size: .82rem;
+  line-height: 1.55;
+}
+
+.contact-direct-option {
+  display: grid;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.contact-direct-option span {
+  color: var(--theme-muted);
+  font-size: .76rem;
+}
+
+.contact-direct-option a {
+  color: var(--theme-accent);
+  font-size: .84rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-form-shell {
+  padding: 34px;
+}
+
+.contact-form-heading {
+  margin-bottom: 26px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.contact-form-grid {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.contact-form-grid.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#inquiryForm label,
+.contact-choice-group {
+  display: grid;
+  gap: 8px;
+}
+
+#inquiryForm label > span,
+.contact-choice-group legend {
+  color: var(--theme-text);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+#inquiryForm input,
+#inquiryForm select,
+#inquiryForm textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--theme-line);
+  border-radius: 12px;
+  background: var(--theme-surface-2);
+  color: var(--theme-text);
+  font: inherit;
+  font-size: .88rem;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+#inquiryForm textarea {
+  min-height: 170px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+#inquiryForm input:focus,
+#inquiryForm select:focus,
+#inquiryForm textarea:focus {
+  border-color: var(--theme-accent);
+  box-shadow: 0 0 0 4px var(--theme-accent-soft);
+}
+
+#inquiryForm input::placeholder,
+#inquiryForm textarea::placeholder {
+  color: var(--theme-soft-muted);
+}
+
+.contact-choice-group {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 8px 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+.contact-choice-group legend {
+  grid-column: 1 / -1;
+  margin-bottom: 2px;
+}
+
+.contact-choice-group label {
+  display: block !important;
+  cursor: pointer;
+}
+
+.contact-choice-group input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-choice-group label span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 9px 10px;
+  border: 1px solid var(--theme-line);
+  border-radius: 999px;
+  background: var(--theme-surface-2);
+  color: var(--theme-muted) !important;
+  font-size: .76rem;
+  text-align: center;
+}
+
+.contact-choice-group input:checked + span {
+  border-color: var(--theme-accent);
+  background: var(--theme-accent-soft);
+  color: var(--theme-accent) !important;
+}
+
+.contact-message-field {
+  margin-bottom: 18px;
+}
+
+.contact-message-field small {
+  justify-self: end;
+  color: var(--theme-soft-muted) !important;
+  font-size: .7rem;
+}
+
+.contact-consent {
+  grid-template-columns: 18px 1fr !important;
+  align-items: start;
+  gap: 10px !important;
+  margin: 4px 0 24px;
+}
+
+.contact-consent input {
+  width: 18px !important;
+  min-height: 18px !important;
+  margin-top: 1px;
+  accent-color: var(--theme-accent);
+}
+
+.contact-consent span {
+  color: var(--theme-muted) !important;
+  font-weight: 500 !important;
+  line-height: 1.5;
+}
+
+.contact-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--theme-line);
+}
+
+.contact-submit-row button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+#inquiryStatus {
+  margin: 0;
+  color: var(--theme-muted) !important;
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.form-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+.inquiry-success {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.inquiry-success[hidden] {
+  display: none !important;
+}
+
+.inquiry-success-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: var(--theme-accent);
+  color: var(--theme-on-accent);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.project-conversion-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 30px;
+  border: 1px solid var(--theme-line);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0%, var(--theme-hero-glow-1), transparent 36%),
+    var(--theme-surface);
+}
+
+.project-conversion-strip h2 {
+  max-width: 720px;
+  margin: 5px 0 0;
+  color: var(--theme-text) !important;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+@media (max-width: 900px) {
+  .contact-hero,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-intro-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-page {
+    width: calc(100% - 20px);
+  }
+
+  .contact-hero {
+    gap: 24px;
+    padding-top: 38px;
+  }
+
+  .contact-form-shell,
+  .contact-intro-panel {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .contact-form-grid.two-column,
+  .contact-choice-group {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-choice-group label span {
+    justify-content: flex-start;
+    padding-left: 14px;
+  }
+
+  .contact-submit-row,
+  .project-conversion-strip {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
