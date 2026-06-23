@@ -2131,3 +2131,329 @@ select {
     border-bottom: 0;
   }
 }
+
+
+/* =========================================================
+   v2.3.1 — Full Dark Theme Cleanup
+   ========================================================= */
+
+/* Global text normalization */
+.signal-theme,
+.signal-theme h1,
+.signal-theme h2,
+.signal-theme h3,
+.signal-theme h4,
+.signal-theme h5,
+.signal-theme h6,
+.signal-theme strong,
+.signal-theme label {
+  color: var(--signal-text);
+}
+
+.signal-theme p,
+.signal-theme li,
+.signal-theme small,
+.signal-theme .muted,
+.signal-theme .body-copy {
+  color: var(--signal-muted);
+}
+
+/* Header and navigation */
+.signal-theme .site-header,
+.signal-theme .editorial-header,
+.signal-theme .linear-header,
+.signal-theme .swiss-header {
+  background: rgba(8, 10, 8, 0.92) !important;
+  border-color: var(--signal-line) !important;
+  box-shadow: 0 16px 42px rgba(0,0,0,.32) !important;
+}
+
+.signal-theme .site-header .brand strong,
+.signal-theme .site-header .brand small,
+.signal-theme .site-header .nav-links a {
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .site-header .nav-links a:hover {
+  color: var(--signal-lime) !important;
+  background: var(--signal-lime-soft) !important;
+}
+
+/* Project intro and metadata */
+.signal-theme .project-premium-hero,
+.signal-theme .cinematic-project-intro,
+.signal-theme .project-hero-copy,
+.signal-theme .project-hero-meta {
+  background: var(--signal-surface) !important;
+  border-color: var(--signal-line) !important;
+}
+
+.signal-theme .project-hero-copy,
+.signal-theme .project-hero-meta {
+  box-shadow: none !important;
+}
+
+.signal-theme .project-hero-copy h1,
+.signal-theme .project-hero-copy h2,
+.signal-theme .project-hero-meta h2,
+.signal-theme .project-hero-meta h3 {
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .project-detail-copy,
+.signal-theme .project-hero-meta p {
+  color: var(--signal-muted) !important;
+}
+
+/* Skill tags */
+.signal-theme .project-skill-tags span,
+.signal-theme .project-tags span,
+.signal-theme .tag,
+.signal-theme .chip,
+.signal-theme .filter-chip {
+  background: var(--signal-lime-soft) !important;
+  border-color: rgba(156,255,24,.28) !important;
+  color: var(--signal-lime) !important;
+}
+
+/* Gallery */
+.signal-theme .project-hero-gallery,
+.signal-theme .cinematic-gallery,
+.signal-theme .project-carousel,
+.signal-theme .premium-carousel,
+.signal-theme .modal-preview,
+.signal-theme .project-modal-panel {
+  background: var(--signal-surface) !important;
+  border-color: var(--signal-line) !important;
+}
+
+.signal-theme .project-carousel,
+.signal-theme .premium-carousel,
+.signal-theme .cinematic-carousel {
+  background:
+    radial-gradient(circle at 84% 12%, rgba(156,255,24,.06), transparent 30%),
+    #0b0e0b !important;
+}
+
+.signal-theme .carousel-top h2,
+.signal-theme .carousel-top h3,
+.signal-theme .carousel-top p,
+.signal-theme .carousel-controls span {
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .carousel-controls button,
+.signal-theme .carousel-dots button {
+  background: var(--signal-surface-2) !important;
+  border-color: var(--signal-line) !important;
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .carousel-controls button:hover,
+.signal-theme .carousel-dots button.active {
+  background: var(--signal-lime) !important;
+  border-color: var(--signal-lime) !important;
+  color: #080a08 !important;
+}
+
+/* Case study cards */
+.signal-theme .project-story-grid {
+  background: transparent !important;
+}
+
+.signal-theme .project-story-card {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.025), rgba(255,255,255,.01)),
+    var(--signal-surface) !important;
+  border: 1px solid var(--signal-line) !important;
+  color: var(--signal-text) !important;
+  box-shadow: none !important;
+}
+
+.signal-theme .project-story-card .story-number,
+.signal-theme .project-story-card .section-number,
+.signal-theme .project-story-card .project-story-number {
+  background: var(--signal-lime-soft) !important;
+  border-color: rgba(156,255,24,.28) !important;
+  color: var(--signal-lime) !important;
+}
+
+.signal-theme .project-story-card h3,
+.signal-theme .project-story-card h4,
+.signal-theme .project-story-card .eyebrow {
+  color: var(--signal-lime) !important;
+}
+
+.signal-theme .project-story-card p,
+.signal-theme .project-story-card li {
+  color: var(--signal-muted) !important;
+}
+
+.signal-theme .project-story-card .read-more-btn,
+.signal-theme .project-story-card button {
+  color: var(--signal-lime) !important;
+}
+
+/* Project modal */
+.signal-theme .project-modal,
+.signal-theme .modal-shell,
+.signal-theme .modal-content,
+.signal-theme .modal-panel,
+.signal-theme .project-modal-content {
+  background: rgba(8,10,8,.98) !important;
+  color: var(--signal-text) !important;
+  border-color: var(--signal-line) !important;
+}
+
+.signal-theme .modal-backdrop {
+  background: rgba(0,0,0,.78) !important;
+}
+
+.signal-theme .modal-close,
+.signal-theme .modal-nav button {
+  background: var(--signal-surface-2) !important;
+  border-color: var(--signal-line) !important;
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .modal-close:hover,
+.signal-theme .modal-nav button:hover {
+  background: var(--signal-lime) !important;
+  color: #080a08 !important;
+}
+
+.signal-theme .modal-title,
+.signal-theme .modal-content h2,
+.signal-theme .modal-content h3 {
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .modal-content p {
+  color: var(--signal-muted) !important;
+}
+
+/* Contact / connect area */
+.signal-theme #links,
+.signal-theme .links-section,
+.signal-theme .contact-section,
+.signal-theme .connect-section,
+.signal-theme .contact-card,
+.signal-theme .links-card {
+  background: var(--signal-surface) !important;
+  border-color: var(--signal-line) !important;
+  color: var(--signal-text) !important;
+}
+
+.signal-theme #links h2,
+.signal-theme #links h3,
+.signal-theme .links-section h2,
+.signal-theme .contact-section h2 {
+  color: var(--signal-text) !important;
+}
+
+.signal-theme #links .eyebrow,
+.signal-theme .links-section .eyebrow,
+.signal-theme .contact-section .eyebrow {
+  color: var(--signal-lime) !important;
+}
+
+.signal-theme #links a,
+.signal-theme .links-section a,
+.signal-theme .contact-section a,
+.signal-theme .contact-card a {
+  background: var(--signal-lime-soft) !important;
+  border-color: rgba(156,255,24,.28) !important;
+  color: var(--signal-lime) !important;
+}
+
+.signal-theme #links a:hover,
+.signal-theme .links-section a:hover,
+.signal-theme .contact-section a:hover,
+.signal-theme .contact-card a:hover {
+  background: var(--signal-lime) !important;
+  color: #080a08 !important;
+}
+
+/* Projects page */
+.signal-theme .projects-hero,
+.signal-theme .projects-toolbar,
+.signal-theme .projects-empty,
+.signal-theme .projects-load-state {
+  background: var(--signal-surface) !important;
+  border-color: var(--signal-line) !important;
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .projects-toolbar input,
+.signal-theme .projects-toolbar select,
+.signal-theme .admin-page input,
+.signal-theme .admin-page textarea,
+.signal-theme .admin-page select {
+  background: var(--signal-surface-2) !important;
+  border-color: var(--signal-line) !important;
+  color: var(--signal-text) !important;
+}
+
+.signal-theme .projects-toolbar input::placeholder,
+.signal-theme .admin-page input::placeholder,
+.signal-theme .admin-page textarea::placeholder {
+  color: rgba(246,248,243,.45) !important;
+}
+
+/* Footer */
+.signal-theme .footer {
+  background: transparent !important;
+  border-color: var(--signal-line) !important;
+}
+
+.signal-theme .footer,
+.signal-theme .footer a,
+.signal-theme .footer p,
+.signal-theme .footer small {
+  color: var(--signal-muted) !important;
+}
+
+.signal-theme .footer a:hover {
+  color: var(--signal-lime) !important;
+}
+
+/* Native scrollbars for dark mode */
+.signal-theme {
+  scrollbar-color: #3a4334 #0b0e0b;
+}
+
+.signal-theme ::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+.signal-theme ::-webkit-scrollbar-track {
+  background: #0b0e0b;
+}
+
+.signal-theme ::-webkit-scrollbar-thumb {
+  background: #313a2c;
+  border: 3px solid #0b0e0b;
+  border-radius: 999px;
+}
+
+.signal-theme ::-webkit-scrollbar-thumb:hover {
+  background: #47543f;
+}
+
+/* Prevent accidental light backgrounds from inherited styles */
+.signal-theme [class*="card"],
+.signal-theme [class*="panel"],
+.signal-theme [class*="section"] {
+  --card-bg: var(--signal-surface);
+}
+
+.signal-theme .project-story-card,
+.signal-theme .project-premium-hero,
+.signal-theme .project-hero-gallery,
+.signal-theme .project-modal-content,
+.signal-theme .contact-card,
+.signal-theme .links-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}

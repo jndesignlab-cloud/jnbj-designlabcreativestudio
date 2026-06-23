@@ -332,3 +332,12 @@ Each homepage load records one visit. Reloads, bots, and repeat visits may also 
 - Production Web App API URL is included in `config.js`
 - Existing Apps Script integration is retained
 - No `Code.gs` update is required
+
+
+## Update v2.3.1
+
+- Completed the dark-theme conversion across inner project pages.
+- Fixed remaining light header, project-story cards, modal, contact section, skill tags, and gallery controls.
+- Added dark input fields, scrollbars, and footer styling.
+- Preserved all existing project content, layout, and API integration.
+- No `Code.gs` update is required.
