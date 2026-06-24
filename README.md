@@ -492,3 +492,13 @@ No change to the Web App URL is required when editing the existing deployment.
 - Added `BLOG_SETUP.md` and a starter `generate_blog.py`.
 - Added Insights links across the site navigation.
 - No `Code.gs` update is required.
+
+## Update v2.8.0 — Online CV / Professional Profile
+
+- Added `cv.html`, a responsive website-form CV page.
+- Added experience, core skills, applications, remote-work capability, certification, and working style sections.
+- Added a compact CV icon/link to the homepage About section.
+- Added print / Save as PDF support through `cv.js`.
+- Added Person structured data and CV metadata.
+- Added `cv.html` to `sitemap.xml`.
+- No Apps Script or `Code.gs` change is required for this update.

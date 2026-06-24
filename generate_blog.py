@@ -26,7 +26,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 BASE_URL = "https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio"
-VERSION = "2.7.0"
+VERSION = "2.8.0"
 REQUIRED_COLUMNS = [
     "title", "slug", "category", "excerpt", "meta_title", "meta_description",
     "published_date", "reading_time", "featured", "status", "cover_image", "body"
