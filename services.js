@@ -1,5 +1,5 @@
-const SITE_VERSION = "2.6.1";
-const LAST_EDIT = "June 23, 2026";
+const SITE_VERSION = "2.9.0";
+const LAST_EDIT = "June 24, 2026";
 
 const triggers = [...document.querySelectorAll("[data-service-target]")];
 const panels = [...document.querySelectorAll(".service-detail-panel")];

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Online CV of Jann Nathaniel Jaravata — graphic designer, creative developer, and founder of DesignLab Creative Studio." />
+  <meta name="description" content="Online CV of Jann Nathaniel Jaravata — creative designer, social media designer, and founder of DesignLab Creative Studio." />
   <link rel="canonical" href="https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/cv.html" />
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Jann Nathaniel Jaravata | Online CV" />
-  <meta property="og:description" content="Experience, skills, creative tools, web capabilities, and remote-work readiness." />
+  <meta property="og:description" content="Creative design experience, campaign work, technical skills, certifications, and remote-work readiness." />
   <meta property="og:url" content="https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/cv.html" />
   <meta property="og:image" content="https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/profile-photo.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -15,13 +15,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.8.0" />
+  <link rel="stylesheet" href="style.css?v=2.9.0" />
   <script>
     (function () {
-      const savedTheme = localStorage.getItem("designlab-theme");
       const validThemes = ["dark", "blue", "light"];
-      document.documentElement.dataset.theme =
-        validThemes.includes(savedTheme) ? savedTheme : "dark";
+      document.documentElement.dataset.theme = "blue";
+      try {
+        const savedTheme = localStorage.getItem("designlab-theme");
+        if (validThemes.includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
+      } catch (error) {
+        /* Blue remains the safe first-visit theme when storage is unavailable. */
+      }
     })();
   </script>
   <script type="application/ld+json">
@@ -29,21 +33,14 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Jann Nathaniel Jaravata",
-    "jobTitle": "Graphic Designer and Creative Developer",
+    "jobTitle": "Creative Designer and Social Media Designer",
     "url": "https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/cv.html",
     "image": "https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/profile-photo.png",
     "email": "mailto:jannjaravata@gmail.com",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Panpacific University"
-    },
-    "affiliation": {
-      "@type": "Organization",
-      "name": "DesignLab Creative Studio"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/jaenjaravata/"
-    ]
+    "telephone": "+63 926 069 7158",
+    "worksFor": {"@type": "Organization", "name": "Panpacific University"},
+    "affiliation": {"@type": "Organization", "name": "DesignLab Creative Studio"},
+    "sameAs": ["https://www.linkedin.com/in/jaenjaravata/"]
   }
   </script>
 </head>
@@ -51,12 +48,8 @@
   <header class="site-header signal-header">
     <a href="index.html" class="brand signal-brand">
       <span class="brand-mark">DL</span>
-      <span>
-        <strong>Jann Nathaniel</strong>
-        <small>Online CV</small>
-      </span>
+      <span><strong>Jann Nathaniel</strong><small>Online CV</small></span>
     </a>
-
     <nav class="nav-links signal-nav">
       <a href="index.html">Home</a>
       <a href="projects.html">Work</a>
@@ -65,7 +58,6 @@
       <a href="cv.html" aria-current="page">CV</a>
       <a href="contact.html?source=cv-navigation">Contact</a>
     </nav>
-
     <a href="contact.html?source=cv-header&service=General%20Inquiry" class="signal-header-cta">Work With Me ↗</a>
   </header>
 
@@ -75,23 +67,20 @@
         <img src="profile-photo.png" alt="Portrait of Jann Nathaniel Jaravata" class="cv-portrait" width="760" height="900" />
         <div class="cv-availability"><span></span> Open to remote opportunities</div>
       </div>
-
       <div class="cv-hero-copy">
         <p class="signal-kicker">Professional Profile</p>
         <h1>Jann Nathaniel Jaravata</h1>
-        <p class="cv-role">Graphic Designer · Creative Developer · Founder, DesignLab Creative Studio</p>
+        <p class="cv-role">Creative Designer · Social Media Designer · Founder, DesignLab Creative Studio</p>
         <p class="cv-summary">
-          I create clear, strategic visual communication and practical digital systems for institutions,
-          businesses, and creative teams. My experience spans campaign design, social content, publication
-          layouts, branding, photo retouching, interface design, dashboards, workflow tools, and digital products.
+          Creative Designer with 7+ years of experience developing brand visuals, campaign materials, social media content,
+          publication layouts, event graphics, and digital assets for institutional, business, and freelance projects. I turn
+          ideas and marketing goals into clean, strategic, and professional visuals across digital and print platforms.
         </p>
-
         <div class="cv-contact-line">
           <a href="mailto:jannjaravata@gmail.com">jannjaravata@gmail.com</a>
-          <span>Tayug, Pangasinan, Philippines</span>
-          <span>Available for remote collaboration</span>
+          <a href="tel:+639260697158">+63 926 069 7158</a>
+          <span>Pangasinan, Philippines</span>
         </div>
-
         <div class="cv-hero-actions">
           <a class="btn btn-primary" href="https://bit.ly/JNBJ-Resume" target="_blank" rel="noopener">View PDF Résumé ↗</a>
           <button class="btn btn-soft cv-print-button" type="button" id="printCvButton">Print / Save as PDF</button>
@@ -100,9 +89,9 @@
     </section>
 
     <section class="cv-quick-facts" aria-label="Professional highlights">
-      <article><strong>8+</strong><span>Years of design experience</span></article>
+      <article><strong>7+</strong><span>Years of creative experience</span></article>
+      <article><strong>200+</strong><span>Marketing and promotional materials</span></article>
       <article><strong>ACP</strong><span>Adobe Certified Professional</span></article>
-      <article><strong>4–5</strong><span>Creative outputs per day</span></article>
       <article><strong>Remote</strong><span>Ready for distributed teams</span></article>
     </section>
 
@@ -111,18 +100,10 @@
         <section class="cv-panel">
           <p class="eyebrow">Core Skills</p>
           <div class="cv-skill-list">
-            <span>Social Media Design</span>
-            <span>Campaign Visuals</span>
-            <span>Poster Design</span>
-            <span>Brand Identity</span>
-            <span>Publication Layout</span>
-            <span>Photo Retouching</span>
-            <span>Website Visuals</span>
-            <span>UI Design</span>
-            <span>Digital Product Design</span>
-            <span>Canva Templates</span>
-            <span>Visual Systems</span>
-            <span>AI Prompting</span>
+            <span>Creative Design</span><span>Graphic Design</span><span>Brand Identity</span>
+            <span>Campaign Visuals</span><span>Social Media Design</span><span>Content Planning</span>
+            <span>Marketing Collateral</span><span>Publication Layout</span><span>Event Visuals</span>
+            <span>Presentation Design</span><span>Photo Retouching</span><span>AI-Assisted Creative Direction</span>
           </div>
         </section>
 
@@ -132,9 +113,9 @@
             <li><strong>Adobe</strong><span>Photoshop, Illustrator, InDesign</span></li>
             <li><strong>Design</strong><span>Canva Pro, Figma, Framer</span></li>
             <li><strong>Web</strong><span>HTML, CSS, JavaScript, GitHub Pages</span></li>
-            <li><strong>Automation</strong><span>Google Apps Script, Google Sheets</span></li>
-            <li><strong>Collaboration</strong><span>Google Workspace, Drive, Meet</span></li>
-            <li><strong>Production</strong><span>OBS and digital presentation tools</span></li>
+            <li><strong>Workspace</strong><span>Google Workspace, Sheets, Drive, Meet</span></li>
+            <li><strong>Social</strong><span>Meta / Facebook Page Management</span></li>
+            <li><strong>Production</strong><span>OBS and video editing tools</span></li>
           </ul>
         </section>
 
@@ -155,100 +136,90 @@
         <section class="cv-section">
           <div class="cv-section-heading">
             <p class="eyebrow">Professional Experience</p>
-            <h2>Experience shaped by real communication needs.</h2>
+            <h2>Creative work built around communication, consistency, and results.</h2>
           </div>
 
           <div class="cv-timeline">
             <article class="cv-timeline-item">
               <div class="cv-timeline-marker"></div>
-              <div class="cv-timeline-meta"><span>Current</span><small>Institutional Communications</small></div>
+              <div class="cv-timeline-meta"><span>2018 — Present</span><small>Panpacific University</small></div>
               <div>
-                <h3>Graphic Designer — Panpacific University</h3>
-                <p>Strategic Communications / Marketing</p>
+                <h3>Creative Designer & Multimedia Specialist</h3>
+                <p>Institutional campaigns, marketing, events, and digital platforms</p>
                 <ul>
-                  <li>Designs posters, brochures, backdrops, newsletters, campaign visuals, website assets, and event materials.</li>
-                  <li>Supports social media content and visual communication for the university’s Urdaneta and Tayug campuses.</li>
-                  <li>Builds lightweight dashboards, trackers, request systems, and internal tools using Google Apps Script.</li>
-                  <li>Maintains visual consistency across institutional campaigns, announcements, and enrollment initiatives.</li>
+                  <li>Design creative materials for university-wide campaigns, enrollment promotions, institutional announcements, events, and digital platforms.</li>
+                  <li>Create posters, tarpaulins, brochures, newsletters, backdrops, presentation visuals, website graphics, social media content, and branded collateral.</li>
+                  <li>Maintain brand consistency across departments, official pages, print materials, and high-volume campaign outputs.</li>
+                  <li>Collaborate with marketing and communications teams to produce visuals, captions, event materials, and promotional assets under tight deadlines.</li>
+                  <li>Support photo and video content, event visuals, presentation materials, and live visual production for large institutional activities.</li>
                 </ul>
               </div>
             </article>
 
             <article class="cv-timeline-item">
               <div class="cv-timeline-marker"></div>
-              <div class="cv-timeline-meta"><span>Ongoing</span><small>Independent Creative Practice</small></div>
+              <div class="cv-timeline-meta"><span>2018 — Present</span><small>DesignLab Creative Studio</small></div>
               <div>
-                <h3>Founder & Creative Director — DesignLab Creative Studio</h3>
-                <p>Brand, content, web, and digital-product design</p>
+                <h3>Creative Director & Freelance Designer</h3>
+                <p>Brand, social media, campaign, web, and digital-product design</p>
                 <ul>
-                  <li>Creates social media graphics, logos, campaign systems, publications, ads, and client-facing websites.</li>
-                  <li>Develops DesignLab Downloads products, including editable templates and practical digital resources.</li>
-                  <li>Manages project communication, visual direction, revisions, delivery, and portfolio documentation.</li>
-                  <li>Publishes educational design content and behind-the-scenes Studio Notes.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="cv-timeline-item">
-              <div class="cv-timeline-marker"></div>
-              <div class="cv-timeline-meta"><span>Previous</span><small>Image Production</small></div>
-              <div>
-                <h3>Professional Photo Retoucher</h3>
-                <p>Commercial and production-based retouching</p>
-                <ul>
-                  <li>Handled high-volume image cleanup, enhancement, color correction, and professional finishing.</li>
-                  <li>Developed strong attention to detail, file discipline, and consistent visual quality.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="cv-timeline-item">
-              <div class="cv-timeline-marker"></div>
-              <div class="cv-timeline-meta"><span>Selected Contracts</span><small>2021 and 2024</small></div>
-              <div>
-                <h3>Head Game Master & Graphic Designer — MU Online Communities</h3>
-                <p>Community operations and promotional design</p>
-                <ul>
-                  <li>Created promotional graphics, in-game announcements, event materials, and community-facing content.</li>
-                  <li>Supported player communication, moderation, event execution, and day-to-day online operations.</li>
+                  <li>Create brand visuals, social media graphics, carousel posts, logos, banners, content templates, product previews, and promotional materials.</li>
+                  <li>Develop branded content systems for DesignLab Creative Studio and DesignLab Downloads.</li>
+                  <li>Design Canva-editable templates for businesses, freelancers, insurance agents, real estate professionals, and online sellers.</li>
+                  <li>Manage client communication, project intake, creative direction, revisions, file preparation, and final delivery.</li>
+                  <li>Build portfolio websites, landing page visuals, and online project presentations using Figma, Framer, HTML/CSS, and GitHub Pages.</li>
+                  <li>Use AI prompting for concepts, storyboards, model references, campaign angles, and faster brand-aligned creative direction.</li>
                 </ul>
               </div>
             </article>
           </div>
         </section>
 
-        <section class="cv-section cv-two-column-section">
-          <article class="cv-panel">
-            <p class="eyebrow">Certification</p>
-            <h3>Adobe Certified Professional</h3>
-            <p>Professional certification in visual design using Adobe Photoshop.</p>
-          </article>
+        <section class="cv-section">
+          <div class="cv-section-heading">
+            <p class="eyebrow">Selected Projects</p>
+            <h2>Work across campaigns, content systems, and digital experiences.</h2>
+          </div>
+          <div class="cv-selected-projects">
+            <article><h3>University Campaigns</h3><p>Enrollment campaigns, student advisories, institutional announcements, event promotions, and branded collateral.</p></article>
+            <article><h3>DesignLab Creative Studio</h3><p>Service visuals, social campaigns, client presentations, logos, banners, and creative direction systems.</p></article>
+            <article><h3>DesignLab Downloads</h3><p>Canva template systems, product campaigns, mockups, and launch visuals for downloadable creative products.</p></article>
+            <article><h3>Web & Digital Systems</h3><p>Portfolio websites, landing pages, request systems, dashboards, trackers, and Google Apps Script workflows.</p></article>
+          </div>
+        </section>
 
+        <section class="cv-section cv-credential-grid">
           <article class="cv-panel">
-            <p class="eyebrow">Teaching Experience</p>
-            <h3>Digital Publishing</h3>
-            <p>Prepared and delivered a four-module Digital Publishing course for AB Communication students.</p>
+            <p class="eyebrow">Education</p>
+            <h3>BS Computer Science</h3>
+            <p>Panpacific University · Cum Laude</p>
+          </article>
+          <article class="cv-panel">
+            <p class="eyebrow">Certifications</p>
+            <ul class="cv-credential-list">
+              <li><strong>Adobe Certified Professional</strong>Visual Design using Adobe Photoshop</li>
+              <li><strong>Google</strong>Digital Marketing & E-Commerce</li>
+              <li><strong>Microsoft Office Specialist</strong>Professional productivity certification</li>
+              <li><strong>Civil Service Professional</strong>Professional eligibility passer</li>
+            </ul>
           </article>
         </section>
 
         <section class="cv-section">
           <div class="cv-section-heading">
             <p class="eyebrow">Working Style</p>
-            <h2>Structured, responsive, and focused on usable outcomes.</h2>
+            <h2>Structured, responsive, and focused on useful outcomes.</h2>
           </div>
           <div class="cv-value-grid">
-            <article><span>01</span><h3>Clarity First</h3><p>I simplify information and organize it into visuals that are easier to understand and act on.</p></article>
-            <article><span>02</span><h3>System Thinking</h3><p>I look beyond a single design and build reusable visual and workflow systems where possible.</p></article>
+            <article><span>01</span><h3>Clarity First</h3><p>I organize information into visuals that are easier to understand and act on.</p></article>
+            <article><span>02</span><h3>Brand Consistency</h3><p>I create repeatable visual systems that keep campaigns and content recognizable.</p></article>
             <article><span>03</span><h3>Reliable Production</h3><p>I work comfortably with recurring content, urgent campaigns, multi-format assets, and organized delivery.</p></article>
-            <article><span>04</span><h3>Continuous Learning</h3><p>I combine design practice with web tools, automation, and AI-assisted workflows to expand what I can build.</p></article>
+            <article><span>04</span><h3>Creative + Technical</h3><p>I combine design practice with web tools, automation, and AI-assisted workflows.</p></article>
           </div>
         </section>
 
         <section class="cv-contact-band">
-          <div>
-            <p class="eyebrow">Let’s Work Together</p>
-            <h2>Looking for a designer who can also build practical digital systems?</h2>
-          </div>
+          <div><p class="eyebrow">Let’s Work Together</p><h2>Looking for a creative designer who can support both visuals and digital systems?</h2></div>
           <div class="cv-contact-actions">
             <a class="btn btn-primary" href="contact.html?source=cv-footer&service=General%20Inquiry">Start a Conversation ↗</a>
             <a class="btn btn-soft" href="projects.html">View Selected Work</a>
@@ -271,7 +242,8 @@
     <p class="footer-meta">Version <span id="siteVersion"></span> · Online CV</p>
   </footer>
 
-  <script src="theme.js?v=2.8.0"></script>
-  <script src="cv.js?v=2.8.0"></script>
+  <script src="theme.js?v=2.9.0"></script>
+  <script src="navigation.js?v=2.9.0"></script>
+  <script src="cv.js?v=2.9.0"></script>
 </body>
 </html>

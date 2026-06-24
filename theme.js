@@ -3,15 +3,27 @@
   const THEMES = ["dark", "blue", "light"];
   const root = document.documentElement;
 
-  function getTheme() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return THEMES.includes(saved) ? saved : "dark";
+  function readStoredTheme() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return THEMES.includes(saved) ? saved : "blue";
+    } catch (error) {
+      return "blue";
+    }
+  }
+
+  function persistTheme(theme) {
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch (error) {
+      /* Theme still works for this visit when storage is unavailable. */
+    }
   }
 
   function setTheme(theme) {
-    const selected = THEMES.includes(theme) ? theme : "dark";
+    const selected = THEMES.includes(theme) ? theme : "blue";
     root.dataset.theme = selected;
-    localStorage.setItem(STORAGE_KEY, selected);
+    persistTheme(selected);
 
     document.querySelectorAll("[data-theme-choice]").forEach((button) => {
       const active = button.dataset.themeChoice === selected;
@@ -21,12 +33,10 @@
   }
 
   function initializeThemeControls() {
-    setTheme(getTheme());
+    setTheme(readStoredTheme());
 
     document.querySelectorAll("[data-theme-choice]").forEach((button) => {
-      button.addEventListener("click", () => {
-        setTheme(button.dataset.themeChoice);
-      });
+      button.addEventListener("click", () => setTheme(button.dataset.themeChoice));
     });
   }
 

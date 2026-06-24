@@ -8,12 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2.9.0" />
   <script>
     (function () {
-      const savedTheme = localStorage.getItem("designlab-theme");
       const validThemes = ["dark", "blue", "light"];
-      document.documentElement.dataset.theme = validThemes.includes(savedTheme) ? savedTheme : "dark";
+      document.documentElement.dataset.theme = "blue";
+      try {
+        const savedTheme = localStorage.getItem("designlab-theme");
+        if (validThemes.includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
+      } catch (error) {
+        /* Blue remains the safe first-visit theme when storage is unavailable. */
+      }
     })();
   </script>
 </head>
@@ -21,12 +26,8 @@
   <header class="site-header signal-header">
     <a href="index.html" class="brand signal-brand">
       <span class="brand-mark">DL</span>
-      <span>
-        <strong>Jann Nathaniel</strong>
-        <small>DesignLab Creative Studio</small>
-      </span>
+      <span><strong>Jann Nathaniel</strong><small>DesignLab Creative Studio</small></span>
     </a>
-
     <nav class="nav-links signal-nav">
       <a href="index.html">Home</a>
       <a href="projects.html">Work</a>
@@ -34,20 +35,13 @@
       <a href="insights.html">Insights</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
-
     <a href="#inquiryForm" class="signal-header-cta">Start Brief ↘</a>
   </header>
 
   <main class="contact-page section-pad">
     <section class="contact-hero">
-      <div>
-        <p class="signal-kicker">Project Inquiry</p>
-        <h1>Tell me what you’re planning.</h1>
-      </div>
-      <p>
-        Share the project details, your preferred timeline, and the best way to contact you.
-        The information helps me understand the scope before I respond.
-      </p>
+      <div><p class="signal-kicker">Project Inquiry</p><h1>Tell me what you’re planning.</h1></div>
+      <p>Complete the short guided brief. Each section focuses on one part of the project so the form feels easier to answer.</p>
     </section>
 
     <section class="contact-layout">
@@ -55,17 +49,13 @@
         <div>
           <p class="eyebrow">A clearer first conversation</p>
           <h2>Your project starts with a useful brief.</h2>
-          <p>
-            Choose the service you are interested in, provide the essential details, and describe the result you need.
-          </p>
+          <p>Move through three short sections: your information, the project scope, and how you would like me to respond.</p>
         </div>
-
         <ol class="contact-process-list">
-          <li><span>01</span><div><strong>Share your details</strong><p>Name, email, contact number, and business information.</p></div></li>
-          <li><span>02</span><div><strong>Describe the project</strong><p>Service, package, budget range, timeline, and goals.</p></div></li>
-          <li><span>03</span><div><strong>Receive a response</strong><p>I’ll review the inquiry and contact you using your preferred method.</p></div></li>
+          <li><span>01</span><div><strong>About you</strong><p>Basic contact and business information.</p></div></li>
+          <li><span>02</span><div><strong>Project scope</strong><p>Service, budget, timeline, and goals.</p></div></li>
+          <li><span>03</span><div><strong>Contact & review</strong><p>Choose how I should reply and check your answers.</p></div></li>
         </ol>
-
         <div class="contact-direct-option">
           <span>Prefer another channel?</span>
           <a href="https://www.linkedin.com/in/jaenjaravata/" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
@@ -74,133 +64,125 @@
 
       <section class="contact-form-shell">
         <div id="contactFormIntro" class="contact-form-heading">
-          <p class="eyebrow">Project Details</p>
+          <p class="eyebrow">Guided Project Brief</p>
           <h2>Start your inquiry</h2>
-          <p>Fields marked with * are required.</p>
+          <p>Fields marked with * are required. Your progress is saved in this browser while you complete the form.</p>
         </div>
+
+        <div class="inquiry-stepper" aria-label="Inquiry form progress">
+          <div class="inquiry-step is-active" data-step-indicator="1"><span>1</span><strong>About you</strong></div>
+          <div class="inquiry-step" data-step-indicator="2"><span>2</span><strong>Project scope</strong></div>
+          <div class="inquiry-step" data-step-indicator="3"><span>3</span><strong>Contact & review</strong></div>
+        </div>
+        <div class="inquiry-progress-track" aria-hidden="true"><div id="inquiryProgressFill" class="inquiry-progress-fill"></div></div>
 
         <form id="inquiryForm" novalidate>
           <div class="form-honeypot" aria-hidden="true">
             <label for="website">Website</label>
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
-
           <input type="hidden" name="source" id="inquirySource" value="contact-page">
           <input type="hidden" name="sourcePage" id="inquirySourcePage">
           <input type="hidden" name="theme" id="inquiryTheme">
 
-          <div class="contact-form-grid two-column">
-            <label>
-              <span>First name *</span>
-              <input type="text" name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Your first name">
-            </label>
-            <label>
-              <span>Last name *</span>
-              <input type="text" name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Your last name">
-            </label>
-          </div>
+          <section class="inquiry-form-step" data-form-step="1">
+            <div class="inquiry-step-heading">
+              <h3>First, tell me about you.</h3>
+              <p>This helps me know who I am speaking with and where to send my response.</p>
+            </div>
 
-          <div class="contact-form-grid two-column">
-            <label>
-              <span>Email address *</span>
-              <input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@example.com">
-            </label>
-            <label>
-              <span>Contact number *</span>
-              <input type="tel" name="contactNumber" autocomplete="tel" required maxlength="40" placeholder="+63 9XX XXX XXXX">
-            </label>
-          </div>
+            <div class="contact-form-grid two-column">
+              <label><span>First name *</span><input type="text" name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Your first name"></label>
+              <label><span>Last name *</span><input type="text" name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Your last name"></label>
+            </div>
+            <div class="contact-form-grid two-column">
+              <label><span>Email address *</span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@example.com"></label>
+              <label><span>Contact number *</span><input type="tel" name="contactNumber" autocomplete="tel" required maxlength="40" placeholder="+63 9XX XXX XXXX"></label>
+            </div>
+            <div class="contact-form-grid two-column">
+              <label><span>Company / brand</span><input type="text" name="company" autocomplete="organization" maxlength="140" placeholder="Optional"></label>
+              <label><span>How did you find DesignLab?</span>
+                <select name="referralSource">
+                  <option value="">Select one</option><option>LinkedIn</option><option>Facebook</option><option>Referral</option><option>Portfolio website</option><option>Existing client</option><option>Other</option>
+                </select>
+              </label>
+            </div>
+            <p class="inquiry-draft-note">Your answers are temporarily saved on this device until the inquiry is submitted.</p>
+            <div class="inquiry-step-actions">
+              <span></span>
+              <div class="step-actions-right"><button class="btn btn-primary" type="button" data-next-step="2">Continue to Project Scope →</button></div>
+            </div>
+          </section>
 
-          <div class="contact-form-grid two-column">
-            <label>
-              <span>Company / brand</span>
-              <input type="text" name="company" autocomplete="organization" maxlength="140" placeholder="Optional">
+          <section class="inquiry-form-step" data-form-step="2" hidden>
+            <div class="inquiry-step-heading">
+              <h3>What would you like to create?</h3>
+              <p>Choose the closest service and share enough detail for an initial scope review.</p>
+            </div>
+            <div class="contact-form-grid two-column">
+              <label><span>Service interested in *</span>
+                <select name="service" id="serviceInterest" required>
+                  <option value="">Choose a service</option><option>Design Packages</option><option>Flexible Design Services</option><option>Static Website / Landing Page</option><option>Brand Identity / Logo</option><option>Social Media Design</option><option>Web App / Dashboard</option><option>Publication / Print Design</option><option>General Inquiry</option><option>Other</option>
+                </select>
+              </label>
+              <label><span>Package or project type</span><input type="text" name="package" id="packageInterest" maxlength="160" placeholder="Example: Brand Growth Package"></label>
+            </div>
+            <div class="contact-form-grid two-column">
+              <label><span>Estimated budget *</span>
+                <select name="budget" required>
+                  <option value="">Choose a range</option><option>Below ₱3,500</option><option>₱3,500–₱7,500</option><option>₱7,500–₱12,000</option><option>₱12,000–₱20,000</option><option>₱20,000+</option><option>Not sure yet</option>
+                </select>
+              </label>
+              <label><span>Preferred timeline *</span>
+                <select name="timeline" required>
+                  <option value="">Choose a timeline</option><option>ASAP / Rush</option><option>Within 1–2 weeks</option><option>Within 3–4 weeks</option><option>Within 1–2 months</option><option>Flexible / Planning stage</option>
+                </select>
+              </label>
+            </div>
+            <label class="contact-message-field">
+              <span>Tell me about the project *</span>
+              <textarea name="message" required minlength="20" maxlength="3000" rows="7" placeholder="What do you need, what is the goal, and what should the finished output help you accomplish?"></textarea>
+              <small><span id="messageCount">0</span> / 3000 characters</small>
             </label>
-            <label>
-              <span>How did you find DesignLab?</span>
-              <select name="referralSource">
-                <option value="">Select one</option>
-                <option>LinkedIn</option>
-                <option>Facebook</option>
-                <option>Referral</option>
-                <option>Portfolio website</option>
-                <option>Existing client</option>
-                <option>Other</option>
-              </select>
+            <div class="inquiry-step-actions">
+              <button class="btn btn-soft" type="button" data-previous-step="1">← Back</button>
+              <div class="step-actions-right"><button class="btn btn-primary" type="button" data-next-step="3">Review Contact Options →</button></div>
+            </div>
+          </section>
+
+          <section class="inquiry-form-step" data-form-step="3" hidden>
+            <div class="inquiry-step-heading">
+              <h3>How should I contact you?</h3>
+              <p>Choose your preferred response channel, review the summary, then submit.</p>
+            </div>
+            <fieldset class="contact-choice-group">
+              <legend>Preferred contact method *</legend>
+              <label><input type="radio" name="preferredContact" value="Email" required><span>Email</span></label>
+              <label><input type="radio" name="preferredContact" value="Phone call"><span>Phone call</span></label>
+              <label><input type="radio" name="preferredContact" value="Text message"><span>Text message</span></label>
+              <label><input type="radio" name="preferredContact" value="LinkedIn"><span>LinkedIn</span></label>
+            </fieldset>
+
+            <div class="inquiry-review" id="inquiryReview" aria-label="Inquiry summary">
+              <article><span>Name</span><strong data-review-field="name">—</strong></article>
+              <article><span>Email</span><strong data-review-field="email">—</strong></article>
+              <article><span>Service</span><strong data-review-field="service">—</strong></article>
+              <article><span>Budget & timeline</span><strong data-review-field="scope">—</strong></article>
+            </div>
+
+            <label class="contact-consent">
+              <input type="checkbox" name="consent" value="Yes" required>
+              <span>I agree to be contacted about this inquiry using the details I provided. *</span>
             </label>
-          </div>
 
-          <div class="contact-form-grid two-column">
-            <label>
-              <span>Service interested in *</span>
-              <select name="service" id="serviceInterest" required>
-                <option value="">Choose a service</option>
-                <option>Design Packages</option>
-                <option>Flexible Design Services</option>
-                <option>Static Website / Landing Page</option>
-                <option>Brand Identity / Logo</option>
-                <option>Social Media Design</option>
-                <option>Web App / Dashboard</option>
-                <option>Publication / Print Design</option>
-                <option>General Inquiry</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>
-              <span>Package or project type</span>
-              <input type="text" name="package" id="packageInterest" maxlength="160" placeholder="Example: Brand Growth Package">
-            </label>
-          </div>
-
-          <div class="contact-form-grid two-column">
-            <label>
-              <span>Estimated budget *</span>
-              <select name="budget" required>
-                <option value="">Choose a range</option>
-                <option>Below ₱3,500</option>
-                <option>₱3,500–₱7,500</option>
-                <option>₱7,500–₱12,000</option>
-                <option>₱12,000–₱20,000</option>
-                <option>₱20,000+</option>
-                <option>Not sure yet</option>
-              </select>
-            </label>
-            <label>
-              <span>Preferred timeline *</span>
-              <select name="timeline" required>
-                <option value="">Choose a timeline</option>
-                <option>ASAP / Rush</option>
-                <option>Within 1–2 weeks</option>
-                <option>Within 3–4 weeks</option>
-                <option>Within 1–2 months</option>
-                <option>Flexible / Planning stage</option>
-              </select>
-            </label>
-          </div>
-
-          <fieldset class="contact-choice-group">
-            <legend>Preferred contact method *</legend>
-            <label><input type="radio" name="preferredContact" value="Email" required><span>Email</span></label>
-            <label><input type="radio" name="preferredContact" value="Phone call"><span>Phone call</span></label>
-            <label><input type="radio" name="preferredContact" value="Text message"><span>Text message</span></label>
-            <label><input type="radio" name="preferredContact" value="LinkedIn"><span>LinkedIn</span></label>
-          </fieldset>
-
-          <label class="contact-message-field">
-            <span>Tell me about the project *</span>
-            <textarea name="message" required minlength="20" maxlength="3000" rows="7" placeholder="What do you need, what is the goal, and what should the finished output help you accomplish?"></textarea>
-            <small><span id="messageCount">0</span> / 3000 characters</small>
-          </label>
-
-          <label class="contact-consent">
-            <input type="checkbox" name="consent" value="Yes" required>
-            <span>I agree to be contacted about this inquiry using the details I provided. *</span>
-          </label>
-
-          <div class="contact-submit-row">
-            <button id="inquirySubmit" class="btn btn-primary" type="submit">Send Project Inquiry ↗</button>
+            <div class="inquiry-step-actions">
+              <button class="btn btn-soft" type="button" data-previous-step="2">← Back</button>
+              <div class="step-actions-right">
+                <button id="inquirySubmit" class="btn btn-primary" type="submit">Send Project Inquiry ↗</button>
+              </div>
+            </div>
             <p id="inquiryStatus" role="status" aria-live="polite"></p>
-          </div>
+          </section>
         </form>
 
         <div id="inquirySuccess" class="inquiry-success" hidden>
@@ -208,10 +190,7 @@
           <p class="eyebrow">Inquiry received</p>
           <h2>Thank you for reaching out.</h2>
           <p>Your reference number is <strong id="inquiryReference"></strong>. I’ll review your details and respond through your preferred contact method.</p>
-          <div class="hero-actions">
-            <a href="index.html" class="btn btn-soft">Return Home</a>
-            <a href="projects.html" class="btn btn-primary">View Projects</a>
-          </div>
+          <div class="hero-actions"><a href="index.html" class="btn btn-soft">Return Home</a><a href="projects.html" class="btn btn-primary">View Projects</a></div>
         </div>
       </section>
     </section>
@@ -230,8 +209,9 @@
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js?v=2.8.0"></script>
-  <script src="theme.js?v=2.8.0"></script>
-  <script src="contact.js?v=2.8.0"></script>
+  <script src="config.js?v=2.9.0"></script>
+  <script src="theme.js?v=2.9.0"></script>
+  <script src="navigation.js?v=2.9.0"></script>
+  <script src="contact.js?v=2.9.0"></script>
 </body>
 </html>

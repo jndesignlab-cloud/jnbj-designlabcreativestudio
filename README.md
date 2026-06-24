@@ -502,3 +502,36 @@ No change to the Web App URL is required when editing the existing deployment.
 - Added Person structured data and CV metadata.
 - Added `cv.html` to `sitemap.xml`.
 - No Apps Script or `Code.gs` change is required for this update.
+
+## Update v2.9.0 — CV Refresh, Mobile Navigation, Blue Default, Guided Inquiry
+
+### CV refresh
+- Rebuilt `cv.html` using the supplied Creative Designer and Social Media Manager / Designer ATS résumé content.
+- Uses a combined Creative Designer + Social Media Designer positioning.
+- Updated professional summary, core skills, applications, current experience, selected projects, education, and certifications.
+- Removed the Teaching Experience section.
+
+### Studio Notes imagery
+- Replaced the three typography-only covers with action-based designer photographs.
+- Final article images remain local, cropped to 1200 × 630, and stored in `assets/`.
+- See `IMAGE_CREDITS.md` for source credits.
+
+### Mobile navigation
+- Added `navigation.js`.
+- A hamburger menu now appears on phones and tablets where the desktop navigation is hidden.
+- The menu supports outside-click close, Escape-key close, current-page highlighting, and the page CTA.
+
+### Theme
+- Blue Mode is now the first-visit/default theme.
+- A visitor's previously selected theme still remains saved through localStorage.
+
+### Guided inquiry form
+- Converted the contact form into a three-step experience:
+  1. About you
+  2. Project scope
+  3. Contact preference and review
+- Added progress indicators, per-step validation, a review summary, Back/Continue controls, and temporary browser-session draft saving.
+- The submission field names and Apps Script payload remain compatible with the existing inquiry backend.
+
+### Apps Script
+No `Code.gs` change is required for v2.9.0. Keep the existing deployed Apps Script and API URL.

@@ -10,10 +10,14 @@
   <link rel="stylesheet" href="style.css" />
   <script>
     (function () {
-      const savedTheme = localStorage.getItem("designlab-theme");
       const validThemes = ["dark", "blue", "light"];
-      document.documentElement.dataset.theme =
-        validThemes.includes(savedTheme) ? savedTheme : "dark";
+      document.documentElement.dataset.theme = "blue";
+      try {
+        const savedTheme = localStorage.getItem("designlab-theme");
+        if (validThemes.includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
+      } catch (error) {
+        /* Blue remains the safe first-visit theme when storage is unavailable. */
+      }
     })();
   </script>
 </head>
@@ -137,8 +141,8 @@
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js?v=2.8.0"></script>
-  <script src="theme.js?v=2.8.0"></script>
-  <script src="project.js?v=2.8.0"></script>
-</body>
+  <script src="config.js?v=2.9.0"></script>
+  <script src="theme.js?v=2.9.0"></script>
+  <script src="project.js?v=2.9.0"></script>
+<script src="navigation.js?v=2.9.0"></script></body>
 </html>
