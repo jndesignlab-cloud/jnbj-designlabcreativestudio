@@ -1,4 +1,4 @@
-const SITE_VERSION = "2.9.0";
+const SITE_VERSION = "2.10.0";
 const LAST_EDIT = "June 24, 2026";
 const DRAFT_STORAGE_KEY = "designlab-inquiry-draft";
 
@@ -8,6 +8,8 @@ const inquiryStatus = document.querySelector("#inquiryStatus");
 const successPanel = document.querySelector("#inquirySuccess");
 const formIntro = document.querySelector("#contactFormIntro");
 const referenceElement = document.querySelector("#inquiryReference");
+const confirmationNote = document.querySelector("#inquiryConfirmationNote");
+const trackingLink = document.querySelector("#inquiryTrackingLink");
 const messageField = inquiryForm?.querySelector('textarea[name="message"]');
 const messageCount = document.querySelector("#messageCount");
 const progressFill = document.querySelector("#inquiryProgressFill");
@@ -203,10 +205,24 @@ async function submitInquiry(event) {
     document.querySelector(".inquiry-stepper")?.setAttribute("hidden", "");
     document.querySelector(".inquiry-progress-track")?.setAttribute("hidden", "");
     successPanel.hidden = false;
-    referenceElement.textContent = data.inquiryId || "Submitted";
+    const inquiryId = data.inquiryId || "Submitted";
+    referenceElement.textContent = inquiryId;
+
+    if (trackingLink) {
+      trackingLink.href = data.trackingUrl || `inquiry-status.html?id=${encodeURIComponent(inquiryId)}`;
+    }
+
+    if (confirmationNote) {
+      confirmationNote.textContent = data.clientConfirmationSent === false
+        ? "Your inquiry was saved, but the confirmation email could not be sent. Keep your reference number and use the Track Inquiry button below."
+        : `A confirmation email with your submitted details and tracking link was sent to ${payload.email}.`;
+    }
 
     if (data.notificationSent === false) {
-      console.warn("Inquiry saved, but notification email failed:", data.notificationError || "Unknown error");
+      console.warn("Inquiry saved, but the admin notification email failed:", data.notificationError || "Unknown error");
+    }
+    if (data.clientConfirmationSent === false) {
+      console.warn("Inquiry saved, but the client confirmation email failed:", data.clientConfirmationError || "Unknown error");
     }
 
     successPanel.scrollIntoView({ behavior: "smooth", block: "center" });

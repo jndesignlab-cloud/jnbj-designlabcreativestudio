@@ -503,7 +503,7 @@ No change to the Web App URL is required when editing the existing deployment.
 - Added `cv.html` to `sitemap.xml`.
 - No Apps Script or `Code.gs` change is required for this update.
 
-## Update v2.9.0 — CV Refresh, Mobile Navigation, Blue Default, Guided Inquiry
+## Update v2.10.0 — CV Refresh, Mobile Navigation, Blue Default, Guided Inquiry
 
 ### CV refresh
 - Rebuilt `cv.html` using the supplied Creative Designer and Social Media Manager / Designer ATS résumé content.
@@ -534,4 +534,10 @@ No change to the Web App URL is required when editing the existing deployment.
 - The submission field names and Apps Script payload remain compatible with the existing inquiry backend.
 
 ### Apps Script
-No `Code.gs` change is required for v2.9.0. Keep the existing deployed Apps Script and API URL.
+No `Code.gs` change is required for v2.10.0. Keep the existing deployed Apps Script and API URL.
+
+## v2.10.0 inquiry email and tracking update
+
+The inquiry workflow now sends two branded HTML emails per successful submission: an internal DesignLab notification and a confirmation copy to the client. The inquiry ID doubles as the tracking reference. Clients can securely check the current sheet status at `inquiry-status.html` by entering the reference and original email address.
+
+This update requires replacing and redeploying `Code.gs`. The new public tracking page also requires uploading `inquiry-status.html`, `inquiry-status.js`, updated `contact.html`, `contact.js`, and `style.css`.

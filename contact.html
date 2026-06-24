@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.9.0" />
+  <link rel="stylesheet" href="style.css?v=2.10.0" />
   <script>
     (function () {
       const validThemes = ["dark", "blue", "light"];
@@ -59,6 +59,7 @@
         <div class="contact-direct-option">
           <span>Prefer another channel?</span>
           <a href="https://www.linkedin.com/in/jaenjaravata/" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
+          <a href="inquiry-status.html">Track an existing inquiry ↗</a>
         </div>
       </aside>
 
@@ -190,7 +191,8 @@
           <p class="eyebrow">Inquiry received</p>
           <h2>Thank you for reaching out.</h2>
           <p>Your reference number is <strong id="inquiryReference"></strong>. I’ll review your details and respond through your preferred contact method.</p>
-          <div class="hero-actions"><a href="index.html" class="btn btn-soft">Return Home</a><a href="projects.html" class="btn btn-primary">View Projects</a></div>
+          <p id="inquiryConfirmationNote" class="inquiry-confirmation-note">A confirmation email with your submitted details and tracking link is being sent to your inbox.</p>
+          <div class="hero-actions"><a href="index.html" class="btn btn-soft">Return Home</a><a id="inquiryTrackingLink" href="inquiry-status.html" class="btn btn-soft">Track Inquiry</a><a href="projects.html" class="btn btn-primary">View Projects</a></div>
         </div>
       </section>
     </section>
@@ -209,9 +211,9 @@
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js?v=2.9.0"></script>
-  <script src="theme.js?v=2.9.0"></script>
-  <script src="navigation.js?v=2.9.0"></script>
-  <script src="contact.js?v=2.9.0"></script>
+  <script src="config.js?v=2.10.0"></script>
+  <script src="theme.js?v=2.10.0"></script>
+  <script src="navigation.js?v=2.10.0"></script>
+  <script src="contact.js?v=2.10.0"></script>
 </body>
 </html>
