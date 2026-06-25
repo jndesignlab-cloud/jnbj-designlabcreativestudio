@@ -1,4 +1,4 @@
-# DesignLab Portfolio v3.2.7
+# DesignLab Portfolio v3.2.8
 
 ## Changes
 - Wider Online CV portrait on desktop, tablet, and mobile.
@@ -9,3 +9,10 @@
 - Individual Services now includes Social Media Design, Carousel Design, Poster & Event Design, Logo Design, Packaging Design, Story Adaptation, Simple Motion Graphics, and Rush Delivery.
 
 No Google Apps Script redeployment is required for this visual and interaction update.
+
+
+## v3.2.8 CV editorial rebuild
+- Replaced the scattered post-stats card layout with flat editorial rows.
+- Added detailed, accessible modals for capabilities, tools, remote work, and both professional roles.
+- Combined education, certifications, and working principles into a single aligned section.
+- Preserved the output statistics, print support, themes, navigation, and current systems.
