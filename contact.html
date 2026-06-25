@@ -8,17 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.1.0" />
+  <link rel="stylesheet" href="style.css?v=3.2.0" />
   <script>
     (function () {
-      const validThemes = ["dark", "blue", "light"];
-      document.documentElement.dataset.theme = "blue";
+      const validThemes = ["blue", "light"];
+      let selectedTheme = "light";
       try {
-        const savedTheme = "blue";
-        if (validThemes.includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
-      } catch (error) {
-        /* Blue remains the safe first-visit theme when storage is unavailable. */
-      }
+        const savedTheme = localStorage.getItem("designlab-theme");
+        if (validThemes.includes(savedTheme)) selectedTheme = savedTheme;
+      } catch (error) {}
+      document.documentElement.dataset.theme = selectedTheme;
     })();
   </script>
 </head>
@@ -200,7 +199,7 @@
 
   <div class="theme-dock" aria-label="Portfolio appearance">
     <div class="theme-switcher" role="group" aria-label="Choose website theme">
-      <button type="button" data-theme-choice="dark" aria-label="Use Dark Mode" title="Dark Mode"><span class="theme-swatch theme-swatch-dark"></span><span>Dark</span></button>
+      
       <button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
       <button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button>
     </div>
@@ -212,8 +211,8 @@
   </footer>
 
   <script src="config.js?v=3.0.1"></script>
-  <script src="theme.js?v=3.1.0"></script>
-  <script src="navigation.js?v=3.1.0"></script>
+  <script src="theme.js?v=3.2.0"></script>
+  <script src="navigation.js?v=3.2.0"></script>
   <script src="contact.js?v=3.0.1"></script>
 </body>
 </html>
