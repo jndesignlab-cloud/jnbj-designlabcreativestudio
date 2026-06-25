@@ -6,6 +6,7 @@ const modalTitle = document.querySelector("#modalTitle");
 const modalDescription = document.querySelector("#modalDescription");
 const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
+const modalInquiryLink = document.querySelector("#modalInquiryLink");
 const visitorCountElement = document.querySelector("#visitorCount");
 
 const statModal = document.querySelector("#statModal");
@@ -196,7 +197,7 @@ document.querySelectorAll("[data-close-stat-modal]").forEach((element) => {
   element.addEventListener("click", closeStatModal);
 });
 
-const SITE_VERSION = "3.2.5";
+const SITE_VERSION = "3.2.6";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -347,13 +348,19 @@ function openModal(project) {
   renderSkillTags(modalSkills, project.skills);
   const projectId = project.id || createSlug(project.title);
   modalLink.href = `project.html?id=${encodeURIComponent(projectId)}`;
+  if (modalInquiryLink) {
+    const params = new URLSearchParams({ source: "project-preview", service: "Similar Project", package: project.title || "Portfolio Project" });
+    modalInquiryLink.href = `contact.html?${params.toString()}`;
+  }
   modal.classList.add("active");
+  document.body.classList.add("modal-open");
   modal.setAttribute("aria-hidden", "false");
 }
 
 function closeModal() {
   modal.classList.remove("active");
   modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
 }
 
 document.querySelectorAll("[data-close-modal]").forEach((element) => {

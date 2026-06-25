@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.2.5" rel="stylesheet">
+<link href="style.css?v=3.2.6" rel="stylesheet"/>
 <script>
     (function () {
       const validThemes = ["blue", "light"];
@@ -22,7 +22,7 @@
       document.documentElement.dataset.theme = selectedTheme;
     })();
   </script>
-</link></head>
+</head>
 <body class="signal-theme compact-home editorial-system unified-page">
 <header class="site-header signal-header compact-header unified-header editorial-header">
 <a aria-label="DesignLab Creative Studio home" class="brand signal-brand" href="index.html">
@@ -127,19 +127,28 @@
 </div>
 </section>
 </main>
-<div aria-hidden="true" class="modal" id="projectModal">
+<div aria-hidden="true" class="modal project-preview-modal" id="projectModal">
 <div class="modal-backdrop" data-close-modal=""></div>
-<div aria-labelledby="modalTitle" aria-modal="true" class="modal-card" role="dialog">
-<button aria-label="Close project preview" class="modal-close" data-close-modal="" type="button">×</button>
-<div class="modal-image-wrap"><img alt="" id="modalImage" src=""/></div>
-<div class="modal-content">
-<p class="eyebrow" id="modalCategory"></p>
+<section aria-labelledby="modalTitle" aria-modal="true" class="project-preview-dialog" role="dialog">
+<button aria-label="Close project preview" class="project-preview-close" data-close-modal="" type="button">×</button>
+<div class="project-preview-visual">
+<img alt="" id="modalImage" src=""/>
+<p class="project-preview-category" id="modalCategory"></p>
+</div>
+<div class="project-preview-content">
+<p class="compact-overline">Project preview</p>
 <h2 id="modalTitle"></h2>
-<p id="modalDescription"></p>
+<p class="project-preview-description" id="modalDescription"></p>
+<div class="project-preview-skill-block">
+<span>Skills &amp; services</span>
 <div class="skill-tags" id="modalSkills"></div>
-<a class="btn btn-primary" href="#" id="modalLink">View case study</a>
+</div>
+<div class="project-preview-actions">
+<a class="btn btn-primary" href="#" id="modalLink">View full case study ↗</a>
+<a class="compact-text-link" href="contact.html?source=project-preview" id="modalInquiryLink">Start a similar project ↗</a>
 </div>
 </div>
+</section>
 </div>
 <div aria-label="Portfolio appearance" class="theme-dock">
 <div aria-label="Choose website theme" class="theme-switcher" role="group">
@@ -153,12 +162,12 @@
 <strong id="visitorCount">—</strong>
 </aside>
 <footer class="footer compact-footer unified-footer editorial-footer">
-<div><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
+<div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.2.5"></script>
-<script src="theme.js?v=3.2.5"></script>
-<script src="app.js?v=3.2.5"></script>
-<script src="navigation.js?v=3.2.5"></script>
-<script src="reveal.js?v=3.2.5"></script></body>
+<script src="config.js?v=3.2.6"></script>
+<script src="theme.js?v=3.2.6"></script>
+<script src="app.js?v=3.2.6"></script>
+<script src="navigation.js?v=3.2.6"></script>
+<script src="reveal.js?v=3.2.6"></script></body>
 </html>

@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.2.5" rel="stylesheet"/>
+<link href="style.css?v=3.2.6" rel="stylesheet"/>
 <script>
     (function () {
       const validThemes = ["blue", "light"];
@@ -39,35 +39,34 @@
 <main class="services-page section-pad editorial-services-page">
 <section class="editorial-page-head"><div><p class="compact-overline">Services &amp; packages</p><h1>Creative support, clearly scoped</h1></div><p>Choose a category to view inclusions and starting rates.</p></section>
 <section aria-labelledby="serviceCategoryHeading" class="editorial-service-index">
-
-<div aria-label="Service categories" class="service-category-grid editorial-service-list" role="tablist">
-<button aria-controls="design-packages" aria-selected="false" class="service-category-trigger editorial-service-row" data-service-target="design-packages" role="tab" type="button">
+<div aria-label="Service categories" class="service-category-grid editorial-service-list">
+<button class="service-category-trigger editorial-service-row" data-service-target="design-packages" type="button">
 <span class="service-category-number">01</span>
 <span class="service-category-copy">
 <strong>Design Packages</strong>
 <small>Three content tiers for consistent social media and campaign design.</small>
 </span>
-<span class="service-category-action">View Packages <b>+</b></span>
+<span class="service-category-action">View Packages<b>↗</b></span>
 </button>
-<button aria-controls="flexible-services" aria-selected="false" class="service-category-trigger editorial-service-row" data-service-target="flexible-services" role="tab" type="button">
+<button class="service-category-trigger editorial-service-row" data-service-target="flexible-services" type="button">
 <span class="service-category-number">02</span>
 <span class="service-category-copy">
 <strong>Flexible Design Services</strong>
 <small>Standalone add-ons, rush work, branding, packaging, and adaptations.</small>
 </span>
-<span class="service-category-action">View Services <b>+</b></span>
+<span class="service-category-action">View Services<b>↗</b></span>
 </button>
-<button aria-controls="website-packages" aria-selected="false" class="service-category-trigger editorial-service-row" data-service-target="website-packages" role="tab" type="button">
+<button class="service-category-trigger editorial-service-row" data-service-target="website-packages" type="button">
 <span class="service-category-number">03</span>
 <span class="service-category-copy">
 <strong>Static Website Packages</strong>
 <small>Responsive landing pages for launching, presenting, and converting.</small>
 </span>
-<span class="service-category-action">View Website Tiers <b>+</b></span>
+<span class="service-category-action">View Website Tiers<b>↗</b></span>
 </button>
 </div>
 </section>
-<div aria-live="polite" class="service-panels">
+<div aria-hidden="true" aria-live="polite" class="service-panels service-template-store" hidden="">
 <section class="editorial-service-panel service-detail-panel" hidden="" id="design-packages" role="tabpanel">
 <div class="service-panel-heading">
 <div>
@@ -226,15 +225,41 @@
 <a href="contact.html?source=services&amp;service=Static%20Website%20%2F%20Landing%20Page&amp;package=Custom%20Website%20Quote">Discuss a Custom Website ↗</a>
 </div>
 </section>
+<section class="service-detail-panel custom-project-template" hidden="" id="custom-projects">
+<div class="service-panel-heading">
+<div>
+<p class="eyebrow">Custom project planning</p>
+<h2>Build a scope around what you actually need.</h2>
 </div>
+</div>
+<div class="custom-project-modal-copy">
+<p>Best for campaigns or launches that combine several deliverables, recurring creative support, unusual formats, or deadlines that do not fit a standard package.</p>
+<div class="custom-project-points">
+<article><span>01</span><strong>Mix services</strong><p>Combine social graphics, publications, web visuals, packaging, and adaptations.</p></article>
+<article><span>02</span><strong>Set the scope</strong><p>Receive a clear list of deliverables, timeline, revisions, and a project estimate.</p></article>
+<article><span>03</span><strong>Organized delivery</strong><p>Keep feedback, files, and final outputs structured in one workflow.</p></article>
+</div>
+<div class="service-modal-bottom-cta">
+<div><strong>Not sure which service fits?</strong><span>Send the project details and I will recommend a practical scope.</span></div>
+<a class="btn btn-primary" href="contact.html?source=services-custom&amp;service=Custom%20Project">Start a custom inquiry ↗</a>
+</div>
+</div>
+</section></div>
 <section class="compact-contact editorial-service-cta">
 <div>
 <p class="eyebrow">Need Something Custom?</p>
 <h2>Need a custom combination?</h2>
 </div>
-<a class="btn btn-primary" href="contact.html?source=services-footer&amp;service=General%20Inquiry">Let’s Talk ↗</a>
+<button class="btn btn-primary service-custom-trigger" data-service-target="custom-projects" type="button">Explore a custom project ↗</button>
 </section>
 </main>
+<div aria-hidden="true" class="service-modal" id="serviceModal">
+<div class="service-modal-backdrop" data-close-service-modal=""></div>
+<section aria-label="Service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1">
+<button aria-label="Close service details" class="service-modal-close" data-close-service-modal="" type="button">×</button>
+<div class="service-modal-content" id="serviceModalContent"></div>
+</section>
+</div>
 <div aria-label="Portfolio appearance" class="theme-dock">
 <div aria-label="Choose website theme" class="theme-switcher" role="group">
 <button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
@@ -242,11 +267,11 @@
 </div>
 </div>
 <footer class="footer compact-footer unified-footer editorial-footer">
-<div><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
+<div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.2.5"></script>
-<script src="theme.js?v=3.2.5"></script>
-<script src="services.js?v=3.2.5"></script>
-<script src="navigation.js?v=3.2.5"></script><script src="reveal.js?v=3.2.5"></script></body>
+<script src="config.js?v=3.2.6"></script>
+<script src="theme.js?v=3.2.6"></script>
+<script src="services.js?v=3.2.6"></script>
+<script src="navigation.js?v=3.2.6"></script><script src="reveal.js?v=3.2.6"></script></body>
 </html>
