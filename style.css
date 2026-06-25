@@ -8871,3 +8871,563 @@ body.signal-theme .footer:not(.compact-footer) {
     padding: 16px 0;
   }
 }
+
+/* =========================================================
+   v3.2.2 — Balanced Rhythm + Unified Editorial System
+   Restores breathing room, aligns every page with the compact
+   homepage language, and adds subtle reveal motion.
+   ========================================================= */
+
+/* Balanced site rhythm */
+.unified-page main.section-pad:not(.compact-main) {
+  padding-top: 34px !important;
+  padding-bottom: 46px !important;
+}
+
+.compact-home .section-pad {
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
+
+.compact-home .compact-profile.section-pad {
+  padding-top: 26px !important;
+  padding-bottom: 26px !important;
+}
+
+.compact-home .compact-contact {
+  padding-top: 20px !important;
+  padding-bottom: 22px !important;
+}
+
+.unified-page .footer,
+.unified-page .compact-footer {
+  padding-top: 16px;
+}
+
+/* Shared header and primary controls */
+.unified-page .site-header,
+.unified-page .signal-header {
+  width: min(1220px, calc(100% - 36px));
+  min-height: 60px;
+  margin-top: 12px;
+  padding: 9px 12px;
+  top: 10px;
+  border: 1px solid var(--theme-line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--theme-surface) 94%, transparent);
+  box-shadow: none;
+}
+
+.unified-page .brand-mark,
+.unified-page .signal-brand .brand-mark {
+  border-radius: 8px;
+  background: var(--theme-accent) !important;
+  box-shadow: none !important;
+}
+
+.unified-page .btn-primary,
+.unified-page .signal-header-cta {
+  background: var(--theme-accent) !important;
+  color: var(--theme-on-accent) !important;
+  box-shadow: none !important;
+}
+
+.unified-page .btn,
+.unified-page button,
+.unified-page input,
+.unified-page select,
+.unified-page textarea {
+  border-radius: 8px;
+}
+
+/* A common editorial page header */
+.unified-page :is(
+  .projects-page-hero,
+  .services-hero,
+  .contact-hero,
+  .tracking-hero,
+  .insights-hero,
+  .cv-hero,
+  .article-hero
+) {
+  margin-bottom: 24px !important;
+  padding: 18px 0 24px !important;
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.unified-page :is(
+  .projects-page-hero h1,
+  .services-hero h1,
+  .contact-hero h1,
+  .tracking-hero h1,
+  .insights-hero h1,
+  .cv-hero-copy h1,
+  .article-hero h1,
+  .project-hero-copy h1
+) {
+  font-size: clamp(2.05rem, 4.2vw, 3.65rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.045em !important;
+}
+
+.unified-page :is(
+  .projects-page-hero p,
+  .services-hero-copy,
+  .contact-hero > p,
+  .tracking-hero > p,
+  .insights-hero > p,
+  .article-hero > p,
+  .cv-summary
+) {
+  max-width: 720px;
+  color: var(--theme-muted) !important;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* Flat, consistent surfaces */
+.unified-page :is(
+  .project-card,
+  .managed-page-card,
+  .filter-shell,
+  .project-premium-hero,
+  .project-hero-copy,
+  .project-hero-meta,
+  .project-hero-gallery,
+  .case-study-card,
+  .project-conversion-strip,
+  .services-hero-note,
+  .service-category-trigger,
+  .service-detail-panel,
+  .package-tier,
+  .website-tier,
+  .flexible-service-card,
+  .contact-intro-panel,
+  .contact-form-shell,
+  .tracking-info-panel,
+  .tracking-card-shell,
+  .cv-panel,
+  .cv-quick-facts article,
+  .cv-value-grid article,
+  .cv-contact-band,
+  .insight-card,
+  .article-author,
+  .article-cta,
+  .admin-panel,
+  .admin-guide
+) {
+  border: 1px solid var(--theme-line) !important;
+  border-radius: 10px !important;
+  background: var(--theme-surface) !important;
+  box-shadow: none !important;
+}
+
+.unified-page :is(
+  .project-card,
+  .managed-page-card,
+  .service-category-trigger,
+  .package-tier,
+  .website-tier,
+  .flexible-service-card,
+  .insight-card,
+  .cv-panel,
+  .case-study-card
+) {
+  transition: border-color .2s ease, transform .2s ease, background-color .2s ease;
+}
+
+.unified-page :is(
+  .project-card,
+  .managed-page-card,
+  .service-category-trigger,
+  .package-tier,
+  .website-tier,
+  .flexible-service-card,
+  .insight-card
+):hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--theme-accent) 46%, var(--theme-line)) !important;
+}
+
+/* Homepage: still compact, no longer cramped */
+.compact-profile {
+  min-height: 270px;
+  gap: 24px;
+}
+
+.compact-profile-photo {
+  min-height: 220px;
+  border-radius: 10px;
+}
+
+.compact-panel {
+  padding: 17px;
+  border-radius: 10px;
+}
+
+.compact-dual {
+  gap: 12px;
+}
+
+.compact-section-head,
+.compact-panel-head {
+  margin-bottom: 12px;
+}
+
+.compact-project-grid {
+  gap: 11px !important;
+}
+
+.compact-home .compact-project-grid .project-card,
+.compact-home .compact-project-grid .project-thumb {
+  min-height: 132px;
+}
+
+.compact-home .compact-project-grid .project-info {
+  padding: 13px !important;
+}
+
+.compact-capability-list span {
+  padding: 10px 11px;
+}
+
+.compact-index-list a {
+  min-height: 40px;
+}
+
+/* Projects archive */
+.unified-page .projects-page {
+  width: min(1220px, calc(100% - 36px));
+}
+
+.unified-page .filter-shell {
+  margin-bottom: 22px !important;
+  padding: 12px;
+}
+
+.unified-page .filter-tabs {
+  gap: 8px;
+}
+
+.unified-page .filter-tabs button {
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--theme-line);
+  background: var(--theme-surface-2);
+  color: var(--theme-text);
+}
+
+.unified-page .filter-tabs button.active {
+  background: var(--theme-accent);
+  color: var(--theme-on-accent);
+  border-color: var(--theme-accent);
+}
+
+.unified-page .projects-page .project-grid {
+  gap: 16px;
+}
+
+.unified-page .project-card {
+  overflow: hidden;
+}
+
+/* Individual project */
+.unified-page .project-page {
+  width: min(1220px, calc(100% - 36px));
+}
+
+.unified-page .project-premium-hero {
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.unified-page .project-hero-copy,
+.unified-page .project-hero-meta {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.unified-page .project-hero-copy {
+  padding: clamp(24px, 3.6vw, 44px);
+}
+
+.unified-page .project-hero-meta {
+  border-left: 1px solid var(--theme-line) !important;
+  padding: 24px;
+  background: var(--theme-surface-2) !important;
+}
+
+.unified-page .project-hero-gallery {
+  margin-bottom: 18px;
+  padding: 18px;
+}
+
+.unified-page .case-study-editorial {
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.unified-page .case-study-editorial .case-study-card {
+  padding: 22px;
+}
+
+.unified-page .project-conversion-strip {
+  margin-top: 18px;
+  padding: 24px;
+}
+
+/* Services */
+.unified-page .services-page,
+.unified-page .contact-page,
+.unified-page .tracking-page,
+.unified-page .cv-page,
+.unified-page .insights-page,
+.unified-page .article-page,
+.unified-page .admin-wrap {
+  width: min(1220px, calc(100% - 36px));
+}
+
+.unified-page .service-category-section,
+.unified-page .service-detail-panel {
+  padding: 28px 0 34px;
+}
+
+.unified-page .service-category-grid,
+.unified-page .package-tier-grid,
+.unified-page .website-tier-grid {
+  gap: 14px;
+}
+
+.unified-page .service-category-trigger {
+  min-height: 170px;
+  padding: 21px;
+}
+
+.unified-page .package-tier,
+.unified-page .website-tier {
+  padding: 22px;
+}
+
+/* Contact + tracking */
+.unified-page .contact-layout,
+.unified-page .tracking-layout {
+  gap: 20px;
+  padding: 0 0 8px;
+}
+
+.unified-page :is(
+  .contact-intro-panel,
+  .contact-form-shell,
+  .tracking-info-panel,
+  .tracking-card-shell
+) {
+  padding: 24px;
+}
+
+.unified-page .inquiry-stepper {
+  margin: 16px 0 22px;
+}
+
+.unified-page .inquiry-step-actions {
+  margin-top: 20px;
+  padding-top: 16px;
+}
+
+/* CV */
+.unified-page .cv-quick-facts {
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.unified-page .cv-quick-facts article {
+  padding: 18px;
+}
+
+.unified-page .cv-layout {
+  gap: 34px;
+  padding-top: 8px;
+}
+
+.unified-page .cv-sidebar {
+  gap: 14px;
+}
+
+.unified-page .cv-panel {
+  padding: 19px;
+}
+
+.unified-page .cv-section {
+  padding-bottom: 34px;
+}
+
+.unified-page .cv-section + .cv-section {
+  padding-top: 32px;
+}
+
+/* Insights and article pages */
+.unified-page .insights-list {
+  display: grid;
+  gap: 14px;
+  padding-bottom: 10px;
+}
+
+.unified-page .insight-card {
+  gap: 24px;
+  padding: 18px;
+}
+
+.unified-page .article-cover {
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--theme-line);
+}
+
+.unified-page .article-layout {
+  gap: 38px;
+}
+
+.unified-page .article-author {
+  padding: 20px;
+}
+
+.unified-page .article-content p {
+  margin-bottom: 17px;
+}
+
+.unified-page .article-content h2 {
+  margin: 34px 0 13px;
+}
+
+.unified-page .article-cta {
+  margin: 38px 0 8px;
+  padding: 24px;
+}
+
+/* Admin */
+.unified-page .admin-panel,
+.unified-page .admin-guide {
+  padding: 24px;
+}
+
+/* Consistent footer */
+.unified-page .footer:not(.compact-footer) {
+  width: min(1220px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 18px 0 88px;
+  border-top: 1px solid var(--theme-line);
+}
+
+/* Seamless fade-in-up */
+.motion-enabled .reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition:
+    opacity 520ms cubic-bezier(.22, .8, .28, 1),
+    transform 520ms cubic-bezier(.22, .8, .28, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.motion-enabled .reveal-up.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 900px) {
+  .unified-page .project-hero-meta {
+    border-left: 0 !important;
+    border-top: 1px solid var(--theme-line) !important;
+  }
+
+  .unified-page .article-layout,
+  .unified-page .cv-layout {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .unified-page .site-header,
+  .unified-page .signal-header,
+  .unified-page :is(
+    .projects-page,
+    .project-page,
+    .services-page,
+    .contact-page,
+    .tracking-page,
+    .cv-page,
+    .insights-page,
+    .article-page,
+    .admin-wrap,
+    .footer:not(.compact-footer)
+  ) {
+    width: min(100% - 24px, 1220px);
+  }
+
+  .unified-page main.section-pad:not(.compact-main) {
+    padding-top: 24px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .compact-home .section-pad {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .compact-home .compact-profile.section-pad {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .compact-profile {
+    gap: 16px;
+  }
+
+  .compact-panel {
+    padding: 15px;
+  }
+
+  .unified-page :is(
+    .projects-page-hero,
+    .services-hero,
+    .contact-hero,
+    .tracking-hero,
+    .insights-hero,
+    .cv-hero,
+    .article-hero
+  ) {
+    margin-bottom: 18px !important;
+    padding: 12px 0 18px !important;
+  }
+
+  .unified-page :is(
+    .contact-intro-panel,
+    .contact-form-shell,
+    .tracking-info-panel,
+    .tracking-card-shell,
+    .project-hero-gallery,
+    .admin-panel,
+    .admin-guide
+  ) {
+    padding: 19px;
+  }
+
+  .unified-page .service-category-trigger {
+    min-height: 145px;
+    padding: 18px;
+  }
+
+  .unified-page .insight-card {
+    padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-enabled .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
