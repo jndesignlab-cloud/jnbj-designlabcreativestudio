@@ -26,7 +26,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 BASE_URL = "https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio"
-VERSION = "2.10.0"
+VERSION = "3.0.0"
 REQUIRED_COLUMNS = [
     "title", "slug", "category", "excerpt", "meta_title", "meta_description",
     "published_date", "reading_time", "featured", "status", "cover_image", "body"
@@ -34,7 +34,7 @@ REQUIRED_COLUMNS = [
 
 BOOT_SCRIPT = '''<script>
     (function () {
-      const savedTheme = localStorage.getItem("designlab-theme");
+      const savedTheme = "blue";
       const validThemes = ["dark", "blue", "light"];
       document.documentElement.dataset.theme = validThemes.includes(savedTheme) ? savedTheme : "blue";
     })();

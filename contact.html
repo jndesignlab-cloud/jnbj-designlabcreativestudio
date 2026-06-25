@@ -8,13 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.10.0" />
+  <link rel="stylesheet" href="style.css?v=3.0.0" />
   <script>
     (function () {
       const validThemes = ["dark", "blue", "light"];
       document.documentElement.dataset.theme = "blue";
       try {
-        const savedTheme = localStorage.getItem("designlab-theme");
+        const savedTheme = "blue";
         if (validThemes.includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
       } catch (error) {
         /* Blue remains the safe first-visit theme when storage is unavailable. */
@@ -211,9 +211,9 @@
     <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
   </footer>
 
-  <script src="config.js?v=2.10.0"></script>
-  <script src="theme.js?v=2.10.0"></script>
-  <script src="navigation.js?v=2.10.0"></script>
-  <script src="contact.js?v=2.10.0"></script>
+  <script src="config.js?v=3.0.0"></script>
+  <script src="theme.js?v=3.0.0"></script>
+  <script src="navigation.js?v=3.0.0"></script>
+  <script src="contact.js?v=3.0.0"></script>
 </body>
 </html>

@@ -541,3 +541,23 @@ No `Code.gs` change is required for v2.10.0. Keep the existing deployed Apps Scr
 The inquiry workflow now sends two branded HTML emails per successful submission: an internal DesignLab notification and a confirmation copy to the client. The inquiry ID doubles as the tracking reference. Clients can securely check the current sheet status at `inquiry-status.html` by entering the reference and original email address.
 
 This update requires replacing and redeploying `Code.gs`. The new public tracking page also requires uploading `inquiry-status.html`, `inquiry-status.js`, updated `contact.html`, `contact.js`, and `style.css`.
+
+## v3.0.0 — Portfolio Art Direction Cleanup
+
+Version 3.0.0 keeps all working systems from v2.10.0 but presents them through a more restrained, personal, and editorial visual direction. The homepage is rebuilt around Jann's authorship and real areas of work, with fewer card-like components, less visual decoration, and clearer project curation.
+
+### Public-facing changes
+
+- One DesignLab Blue visual identity
+- Rebuilt personal homepage hero
+- Editorial selected-work grid
+- More specific and less generic portfolio writing
+- Quieter presentation of CV, services, notes, inquiry, and tracking features
+- Hidden public theme switcher and visitor counter
+- Cleaner square corners, flatter surfaces, and reduced visual effects
+
+### Systems preserved
+
+Projects, admin tools, Services, the online CV, static Studio Notes, the multi-step inquiry form, branded email confirmations, and inquiry tracking remain included.
+
+No Apps Script redeployment is required when upgrading from the working v2.10.0 release because `Code.gs` is unchanged.

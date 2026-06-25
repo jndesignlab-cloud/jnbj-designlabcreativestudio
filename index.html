@@ -1,277 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="blue">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jann Nathaniel Jaravata | Portfolio</title>
+  <meta name="description" content="The portfolio and independent creative practice of Jann Nathaniel Jaravata, covering campaign design, social media, publications, branding, and lightweight web systems." />
+  <title>Jann Nathaniel Jaravata | DesignLab Creative Studio</title>
+  <link rel="canonical" href="https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3.0.0" />
   <script>
-    (function () {
-      const validThemes = ["dark", "blue", "light"];
-      document.documentElement.dataset.theme = "blue";
-      try {
-        const savedTheme = localStorage.getItem("designlab-theme");
-        if (validThemes.includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
-      } catch (error) {
-        /* Blue remains the safe first-visit theme when storage is unavailable. */
-      }
-    })();
+    document.documentElement.dataset.theme = "blue";
+    try { localStorage.removeItem("designlab-theme"); } catch (error) {}
   </script>
 </head>
-<body class="signal-theme">
-  <header class="site-header signal-header">
-    <a href="#" class="brand signal-brand">
+<body class="signal-theme v3-portfolio">
+  <header class="site-header signal-header v3-header">
+    <a href="index.html" class="brand signal-brand v3-brand" aria-label="DesignLab Creative Studio home">
       <span class="brand-mark">DL</span>
       <span>
-        <strong>Jann Nathaniel</strong>
-        <small>DesignLab Creative Studio</small>
+        <strong>DesignLab Creative Studio</strong>
+        <small>Portfolio of Jann Nathaniel Jaravata</small>
       </span>
     </a>
 
-    <nav class="nav-links signal-nav">
-      <a href="#about">About</a>
+    <nav class="nav-links signal-nav" aria-label="Primary navigation">
       <a href="#projects">Work</a>
+      <a href="#about">About</a>
       <a href="services.html">Services</a>
-      <a href="insights.html">Insights</a>
-      <a href="#managed-pages">Pages</a>
+      <a href="insights.html">Notes</a>
       <a href="contact.html?source=homepage-navigation">Contact</a>
     </nav>
 
-    <a href="#projects" class="signal-header-cta">View Work ↗</a>
+    <a href="contact.html?source=homepage-header" class="signal-header-cta">Project inquiry</a>
   </header>
 
   <main>
-    <section class="hero section-pad signal-hero">
-      <div class="signal-hero-grid">
-        <div class="signal-hero-copy">
-          <p class="signal-kicker">Creative design, digital systems, and visual communication</p>
-          <h1>Design work that looks sharp and systems that actually work.</h1>
-          <p class="hero-copy">
-            I create campaign visuals, social content, brand systems, dashboards,
-            trackers, and lightweight web tools for real communication needs.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Explore Projects</a>
-            <a href="services.html" class="btn btn-soft">View Services</a>
-          </div>
-        </div>
-
-        <aside class="signal-hero-panel">
-          <div class="signal-panel-top">
-            <span>Currently building</span>
-            <strong>Visual systems + practical digital products</strong>
-          </div>
-
-          <div class="signal-panel-list">
-            <div><span>01</span><p>Brand and campaign design</p></div>
-            <div><span>02</span><p>Social media content systems</p></div>
-            <div><span>03</span><p>Web apps and workflow tools</p></div>
-            <div><span>04</span><p>Digital products and templates</p></div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="signal-marquee" aria-hidden="true">
-        <span>DESIGNLAB · CAMPAIGNS · DIGITAL SYSTEMS · BRANDING · WEB APPS · PORTFOLIO · </span>
-      </div>
-    </section>
-
-    <section id="about" class="section-pad signal-about">
-      <div class="signal-about-photo">
-        <img src="profile-photo.png" alt="Portrait of Jann Nathaniel Jaravata" loading="lazy" decoding="async">
-      </div>
-
-      <div class="signal-about-copy">
-        <p class="signal-kicker">About the practice</p>
-        <h2>Visual design backed by structure, workflow thinking, and hands-on execution.</h2>
-        <p class="body-copy">
-          My work covers social media design, campaign visuals, publication layouts,
-          branding, photo retouching, UI design, dashboards, trackers, and digital products.
-          I focus on clarity, consistency, and usability across every project.
+    <section class="section-pad v3-hero" aria-labelledby="v3-hero-title">
+      <div class="v3-hero-copy">
+        <p class="v3-overline">Independent creative practice · Pangasinan, Philippines</p>
+        <h1 id="v3-hero-title">I design clear visual work for campaigns, content, and digital systems.</h1>
+        <p class="v3-hero-intro">
+          I’m Jann, a graphic designer and creative developer with more than eight years of hands-on experience.
+          My work includes university campaigns, social media systems, publications, brand visuals, dashboards, and lightweight web tools.
         </p>
+        <div class="v3-actions">
+          <a href="#projects" class="btn btn-primary">View selected work</a>
+          <a href="cv.html" class="v3-text-link">Read my CV <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
 
-        <a class="about-cv-link" href="cv.html" aria-label="View Jann Nathaniel Jaravata's online CV">
-          <span class="about-cv-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <path d="M14 2v6h6"></path>
-              <path d="M8 13h8"></path>
-              <path d="M8 17h6"></path>
-            </svg>
-          </span>
-          <span class="about-cv-copy">
-            <strong>View my online CV</strong>
-            <small>Experience, skills, tools, and remote-work capability</small>
-          </span>
-          <span class="about-cv-arrow" aria-hidden="true">↗</span>
-        </a>
+      <figure class="v3-portrait">
+        <div class="v3-portrait-frame">
+          <img src="profile-photo.png" alt="Jann Nathaniel Jaravata" width="720" height="880" fetchpriority="high">
+        </div>
+        <figcaption>
+          <span>Graphic Designer · Creative Developer</span>
+          <span>Available for remote creative work</span>
+        </figcaption>
+      </figure>
 
-        <div class="signal-stat-row">
-          <div><strong>8+</strong><span>Years of design experience</span></div>
-          <div><strong>ACP</strong><span>Adobe Certified Professional</span></div>
-          <div><strong>4–5</strong><span>Daily creative outputs</span></div>
+      <div class="v3-proof-row" aria-label="Professional highlights">
+        <div><strong>8+</strong><span>years in professional design</span></div>
+        <div><strong>ACP</strong><span>Adobe Certified Professional</span></div>
+        <div><strong>200+</strong><span>marketing and campaign materials</span></div>
+        <div><strong>Remote</strong><span>design, collaboration, and delivery</span></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad v3-work-section">
+      <div class="v3-section-intro">
+        <p class="v3-overline">Selected work</p>
+        <h2>A mix of university campaigns, client projects, and systems I built to solve real workflow needs.</h2>
+        <a href="projects.html" class="v3-text-link">See all projects <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div id="projectGrid" class="project-grid v3-project-grid">
+        <div class="loading-card">Loading selected projects…</div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad v3-practice-section">
+      <div class="v3-practice-heading">
+        <p class="v3-overline">About the practice</p>
+        <h2>Most of my projects begin with a deadline, a lot of information, and the need to make it clear quickly.</h2>
+      </div>
+
+      <div class="v3-practice-body">
+        <div class="v3-practice-copy">
+          <p>
+            I work across design and implementation. That means I can shape the visual direction, prepare the final campaign materials,
+            and build simple digital systems when the workflow needs more than a poster.
+          </p>
+          <p>
+            DesignLab Creative Studio is my independent creative practice and the home of my portfolio, freelance services,
+            digital products, and design experiments.
+          </p>
+          <a href="cv.html" class="v3-inline-feature">
+            <span class="v3-inline-icon" aria-hidden="true">CV</span>
+            <span><strong>Experience, tools, and remote-work capability</strong><small>Open my online CV</small></span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="v3-capabilities" aria-label="Capabilities">
+          <div><span>01</span><strong>Campaign and social media design</strong></div>
+          <div><span>02</span><strong>Publication and event materials</strong></div>
+          <div><span>03</span><strong>Brand identity and content systems</strong></div>
+          <div><span>04</span><strong>UI, dashboards, and lightweight web tools</strong></div>
+          <div><span>05</span><strong>Photo retouching and digital product design</strong></div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section-pad signal-projects">
-      <div class="section-heading signal-section-heading">
-        <div>
-          <p class="signal-kicker">Selected Work</p>
-          <h2>Projects built to communicate, organize, and perform.</h2>
-        </div>
-        <p>Explore visual campaigns, portfolio systems, dashboards, and digital product concepts.</p>
+    <section class="section-pad v3-ongoing-section" aria-labelledby="ongoing-title">
+      <div class="v3-section-intro compact">
+        <p class="v3-overline">Ongoing work</p>
+        <h2 id="ongoing-title">Pages and brands I support through campaigns, content, and visual direction.</h2>
       </div>
 
-      <div id="projectGrid" class="project-grid">
-        <div class="loading-card">Loading projects...</div>
-      </div>
-
-      <div class="show-more-wrap">
-        <a href="projects.html" class="btn btn-soft">Show More Projects</a>
+      <div class="v3-link-list">
+        <a href="https://www.facebook.com/panpacificu" target="_blank" rel="noopener"><span>Panpacific University</span><small>Institutional campaigns and communications</small><b>↗</b></a>
+        <a href="https://www.facebook.com/officialpunptayug" target="_blank" rel="noopener"><span>Panpacific University Tayug</span><small>Campus announcements and enrollment content</small><b>↗</b></a>
+        <a href="https://www.facebook.com/DesignLabCreativeStudio" target="_blank" rel="noopener"><span>DesignLab Creative Studio</span><small>Creative services and studio content</small><b>↗</b></a>
+        <a href="https://www.facebook.com/profile.php?id=61573673860829" target="_blank" rel="noopener"><span>DesignLab Downloads</span><small>Templates and digital product campaigns</small><b>↗</b></a>
       </div>
     </section>
 
-    <section id="managed-pages" class="section-pad managed-pages-section signal-managed">
-      <div class="section-heading compact-heading">
-        <div>
-          <p class="eyebrow">Pages I Help Manage</p>
-          <h2>Managed Pages</h2>
-        </div>
-        <p>Selected pages and brands supported through visual content, campaigns, and page management.</p>
+    <section class="section-pad v3-notes-section" aria-labelledby="notes-title">
+      <div class="v3-section-intro compact">
+        <p class="v3-overline">Studio Notes</p>
+        <h2 id="notes-title">What I learned while building the work.</h2>
+        <a href="insights.html" class="v3-text-link">Read all notes <span aria-hidden="true">↗</span></a>
       </div>
 
-      <div class="managed-pages-grid">
-        <a class="managed-page-card" href="https://www.facebook.com/panpacificu" target="_blank" rel="noopener">
-          <div class="managed-page-icon">PU</div>
-          <div>
-            <h3>Panpacific University</h3>
-            <p>Institutional campaigns, announcements, enrollment content, and university social media visuals.</p>
-            <span>Urdaneta Campus · Visit Page ↗</span>
-          </div>
+      <div class="v3-notes-list">
+        <a href="insights/building-an-internal-creative-request-system/">
+          <span>01</span><div><small>Workflow systems</small><strong>How I built an internal creative request system with Google Apps Script</strong></div><b>↗</b>
         </a>
-
-        <a class="managed-page-card" href="https://www.facebook.com/officialpunptayug" target="_blank" rel="noopener">
-          <div class="managed-page-icon">PT</div>
-          <div>
-            <h3>Panpacific University Tayug</h3>
-            <p>Campus-specific announcements, enrollment campaigns, event visuals, and student-focused content.</p>
-            <span>Tayug Campus · Visit Page ↗</span>
-          </div>
+        <a href="insights/from-personal-tool-to-digital-product/">
+          <span>02</span><div><small>Digital products</small><strong>From personal tool to digital product: building my daily task tracker</strong></div><b>↗</b>
         </a>
-
-        <a class="managed-page-card" href="https://www.facebook.com/DesignLabCreativeStudio" target="_blank" rel="noopener">
-          <div class="managed-page-icon">DL</div>
-          <div>
-            <h3>DesignLab Creative Studio</h3>
-            <p>Daily content, service promotions, client work, educational posts, and brand development.</p>
-            <span>Creative Studio · Visit Page ↗</span>
-          </div>
-        </a>
-
-        <a class="managed-page-card" href="https://www.facebook.com/profile.php?id=61573673860829" target="_blank" rel="noopener">
-          <div class="managed-page-icon">DD</div>
-          <div>
-            <h3>DesignLab Downloads</h3>
-            <p>Digital product campaigns, template promotions, launch content, and customer-facing visuals.</p>
-            <span>Digital Products · Visit Page ↗</span>
-          </div>
+        <a href="insights/what-60-days-of-design-taught-me/">
+          <span>03</span><div><small>Creative process</small><strong>What 60 days of consistent design content taught me</strong></div><b>↗</b>
         </a>
       </div>
     </section>
 
-    <section id="testimonials" class="section-pad signal-testimonials">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Client Feedback</p>
-          <h2>Testimonials</h2>
-        </div>
-      </div>
-
-      <div id="testimonialGrid" class="testimonial-grid">
-        <div class="testimonial-card">
-          <p>“Jann is a highly reliable and talented Graphic Designer. He consistently delivers high-quality designs, from company logos and product designs to social media visuals and branding assets.”</p>
+    <section class="section-pad v3-testimonial-section" aria-labelledby="testimonial-title">
+      <p class="v3-overline">Client feedback</p>
+      <blockquote>
+        <p id="testimonial-title">“Jann consistently delivers high-quality designs, from company logos and product design to social media visuals and branding assets.”</p>
+        <footer>
           <strong>Laurence Angelo Mamaril Ungson</strong>
-          <span>Graphic/Web Designer & Developer | Shoe Care & Restoration Founder</span>
-        </div>
-        <div class="testimonial-card">
-          <p>“DesignLab delivered high-quality designs on time and communicated clearly throughout the process. Highly recommended.”</p>
-          <strong>RM Coll</strong>
-          <span>DesignLab Creative Studio Client</span>
-        </div>
-        <div class="testimonial-card">
-          <p>“Thank you so much DesignLab for the publication materials you created. Your designs are truly stunning.”</p>
-          <strong>Richard Dhean V.</strong>
-          <span>Owner, Perlas ng Silanganan Car Rentals - Dagupan</span>
-        </div>
-        <div class="testimonial-card">
-          <p>“Top-notch service and design. DesignLab nailed the promotional materials for our event with clear communication, sharp visuals, and attention to detail.”</p>
-          <strong>Darren L.</strong>
-          <span>Owner | Events Management Company</span>
-        </div>
+          <span>Graphic/Web Designer & Developer · Shoe Care & Restoration Founder</span>
+        </footer>
+      </blockquote>
+      <div class="v3-secondary-quotes">
+        <p>“DesignLab delivered high-quality designs on time and communicated clearly throughout the process.” <strong>— RM Coll</strong></p>
+        <p>“Top-notch service and design. Clear communication, sharp visuals, and attention to detail.” <strong>— Darren L.</strong></p>
       </div>
     </section>
 
-    <section id="links" class="section-pad links-section">
-      <p class="eyebrow">Let’s Connect</p>
-      <div class="link-buttons">
-        <a href="contact.html?source=homepage-connect&service=General%20Inquiry">Start a Conversation</a>
-        <a href="https://www.linkedin.com/in/jaenjaravata/" target="_blank" rel="noopener">LinkedIn</a>
+    <section class="section-pad v3-contact-section">
+      <div>
+        <p class="v3-overline">Start a conversation</p>
+        <h2>Have a campaign, design project, or practical web idea in mind?</h2>
+      </div>
+      <div class="v3-contact-actions">
+        <a href="contact.html?source=homepage-footer" class="btn btn-primary">Send a project inquiry</a>
+        <a href="https://www.linkedin.com/in/jaenjaravata/" target="_blank" rel="noopener" class="v3-text-link">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
   <div id="projectModal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card">
-      <button class="modal-close" data-close-modal>&times;</button>
-      <div class="modal-preview">
-        <img id="modalImage" src="" alt="" loading="lazy" decoding="async">
-      </div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close project preview">×</button>
+      <div class="modal-image-wrap"><img id="modalImage" src="" alt=""></div>
       <div class="modal-content">
         <p id="modalCategory" class="eyebrow"></p>
-        <h3 id="modalTitle"></h3>
-        <div id="modalSkills" class="project-skill-tags"></div>
+        <h2 id="modalTitle"></h2>
         <p id="modalDescription"></p>
-        <a id="modalLink" href="#" class="btn btn-primary">Open Project Page</a>
+        <div id="modalSkills" class="skill-tags"></div>
+        <a id="modalLink" href="#" class="btn btn-primary">View case study</a>
       </div>
     </div>
   </div>
 
-  <div class="theme-dock" aria-label="Portfolio appearance">
-    <div class="theme-switcher" role="group" aria-label="Choose website theme">
-      <button type="button" data-theme-choice="dark" aria-label="Use Dark Mode" title="Dark Mode">
-        <span class="theme-swatch theme-swatch-dark"></span>
-        <span>Dark</span>
-      </button>
-      <button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode">
-        <span class="theme-swatch theme-swatch-blue"></span>
-        <span>Blue</span>
-      </button>
-      <button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode">
-        <span class="theme-swatch theme-swatch-light"></span>
-        <span>Light</span>
-      </button>
+  <footer class="footer v3-footer">
+    <div>
+      <strong>DesignLab Creative Studio</strong>
+      <span>The independent creative practice and portfolio of Jann Nathaniel Jaravata.</span>
     </div>
-  </div>
-
-  <aside class="visitor-float" aria-label="Portfolio visitor count" title="Recorded site visits">
-    <span class="visitor-float-dot" aria-hidden="true"></span>
-    <span class="visitor-float-label">Site Visits</span>
-    <strong id="visitorCount">—</strong>
-  </aside>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
-    <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
+    <div>
+      <p>© <span id="year"></span> Jann Nathaniel Jaravata</p>
+      <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
+    </div>
   </footer>
 
-  <script src="config.js?v=2.10.0"></script>
-  <script src="theme.js?v=2.10.0"></script>
-  <script src="app.js?v=2.10.0"></script>
-<script src="navigation.js?v=2.10.0"></script></body>
+  <script src="config.js?v=3.0.0"></script>
+  <script src="theme.js?v=3.0.0"></script>
+  <script src="app.js?v=3.0.0"></script>
+  <script src="navigation.js?v=3.0.0"></script>
+</body>
 </html>

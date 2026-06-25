@@ -8,7 +8,7 @@ const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
 const visitorCountElement = document.querySelector("#visitorCount");
 
-const SITE_VERSION = "2.10.0";
+const SITE_VERSION = "3.0.0";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -122,21 +122,30 @@ function isFeatured(project) {
 function renderProjects(projects) {
   projectGrid.innerHTML = "";
 
-  projects.forEach((project) => {
+  projects.forEach((project, index) => {
     const card = document.createElement("article");
     card.className = "project-card";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `Preview ${project.title}`);
     card.innerHTML = `
       <div class="project-thumb">
         <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}" loading="lazy" decoding="async">
       </div>
       <div class="project-info">
-        <p class="eyebrow">${escapeHtml(project.category || "Project")}</p>
+        <p class="eyebrow">${String(index + 1).padStart(2, "0")} · ${escapeHtml(project.category || "Project")}</p>
         <h3>${escapeHtml(project.title)}</h3>
         <p>${escapeHtml(project.description || "")}</p>
       </div>
     `;
 
     card.addEventListener("click", () => openModal(project));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openModal(project);
+      }
+    });
     projectGrid.appendChild(card);
   });
 }
