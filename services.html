@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.2.6" rel="stylesheet"/>
+<link href="style.css?v=3.2.7" rel="stylesheet"/>
 <script>
     (function () {
       const validThemes = ["blue", "light"];
@@ -36,226 +36,70 @@
 </nav>
 <a class="signal-header-cta" href="contact.html?source=services-header">Project inquiry</a>
 </header>
-<main class="services-page section-pad editorial-services-page">
-<section class="editorial-page-head"><div><p class="compact-overline">Services &amp; packages</p><h1>Creative support, clearly scoped</h1></div><p>Choose a category to view inclusions and starting rates.</p></section>
+<main class="services-page section-pad editorial-services-page services-v327">
+<section class="editorial-page-head"><div><p class="compact-overline">Services &amp; packages</p><h1>Creative support, clearly scoped</h1></div><p>Select a category, then choose a package or service to view the full details.</p></section>
+
 <section aria-labelledby="serviceCategoryHeading" class="editorial-service-index">
+<h2 class="sr-only" id="serviceCategoryHeading">Service categories</h2>
 <div aria-label="Service categories" class="service-category-grid editorial-service-list">
-<button class="service-category-trigger editorial-service-row" data-service-target="design-packages" type="button">
-<span class="service-category-number">01</span>
-<span class="service-category-copy">
-<strong>Design Packages</strong>
-<small>Three content tiers for consistent social media and campaign design.</small>
-</span>
-<span class="service-category-action">View Packages<b>↗</b></span>
+<button aria-controls="design-packages" aria-expanded="true" class="service-category-trigger editorial-service-row active" data-service-panel="design-packages" type="button">
+<span class="service-category-number">01</span><span class="service-category-copy"><strong>Design Packages</strong><small>Three content tiers for consistent social media and campaign design.</small></span><span class="service-category-action">View Packages <b>+</b></span>
 </button>
-<button class="service-category-trigger editorial-service-row" data-service-target="flexible-services" type="button">
-<span class="service-category-number">02</span>
-<span class="service-category-copy">
-<strong>Flexible Design Services</strong>
-<small>Standalone add-ons, rush work, branding, packaging, and adaptations.</small>
-</span>
-<span class="service-category-action">View Services<b>↗</b></span>
+<button aria-controls="individual-services" aria-expanded="false" class="service-category-trigger editorial-service-row" data-service-panel="individual-services" type="button">
+<span class="service-category-number">02</span><span class="service-category-copy"><strong>Individual Services</strong><small>Choose one focused creative service or add-on based on your immediate need.</small></span><span class="service-category-action">View Services <b>+</b></span>
 </button>
-<button class="service-category-trigger editorial-service-row" data-service-target="website-packages" type="button">
-<span class="service-category-number">03</span>
-<span class="service-category-copy">
-<strong>Static Website Packages</strong>
-<small>Responsive landing pages for launching, presenting, and converting.</small>
-</span>
-<span class="service-category-action">View Website Tiers<b>↗</b></span>
+<button aria-controls="website-packages" aria-expanded="false" class="service-category-trigger editorial-service-row" data-service-panel="website-packages" type="button">
+<span class="service-category-number">03</span><span class="service-category-copy"><strong>Static Website Packages</strong><small>Responsive landing pages for launching, presenting, and converting.</small></span><span class="service-category-action">View Website Tiers <b>+</b></span>
 </button>
 </div>
 </section>
-<div aria-hidden="true" aria-live="polite" class="service-panels service-template-store" hidden="">
-<section class="editorial-service-panel service-detail-panel" hidden="" id="design-packages" role="tabpanel">
-<div class="service-panel-heading">
-<div>
-<p class="eyebrow">Content Design Packages</p>
-<h2>Choose your content support level.</h2>
-</div>
-<button aria-label="Close Design Packages" class="service-panel-close" type="button">Close ×</button>
-</div>
-<div class="package-tier-grid editorial-package-list">
-<article class="editorial-package-row package-tier">
-<div class="package-tier-top">
-<span class="package-index">01</span>
-<p class="package-label">Starter Content Support</p>
-<h3>Content Essentials</h3>
-<div class="package-price"><strong>₱3,500</strong><span>≈ $60 USD</span></div>
-</div>
-<ul class="package-feature-list">
-<li>1 carousel post</li>
-<li>8 static pubmats</li>
-<li>3 revisions per design</li>
-<li>Custom layout direction</li>
-<li>Google Drive delivery</li>
-</ul>
-<a class="package-cta" href="contact.html?source=services&amp;service=Design%20Packages&amp;package=Content%20Essentials">Inquire About This Package ↗</a>
-</article>
-<article class="editorial-package-row package-tier-featured package-tier">
-<div class="package-badge">Client Favorite</div>
-<div class="package-tier-top">
-<span class="package-index">02</span>
-<p class="package-label">Growing Brand Support</p>
-<h3>Brand Growth</h3>
-<div class="package-price"><strong>₱7,500</strong><span>≈ $120 USD</span></div>
-</div>
-<ul class="package-feature-list">
-<li>15 static pubmats</li>
-<li>3 carousel posts</li>
-<li>Priority revisions</li>
-<li>Stronger brand consistency</li>
-<li>Campaign-style creative direction</li>
-<li>Delivered via Google Drive</li>
-</ul>
-<a class="package-cta" href="contact.html?source=services&amp;service=Design%20Packages&amp;package=Brand%20Growth">Choose Brand Growth ↗</a>
-</article>
-<article class="editorial-package-row package-tier">
-<div class="package-tier-top">
-<span class="package-index">03</span>
-<p class="package-label">Complete Content Support</p>
-<h3>Full Content System</h3>
-<div class="package-price"><strong>₱12,000</strong><span>≈ $190 USD</span></div>
-</div>
-<ul class="package-feature-list">
-<li>20–25 pubmats</li>
-<li>4–6 carousel posts</li>
-<li>Story versions included</li>
-<li>Priority turnaround</li>
-<li>Brand consistency supervision</li>
-<li>Organized content folders</li>
-</ul>
-<a class="package-cta" href="contact.html?source=services&amp;service=Design%20Packages&amp;package=Full%20Content%20System">Build a Full Content System ↗</a>
-</article>
+
+<section class="service-panels-inline" aria-live="polite">
+<section class="service-selection-panel active" id="design-packages" data-service-section>
+<div class="service-panel-heading"><div><p class="eyebrow">Content Design Packages</p><h2>Choose your content support level.</h2></div><p>Click a package to see the full scope and inquiry option.</p></div>
+<div class="package-tier-grid service-card-grid">
+<button class="package-tier service-choice-card" data-service-item="content-essentials" type="button">
+<span class="package-index">01</span><p class="package-label">Starter Content Support</p><h3>Content Essentials</h3><div class="package-price"><strong>₱3,500</strong><span>≈ $60 USD</span></div><ul class="package-feature-list"><li>1 carousel post</li><li>8 static pubmats</li><li>3 revisions per design</li></ul><span class="service-card-link">View package details <b>↗</b></span>
+</button>
+<button class="package-tier package-tier-featured service-choice-card" data-service-item="brand-growth" type="button"><span class="package-badge">Client Favorite</span><span class="package-index">02</span><p class="package-label">Growing Brand Support</p><h3>Brand Growth</h3><div class="package-price"><strong>₱7,500</strong><span>≈ $120 USD</span></div><ul class="package-feature-list"><li>15 static pubmats</li><li>3 carousel posts</li><li>Priority revisions</li></ul><span class="service-card-link">View package details <b>↗</b></span>
+</button>
+<button class="package-tier service-choice-card" data-service-item="full-content-system" type="button"><span class="package-index">03</span><p class="package-label">Complete Content Support</p><h3>Full Content System</h3><div class="package-price"><strong>₱12,000</strong><span>≈ $190 USD</span></div><ul class="package-feature-list"><li>20–25 pubmats</li><li>4–6 carousel posts</li><li>Priority turnaround</li></ul><span class="service-card-link">View package details <b>↗</b></span>
+</button>
 </div>
 </section>
-<section class="editorial-service-panel service-detail-panel" hidden="" id="flexible-services" role="tabpanel">
-<div class="service-panel-heading">
-<div>
-<p class="eyebrow">Flexible Design Services</p>
-<h2>Add-ons and standalone services.</h2>
-</div>
-<button aria-label="Close Flexible Design Services" class="service-panel-close" type="button">Close ×</button>
-</div>
-<div class="flex-service-grid editorial-flex-list">
-<article class="flex-service-item editorial-flex-row"><span>01</span><div><h3>Extra Static Pubmat</h3><p>Additional single-format social media artwork.</p></div><strong>₱350<small>≈ $6 USD</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>02</span><div><h3>Extra Carousel Post</h3><p>Multi-slide content designed as one cohesive post.</p></div><strong>₱800<small>≈ $14 USD</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>03</span><div><h3>Poster / Event Design</h3><p>Promotional posters, event announcements, or campaign visuals.</p></div><strong>₱500–₱1,500<small>≈ $9–$26 USD</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>04</span><div><h3>Logo Design</h3><p>Custom logo direction based on the project scope.</p></div><strong>₱2,500–₱5,000<small>≈ $45–$85 USD</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>05</span><div><h3>Packaging Design</h3><p>Visual packaging concepts and production-ready layouts.</p></div><strong>₱3,000+<small>≈ $50+ USD</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>06</span><div><h3>Rush Delivery</h3><p>Priority completion for deadlines under three days.</p></div><strong>+30%<small>of total project</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>07</span><div><h3>Story Version Adaptation</h3><p>Resize and adapt an approved design into story format.</p></div><strong>₱150 each<small>≈ $3 USD</small></strong></article>
-<article class="flex-service-item editorial-flex-row"><span>08</span><div><h3>Motion Graphics / Simple Animation</h3><p>Basic animated visuals for social media or presentations.</p></div><strong>₱800+<small>≈ $14+ USD</small></strong></article>
-</div>
-<div class="service-note-bar">
-<p>Final pricing depends on scope and turnaround.</p>
-<a href="contact.html?source=services&amp;service=Flexible%20Design%20Services&amp;package=Custom%20Quote">Request a Custom Quote ↗</a>
+
+<section class="service-selection-panel" id="individual-services" data-service-section hidden>
+<div class="service-panel-heading"><div><p class="eyebrow">Individual Services</p><h2>Select only what the project needs.</h2></div><p>Each item opens a short service brief with inclusions, starting rate, and CTA.</p></div>
+<div class="individual-service-grid service-card-grid">
+<button class="individual-service-card service-choice-card" data-service-item="social-media-design" type="button"><span>01</span><h3>Social Media Design</h3><p>Static pubmats, campaign graphics, and branded content.</p><strong>Starts at ₱350</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="carousel-design" type="button"><span>02</span><h3>Carousel Design</h3><p>Multi-slide educational, promotional, or story-led content.</p><strong>Starts at ₱800</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="poster-event-design" type="button"><span>03</span><h3>Poster &amp; Event Design</h3><p>Announcements, promotions, events, and campaign key visuals.</p><strong>₱500–₱1,500</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="logo-design" type="button"><span>04</span><h3>Logo Design</h3><p>Focused logo direction for small brands and new projects.</p><strong>₱2,500–₱5,000</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="packaging-design" type="button"><span>05</span><h3>Packaging Design</h3><p>Visual concepts and production-ready packaging layouts.</p><strong>Starts at ₱3,000</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="story-adaptation" type="button"><span>06</span><h3>Story Adaptation</h3><p>Resize an approved design into a vertical story format.</p><strong>₱150 each</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="motion-graphics" type="button"><span>07</span><h3>Simple Motion Graphics</h3><p>Basic animated visuals for social media or presentations.</p><strong>Starts at ₱800</strong><b>View service ↗</b></button>
+<button class="individual-service-card service-choice-card" data-service-item="rush-delivery" type="button"><span>08</span><h3>Rush Delivery</h3><p>Priority completion for qualified projects under three days.</p><strong>+30% project fee</strong><b>View service ↗</b></button>
 </div>
 </section>
-<section class="editorial-service-panel service-detail-panel" hidden="" id="website-packages" role="tabpanel">
-<div class="service-panel-heading">
-<div>
-<p class="eyebrow">Static Website / Landing Page</p>
-<h2>Launch a clean, responsive website.</h2>
-</div>
-<button aria-label="Close Static Website Packages" class="service-panel-close" type="button">Close ×</button>
-</div>
-<div class="package-tier-grid website-tier-grid editorial-package-list">
-<article class="editorial-package-row package-tier">
-<div class="package-tier-top">
-<span class="package-index">01</span>
-<p class="package-label">Simple Online Presence</p>
-<h3>Launch Landing Page</h3>
-<div class="package-price"><strong>₱12,000</strong><span>≈ $210 USD</span></div>
-</div>
-<ul class="package-feature-list">
-<li>One responsive landing page</li>
-<li>Up to 5 content sections</li>
-<li>Brand colors and typography</li>
-<li>Contact and social media links</li>
-<li>Basic SEO and social preview setup</li>
-<li>GitHub Pages deployment</li>
-<li>2 revision rounds</li>
-</ul>
-<a class="package-cta" href="contact.html?source=services&amp;service=Static%20Website%20%2F%20Landing%20Page&amp;package=Launch%20Landing%20Page">Start a Landing Page ↗</a>
-</article>
-<article class="editorial-package-row package-tier-featured package-tier">
-<div class="package-badge">Recommended</div>
-<div class="package-tier-top">
-<span class="package-index">02</span>
-<p class="package-label">Professional Business Presence</p>
-<h3>Business Landing Page</h3>
-<div class="package-price"><strong>₱18,000</strong><span>≈ $310 USD</span></div>
-</div>
-<ul class="package-feature-list">
-<li>One custom responsive landing page</li>
-<li>Up to 8 content sections</li>
-<li>Custom visual and layout direction</li>
-<li>Inquiry form integration</li>
-<li>Basic visitor analytics</li>
-<li>Subtle interactions and animations</li>
-<li>SEO, social preview, and deployment setup</li>
-<li>3 revision rounds</li>
-</ul>
-<a class="package-cta" href="contact.html?source=services&amp;service=Static%20Website%20%2F%20Landing%20Page&amp;package=Business%20Landing%20Page">Choose Business Landing ↗</a>
-</article>
-<article class="editorial-package-row package-tier">
-<div class="package-tier-top">
-<span class="package-index">03</span>
-<p class="package-label">Campaign or Conversion Focus</p>
-<h3>Premium Landing System</h3>
-<div class="package-price"><strong>₱25,000</strong><span>≈ $430 USD</span></div>
-</div>
-<ul class="package-feature-list">
-<li>One premium responsive landing page</li>
-<li>Up to 10 structured sections</li>
-<li>Conversion-focused content hierarchy</li>
-<li>Advanced inquiry or registration form</li>
-<li>Analytics and site-visit tracking</li>
-<li>Performance and image optimization</li>
-<li>Custom-domain deployment support</li>
-<li>4 revision rounds</li>
-<li>30 days of minor post-launch support</li>
-</ul>
-<a class="package-cta" href="contact.html?source=services&amp;service=Static%20Website%20%2F%20Landing%20Page&amp;package=Premium%20Landing%20System">Plan a Premium Website ↗</a>
-</article>
-</div>
-<div class="service-note-bar">
-<p>Domain, hosting, integrations, and copywriting are quoted separately.</p>
-<a href="contact.html?source=services&amp;service=Static%20Website%20%2F%20Landing%20Page&amp;package=Custom%20Website%20Quote">Discuss a Custom Website ↗</a>
+
+<section class="service-selection-panel" id="website-packages" data-service-section hidden>
+<div class="service-panel-heading"><div><p class="eyebrow">Static Website / Landing Page</p><h2>Choose the right level of web presence.</h2></div><p>Click a package to review its purpose, full inclusions, and inquiry option.</p></div>
+<div class="package-tier-grid website-tier-grid service-card-grid">
+<button class="package-tier service-choice-card" data-service-item="launch-landing-page" type="button"><span class="package-index">01</span><p class="package-label">Simple Online Presence</p><h3>Launch Landing Page</h3><div class="package-price"><strong>₱12,000</strong><span>≈ $210 USD</span></div><ul class="package-feature-list"><li>Up to 5 sections</li><li>Responsive layout</li><li>Basic SEO setup</li></ul><span class="service-card-link">View package details <b>↗</b></span></button>
+<button class="package-tier package-tier-featured service-choice-card" data-service-item="business-landing-page" type="button"><span class="package-badge">Recommended</span><span class="package-index">02</span><p class="package-label">Professional Business Presence</p><h3>Business Landing Page</h3><div class="package-price"><strong>₱18,000</strong><span>≈ $310 USD</span></div><ul class="package-feature-list"><li>Up to 8 sections</li><li>Inquiry form integration</li><li>Analytics setup</li></ul><span class="service-card-link">View package details <b>↗</b></span></button>
+<button class="package-tier service-choice-card" data-service-item="premium-landing-system" type="button"><span class="package-index">03</span><p class="package-label">Campaign or Conversion Focus</p><h3>Premium Landing System</h3><div class="package-price"><strong>₱25,000</strong><span>≈ $430 USD</span></div><ul class="package-feature-list"><li>Up to 10 sections</li><li>Advanced form</li><li>30-day support</li></ul><span class="service-card-link">View package details <b>↗</b></span></button>
 </div>
 </section>
-<section class="service-detail-panel custom-project-template" hidden="" id="custom-projects">
-<div class="service-panel-heading">
-<div>
-<p class="eyebrow">Custom project planning</p>
-<h2>Build a scope around what you actually need.</h2>
-</div>
-</div>
-<div class="custom-project-modal-copy">
-<p>Best for campaigns or launches that combine several deliverables, recurring creative support, unusual formats, or deadlines that do not fit a standard package.</p>
-<div class="custom-project-points">
-<article><span>01</span><strong>Mix services</strong><p>Combine social graphics, publications, web visuals, packaging, and adaptations.</p></article>
-<article><span>02</span><strong>Set the scope</strong><p>Receive a clear list of deliverables, timeline, revisions, and a project estimate.</p></article>
-<article><span>03</span><strong>Organized delivery</strong><p>Keep feedback, files, and final outputs structured in one workflow.</p></article>
-</div>
-<div class="service-modal-bottom-cta">
-<div><strong>Not sure which service fits?</strong><span>Send the project details and I will recommend a practical scope.</span></div>
-<a class="btn btn-primary" href="contact.html?source=services-custom&amp;service=Custom%20Project">Start a custom inquiry ↗</a>
-</div>
-</div>
-</section></div>
+</section>
+
 <section class="compact-contact editorial-service-cta">
-<div>
-<p class="eyebrow">Need Something Custom?</p>
-<h2>Need a custom combination?</h2>
-</div>
-<button class="btn btn-primary service-custom-trigger" data-service-target="custom-projects" type="button">Explore a custom project ↗</button>
+<div><p class="eyebrow">Need Something Custom?</p><h2>Build a custom combination.</h2><p>Mix design, publication, web, packaging, and adaptation support into one clear scope.</p></div>
+<button class="btn btn-primary service-choice-card" data-service-item="custom-project" type="button">Explore a custom project ↗</button>
 </section>
 </main>
 <div aria-hidden="true" class="service-modal" id="serviceModal">
 <div class="service-modal-backdrop" data-close-service-modal=""></div>
-<section aria-label="Service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1">
+<section aria-label="Selected service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1">
 <button aria-label="Close service details" class="service-modal-close" data-close-service-modal="" type="button">×</button>
 <div class="service-modal-content" id="serviceModalContent"></div>
 </section>
@@ -270,8 +114,8 @@
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.2.6"></script>
-<script src="theme.js?v=3.2.6"></script>
-<script src="services.js?v=3.2.6"></script>
-<script src="navigation.js?v=3.2.6"></script><script src="reveal.js?v=3.2.6"></script></body>
+<script src="config.js?v=3.2.7"></script>
+<script src="theme.js?v=3.2.7"></script>
+<script src="services.js?v=3.2.7"></script>
+<script src="navigation.js?v=3.2.7"></script><script src="reveal.js?v=3.2.7"></script></body>
 </html>

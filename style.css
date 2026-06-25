@@ -9434,7 +9434,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.6 — unified editorial system
+   v3.2.7 — unified editorial system
    ========================================================= */
 .editorial-system {
   --editorial-max: 1180px;
@@ -9686,7 +9686,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.6 — Services package grid + contact spacing repair
+   v3.2.7 — Services package grid + contact spacing repair
    ========================================================= */
 
 /* Services: tighter category rows and a contained open panel */
@@ -10032,7 +10032,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.6 — refined headings, wide Insights banners,
+   v3.2.7 — refined headings, wide Insights banners,
    project search, flat project stories, full-page reveal
    ========================================================= */
 
@@ -10271,7 +10271,7 @@ body.signal-theme h2,
 
 
 /* =========================================================
-   v3.2.6 — Interactive services, compact CV, modal cleanup
+   v3.2.7 — Interactive services, compact CV, modal cleanup
    ========================================================= */
 
 /* Footer: explicit left-aligned studio identity */
@@ -10587,7 +10587,7 @@ body.signal-theme h2,
 }
 
 
-/* v3.2.6 refinement: custom scope points stay editorial, not card-like */
+/* v3.2.7 refinement: custom scope points stay editorial, not card-like */
 .custom-project-points {
   gap: 0;
   border-top: 1px solid var(--theme-line);
@@ -10604,4 +10604,340 @@ body.signal-theme h2,
 @media (max-width: 900px) {
   .custom-project-points article { border-right: 0; border-bottom: 1px solid var(--theme-line); }
   .custom-project-points article:last-child { border-bottom: 0; }
+}
+
+/* v3.2.7 — wider CV portrait + package-first service interaction */
+.cv-hero-compact {
+  grid-template-columns: minmax(240px, 280px) minmax(0, 1fr) !important;
+  gap: 34px !important;
+  align-items: stretch !important;
+}
+.cv-hero-compact .cv-portrait-wrap {
+  width: 100% !important;
+  max-width: 280px !important;
+}
+.cv-hero-compact .cv-portrait {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 330px;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+.cv-hero-compact .cv-hero-copy {
+  align-self: center;
+}
+
+.services-v327 .editorial-service-index {
+  margin-bottom: 26px;
+}
+.services-v327 .service-panels-inline {
+  border-top: 1px solid var(--theme-line);
+}
+.services-v327 .service-selection-panel {
+  scroll-margin-top: 92px;
+  padding: 28px 0 12px;
+}
+.services-v327 .service-selection-panel[hidden] {
+  display: none !important;
+}
+.services-v327 .service-panel-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .46fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.services-v327 .service-panel-heading h2 {
+  margin: 5px 0 0;
+  color: var(--theme-text) !important;
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  letter-spacing: -.035em;
+}
+.services-v327 .service-panel-heading > p {
+  margin: 0;
+  color: var(--theme-muted) !important;
+  font-size: .8rem;
+  line-height: 1.55;
+}
+.services-v327 .service-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+.services-v327 button.service-choice-card {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  text-align: left;
+  color: var(--theme-text);
+  cursor: pointer;
+}
+.services-v327 .package-tier.service-choice-card {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  min-height: 350px;
+  padding: 22px !important;
+  border: 1px solid var(--theme-line) !important;
+  border-radius: 12px !important;
+  background: var(--theme-surface) !important;
+  box-shadow: none !important;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.services-v327 .package-tier.service-choice-card:hover,
+.services-v327 .package-tier.service-choice-card:focus-visible,
+.services-v327 .individual-service-card:hover,
+.services-v327 .individual-service-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--theme-accent) 58%, var(--theme-line)) !important;
+  outline: none;
+}
+.services-v327 .package-tier-featured.service-choice-card {
+  background: var(--theme-accent-soft) !important;
+}
+.services-v327 .package-tier .package-feature-list {
+  margin: 18px 0 24px;
+}
+.services-v327 .service-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--theme-line);
+  color: var(--theme-accent);
+  font-size: .75rem;
+  font-weight: 800;
+}
+.services-v327 .individual-service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+.services-v327 .individual-service-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 235px;
+  padding: 21px;
+  border: 1px solid var(--theme-line);
+  border-radius: 12px;
+  background: var(--theme-surface);
+  transition: transform .18s ease, border-color .18s ease;
+}
+.services-v327 .individual-service-card > span {
+  color: var(--theme-accent);
+  font-size: .7rem;
+  font-weight: 800;
+}
+.services-v327 .individual-service-card h3 {
+  margin: 18px 0 8px;
+  color: var(--theme-text) !important;
+  font-size: 1.05rem;
+}
+.services-v327 .individual-service-card p {
+  margin: 0 0 18px;
+  color: var(--theme-muted) !important;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+.services-v327 .individual-service-card strong {
+  margin-top: auto;
+  color: var(--theme-text);
+  font-size: .88rem;
+}
+.services-v327 .individual-service-card > b {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid var(--theme-line);
+  color: var(--theme-accent);
+  font-size: .72rem;
+}
+.services-v327 .editorial-service-cta {
+  margin-top: 30px;
+}
+.services-v327 .editorial-service-cta p:last-child {
+  max-width: 650px;
+  margin: 8px 0 0;
+  color: var(--theme-muted) !important;
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+.service-modal-dialog {
+  width: min(760px, 100%) !important;
+  max-width: 760px !important;
+}
+.service-detail-modal-layout {
+  display: grid;
+  gap: 24px;
+}
+.service-detail-modal-head {
+  padding-right: 46px;
+}
+.service-detail-modal-head h2 {
+  margin: 7px 0 10px;
+  color: var(--theme-text) !important;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+.service-detail-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+.service-detail-price strong {
+  color: var(--theme-text);
+  font-size: 1.55rem;
+}
+.service-detail-price span {
+  color: var(--theme-muted);
+  font-size: .74rem;
+}
+.service-detail-intro {
+  max-width: 690px;
+  margin: 0;
+  color: var(--theme-muted) !important;
+  font-size: .92rem;
+  line-height: 1.7;
+}
+.service-detail-modal-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  border-top: 1px solid var(--theme-line);
+  border-bottom: 1px solid var(--theme-line);
+}
+.service-detail-modal-grid section {
+  padding: 22px 0;
+}
+.service-detail-modal-grid section + section {
+  padding-left: 26px;
+  border-left: 1px solid var(--theme-line);
+}
+.service-detail-label {
+  display: block;
+  margin-bottom: 11px;
+  color: var(--theme-accent);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.service-detail-modal-grid p,
+.service-detail-modal-grid li,
+.service-detail-note p {
+  color: var(--theme-muted) !important;
+  font-size: .8rem;
+  line-height: 1.6;
+}
+.service-detail-modal-grid p { margin: 0; }
+.service-detail-modal-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.service-detail-modal-grid li {
+  position: relative;
+  padding-left: 17px;
+}
+.service-detail-modal-grid li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--theme-accent);
+  font-weight: 800;
+}
+.service-detail-note {
+  padding: 16px 18px;
+  border: 1px solid var(--theme-line);
+  border-radius: 10px;
+  background: var(--theme-surface-2);
+}
+.service-detail-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--theme-text);
+  font-size: .78rem;
+}
+.service-detail-note p { margin: 0; }
+.service-detail-modal-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.service-detail-modal-cta > div {
+  display: grid;
+  gap: 4px;
+}
+.service-detail-modal-cta > div strong {
+  color: var(--theme-text);
+  font-size: .9rem;
+}
+.service-detail-modal-cta > div span {
+  color: var(--theme-muted);
+  font-size: .72rem;
+}
+.service-modal-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  white-space: nowrap;
+}
+.service-modal-cta-button b {
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .cv-hero-compact {
+    grid-template-columns: minmax(180px, 230px) minmax(0, 1fr) !important;
+  }
+  .cv-hero-compact .cv-portrait-wrap { max-width: 230px !important; }
+  .services-v327 .service-card-grid,
+  .services-v327 .individual-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .cv-hero-compact {
+    grid-template-columns: 124px minmax(0, 1fr) !important;
+    gap: 17px !important;
+  }
+  .cv-hero-compact .cv-portrait-wrap { max-width: 124px !important; }
+  .cv-hero-compact .cv-portrait { min-height: 165px; }
+  .services-v327 .service-panel-heading {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .services-v327 .service-card-grid,
+  .services-v327 .individual-service-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .services-v327 .package-tier.service-choice-card,
+  .services-v327 .individual-service-card {
+    min-height: 0;
+  }
+  .service-detail-modal-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-detail-modal-grid section + section {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--theme-line);
+  }
+  .service-detail-modal-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .service-modal-cta-button {
+    justify-content: space-between;
+  }
 }
