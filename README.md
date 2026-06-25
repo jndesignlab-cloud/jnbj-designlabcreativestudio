@@ -1,15 +1,12 @@
-# DesignLab Portfolio v3.2.0 — Compact Portfolio Index
+# DesignLab Portfolio v3.2.1 — Sitewide Compact Density
 
-This release replaces the game-profile homepage with a compact editorial portfolio index.
+This release tightens spacing across the full portfolio, not only the homepage.
 
-## Main changes
-- Dense homepage with less vertical spacing
-- Compact profile, selected work, capabilities, notes, and collaboration sections
-- Light Mode is the first-visit default
-- Theme selector contains Light and Blue only
-- Public site visit counter restored on the homepage
-- Existing projects, inquiry system, tracking, CV, services, insights, and admin tools preserved
+## Changes
+- Reduced gaps between homepage sections and divider lines
+- Removed the redundant Profile navigation link
+- Removed the duplicate Full Profile link from the About panel
+- Reduced hero, panel, card, form, article, CV, services, and footer spacing
+- Preserved Light Mode as default, Blue Mode, visitor counter, mobile navigation, inquiry tracking, and all existing integrations
 
-## Deployment
-Upload and overwrite the root files and existing folders in the GitHub Pages repository.
-No Google Apps Script or Code.gs redeployment is required.
+No Apps Script or Code.gs redeployment is required.

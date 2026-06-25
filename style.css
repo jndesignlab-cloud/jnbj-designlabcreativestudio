@@ -7770,7 +7770,7 @@ body.modal-open {
 
 
 /* =========================================================
-   v3.2.0 — Compact Portfolio Index
+   v3.2.1 — Compact Portfolio Index
    Dense editorial presentation with Light / Blue themes.
    ========================================================= */
 
@@ -8229,7 +8229,7 @@ html[data-theme="blue"] .theme-swatch-light { border-color: rgba(255,255,255,.35
   .theme-switcher button span:last-child { display: none; }
 }
 
-/* v3.2.0 compact density refinement */
+/* v3.2.1 compact density refinement */
 .compact-home .section-pad { padding-top: 26px; padding-bottom: 26px; }
 .compact-profile { min-height: 270px; }
 .compact-profile-photo { min-height: 220px; }
@@ -8240,4 +8240,634 @@ html[data-theme="blue"] .theme-swatch-light { border-color: rgba(255,255,255,.35
 .compact-footer { min-height: 58px; padding-top: 12px; }
 @media (max-width: 760px) {
   .compact-home .section-pad { padding-top: 20px; padding-bottom: 20px; }
+}
+
+/* =========================================================
+   v3.2.1 — Sitewide Compact Density Pass
+   Reduces vertical travel while preserving readability.
+   ========================================================= */
+
+/* Shared page rhythm */
+body.signal-theme .site-header,
+body.signal-theme .signal-header {
+  min-height: 58px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+body.signal-theme main.section-pad:not(.compact-main) {
+  padding-top: 22px !important;
+  padding-bottom: 28px !important;
+}
+
+body.signal-theme .footer:not(.compact-footer) {
+  padding: 16px 20px 82px;
+}
+
+/* Homepage */
+.compact-home .section-pad {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+.compact-home .compact-profile.section-pad {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.compact-profile {
+  min-height: 245px;
+  gap: 20px;
+}
+
+.compact-profile-photo {
+  min-height: 200px;
+}
+
+.compact-profile-copy > p:not(.compact-overline) {
+  margin-bottom: 13px;
+}
+
+.compact-section-head,
+.compact-panel-head {
+  margin-bottom: 9px;
+}
+
+.compact-project-grid {
+  gap: 8px !important;
+}
+
+.compact-home .compact-project-grid .project-card,
+.compact-home .compact-project-grid .project-thumb {
+  min-height: 118px;
+}
+
+.compact-home .compact-project-grid .project-info {
+  padding: 11px !important;
+}
+
+.compact-dual {
+  gap: 8px;
+}
+
+.compact-panel {
+  padding: 13px;
+}
+
+.compact-capability-list span {
+  padding: 9px 10px;
+}
+
+.compact-index-list a {
+  min-height: 36px;
+}
+
+.compact-contact {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+.compact-footer {
+  min-height: 50px;
+  padding-top: 9px;
+}
+
+/* Projects archive */
+.projects-page {
+  padding-top: 18px !important;
+  padding-bottom: 26px !important;
+}
+
+.projects-page-hero {
+  padding: 8px 0 14px !important;
+  margin-bottom: 12px !important;
+}
+
+.filter-shell {
+  margin-bottom: 14px !important;
+}
+
+.filter-tabs {
+  gap: 7px;
+}
+
+.filter-tabs button {
+  padding: 8px 12px;
+}
+
+.projects-page .project-grid {
+  gap: 12px;
+}
+
+.managed-pages-section {
+  padding-top: 18px !important;
+}
+
+/* Individual project */
+.project-page {
+  padding-top: 18px !important;
+  padding-bottom: 26px !important;
+}
+
+.project-page .back-link {
+  margin-bottom: 9px !important;
+}
+
+.project-premium-hero {
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.project-hero-copy {
+  padding: clamp(18px, 2.5vw, 30px);
+}
+
+.project-hero-copy h1 {
+  margin-bottom: 10px;
+}
+
+.project-hero-copy .project-skill-tags {
+  margin: 6px 0 12px;
+}
+
+.project-hero-copy .project-detail-actions {
+  margin-top: 12px;
+}
+
+.project-hero-gallery {
+  padding: 12px;
+}
+
+.compact-carousel-top {
+  margin-bottom: 9px;
+}
+
+.premium-carousel {
+  min-height: 300px;
+}
+
+.project-hero-gallery .carousel-dots {
+  margin-top: 8px;
+}
+
+.case-study-editorial {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.case-study-editorial .case-study-card {
+  gap: 10px;
+  padding: 18px;
+}
+
+.project-conversion-strip {
+  gap: 18px;
+  margin-top: 14px;
+  padding: 20px;
+}
+
+/* Services */
+.services-hero {
+  gap: 20px;
+  padding: 8px 0 18px !important;
+}
+
+.services-hero h1 {
+  margin-bottom: 12px;
+}
+
+.services-hero-note {
+  padding: 10px 0 2px 18px;
+}
+
+.service-category-section,
+.service-detail-panel {
+  padding: 24px 0 28px;
+}
+
+.services-section-heading,
+.service-panel-heading {
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.service-category-grid,
+.package-tier-grid,
+.website-tier-grid {
+  gap: 10px;
+}
+
+.service-category-trigger {
+  min-height: 185px;
+  padding: 18px;
+}
+
+.service-category-copy {
+  gap: 8px;
+  margin: 26px 0 auto;
+}
+
+.service-category-action {
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.package-tier {
+  min-height: 0;
+  padding: 20px;
+}
+
+.package-tier-top {
+  padding-bottom: 14px;
+}
+
+.package-label {
+  margin-top: 16px;
+}
+
+.package-tier h3 {
+  margin-bottom: 13px;
+}
+
+.package-feature-list {
+  gap: 9px;
+  margin: 16px 0 20px;
+}
+
+.package-cta {
+  padding-top: 13px;
+}
+
+.flex-service-item {
+  min-height: 102px;
+  gap: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.service-note-bar {
+  margin-top: 16px;
+  padding: 14px 0;
+}
+
+.services-contact-band {
+  gap: 22px;
+  margin: 28px 0 14px;
+  padding: 24px;
+}
+
+/* Contact and inquiry */
+.contact-hero {
+  gap: 24px;
+  padding: 8px 0 18px !important;
+}
+
+.contact-layout {
+  gap: 16px;
+  padding: 18px 0 28px;
+}
+
+.contact-intro-panel,
+.contact-form-shell {
+  padding: 22px;
+}
+
+.contact-process-list {
+  margin: 20px 0;
+}
+
+.contact-process-list li {
+  gap: 10px;
+  padding: 12px 0;
+}
+
+.contact-form-heading {
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+}
+
+.contact-form-grid {
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#inquiryForm textarea {
+  min-height: 130px;
+}
+
+.inquiry-stepper {
+  margin: 14px 0 20px;
+}
+
+.inquiry-step {
+  padding: 9px;
+}
+
+.inquiry-progress-track {
+  margin: -8px 0 20px;
+}
+
+.inquiry-step-heading {
+  margin-bottom: 15px;
+}
+
+.inquiry-step-actions {
+  margin-top: 17px;
+  padding-top: 14px;
+}
+
+.inquiry-review {
+  margin-bottom: 15px;
+}
+
+.inquiry-review article {
+  padding: 11px;
+}
+
+.inquiry-success {
+  min-height: 380px;
+  padding: 22px;
+}
+
+/* CV */
+.cv-page {
+  padding-top: 18px !important;
+  padding-bottom: 26px !important;
+}
+
+.cv-hero {
+  gap: 24px;
+  padding: 8px 0 20px !important;
+}
+
+.cv-hero-copy h1 {
+  margin-bottom: 10px;
+}
+
+.cv-summary {
+  margin-bottom: 14px;
+}
+
+.cv-quick-facts {
+  margin-top: 14px;
+}
+
+.cv-quick-facts article {
+  padding: 16px;
+}
+
+.cv-layout {
+  gap: 28px;
+  padding: 24px 0 10px;
+}
+
+.cv-sidebar {
+  gap: 10px;
+}
+
+.cv-panel {
+  padding: 17px;
+}
+
+.cv-section {
+  padding-bottom: 28px;
+}
+
+.cv-section + .cv-section {
+  padding-top: 26px;
+}
+
+.cv-section-heading {
+  margin-bottom: 17px;
+}
+
+.cv-timeline-item {
+  gap: 13px;
+  padding-bottom: 24px;
+}
+
+.cv-timeline-item ul {
+  gap: 6px;
+}
+
+.cv-value-grid,
+.cv-two-column-section,
+.cv-credential-grid {
+  gap: 10px;
+}
+
+.cv-value-grid article {
+  padding: 17px;
+}
+
+.cv-contact-band {
+  gap: 18px;
+  padding: 22px;
+}
+
+/* Insights listing and articles */
+.insights-hero {
+  gap: 24px;
+  padding: 8px 0 18px !important;
+}
+
+.insights-list {
+  padding-bottom: 28px;
+}
+
+.insight-card {
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.insight-card h2 {
+  margin: 9px 0;
+}
+
+.insight-card p {
+  margin-bottom: 8px;
+}
+
+.insight-read-link {
+  margin-top: 5px;
+}
+
+.article-back {
+  margin: 20px 0 12px;
+}
+
+.article-hero {
+  padding: 8px 0 20px !important;
+}
+
+.article-hero h1 {
+  margin: 12px 0 14px;
+}
+
+.article-cover {
+  margin-bottom: 28px;
+}
+
+.article-layout {
+  gap: 36px;
+}
+
+.article-content p {
+  margin-bottom: 15px;
+}
+
+.article-content h2 {
+  margin: 30px 0 12px;
+}
+
+.article-content h3 {
+  margin: 22px 0 10px;
+}
+
+.article-content ul {
+  margin-bottom: 18px;
+}
+
+.article-cta {
+  gap: 18px;
+  margin: 34px 0 12px;
+  padding: 22px;
+}
+
+/* Inquiry tracking */
+.tracking-hero {
+  gap: 24px;
+  padding: 8px 0 18px !important;
+}
+
+.tracking-layout {
+  gap: 16px;
+  padding: 18px 0 28px;
+}
+
+.tracking-info-panel,
+.tracking-card-shell {
+  padding: 22px;
+}
+
+.tracking-info-list {
+  margin-top: 18px;
+}
+
+.tracking-info-list article {
+  padding: 12px 0;
+}
+
+.tracking-form-heading {
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+}
+
+.tracking-form {
+  gap: 12px;
+}
+
+/* Admin utility page */
+.admin-wrap {
+  padding-top: 24px !important;
+  padding-bottom: 30px !important;
+}
+
+.admin-panel,
+.admin-guide {
+  padding: 22px;
+}
+
+.admin-guide {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .service-category-trigger {
+    min-height: 150px;
+  }
+
+  .article-layout {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .compact-home .section-pad {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .compact-home .compact-profile.section-pad {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .compact-profile {
+    gap: 12px;
+  }
+
+  .compact-dual {
+    gap: 7px;
+  }
+
+  .compact-panel {
+    padding: 12px;
+  }
+
+  body.signal-theme main.section-pad:not(.compact-main) {
+    padding-top: 16px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .projects-page-hero,
+  .services-hero,
+  .contact-hero,
+  .tracking-hero,
+  .insights-hero,
+  .cv-hero,
+  .article-hero {
+    padding-top: 4px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .project-premium-hero,
+  .contact-layout,
+  .tracking-layout,
+  .cv-layout {
+    gap: 12px;
+  }
+
+  .premium-carousel {
+    min-height: 230px;
+  }
+
+  .service-category-section,
+  .service-detail-panel {
+    padding: 18px 0 20px;
+  }
+
+  .service-category-trigger {
+    min-height: 132px;
+  }
+
+  .contact-intro-panel,
+  .contact-form-shell,
+  .tracking-info-panel,
+  .tracking-card-shell {
+    padding: 17px;
+  }
+
+  .cv-section {
+    padding-bottom: 22px;
+  }
+
+  .cv-section + .cv-section {
+    padding-top: 20px;
+  }
+
+  .insight-card {
+    gap: 14px;
+    padding: 16px 0;
+  }
 }

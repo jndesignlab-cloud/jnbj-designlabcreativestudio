@@ -1,5 +1,5 @@
-const SITE_VERSION = "3.2.0";
-const LAST_EDIT = "June 24, 2026";
+const SITE_VERSION = "3.2.1";
+const LAST_EDIT = "June 25, 2026";
 const DRAFT_STORAGE_KEY = "designlab-inquiry-draft";
 
 const inquiryForm = document.querySelector("#inquiryForm");
