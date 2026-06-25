@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.0.1" />
+  <link rel="stylesheet" href="style.css?v=3.1.0" />
   <script>
     document.documentElement.dataset.theme = "blue";
     try { localStorage.removeItem("designlab-theme"); } catch (error) {}
@@ -37,41 +37,79 @@
   </header>
 
   <main>
-    <section class="section-pad v3-hero" aria-labelledby="v3-hero-title">
-      <div class="v3-hero-copy">
-        <p class="v3-overline">Independent creative practice · Pangasinan, Philippines</p>
-        <h1 id="v3-hero-title">I design campaigns, content, and useful digital systems.</h1>
-        <p class="v3-hero-intro">
-          I’m Jann, a graphic designer and creative developer based in Pangasinan. I create university campaigns, brand visuals, publications, and lightweight web tools.
-        </p>
-        <div class="v3-actions">
-          <a href="#projects" class="btn btn-primary">View selected work</a>
-          <a href="cv.html" class="v3-text-link">Read my CV <span aria-hidden="true">↗</span></a>
-        </div>
+    <section class="section-pad game-hero" aria-labelledby="player-name">
+      <div class="game-hud-top" aria-label="Profile status">
+        <span class="game-online"><i aria-hidden="true"></i> Profile active</span>
+        <span>PLAYER ID · JNJ-08</span>
       </div>
 
-      <figure class="v3-portrait">
-        <div class="v3-portrait-frame">
-          <img src="profile-photo.png" alt="Jann Nathaniel Jaravata" width="720" height="880" fetchpriority="high">
-        </div>
-        <figcaption>
-          <span>Graphic Designer · Creative Developer</span>
-          <span>Available for remote creative work</span>
-        </figcaption>
-      </figure>
+      <div class="game-hero-grid">
+        <article class="game-character-card">
+          <div class="game-character-visual">
+            <img src="profile-photo.png" alt="Jann Nathaniel Jaravata" width="720" height="880" fetchpriority="high">
+            <span class="game-level-badge">LVL 08</span>
+          </div>
 
-      <div class="v3-proof-row" aria-label="Professional highlights">
-        <div><strong>8+</strong><span>years in professional design</span></div>
-        <div><strong>ACP</strong><span>Adobe Certified Professional</span></div>
-        <div><strong>200+</strong><span>marketing and campaign materials</span></div>
-        <div><strong>Remote</strong><span>design, collaboration, and delivery</span></div>
+          <div class="game-character-copy">
+            <p class="game-kicker">Creative class</p>
+            <h1 id="player-name">Jann Jaravata</h1>
+            <p class="game-role">Graphic Designer · Creative Developer</p>
+            <p class="game-summary">Campaigns, brand visuals, publications, and lightweight web systems.</p>
+            <div class="game-actions">
+              <a href="#projects" class="btn btn-primary">Open quest log</a>
+              <a href="cv.html" class="game-secondary-action">View full profile ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <aside class="game-stats-panel" aria-labelledby="stats-title">
+          <div class="game-panel-heading">
+            <div>
+              <p class="game-kicker">Dashboard</p>
+              <h2 id="stats-title">Character stats</h2>
+            </div>
+            <span>Click to inspect</span>
+          </div>
+
+          <div class="game-stat-grid">
+            <button class="game-stat-card" type="button" data-stat="experience">
+              <span class="game-stat-code">EXP</span>
+              <strong>8+</strong>
+              <small>Years in design</small>
+              <span class="game-stat-open">View details</span>
+            </button>
+            <button class="game-stat-card" type="button" data-stat="campaigns">
+              <span class="game-stat-code">QST</span>
+              <strong>200+</strong>
+              <small>Campaign materials</small>
+              <span class="game-stat-open">View details</span>
+            </button>
+            <button class="game-stat-card" type="button" data-stat="certification">
+              <span class="game-stat-code">BDG</span>
+              <strong>ACP</strong>
+              <small>Adobe certified</small>
+              <span class="game-stat-open">View details</span>
+            </button>
+            <button class="game-stat-card" type="button" data-stat="remote">
+              <span class="game-stat-code">MOD</span>
+              <strong>ON</strong>
+              <small>Remote ready</small>
+              <span class="game-stat-open">View details</span>
+            </button>
+          </div>
+        </aside>
+      </div>
+
+      <div class="game-status-bar">
+        <span><i aria-hidden="true"></i> AVAILABLE FOR REMOTE CREATIVE WORK</span>
+        <a href="contact.html?source=homepage-game-status">Start a project ↗</a>
       </div>
     </section>
 
     <section id="projects" class="section-pad v3-work-section">
       <div class="v3-section-intro">
-        <p class="v3-overline">Selected work</p>
-        <h2>Campaigns, client work, and practical digital systems.</h2>
+        <p class="v3-overline">Quest log</p>
+        <h2>Selected work.</h2>
         <a href="projects.html" class="v3-text-link">See all projects <span aria-hidden="true">↗</span></a>
       </div>
 
@@ -80,41 +118,62 @@
       </div>
     </section>
 
-    <section id="about" class="section-pad v3-practice-section">
-      <div class="v3-practice-heading">
-        <p class="v3-overline">About the practice</p>
-        <h2>Clear design for real deadlines and complex information.</h2>
+    <section id="about" class="section-pad game-skill-section" aria-labelledby="skill-tree-title">
+      <div class="game-skill-intro">
+        <div>
+          <p class="v3-overline">Skill tree</p>
+          <h2 id="skill-tree-title">Choose a skill.</h2>
+        </div>
+        <p>Open a stat card to see the tools, work, and experience behind it.</p>
       </div>
 
-      <div class="v3-practice-body">
-        <div class="v3-practice-copy">
-          <p>
-            I handle both visual direction and implementation—from campaign materials to simple web tools that improve the workflow.
-          </p>
-          <p>
-            DesignLab Creative Studio is my independent practice for portfolio work, client services, and digital experiments.
-          </p>
-          <a href="cv.html" class="v3-inline-feature">
-            <span class="v3-inline-icon" aria-hidden="true">CV</span>
-            <span><strong>Experience, tools, and remote work</strong><small>Open my online CV</small></span>
-            <span aria-hidden="true">↗</span>
-          </a>
+      <div class="game-skill-layout">
+        <div class="game-skill-grid">
+          <button type="button" class="game-skill-node" data-stat="social-design">
+            <span>01</span>
+            <strong>Campaign Design</strong>
+            <div><i style="--skill: 94%"></i></div>
+            <small>Social · Enrollment · Events</small>
+          </button>
+          <button type="button" class="game-skill-node" data-stat="publication">
+            <span>02</span>
+            <strong>Publication</strong>
+            <div><i style="--skill: 88%"></i></div>
+            <small>Brochures · Newsletters · Layout</small>
+          </button>
+          <button type="button" class="game-skill-node" data-stat="branding">
+            <span>03</span>
+            <strong>Brand Systems</strong>
+            <div><i style="--skill: 86%"></i></div>
+            <small>Identity · Templates · Consistency</small>
+          </button>
+          <button type="button" class="game-skill-node" data-stat="web-systems">
+            <span>04</span>
+            <strong>Web Systems</strong>
+            <div><i style="--skill: 81%"></i></div>
+            <small>UI · Apps Script · Dashboards</small>
+          </button>
+          <button type="button" class="game-skill-node" data-stat="retouching">
+            <span>05</span>
+            <strong>Photo Retouching</strong>
+            <div><i style="--skill: 91%"></i></div>
+            <small>Cleanup · Compositing · Finishing</small>
+          </button>
         </div>
 
-        <div class="v3-capabilities" aria-label="Capabilities">
-          <div><span>01</span><strong>Campaign and social media design</strong></div>
-          <div><span>02</span><strong>Publication and event materials</strong></div>
-          <div><span>03</span><strong>Brand identity and content systems</strong></div>
-          <div><span>04</span><strong>UI, dashboards, and lightweight web tools</strong></div>
-          <div><span>05</span><strong>Photo retouching and digital product design</strong></div>
-        </div>
+        <aside class="game-practice-card">
+          <p class="game-kicker">About the player</p>
+          <h3>DesignLab Creative Studio</h3>
+          <p>My independent practice for portfolio work, client services, and digital experiments.</p>
+          <a href="cv.html">Open complete CV ↗</a>
+        </aside>
       </div>
     </section>
 
     <section class="section-pad v3-ongoing-section" aria-labelledby="ongoing-title">
       <div class="v3-section-intro compact">
-        <p class="v3-overline">Ongoing work</p>
-        <h2 id="ongoing-title">Brands and pages I currently support.</h2>
+        <p class="v3-overline">Active pages</p>
+        <h2 id="ongoing-title">Current collaborations.</h2>
       </div>
 
       <div class="v3-link-list">
@@ -127,8 +186,8 @@
 
     <section class="section-pad v3-notes-section" aria-labelledby="notes-title">
       <div class="v3-section-intro compact">
-        <p class="v3-overline">Studio Notes</p>
-        <h2 id="notes-title">Notes from the work.</h2>
+        <p class="v3-overline">Field notes</p>
+        <h2 id="notes-title">Behind the work.</h2>
         <a href="insights.html" class="v3-text-link">Read all notes <span aria-hidden="true">↗</span></a>
       </div>
 
@@ -163,7 +222,7 @@
     <section class="section-pad v3-contact-section">
       <div>
         <p class="v3-overline">Start a conversation</p>
-        <h2>Have a project in mind?</h2>
+        <h2>Start a project?</h2>
       </div>
       <div class="v3-contact-actions">
         <a href="contact.html?source=homepage-footer" class="btn btn-primary">Send a project inquiry</a>
@@ -171,6 +230,29 @@
       </div>
     </section>
   </main>
+
+  <div id="statModal" class="game-modal" aria-hidden="true">
+    <div class="game-modal-backdrop" data-close-stat-modal></div>
+    <section class="game-modal-panel" role="dialog" aria-modal="true" aria-labelledby="statModalTitle">
+      <div class="game-modal-toolbar">
+        <span id="statModalCode">STAT // 01</span>
+        <button type="button" data-close-stat-modal aria-label="Close stat details">×</button>
+      </div>
+      <div class="game-modal-body">
+        <p id="statModalLabel" class="game-kicker">Character stat</p>
+        <div class="game-modal-value-row">
+          <strong id="statModalValue">8+</strong>
+          <div>
+            <h2 id="statModalTitle">Experience level</h2>
+            <p id="statModalDescription"></p>
+          </div>
+        </div>
+        <div class="game-modal-meter" aria-hidden="true"><i id="statModalMeter"></i></div>
+        <ul id="statModalList"></ul>
+        <a id="statModalLink" href="cv.html" class="btn btn-primary">Open full profile</a>
+      </div>
+    </section>
+  </div>
 
   <div id="projectModal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
@@ -198,9 +280,9 @@
     </div>
   </footer>
 
-  <script src="config.js?v=3.0.1"></script>
-  <script src="theme.js?v=3.0.1"></script>
-  <script src="app.js?v=3.0.1"></script>
-  <script src="navigation.js?v=3.0.1"></script>
+  <script src="config.js?v=3.1.0"></script>
+  <script src="theme.js?v=3.1.0"></script>
+  <script src="app.js?v=3.1.0"></script>
+  <script src="navigation.js?v=3.1.0"></script>
 </body>
 </html>

@@ -8,7 +8,195 @@ const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
 const visitorCountElement = document.querySelector("#visitorCount");
 
-const SITE_VERSION = "3.0.1";
+const statModal = document.querySelector("#statModal");
+const statModalCode = document.querySelector("#statModalCode");
+const statModalLabel = document.querySelector("#statModalLabel");
+const statModalValue = document.querySelector("#statModalValue");
+const statModalTitle = document.querySelector("#statModalTitle");
+const statModalDescription = document.querySelector("#statModalDescription");
+const statModalMeter = document.querySelector("#statModalMeter");
+const statModalList = document.querySelector("#statModalList");
+const statModalLink = document.querySelector("#statModalLink");
+let lastStatTrigger = null;
+
+const STAT_DETAILS = {
+  experience: {
+    code: "STAT // EXP",
+    label: "Experience level",
+    value: "8+",
+    title: "Professional design experience",
+    description: "Years of hands-on work across institutional campaigns, freelance projects, content systems, and digital design.",
+    meter: 92,
+    bullets: [
+      "Creative Designer and Multimedia Specialist at Panpacific University",
+      "Founder and Creative Director of DesignLab Creative Studio",
+      "Fast-turnaround work for digital, print, social, and events"
+    ],
+    link: "cv.html",
+    linkText: "Open complete CV"
+  },
+  campaigns: {
+    code: "STAT // QST",
+    label: "Completed missions",
+    value: "200+",
+    title: "Campaign and marketing materials",
+    description: "A growing body of posters, social content, publications, event visuals, templates, and web presentations.",
+    meter: 96,
+    bullets: [
+      "University announcements and enrollment campaigns",
+      "Social media content and branded carousel systems",
+      "Print collateral, event graphics, and presentation materials"
+    ],
+    link: "projects.html",
+    linkText: "Browse all projects"
+  },
+  certification: {
+    code: "STAT // BDG",
+    label: "Unlocked badge",
+    value: "ACP",
+    title: "Adobe Certified Professional",
+    description: "Certified in Adobe Photoshop, supported by years of daily production, retouching, compositing, and campaign design.",
+    meter: 100,
+    bullets: [
+      "Adobe Photoshop certification",
+      "Google Digital Marketing and E-Commerce",
+      "Microsoft Office Specialist and Civil Service Professional"
+    ],
+    link: "cv.html#certifications",
+    linkText: "View certifications"
+  },
+  remote: {
+    code: "STAT // MOD",
+    label: "Work mode",
+    value: "ON",
+    title: "Remote collaboration ready",
+    description: "Set up for organized remote work, async feedback, online meetings, cloud delivery, and cross-time-zone collaboration.",
+    meter: 94,
+    bullets: [
+      "Reliable workstation and high-speed internet with backup connection",
+      "Google Workspace, Figma, Canva, Adobe, Framer, and GitHub workflows",
+      "Clear file organization, progress updates, and delivery systems"
+    ],
+    link: "contact.html?source=stat-remote",
+    linkText: "Start a project"
+  },
+  "social-design": {
+    code: "SKILL // 01",
+    label: "Core skill",
+    value: "94",
+    title: "Campaign and social design",
+    description: "Clear campaign visuals built for fast reading, brand consistency, and multi-platform use.",
+    meter: 94,
+    bullets: [
+      "Enrollment, institutional, and event campaigns",
+      "Social posts, carousels, advisories, and promotional graphics",
+      "Content systems for recurring campaigns and daily publishing"
+    ],
+    link: "projects.html",
+    linkText: "View related work"
+  },
+  publication: {
+    code: "SKILL // 02",
+    label: "Core skill",
+    value: "88",
+    title: "Publication and layout design",
+    description: "Structured layouts that turn dense information into readable brochures, newsletters, flyers, and event materials.",
+    meter: 88,
+    bullets: [
+      "Brochures, newsletters, flyers, and program materials",
+      "Clear hierarchy for information-heavy content",
+      "Print-ready file preparation and format adaptation"
+    ],
+    link: "projects.html",
+    linkText: "View related work"
+  },
+  branding: {
+    code: "SKILL // 03",
+    label: "Core skill",
+    value: "86",
+    title: "Brand and content systems",
+    description: "Practical identity systems that help brands stay recognizable across repeated content and campaigns.",
+    meter: 86,
+    bullets: [
+      "Logo direction and supporting visual elements",
+      "Reusable Canva templates and campaign systems",
+      "Guidelines for color, typography, and visual consistency"
+    ],
+    link: "services.html#branding",
+    linkText: "Explore services"
+  },
+  "web-systems": {
+    code: "SKILL // 04",
+    label: "Core skill",
+    value: "81",
+    title: "Web interfaces and workflow systems",
+    description: "Lightweight websites and internal tools designed around real communication and workflow needs.",
+    meter: 81,
+    bullets: [
+      "Responsive HTML, CSS, and JavaScript interfaces",
+      "Google Apps Script and Google Sheets integrations",
+      "Dashboards, inquiry systems, trackers, and static websites"
+    ],
+    link: "projects.html",
+    linkText: "View web projects"
+  },
+  retouching: {
+    code: "SKILL // 05",
+    label: "Core skill",
+    value: "91",
+    title: "Photo retouching and finishing",
+    description: "Detailed image cleanup, compositing, product enhancement, and final polishing for digital and print use.",
+    meter: 91,
+    bullets: [
+      "Professional cleanup and image correction",
+      "Product, campaign, and portrait compositing",
+      "Lighting, color, detail, and presentation finishing"
+    ],
+    link: "projects.html",
+    linkText: "View selected work"
+  }
+};
+
+function openStatModal(statKey, trigger) {
+  const stat = STAT_DETAILS[statKey];
+  if (!statModal || !stat) return;
+
+  lastStatTrigger = trigger || document.activeElement;
+  statModalCode.textContent = stat.code;
+  statModalLabel.textContent = stat.label;
+  statModalValue.textContent = stat.value;
+  statModalTitle.textContent = stat.title;
+  statModalDescription.textContent = stat.description;
+  statModalMeter.style.width = `${Math.max(0, Math.min(100, stat.meter || 0))}%`;
+  statModalList.innerHTML = stat.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  statModalLink.href = stat.link;
+  statModalLink.textContent = stat.linkText;
+
+  statModal.classList.add("active");
+  statModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  const closeButton = statModal.querySelector("[data-close-stat-modal]");
+  window.setTimeout(() => closeButton?.focus(), 20);
+}
+
+function closeStatModal() {
+  if (!statModal) return;
+  statModal.classList.remove("active");
+  statModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  lastStatTrigger?.focus?.();
+}
+
+document.querySelectorAll("[data-stat]").forEach((button) => {
+  button.addEventListener("click", () => openStatModal(button.dataset.stat, button));
+});
+
+document.querySelectorAll("[data-close-stat-modal]").forEach((element) => {
+  element.addEventListener("click", closeStatModal);
+});
+
+const SITE_VERSION = "3.1.0";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -173,7 +361,12 @@ document.querySelectorAll("[data-close-modal]").forEach((element) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeModal();
+  if (event.key !== "Escape") return;
+  if (statModal?.classList.contains("active")) {
+    closeStatModal();
+    return;
+  }
+  closeModal();
 });
 
 function renderSkillTags(container, skills = "") {

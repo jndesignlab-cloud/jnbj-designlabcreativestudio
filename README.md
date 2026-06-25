@@ -1,4 +1,8 @@
-# DesignLab Portfolio Website
+# DesignLab Portfolio Website — v3.1.0 Game Profile
+
+The homepage now uses a game-inspired creative profile with clickable stats, skill nodes, and system-style detail modals. The visual direction remains tied to the DesignLab blue identity while replacing the conventional portfolio pitch with a more interactive introduction.
+
+See `UPDATE_v3.1.0.md` for the release notes.
 
 A clean personal portfolio website for GitHub Pages with:
 
