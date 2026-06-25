@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.2.2";
+const SITE_VERSION = "3.2.3";
 
 const fallbackProjects = [
   {
@@ -87,24 +87,26 @@ function renderProjects() {
     return;
   }
 
-  projects.forEach((project) => {
+  projects.forEach((project, index) => {
     const projectId = project.id || createSlug(project.title);
-    const card = document.createElement("a");
-    card.className = "project-card";
-    card.href = `project.html?id=${encodeURIComponent(projectId)}`;
-    card.innerHTML = `
-      <div class="project-thumb">
+    const row = document.createElement("a");
+    row.className = "editorial-project-row";
+    row.href = `project.html?id=${encodeURIComponent(projectId)}`;
+    const number = String(index + 1).padStart(2, "0");
+    row.innerHTML = `
+      <span class="editorial-row-index">${number}</span>
+      <div class="editorial-project-thumb">
         <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}" loading="lazy" decoding="async">
       </div>
-      <div class="project-info">
-        <p class="eyebrow">${escapeHtml(project.category || "Project")}</p>
-        <h3>${escapeHtml(project.title)}</h3>
-        <div class="project-skill-tags">${renderSkillsInline(project.skills)}</div>
+      <div class="editorial-row-copy">
+        <div class="editorial-row-meta"><span>${escapeHtml(project.category || "Project")}</span></div>
+        <h2>${escapeHtml(project.title)}</h2>
         <p>${escapeHtml(project.description || "")}</p>
+        <div class="editorial-project-skills">${renderSkillsInline(project.skills)}</div>
       </div>
+      <span class="editorial-row-arrow" aria-hidden="true">↗</span>
     `;
-
-    grid.appendChild(card);
+    grid.appendChild(row);
   });
 }
 

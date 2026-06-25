@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Start a project with DesignLab Creative Studio. Share your contact details, project goals, budget, and preferred timeline." />
-  <title>Start a Project | DesignLab Creative Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.2.2" />
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Start a project with DesignLab Creative Studio. Share your contact details, project goals, budget, and preferred timeline." name="description"/>
+<title>Start a Project | DesignLab Creative Studio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=3.2.3" rel="stylesheet"/>
+<script>
     (function () {
       const validThemes = ["blue", "light"];
       let selectedTheme = "light";
@@ -21,198 +22,177 @@
     })();
   </script>
 </head>
-<body class="signal-theme unified-page">
-  <header class="site-header signal-header unified-header">
-    <a href="index.html" class="brand signal-brand">
-      <span class="brand-mark">DL</span>
-      <span><strong>Jann Nathaniel</strong><small>DesignLab Creative Studio</small></span>
-    </a>
-    <nav class="nav-links signal-nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Work</a>
-      <a href="services.html">Services</a>
-      <a href="insights.html">Insights</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </nav>
-    <a href="#inquiryForm" class="signal-header-cta">Start Brief ↘</a>
-  </header>
-
-  <main class="contact-page section-pad">
-    <section class="contact-hero">
-      <div><p class="signal-kicker">Project Inquiry</p><h1>Tell me about your project.</h1></div>
-      <p>Complete a short, guided project brief.</p>
-    </section>
-
-    <section class="contact-layout">
-      <aside class="contact-intro-panel">
-        <div>
-          <p class="eyebrow">A clearer first conversation</p>
-          <h2>A clear brief helps us start well.</h2>
-          <p>Three short steps cover your details, project, and preferred contact method.</p>
-        </div>
-        <ol class="contact-process-list">
-          <li><span>01</span><div><strong>About you</strong><p>Basic contact and business information.</p></div></li>
-          <li><span>02</span><div><strong>Project scope</strong><p>Service, budget, timeline, and goals.</p></div></li>
-          <li><span>03</span><div><strong>Contact & review</strong><p>Choose how I should reply and check your answers.</p></div></li>
-        </ol>
-        <div class="contact-direct-option">
-          <span>Prefer another channel?</span>
-          <a href="https://www.linkedin.com/in/jaenjaravata/" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
-          <a href="inquiry-status.html">Track an existing inquiry ↗</a>
-        </div>
-      </aside>
-
-      <section class="contact-form-shell">
-        <div id="contactFormIntro" class="contact-form-heading">
-          <p class="eyebrow">Guided Project Brief</p>
-          <h2>Start your inquiry</h2>
-          <p>Required fields are marked with *. Your progress saves in this browser.</p>
-        </div>
-
-        <div class="inquiry-stepper" aria-label="Inquiry form progress">
-          <div class="inquiry-step is-active" data-step-indicator="1"><span>1</span><strong>About you</strong></div>
-          <div class="inquiry-step" data-step-indicator="2"><span>2</span><strong>Project scope</strong></div>
-          <div class="inquiry-step" data-step-indicator="3"><span>3</span><strong>Contact & review</strong></div>
-        </div>
-        <div class="inquiry-progress-track" aria-hidden="true"><div id="inquiryProgressFill" class="inquiry-progress-fill"></div></div>
-
-        <form id="inquiryForm" novalidate>
-          <div class="form-honeypot" aria-hidden="true">
-            <label for="website">Website</label>
-            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-          </div>
-          <input type="hidden" name="source" id="inquirySource" value="contact-page">
-          <input type="hidden" name="sourcePage" id="inquirySourcePage">
-          <input type="hidden" name="theme" id="inquiryTheme">
-
-          <section class="inquiry-form-step" data-form-step="1">
-            <div class="inquiry-step-heading">
-              <h3>First, tell me about you.</h3>
-              <p>This helps me know who I am speaking with and where to send my response.</p>
-            </div>
-
-            <div class="contact-form-grid two-column">
-              <label><span>First name *</span><input type="text" name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Your first name"></label>
-              <label><span>Last name *</span><input type="text" name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Your last name"></label>
-            </div>
-            <div class="contact-form-grid two-column">
-              <label><span>Email address *</span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@example.com"></label>
-              <label><span>Contact number *</span><input type="tel" name="contactNumber" autocomplete="tel" required maxlength="40" placeholder="+63 9XX XXX XXXX"></label>
-            </div>
-            <div class="contact-form-grid two-column">
-              <label><span>Company / brand</span><input type="text" name="company" autocomplete="organization" maxlength="140" placeholder="Optional"></label>
-              <label><span>How did you find DesignLab?</span>
-                <select name="referralSource">
-                  <option value="">Select one</option><option>LinkedIn</option><option>Facebook</option><option>Referral</option><option>Portfolio website</option><option>Existing client</option><option>Other</option>
-                </select>
-              </label>
-            </div>
-            <p class="inquiry-draft-note">Your draft stays on this device until submitted.</p>
-            <div class="inquiry-step-actions">
-              <span></span>
-              <div class="step-actions-right"><button class="btn btn-primary" type="button" data-next-step="2">Continue to Project Scope →</button></div>
-            </div>
-          </section>
-
-          <section class="inquiry-form-step" data-form-step="2" hidden>
-            <div class="inquiry-step-heading">
-              <h3>What would you like to create?</h3>
-              <p>Choose the closest service and share enough detail for an initial scope review.</p>
-            </div>
-            <div class="contact-form-grid two-column">
-              <label><span>Service interested in *</span>
-                <select name="service" id="serviceInterest" required>
-                  <option value="">Choose a service</option><option>Design Packages</option><option>Flexible Design Services</option><option>Static Website / Landing Page</option><option>Brand Identity / Logo</option><option>Social Media Design</option><option>Web App / Dashboard</option><option>Publication / Print Design</option><option>General Inquiry</option><option>Other</option>
-                </select>
-              </label>
-              <label><span>Package or project type</span><input type="text" name="package" id="packageInterest" maxlength="160" placeholder="Example: Brand Growth Package"></label>
-            </div>
-            <div class="contact-form-grid two-column">
-              <label><span>Estimated budget *</span>
-                <select name="budget" required>
-                  <option value="">Choose a range</option><option>Below ₱3,500</option><option>₱3,500–₱7,500</option><option>₱7,500–₱12,000</option><option>₱12,000–₱20,000</option><option>₱20,000+</option><option>Not sure yet</option>
-                </select>
-              </label>
-              <label><span>Preferred timeline *</span>
-                <select name="timeline" required>
-                  <option value="">Choose a timeline</option><option>ASAP / Rush</option><option>Within 1–2 weeks</option><option>Within 3–4 weeks</option><option>Within 1–2 months</option><option>Flexible / Planning stage</option>
-                </select>
-              </label>
-            </div>
-            <label class="contact-message-field">
-              <span>Tell me about the project *</span>
-              <textarea name="message" required minlength="20" maxlength="3000" rows="7" placeholder="What do you need, what is the goal, and what should the finished output help you accomplish?"></textarea>
-              <small><span id="messageCount">0</span> / 3000 characters</small>
-            </label>
-            <div class="inquiry-step-actions">
-              <button class="btn btn-soft" type="button" data-previous-step="1">← Back</button>
-              <div class="step-actions-right"><button class="btn btn-primary" type="button" data-next-step="3">Review Contact Options →</button></div>
-            </div>
-          </section>
-
-          <section class="inquiry-form-step" data-form-step="3" hidden>
-            <div class="inquiry-step-heading">
-              <h3>How should I contact you?</h3>
-              <p>Choose your preferred response channel, review the summary, then submit.</p>
-            </div>
-            <fieldset class="contact-choice-group">
-              <legend>Preferred contact method *</legend>
-              <label><input type="radio" name="preferredContact" value="Email" required><span>Email</span></label>
-              <label><input type="radio" name="preferredContact" value="Phone call"><span>Phone call</span></label>
-              <label><input type="radio" name="preferredContact" value="Text message"><span>Text message</span></label>
-              <label><input type="radio" name="preferredContact" value="LinkedIn"><span>LinkedIn</span></label>
-            </fieldset>
-
-            <div class="inquiry-review" id="inquiryReview" aria-label="Inquiry summary">
-              <article><span>Name</span><strong data-review-field="name">—</strong></article>
-              <article><span>Email</span><strong data-review-field="email">—</strong></article>
-              <article><span>Service</span><strong data-review-field="service">—</strong></article>
-              <article><span>Budget & timeline</span><strong data-review-field="scope">—</strong></article>
-            </div>
-
-            <label class="contact-consent">
-              <input type="checkbox" name="consent" value="Yes" required>
-              <span>I agree to be contacted about this inquiry using the details I provided. *</span>
-            </label>
-
-            <div class="inquiry-step-actions">
-              <button class="btn btn-soft" type="button" data-previous-step="2">← Back</button>
-              <div class="step-actions-right">
-                <button id="inquirySubmit" class="btn btn-primary" type="submit">Send Project Inquiry ↗</button>
-              </div>
-            </div>
-            <p id="inquiryStatus" role="status" aria-live="polite"></p>
-          </section>
-        </form>
-
-        <div id="inquirySuccess" class="inquiry-success" hidden>
-          <span class="inquiry-success-icon">✓</span>
-          <p class="eyebrow">Inquiry received</p>
-          <h2>Thank you for reaching out.</h2>
-          <p>Your reference is <strong id="inquiryReference"></strong>. I’ll review the request and reply through your preferred method.</p>
-          <p id="inquiryConfirmationNote" class="inquiry-confirmation-note">A confirmation and tracking link will be sent to your inbox.</p>
-          <div class="hero-actions"><a href="index.html" class="btn btn-soft">Return Home</a><a id="inquiryTrackingLink" href="inquiry-status.html" class="btn btn-soft">Track Inquiry</a><a href="projects.html" class="btn btn-primary">View Projects</a></div>
-        </div>
-      </section>
-    </section>
-  </main>
-
-  <div class="theme-dock" aria-label="Portfolio appearance">
-    <div class="theme-switcher" role="group" aria-label="Choose website theme">
-      
-      <button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
-      <button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button>
-    </div>
-  </div>
-
-  <footer class="footer unified-footer">
-    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
-    <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
-  </footer>
-
-  <script src="config.js?v=3.2.2"></script>
-  <script src="theme.js?v=3.2.2"></script>
-  <script src="navigation.js?v=3.2.2"></script>
-  <script src="contact.js?v=3.2.2"></script>
-<script src="reveal.js?v=3.2.2"></script></body>
+<body class="signal-theme editorial-system unified-page">
+<header class="site-header signal-header compact-header unified-header editorial-header">
+<a aria-label="DesignLab Creative Studio home" class="brand signal-brand" href="index.html">
+<span class="brand-mark">DL</span>
+<span><strong>DesignLab Creative Studio</strong><small>Portfolio of Jann Jaravata</small></span>
+</a>
+<nav aria-label="Primary navigation" class="nav-links signal-nav">
+<a href="projects.html">Work</a>
+<a href="services.html">Services</a>
+<a href="insights.html">Notes</a>
+<a aria-current="page" href="contact.html?source=contact">Contact</a>
+</nav>
+<a class="signal-header-cta" href="contact.html?source=contact-header">Project inquiry</a>
+</header>
+<main class="contact-page section-pad editorial-contact-page">
+<section class="editorial-page-head"><div><p class="compact-overline">Project inquiry</p><h1>Tell me about your project</h1></div><p>A guided brief in three short steps.</p></section>
+<section class="contact-layout editorial-contact-layout">
+<aside class="contact-intro-panel editorial-contact-guide">
+<div>
+<p class="eyebrow">A clearer first conversation</p>
+<h2>How the inquiry works</h2>
+<p>Share the essentials, review the summary, and submit.</p>
+</div>
+<ol class="contact-process-list">
+<li><span>01</span><div><strong>About you</strong><p>Basic contact and business information.</p></div></li>
+<li><span>02</span><div><strong>Project scope</strong><p>Service, budget, timeline, and goals.</p></div></li>
+<li><span>03</span><div><strong>Contact &amp; review</strong><p>Choose how I should reply and check your answers.</p></div></li>
+</ol>
+<div class="contact-direct-option">
+<span>Prefer another channel?</span>
+<a href="https://www.linkedin.com/in/jaenjaravata/" rel="noopener" target="_blank">Message me on LinkedIn ↗</a>
+<a href="inquiry-status.html">Track an existing inquiry ↗</a>
+</div>
+</aside>
+<section class="contact-form-shell editorial-form-shell">
+<div class="contact-form-heading" id="contactFormIntro">
+<p class="eyebrow">Guided Project Brief</p>
+<h2>Start your inquiry</h2>
+<p>Required fields are marked with *. Your progress saves in this browser.</p>
+</div>
+<div aria-label="Inquiry form progress" class="inquiry-stepper">
+<div class="inquiry-step is-active" data-step-indicator="1"><span>1</span><strong>About you</strong></div>
+<div class="inquiry-step" data-step-indicator="2"><span>2</span><strong>Project scope</strong></div>
+<div class="inquiry-step" data-step-indicator="3"><span>3</span><strong>Contact &amp; review</strong></div>
+</div>
+<div aria-hidden="true" class="inquiry-progress-track"><div class="inquiry-progress-fill" id="inquiryProgressFill"></div></div>
+<form id="inquiryForm" novalidate="">
+<div aria-hidden="true" class="form-honeypot">
+<label for="website">Website</label>
+<input autocomplete="off" id="website" name="website" tabindex="-1" type="text"/>
+</div>
+<input id="inquirySource" name="source" type="hidden" value="contact-page"/>
+<input id="inquirySourcePage" name="sourcePage" type="hidden"/>
+<input id="inquiryTheme" name="theme" type="hidden"/>
+<section class="inquiry-form-step" data-form-step="1">
+<div class="inquiry-step-heading">
+<h3>First, tell me about you.</h3>
+<p>This helps me know who I am speaking with and where to send my response.</p>
+</div>
+<div class="contact-form-grid two-column">
+<label><span>First name *</span><input autocomplete="given-name" maxlength="80" name="firstName" placeholder="Your first name" required="" type="text"/></label>
+<label><span>Last name *</span><input autocomplete="family-name" maxlength="80" name="lastName" placeholder="Your last name" required="" type="text"/></label>
+</div>
+<div class="contact-form-grid two-column">
+<label><span>Email address *</span><input autocomplete="email" maxlength="160" name="email" placeholder="name@example.com" required="" type="email"/></label>
+<label><span>Contact number *</span><input autocomplete="tel" maxlength="40" name="contactNumber" placeholder="+63 9XX XXX XXXX" required="" type="tel"/></label>
+</div>
+<div class="contact-form-grid two-column">
+<label><span>Company / brand</span><input autocomplete="organization" maxlength="140" name="company" placeholder="Optional" type="text"/></label>
+<label><span>How did you find DesignLab?</span>
+<select name="referralSource">
+<option value="">Select one</option><option>LinkedIn</option><option>Facebook</option><option>Referral</option><option>Portfolio website</option><option>Existing client</option><option>Other</option>
+</select>
+</label>
+</div>
+<p class="inquiry-draft-note">Your draft stays on this device until submitted.</p>
+<div class="inquiry-step-actions">
+<span></span>
+<div class="step-actions-right"><button class="btn btn-primary" data-next-step="2" type="button">Continue to Project Scope →</button></div>
+</div>
+</section>
+<section class="inquiry-form-step" data-form-step="2" hidden="">
+<div class="inquiry-step-heading">
+<h3>What would you like to create?</h3>
+<p>Choose the closest service and share enough detail for an initial scope review.</p>
+</div>
+<div class="contact-form-grid two-column">
+<label><span>Service interested in *</span>
+<select id="serviceInterest" name="service" required="">
+<option value="">Choose a service</option><option>Design Packages</option><option>Flexible Design Services</option><option>Static Website / Landing Page</option><option>Brand Identity / Logo</option><option>Social Media Design</option><option>Web App / Dashboard</option><option>Publication / Print Design</option><option>General Inquiry</option><option>Other</option>
+</select>
+</label>
+<label><span>Package or project type</span><input id="packageInterest" maxlength="160" name="package" placeholder="Example: Brand Growth Package" type="text"/></label>
+</div>
+<div class="contact-form-grid two-column">
+<label><span>Estimated budget *</span>
+<select name="budget" required="">
+<option value="">Choose a range</option><option>Below ₱3,500</option><option>₱3,500–₱7,500</option><option>₱7,500–₱12,000</option><option>₱12,000–₱20,000</option><option>₱20,000+</option><option>Not sure yet</option>
+</select>
+</label>
+<label><span>Preferred timeline *</span>
+<select name="timeline" required="">
+<option value="">Choose a timeline</option><option>ASAP / Rush</option><option>Within 1–2 weeks</option><option>Within 3–4 weeks</option><option>Within 1–2 months</option><option>Flexible / Planning stage</option>
+</select>
+</label>
+</div>
+<label class="contact-message-field">
+<span>Tell me about the project *</span>
+<textarea maxlength="3000" minlength="20" name="message" placeholder="What do you need, what is the goal, and what should the finished output help you accomplish?" required="" rows="7"></textarea>
+<small><span id="messageCount">0</span> / 3000 characters</small>
+</label>
+<div class="inquiry-step-actions">
+<button class="btn btn-soft" data-previous-step="1" type="button">← Back</button>
+<div class="step-actions-right"><button class="btn btn-primary" data-next-step="3" type="button">Review Contact Options →</button></div>
+</div>
+</section>
+<section class="inquiry-form-step" data-form-step="3" hidden="">
+<div class="inquiry-step-heading">
+<h3>How should I contact you?</h3>
+<p>Choose your preferred response channel, review the summary, then submit.</p>
+</div>
+<fieldset class="contact-choice-group">
+<legend>Preferred contact method *</legend>
+<label><input name="preferredContact" required="" type="radio" value="Email"/><span>Email</span></label>
+<label><input name="preferredContact" type="radio" value="Phone call"/><span>Phone call</span></label>
+<label><input name="preferredContact" type="radio" value="Text message"/><span>Text message</span></label>
+<label><input name="preferredContact" type="radio" value="LinkedIn"/><span>LinkedIn</span></label>
+</fieldset>
+<div aria-label="Inquiry summary" class="inquiry-review" id="inquiryReview">
+<article><span>Name</span><strong data-review-field="name">—</strong></article>
+<article><span>Email</span><strong data-review-field="email">—</strong></article>
+<article><span>Service</span><strong data-review-field="service">—</strong></article>
+<article><span>Budget &amp; timeline</span><strong data-review-field="scope">—</strong></article>
+</div>
+<label class="contact-consent">
+<input name="consent" required="" type="checkbox" value="Yes"/>
+<span>I agree to be contacted about this inquiry using the details I provided. *</span>
+</label>
+<div class="inquiry-step-actions">
+<button class="btn btn-soft" data-previous-step="2" type="button">← Back</button>
+<div class="step-actions-right">
+<button class="btn btn-primary" id="inquirySubmit" type="submit">Send Project Inquiry ↗</button>
+</div>
+</div>
+<p aria-live="polite" id="inquiryStatus" role="status"></p>
+</section>
+</form>
+<div class="inquiry-success" hidden="" id="inquirySuccess">
+<span class="inquiry-success-icon">✓</span>
+<p class="eyebrow">Inquiry received</p>
+<h2>Thank you for reaching out.</h2>
+<p>Your reference is <strong id="inquiryReference"></strong>. I’ll review the request and reply through your preferred method.</p>
+<p class="inquiry-confirmation-note" id="inquiryConfirmationNote">A confirmation and tracking link will be sent to your inbox.</p>
+<div class="hero-actions"><a class="btn btn-soft" href="index.html">Return Home</a><a class="btn btn-soft" href="inquiry-status.html" id="inquiryTrackingLink">Track Inquiry</a><a class="btn btn-primary" href="projects.html">View Projects</a></div>
+</div>
+</section>
+</section>
+</main>
+<div aria-label="Portfolio appearance" class="theme-dock">
+<div aria-label="Choose website theme" class="theme-switcher" role="group">
+<button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
+<button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button>
+</div>
+</div>
+<footer class="footer compact-footer unified-footer editorial-footer">
+<div><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
+<div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
+</footer>
+<script src="config.js?v=3.2.3"></script>
+<script src="theme.js?v=3.2.3"></script>
+<script src="navigation.js?v=3.2.3"></script>
+<script src="contact.js?v=3.2.3"></script>
+<script src="reveal.js?v=3.2.3"></script></body>
 </html>

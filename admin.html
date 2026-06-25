@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Admin | DesignLab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.2.2" />
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Admin | DesignLab</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=3.2.3" rel="stylesheet"/>
+<script>
     (function () {
       const validThemes = ["blue", "light"];
       let selectedTheme = "light";
@@ -20,163 +21,147 @@
     })();
   </script>
 </head>
-<body class="admin-page signal-theme unified-page">
-  <header class="site-header signal-header unified-header">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">DL</span>
-      <span>
-        <strong>Portfolio Admin</strong>
-        <small>Add projects to Google Sheets</small>
-      </span>
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">View Site</a>
-    </nav>
-  </header>
-
-  <main class="section-pad admin-wrap">
-    <section class="admin-panel">
-      <p class="eyebrow">Admin Client</p>
-      <h1>Add New Project</h1>
-      <p class="body-copy">Add a new project card. The viewer site will read it from Google Sheets through Apps Script.</p>
-
-      <form id="projectForm" class="admin-form">
-        <label>
+<body class="admin-page signal-theme editorial-system unified-page">
+<header class="site-header signal-header compact-header unified-header editorial-header">
+<a aria-label="DesignLab Creative Studio home" class="brand signal-brand" href="index.html">
+<span class="brand-mark">DL</span>
+<span><strong>DesignLab Creative Studio</strong><small>Portfolio of Jann Jaravata</small></span>
+</a>
+<nav aria-label="Primary navigation" class="nav-links signal-nav">
+<a href="projects.html">Work</a>
+<a href="services.html">Services</a>
+<a href="insights.html">Notes</a>
+<a href="contact.html?source=admin">Contact</a>
+</nav>
+<a class="signal-header-cta" href="contact.html?source=admin-header">Project inquiry</a>
+</header>
+<main class="section-pad admin-wrap editorial-admin-page">
+<section class="admin-panel">
+<p class="eyebrow">Admin Client</p>
+<h1>Add New Project</h1>
+<p class="body-copy">Add a new project card. The viewer site will read it from Google Sheets through Apps Script.</p>
+<form class="admin-form" id="projectForm">
+<label>
           Project Title
-          <input type="text" name="title" placeholder="Recent University Postings" required>
-        </label>
-
-        <label>
+          <input name="title" placeholder="Recent University Postings" required="" type="text"/>
+</label>
+<label>
           Category
-          <input type="text" name="category" placeholder="Social Media Campaign" required>
-        </label>
-
-        <div class="multi-filter-group">
-          <span class="field-label">Filter Categories</span>
-          <div class="multi-filter-grid">
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="Social Media">
+          <input name="category" placeholder="Social Media Campaign" required="" type="text"/>
+</label>
+<div class="multi-filter-group">
+<span class="field-label">Filter Categories</span>
+<div class="multi-filter-grid">
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="Social Media"/>
               Social Media
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="Branding">
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="Branding"/>
               Branding
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="Web / Digital">
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="Web / Digital"/>
               Web / Digital
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="Print & Publications">
-              Print & Publications
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="Print &amp; Publications"/>
+              Print &amp; Publications
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="DesignLab">
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="DesignLab"/>
               DesignLab
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="University">
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="University"/>
               University
             </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="filterCategory" value="Client Work">
+<label class="checkbox-label">
+<input name="filterCategory" type="checkbox" value="Client Work"/>
               Client Work
             </label>
-          </div>
-        </div>
-
-        <label class="checkbox-label">
-          <input type="checkbox" name="featured" value="TRUE">
+</div>
+</div>
+<label class="checkbox-label">
+<input name="featured" type="checkbox" value="TRUE"/>
           Mark as Featured Project
         </label>
-
-        <label>
+<label>
           Preview Image URL
-          <input type="url" name="image" placeholder="Main 16:9 cover image URL" required>
-        </label>
-
-        <label>
+          <input name="image" placeholder="Main 16:9 cover image URL" required="" type="url"/>
+</label>
+<label>
           Project Gallery Image URLs
-          <textarea name="galleryImages" rows="6" placeholder="Paste one 16:9 image URL per line. These will appear in the project page carousel."></textarea>
-        </label>
-
-        <label>
+          <textarea name="galleryImages" placeholder="Paste one 16:9 image URL per line. These will appear in the project page carousel." rows="6"></textarea>
+</label>
+<label>
           Skills / Services Used
-          <input type="text" name="skills" placeholder="Social Media Management - Graphic Design - Campaign Posters">
-        </label>
-
-        <label>
+          <input name="skills" placeholder="Social Media Management - Graphic Design - Campaign Posters" type="text"/>
+</label>
+<label>
           Project Link
-          <input type="url" name="link" placeholder="Optional external link: Behance, Google Drive folder, live site, etc.">
-        </label>
-
-        <label>
+          <input name="link" placeholder="Optional external link: Behance, Google Drive folder, live site, etc." type="url"/>
+</label>
+<label>
           Short Description
-          <textarea name="description" rows="4" placeholder="Briefly describe the project, goal, and design direction." required></textarea>
-        </label>
-
-        <label>
+          <textarea name="description" placeholder="Briefly describe the project, goal, and design direction." required="" rows="4"></textarea>
+</label>
+<label>
           The Problem / Goal
-          <textarea name="problem" rows="4" placeholder="What was the challenge, goal, or communication problem?"></textarea>
-        </label>
-
-        <label>
+          <textarea name="problem" placeholder="What was the challenge, goal, or communication problem?" rows="4"></textarea>
+</label>
+<label>
           What I Did
-          <textarea name="solution" rows="5" placeholder="What was your design approach, process, or creative solution?"></textarea>
-        </label>
-
-        <label>
+          <textarea name="solution" placeholder="What was your design approach, process, or creative solution?" rows="5"></textarea>
+</label>
+<label>
           Result / Outcome
-          <textarea name="outcome" rows="4" placeholder="What improved, what was delivered, or what was the final output?"></textarea>
-        </label>
-
-        <label>
+          <textarea name="outcome" placeholder="What improved, what was delivered, or what was the final output?" rows="4"></textarea>
+</label>
+<label>
           Admin Password
-          <input type="password" name="password" placeholder="Enter admin password" required>
-        </label>
-
-        <button class="btn btn-primary" type="submit">Add Project</button>
-        <p id="formStatus" class="form-status"></p>
-      </form>
-    </section>
-
-    <section class="admin-guide">
-      <h2>Recommended project image format</h2>
-      <div class="guide-card">
-        <strong>Best preview size:</strong>
-        <p>Use 16:9 images such as 1920×1080, 1600×900, or 1280×720.</p>
-      </div>
-      <div class="guide-card">
-        <strong>Image hosting:</strong>
-        <p>You can use GitHub images, Google Drive direct image links, or any public image URL.</p>
-      </div>
-      <div class="guide-card">
-        <strong>Project card display:</strong>
-        <p>The homepage shows up to 6 projects marked as Featured. The full projects page shows all published projects.</p>
-      </div>
-      <div class="guide-card">
-        <strong>Gallery images:</strong>
-        <p>Paste one image URL per line. Recommended size is 1920×1080 or 1600×900.</p>
-      </div>
-      <div class="guide-card">
-        <strong>Skills / Services Used:</strong>
-        <p>Separate items using hyphens, commas, or new lines. Example: Social Media Management - Graphic Design - Campaign Posters.</p>
-      </div>
-      <div class="guide-card">
-        <strong>Case study fields:</strong>
-        <p>Use Problem / Goal, What I Did, and Result / Outcome to make each project page feel more professional and recruiter-friendly.</p>
-      </div>
-      <div class="guide-card">
-        <strong>Featured projects:</strong>
-        <p>Only the first 6 projects marked Featured will appear on the homepage. A project can belong to multiple filter categories on the full projects page. Example: DesignLab and Social Media.</p>
-      </div>
-    </section>
-  </main>
-
-  <script src="config.js?v=3.2.2"></script>
-  <script src="theme.js?v=3.2.2"></script>
-  <script src="admin.js?v=3.2.2"></script>
-<script src="navigation.js?v=3.2.2"></script>
-  <div class="theme-dock" aria-label="Portfolio appearance"><div class="theme-switcher" role="group" aria-label="Choose website theme"><button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button><button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button></div></div>
-<script src="reveal.js?v=3.2.2"></script></body>
+          <input name="password" placeholder="Enter admin password" required="" type="password"/>
+</label>
+<button class="btn btn-primary" type="submit">Add Project</button>
+<p class="form-status" id="formStatus"></p>
+</form>
+</section>
+<section class="admin-guide">
+<h2>Recommended project image format</h2>
+<div class="guide-card">
+<strong>Best preview size:</strong>
+<p>Use 16:9 images such as 1920×1080, 1600×900, or 1280×720.</p>
+</div>
+<div class="guide-card">
+<strong>Image hosting:</strong>
+<p>You can use GitHub images, Google Drive direct image links, or any public image URL.</p>
+</div>
+<div class="guide-card">
+<strong>Project card display:</strong>
+<p>The homepage shows up to 6 projects marked as Featured. The full projects page shows all published projects.</p>
+</div>
+<div class="guide-card">
+<strong>Gallery images:</strong>
+<p>Paste one image URL per line. Recommended size is 1920×1080 or 1600×900.</p>
+</div>
+<div class="guide-card">
+<strong>Skills / Services Used:</strong>
+<p>Separate items using hyphens, commas, or new lines. Example: Social Media Management - Graphic Design - Campaign Posters.</p>
+</div>
+<div class="guide-card">
+<strong>Case study fields:</strong>
+<p>Use Problem / Goal, What I Did, and Result / Outcome to make each project page feel more professional and recruiter-friendly.</p>
+</div>
+<div class="guide-card">
+<strong>Featured projects:</strong>
+<p>Only the first 6 projects marked Featured will appear on the homepage. A project can belong to multiple filter categories on the full projects page. Example: DesignLab and Social Media.</p>
+</div>
+</section>
+</main>
+<script src="config.js?v=3.2.3"></script>
+<script src="theme.js?v=3.2.3"></script>
+<script src="admin.js?v=3.2.3"></script>
+<script src="navigation.js?v=3.2.3"></script>
+<div aria-label="Portfolio appearance" class="theme-dock"><div aria-label="Choose website theme" class="theme-switcher" role="group"><button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button><button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button></div></div>
+<script src="reveal.js?v=3.2.3"></script></body>
 </html>

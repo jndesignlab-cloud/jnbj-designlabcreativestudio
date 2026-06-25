@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Securely check the current status of a DesignLab Creative Studio project inquiry." />
-  <meta name="robots" content="noindex,nofollow" />
-  <title>Track an Inquiry | DesignLab Creative Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.2.2" />
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Securely check the current status of a DesignLab Creative Studio project inquiry." name="description"/>
+<meta content="noindex,nofollow" name="robots"/>
+<title>Track an Inquiry | DesignLab Creative Studio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=3.2.3" rel="stylesheet"/>
+<script>
     (function () {
       const validThemes = ["blue", "light"];
       let selectedTheme = "light";
@@ -22,121 +23,106 @@
     })();
   </script>
 </head>
-<body class="signal-theme unified-page">
-  <header class="site-header signal-header unified-header">
-    <a href="index.html" class="brand signal-brand">
-      <span class="brand-mark">DL</span>
-      <span><strong>Jann Nathaniel</strong><small>DesignLab Creative Studio</small></span>
-    </a>
-    <nav class="nav-links signal-nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Work</a>
-      <a href="services.html">Services</a>
-      <a href="insights.html">Insights</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </nav>
-    <a href="contact.html" class="signal-header-cta">New Inquiry ↘</a>
-  </header>
-
-  <main class="tracking-page section-pad">
-    <section class="tracking-hero">
-      <div>
-        <p class="signal-kicker">Inquiry Tracking</p>
-        <h1>Track your inquiry.</h1>
-      </div>
-      <p>Enter your reference number and submitted email address.</p>
-    </section>
-
-    <section class="tracking-layout">
-      <aside class="tracking-info-panel">
-        <p class="eyebrow">Secure lookup</p>
-        <h2>Secure inquiry lookup</h2>
-        <p>Both details must match before a record is shown.</p>
-        <div class="tracking-info-list">
-          <article><span>01</span><div><strong>Find your reference</strong><p>Find the <code>INQ-</code> number in your confirmation email.</p></div></article>
-          <article><span>02</span><div><strong>Use the same email</strong><p>Use the email entered during submission.</p></div></article>
-          <article><span>03</span><div><strong>View live status</strong><p>View the latest recorded status.</p></div></article>
-        </div>
-      </aside>
-
-      <section class="tracking-card-shell">
-        <div class="tracking-form-heading">
-          <p class="eyebrow">Track a project inquiry</p>
-          <h2>Enter your request details</h2>
-          <p>Both fields are required.</p>
-        </div>
-
-        <form id="trackingForm" class="tracking-form" novalidate>
-          <label>
-            <span>Inquiry reference *</span>
-            <input id="trackingReference" name="inquiryId" type="text" required maxlength="40" autocomplete="off" placeholder="INQ-20260624-ABC123">
-          </label>
-          <label>
-            <span>Email address *</span>
-            <input id="trackingEmail" name="email" type="email" required maxlength="160" autocomplete="email" placeholder="name@example.com">
-          </label>
-          <button id="trackingSubmit" class="btn btn-primary" type="submit">Check Inquiry Status ↗</button>
-          <p id="trackingMessage" class="tracking-message" role="status" aria-live="polite"></p>
-        </form>
-
-        <section id="trackingResult" class="tracking-result" hidden aria-live="polite">
-          <div class="tracking-result-header">
-            <div>
-              <p class="eyebrow">Current inquiry record</p>
-              <h2 id="trackingResultId">—</h2>
-            </div>
-            <span id="trackingStatusBadge" class="tracking-status-badge">New</span>
-          </div>
-
-          <p id="trackingStatusMessage" class="tracking-status-message"></p>
-
-          <ol class="tracking-timeline" aria-label="Inquiry progress">
-            <li data-stage="1"><span>1</span><div><strong>Received</strong><p>Your inquiry was saved.</p></div></li>
-            <li data-stage="2"><span>2</span><div><strong>Review</strong><p>Scope and availability are checked.</p></div></li>
-            <li data-stage="3"><span>3</span><div><strong>Next action</strong><p>Details, quotation, or approval.</p></div></li>
-            <li data-stage="4"><span>4</span><div><strong>Active</strong><p>Scheduled or in progress.</p></div></li>
-            <li data-stage="5"><span>5</span><div><strong>Final stage</strong><p>Completed, delivered, or closed.</p></div></li>
-          </ol>
-
-          <div class="tracking-summary-grid">
-            <article><span>Submitted</span><strong id="trackingCreatedAt">—</strong></article>
-            <article><span>Service</span><strong id="trackingService">—</strong></article>
-            <article><span>Package / Project</span><strong id="trackingPackage">—</strong></article>
-            <article><span>Budget</span><strong id="trackingBudget">—</strong></article>
-            <article><span>Preferred timeline</span><strong id="trackingTimeline">—</strong></article>
-            <article><span>Preferred contact</span><strong id="trackingContact">—</strong></article>
-          </div>
-
-          <div class="tracking-message-card">
-            <span>Submitted project message</span>
-            <p id="trackingProjectMessage">—</p>
-          </div>
-
-          <div class="tracking-result-actions">
-            <a href="mailto:jannjaravata@gmail.com" class="btn btn-soft">Contact DesignLab</a>
-            <a href="contact.html" class="btn btn-primary">Submit Another Inquiry ↗</a>
-          </div>
-        </section>
-      </section>
-    </section>
-  </main>
-
-  <div class="theme-dock" aria-label="Portfolio appearance">
-    <div class="theme-switcher" role="group" aria-label="Choose website theme">
-      
-      <button type="button" data-theme-choice="blue" aria-label="Use Blue Mode" title="Blue Mode"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
-      <button type="button" data-theme-choice="light" aria-label="Use Light Mode" title="Light Mode"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button>
-    </div>
-  </div>
-
-  <footer class="footer unified-footer">
-    <p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p>
-    <p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p>
-  </footer>
-
-  <script src="config.js?v=3.2.2"></script>
-  <script src="theme.js?v=3.2.2"></script>
-  <script src="navigation.js?v=3.2.2"></script>
-  <script src="inquiry-status.js?v=3.2.2"></script>
-<script src="reveal.js?v=3.2.2"></script></body>
+<body class="signal-theme editorial-system unified-page">
+<header class="site-header signal-header compact-header unified-header editorial-header">
+<a aria-label="DesignLab Creative Studio home" class="brand signal-brand" href="index.html">
+<span class="brand-mark">DL</span>
+<span><strong>DesignLab Creative Studio</strong><small>Portfolio of Jann Jaravata</small></span>
+</a>
+<nav aria-label="Primary navigation" class="nav-links signal-nav">
+<a href="projects.html">Work</a>
+<a href="services.html">Services</a>
+<a href="insights.html">Notes</a>
+<a aria-current="page" href="contact.html?source=inquiry-status">Contact</a>
+</nav>
+<a class="signal-header-cta" href="contact.html?source=inquiry-status-header">Project inquiry</a>
+</header>
+<main class="tracking-page section-pad editorial-tracking-page">
+<section class="tracking-hero">
+<div>
+<p class="signal-kicker">Inquiry Tracking</p>
+<h1>Track your inquiry.</h1>
+</div>
+<p>Enter your reference number and submitted email address.</p>
+</section>
+<section class="tracking-layout">
+<aside class="tracking-info-panel">
+<p class="eyebrow">Secure lookup</p>
+<h2>Secure inquiry lookup</h2>
+<p>Both details must match before a record is shown.</p>
+<div class="tracking-info-list">
+<article><span>01</span><div><strong>Find your reference</strong><p>Find the <code>INQ-</code> number in your confirmation email.</p></div></article>
+<article><span>02</span><div><strong>Use the same email</strong><p>Use the email entered during submission.</p></div></article>
+<article><span>03</span><div><strong>View live status</strong><p>View the latest recorded status.</p></div></article>
+</div>
+</aside>
+<section class="tracking-card-shell">
+<div class="tracking-form-heading">
+<p class="eyebrow">Track a project inquiry</p>
+<h2>Enter your request details</h2>
+<p>Both fields are required.</p>
+</div>
+<form class="tracking-form" id="trackingForm" novalidate="">
+<label>
+<span>Inquiry reference *</span>
+<input autocomplete="off" id="trackingReference" maxlength="40" name="inquiryId" placeholder="INQ-20260624-ABC123" required="" type="text"/>
+</label>
+<label>
+<span>Email address *</span>
+<input autocomplete="email" id="trackingEmail" maxlength="160" name="email" placeholder="name@example.com" required="" type="email"/>
+</label>
+<button class="btn btn-primary" id="trackingSubmit" type="submit">Check Inquiry Status ↗</button>
+<p aria-live="polite" class="tracking-message" id="trackingMessage" role="status"></p>
+</form>
+<section aria-live="polite" class="tracking-result" hidden="" id="trackingResult">
+<div class="tracking-result-header">
+<div>
+<p class="eyebrow">Current inquiry record</p>
+<h2 id="trackingResultId">—</h2>
+</div>
+<span class="tracking-status-badge" id="trackingStatusBadge">New</span>
+</div>
+<p class="tracking-status-message" id="trackingStatusMessage"></p>
+<ol aria-label="Inquiry progress" class="tracking-timeline">
+<li data-stage="1"><span>1</span><div><strong>Received</strong><p>Your inquiry was saved.</p></div></li>
+<li data-stage="2"><span>2</span><div><strong>Review</strong><p>Scope and availability are checked.</p></div></li>
+<li data-stage="3"><span>3</span><div><strong>Next action</strong><p>Details, quotation, or approval.</p></div></li>
+<li data-stage="4"><span>4</span><div><strong>Active</strong><p>Scheduled or in progress.</p></div></li>
+<li data-stage="5"><span>5</span><div><strong>Final stage</strong><p>Completed, delivered, or closed.</p></div></li>
+</ol>
+<div class="tracking-summary-grid">
+<article><span>Submitted</span><strong id="trackingCreatedAt">—</strong></article>
+<article><span>Service</span><strong id="trackingService">—</strong></article>
+<article><span>Package / Project</span><strong id="trackingPackage">—</strong></article>
+<article><span>Budget</span><strong id="trackingBudget">—</strong></article>
+<article><span>Preferred timeline</span><strong id="trackingTimeline">—</strong></article>
+<article><span>Preferred contact</span><strong id="trackingContact">—</strong></article>
+</div>
+<div class="tracking-message-card">
+<span>Submitted project message</span>
+<p id="trackingProjectMessage">—</p>
+</div>
+<div class="tracking-result-actions">
+<a class="btn btn-soft" href="mailto:jannjaravata@gmail.com">Contact DesignLab</a>
+<a class="btn btn-primary" href="contact.html">Submit Another Inquiry ↗</a>
+</div>
+</section>
+</section>
+</section>
+</main>
+<div aria-label="Portfolio appearance" class="theme-dock">
+<div aria-label="Choose website theme" class="theme-switcher" role="group">
+<button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button>
+<button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button>
+</div>
+</div>
+<footer class="footer compact-footer unified-footer editorial-footer">
+<div><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
+<div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
+</footer>
+<script src="config.js?v=3.2.3"></script>
+<script src="theme.js?v=3.2.3"></script>
+<script src="navigation.js?v=3.2.3"></script>
+<script src="inquiry-status.js?v=3.2.3"></script>
+<script src="reveal.js?v=3.2.3"></script></body>
 </html>
