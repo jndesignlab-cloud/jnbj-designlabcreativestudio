@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.2.4";
+const SITE_VERSION = "3.2.5";
 
 const fallbackProjects = [
   {
@@ -35,8 +35,12 @@ const fallbackProjects = [
 
 const grid = document.querySelector("#allProjectGrid");
 const filterTabs = document.querySelector("#filterTabs");
+const searchInput = document.querySelector("#projectSearch");
+const clearSearchButton = document.querySelector("#clearProjectSearch");
+const resultCount = document.querySelector("#projectResultCount");
 let allProjects = [];
 let activeFilter = "All";
+let searchQuery = "";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -76,14 +80,19 @@ async function loadProjects() {
 }
 
 function renderProjects() {
-  const projects = activeFilter === "All"
-    ? allProjects
-    : allProjects.filter((project) => projectMatchesFilter(project, activeFilter));
+  const normalizedQuery = normalizeSearch(searchQuery);
+  const projects = allProjects.filter((project) => {
+    const matchesCategory = activeFilter === "All" || projectMatchesFilter(project, activeFilter);
+    if (!matchesCategory) return false;
+    if (!normalizedQuery) return true;
+    return createSearchText(project).includes(normalizedQuery);
+  });
 
   grid.innerHTML = "";
+  updateSearchUi(projects.length);
 
   if (!projects.length) {
-    grid.innerHTML = `<div class="loading-card">No projects found for this category yet.</div>`;
+    grid.innerHTML = `<div class="project-empty-state"><strong>No matching projects.</strong><span>Try another keyword or choose a different category.</span></div>`;
     return;
   }
 
@@ -122,6 +131,50 @@ filterTabs.addEventListener("click", (event) => {
 
   renderProjects();
 });
+
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    searchQuery = searchInput.value;
+    renderProjects();
+  });
+}
+
+if (clearSearchButton) {
+  clearSearchButton.addEventListener("click", () => {
+    searchQuery = "";
+    searchInput.value = "";
+    searchInput.focus();
+    renderProjects();
+  });
+}
+
+function updateSearchUi(count) {
+  if (resultCount) {
+    const label = count === 1 ? "project" : "projects";
+    resultCount.textContent = `${count} ${label} shown`;
+  }
+  if (clearSearchButton) clearSearchButton.hidden = !searchQuery.trim();
+}
+
+function createSearchText(project) {
+  return normalizeSearch([
+    project.title,
+    project.category,
+    project.filterCategory,
+    project.description,
+    project.skills
+  ].filter(Boolean).join(" "));
+}
+
+function normalizeSearch(value = "") {
+  return String(value)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
 
 function projectMatchesFilter(project, activeFilter) {
   const categories = parseFilterCategories(project.filterCategory || project.category);

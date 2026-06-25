@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.2.4" rel="stylesheet"/>
+<link href="style.css?v=3.2.5" rel="stylesheet"/>
 <script>
     (function () {
       const validThemes = ["blue", "light"];
@@ -37,6 +37,13 @@
 </header>
 <main class="projects-page section-pad editorial-archive-page">
 <section class="editorial-page-head"><div><p class="compact-overline">Portfolio archive</p><h1>All projects</h1></div><p>Campaigns, publications, branding, social content, and digital systems.</p></section>
+<section class="editorial-project-tools" aria-label="Search and filter projects">
+<label class="project-search-field" for="projectSearch">
+<span>Search projects</span>
+<div><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg><input id="projectSearch" type="search" placeholder="Title, category, skill, or keyword" autocomplete="off"/><button id="clearProjectSearch" type="button" hidden aria-label="Clear project search">×</button></div>
+</label>
+<p class="project-result-count" id="projectResultCount" aria-live="polite">Loading projects…</p>
+</section>
 <section class="editorial-filter-bar">
 <div class="filter-tabs" id="filterTabs">
 <button class="active" data-filter="All">All</button>
@@ -71,8 +78,8 @@
 <div><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.2.4"></script>
-<script src="theme.js?v=3.2.4"></script>
-<script src="projects.js?v=3.2.4"></script>
-<script src="navigation.js?v=3.2.4"></script><script src="reveal.js?v=3.2.4"></script></body>
+<script src="config.js?v=3.2.5"></script>
+<script src="theme.js?v=3.2.5"></script>
+<script src="projects.js?v=3.2.5"></script>
+<script src="navigation.js?v=3.2.5"></script><script src="reveal.js?v=3.2.5"></script></body>
 </html>
