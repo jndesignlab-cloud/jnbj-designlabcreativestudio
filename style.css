@@ -6908,3 +6908,187 @@ html[data-theme] .signal-theme .v3-project-grid .project-card {
   content-visibility: visible;
   contain-intrinsic-size: auto;
 }
+
+
+/* =========================================================
+   v3.0.1 — Compact typography and concise presentation
+   ========================================================= */
+
+/* Reduce headline scale across public pages. */
+body.signal-theme h1 {
+  font-size: clamp(2.15rem, 4.2vw, 4.15rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.045em !important;
+}
+
+body.signal-theme h2 {
+  font-size: clamp(1.45rem, 2.5vw, 2.65rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.035em !important;
+}
+
+body.signal-theme h3 {
+  line-height: 1.2;
+}
+
+/* Homepage editorial scale. */
+.v3-hero {
+  min-height: auto;
+  padding-top: 72px;
+  padding-bottom: 38px;
+  gap: 42px 64px;
+}
+
+.v3-hero-copy {
+  max-width: 710px;
+}
+
+.v3-hero h1 {
+  max-width: 700px;
+  font-size: clamp(2.45rem, 4.3vw, 4.35rem) !important;
+  line-height: .99 !important;
+  letter-spacing: -.055em !important;
+}
+
+.v3-hero-intro {
+  max-width: 610px;
+  margin-top: 24px;
+  line-height: 1.65;
+}
+
+.v3-actions {
+  margin-top: 28px;
+}
+
+.v3-work-section,
+.v3-practice-section,
+.v3-ongoing-section,
+.v3-notes-section,
+.v3-testimonial-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.v3-section-intro {
+  margin-bottom: 38px;
+}
+
+.v3-section-intro h2,
+.v3-practice-heading h2,
+.v3-contact-section h2 {
+  max-width: 760px;
+  font-size: clamp(1.65rem, 2.5vw, 2.75rem) !important;
+}
+
+.v3-section-intro.compact h2,
+.v3-practice-heading h2 {
+  font-size: clamp(1.55rem, 2.2vw, 2.4rem) !important;
+}
+
+.v3-practice-copy > p {
+  max-width: 720px;
+  font-size: .95rem;
+  line-height: 1.72;
+}
+
+.v3-notes-list strong {
+  font-size: clamp(1.08rem, 1.65vw, 1.55rem);
+}
+
+.v3-testimonial-section blockquote {
+  max-width: 880px;
+}
+
+.v3-testimonial-section blockquote > p {
+  font-size: clamp(1.45rem, 2.45vw, 2.6rem) !important;
+  line-height: 1.14;
+}
+
+.v3-secondary-quotes {
+  margin-top: 50px;
+}
+
+.v3-contact-section {
+  margin-bottom: 72px;
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+
+/* Keep long dynamic summaries visually concise. */
+.v3-project-grid .project-info p,
+.insight-card p,
+.project-detail-copy {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.v3-project-grid .project-info p,
+.insight-card p {
+  -webkit-line-clamp: 2;
+}
+
+.projects-page-hero,
+.services-hero,
+.contact-hero,
+.tracking-hero,
+.insights-hero,
+.cv-hero,
+.project-premium-hero,
+.article-hero {
+  padding-top: 12px;
+  padding-bottom: 30px;
+}
+
+.cv-hero-copy h1,
+.projects-page-hero h1,
+.services-hero h1,
+.contact-hero h1,
+.tracking-hero h1,
+.insights-hero h1,
+.project-premium-hero h1,
+.article-hero h1 {
+  font-size: clamp(2.05rem, 3.8vw, 3.65rem) !important;
+  line-height: 1.04 !important;
+}
+
+.cv-summary,
+.services-hero-copy,
+.contact-hero > p,
+.tracking-hero > p,
+.insights-hero > p,
+.article-hero > p {
+  line-height: 1.65;
+}
+
+@media (max-width: 680px) {
+  body.signal-theme h1 {
+    font-size: clamp(2rem, 10vw, 3.1rem) !important;
+  }
+
+  body.signal-theme h2 {
+    font-size: clamp(1.35rem, 6.5vw, 2rem) !important;
+  }
+
+  .v3-hero {
+    padding-top: 42px;
+    gap: 34px;
+  }
+
+  .v3-hero h1 {
+    font-size: clamp(2.15rem, 10vw, 3.15rem) !important;
+  }
+
+  .v3-work-section,
+  .v3-practice-section,
+  .v3-ongoing-section,
+  .v3-notes-section,
+  .v3-testimonial-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .v3-testimonial-section blockquote > p {
+    font-size: clamp(1.45rem, 7vw, 2.15rem) !important;
+  }
+}

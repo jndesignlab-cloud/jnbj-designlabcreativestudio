@@ -561,3 +561,8 @@ Version 3.0.0 keeps all working systems from v2.10.0 but presents them through a
 Projects, admin tools, Services, the online CV, static Studio Notes, the multi-step inquiry form, branded email confirmations, and inquiry tracking remain included.
 
 No Apps Script redeployment is required when upgrading from the working v2.10.0 release because `Code.gs` is unchanged.
+
+
+## v3.0.1 — Compact Typography & Copy
+
+Reduced oversized headings, shortened repetitive content, and tightened spacing while preserving the v3 editorial direction and all working systems.
