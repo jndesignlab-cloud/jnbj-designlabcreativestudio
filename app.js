@@ -197,7 +197,7 @@ document.querySelectorAll("[data-close-stat-modal]").forEach((element) => {
   element.addEventListener("click", closeStatModal);
 });
 
-const SITE_VERSION = "3.2.8";
+const SITE_VERSION = "3.2.9";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 

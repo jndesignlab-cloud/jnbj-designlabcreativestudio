@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.2.8";
+const SITE_VERSION = "3.2.9";
 
 const fallbackProjects = [
   {
@@ -73,6 +73,7 @@ const slideCounter = document.querySelector("#slideCounter");
 const dotsWrapper = document.querySelector("#carouselDots");
 const prevButton = document.querySelector("#prevSlide");
 const nextButton = document.querySelector("#nextSlide");
+const similarProjectCta = document.querySelector("#similarProjectCta");
 
 let gallery = [];
 let currentSlide = 0;
@@ -120,7 +121,9 @@ async function loadProject() {
 }
 
 function renderProject(project) {
-  titleElement.textContent = project.title || "Untitled Project";
+  const projectTitle = project.title || "Untitled Project";
+  titleElement.textContent = projectTitle;
+  document.title = `${projectTitle} | Jann Nathaniel Jaravata`;
   categoryElement.textContent = project.category || "Project";
   renderSkillTags(skillsElement, project.skills);
   descriptionElement.textContent = project.description || "";
@@ -133,6 +136,15 @@ function renderProject(project) {
     externalLink.style.display = "inline-flex";
   } else {
     externalLink.style.display = "none";
+  }
+
+  if (similarProjectCta) {
+    const inquiryParams = new URLSearchParams({
+      source: "project-case-study",
+      service: project.category || "General Inquiry",
+      package: `Similar to: ${projectTitle}`
+    });
+    similarProjectCta.href = `contact.html?${inquiryParams.toString()}`;
   }
 
   gallery = normalizeGallery(project);
