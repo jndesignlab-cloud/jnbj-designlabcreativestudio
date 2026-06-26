@@ -9434,7 +9434,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.9 — unified editorial system
+   v3.2.10 — unified editorial system
    ========================================================= */
 .editorial-system {
   --editorial-max: 1180px;
@@ -9686,7 +9686,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.9 — Services package grid + contact spacing repair
+   v3.2.10 — Services package grid + contact spacing repair
    ========================================================= */
 
 /* Services: tighter category rows and a contained open panel */
@@ -10032,7 +10032,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.9 — refined headings, wide Insights banners,
+   v3.2.10 — refined headings, wide Insights banners,
    project search, flat project stories, full-page reveal
    ========================================================= */
 
@@ -10271,7 +10271,7 @@ body.signal-theme h2,
 
 
 /* =========================================================
-   v3.2.9 — Interactive services, compact CV, modal cleanup
+   v3.2.10 — Interactive services, compact CV, modal cleanup
    ========================================================= */
 
 /* Footer: explicit left-aligned studio identity */
@@ -10587,7 +10587,7 @@ body.signal-theme h2,
 }
 
 
-/* v3.2.9 refinement: custom scope points stay editorial, not card-like */
+/* v3.2.10 refinement: custom scope points stay editorial, not card-like */
 .custom-project-points {
   gap: 0;
   border-top: 1px solid var(--theme-line);
@@ -10606,7 +10606,7 @@ body.signal-theme h2,
   .custom-project-points article:last-child { border-bottom: 0; }
 }
 
-/* v3.2.9 — wider CV portrait + package-first service interaction */
+/* v3.2.10 — wider CV portrait + package-first service interaction */
 .cv-hero-compact {
   grid-template-columns: minmax(240px, 280px) minmax(0, 1fr) !important;
   gap: 34px !important;
@@ -10942,7 +10942,7 @@ body.signal-theme h2,
   }
 }
 
-/* v3.2.9 — CV editorial rebuild: fewer cards, structured rows, detail modals */
+/* v3.2.10 — CV editorial rebuild: fewer cards, structured rows, detail modals */
 .cv-editorial-body {
   display: grid;
   gap: 0;
@@ -11122,7 +11122,7 @@ body.signal-theme h2,
 .cv-detail-modal {
   position: fixed;
   inset: 0;
-  z-index: 1300;
+  z-index: 5000;
   display: grid;
   place-items: center;
   padding: 22px;
@@ -11130,11 +11130,13 @@ body.signal-theme h2,
 .cv-detail-backdrop {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: rgba(8, 22, 48, .58);
   backdrop-filter: blur(8px);
 }
 .cv-detail-dialog {
   position: relative;
+  z-index: 1;
   width: min(900px, 100%);
   max-height: min(88vh, 860px);
   overflow: auto;
@@ -11278,7 +11280,7 @@ body.modal-open { overflow: hidden; }
 }
 
 /* =========================================================
-   v3.2.9 — Flat editorial project case study
+   v3.2.10 — Flat editorial project case study
    Removes the legacy split-card visual from project.html.
    ========================================================= */
 .project-case-page {
@@ -11477,4 +11479,28 @@ html[data-theme="blue"] .project-media-stage img { background: #fff; }
   .project-media-stage { min-height: 190px; }
   .project-case-cta { align-items: stretch; flex-direction: column; }
   .project-case-cta .btn { justify-content: center; }
+}
+
+
+/* v3.2.10 — CV modal viewport-layer fix */
+body.modal-open .site-header,
+body.modal-open .theme-dock,
+body.modal-open .visitor-float {
+  pointer-events: none;
+}
+
+@media (max-width: 680px) {
+  .cv-detail-modal {
+    place-items: end center;
+    padding: 10px;
+  }
+  .cv-detail-dialog {
+    width: 100%;
+    max-height: calc(100dvh - 20px);
+    padding: 26px 18px 20px;
+    border-radius: 14px;
+  }
+  .cv-detail-modal-head {
+    padding-right: 54px;
+  }
 }

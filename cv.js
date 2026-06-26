@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.2.9";
+const SITE_VERSION = "3.2.10";
 
 const yearNode = document.getElementById("year");
 const versionNode = document.getElementById("siteVersion");
@@ -13,6 +13,14 @@ const modalFooterTitle = document.getElementById("cvDetailFooterTitle");
 const modalFooterText = document.getElementById("cvDetailFooterText");
 const modalCta = document.getElementById("cvDetailCta");
 let lastTrigger = null;
+
+// Move the dialog portal outside <main>. The page reveal animation applies a
+// transform to <main>, which creates a stacking context and can place a fixed
+// modal underneath the sticky navigation. Appending it to <body> keeps the
+// overlay attached to the viewport and above every page element.
+if (modal && modal.parentElement !== document.body) {
+  document.body.appendChild(modal);
+}
 
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 if (versionNode) versionNode.textContent = SITE_VERSION;
