@@ -8,6 +8,10 @@ const modalSkills = document.querySelector("#modalSkills");
 const modalLink = document.querySelector("#modalLink");
 const modalInquiryLink = document.querySelector("#modalInquiryLink");
 const visitorCountElement = document.querySelector("#visitorCount");
+const spotlightProject = document.querySelector("#spotlightProject");
+const spotlightShuffle = document.querySelector("#spotlightShuffle");
+let projectArchive = [];
+let currentSpotlightKey = "";
 
 const statModal = document.querySelector("#statModal");
 const statModalCode = document.querySelector("#statModalCode");
@@ -197,7 +201,7 @@ document.querySelectorAll("[data-close-stat-modal]").forEach((element) => {
   element.addEventListener("click", closeStatModal);
 });
 
-const SITE_VERSION = "3.2.10";
+const SITE_VERSION = "3.3.0";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -277,26 +281,123 @@ const fallbackProjects = [
 ];
 
 async function loadProjects() {
-  if (!API_URL || API_URL.includes("PASTE_YOUR")) {
-    renderProjects(fallbackProjects);
+  let sourceProjects = fallbackProjects;
+
+  if (API_URL && !API_URL.includes("PASTE_YOUR")) {
+    try {
+      const response = await fetch(`${API_URL}?action=listProjects`);
+      const data = await response.json();
+
+      if (!data.success || !Array.isArray(data.projects)) {
+        throw new Error("Invalid project response.");
+      }
+
+      sourceProjects = data.projects;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  projectArchive = sourceProjects.filter((project) => project && project.title);
+  if (!projectArchive.length) projectArchive = fallbackProjects;
+
+  const spotlight = chooseRandomProject(projectArchive);
+  renderSpotlight(spotlight);
+
+  const featuredProjects = getFeaturedProjects(projectArchive);
+  const preferredRecent = featuredProjects.length ? featuredProjects : projectArchive;
+  const recentProjects = buildRecentProjects(preferredRecent, projectArchive, spotlight, 6);
+  renderProjects(recentProjects);
+}
+
+function projectKey(project = {}) {
+  return String(project.id || project.title || "").trim().toLowerCase();
+}
+
+function chooseRandomProject(projects = [], excludeKey = "") {
+  const candidates = projects.filter((project) => projectKey(project) !== excludeKey);
+  const pool = candidates.length ? candidates : projects;
+  if (!pool.length) return null;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function buildRecentProjects(preferred = [], allProjects = [], spotlight = null, limit = 6) {
+  const spotlightKey = projectKey(spotlight);
+  const result = [];
+  const seen = new Set([spotlightKey]);
+
+  [...preferred, ...allProjects].forEach((project) => {
+    const key = projectKey(project);
+    if (!key || seen.has(key) || result.length >= limit) return;
+    seen.add(key);
+    result.push(project);
+  });
+
+  return result.length ? result : fallbackProjects.slice(0, limit);
+}
+
+function getProjectImage(project = {}) {
+  if (project.image) return project.image;
+  if (Array.isArray(project.galleryImages) && project.galleryImages.length) return project.galleryImages[0];
+  return "profile-photo.png";
+}
+
+function renderSpotlight(project) {
+  if (!spotlightProject) return;
+
+  if (!project) {
+    spotlightProject.innerHTML = '<div class="spotlight-loading">No project highlight is available yet.</div>';
     return;
   }
 
-  try {
-    const response = await fetch(`${API_URL}?action=listProjects`);
-    const data = await response.json();
+  currentSpotlightKey = projectKey(project);
+  const projectId = project.id || createSlug(project.title);
+  const projectUrl = `project.html?id=${encodeURIComponent(projectId)}`;
+  const skills = parseSkills(project.skills).slice(0, 4);
+  const archivePosition = Math.max(1, projectArchive.findIndex((item) => projectKey(item) === currentSpotlightKey) + 1);
 
-    if (!data.success || !Array.isArray(data.projects)) {
-      throw new Error("Invalid project response.");
-    }
+  spotlightProject.innerHTML = `
+    <button class="spotlight-media" type="button" aria-label="Preview ${escapeHtml(project.title)}">
+      <img src="${escapeHtml(getProjectImage(project))}" alt="${escapeHtml(project.title)}" loading="eager" decoding="async">
+      <span class="spotlight-number">Archive pick ${String(archivePosition).padStart(2, "0")}</span>
+    </button>
+    <div class="spotlight-copy">
+      <div class="spotlight-meta">
+        <span>${escapeHtml(project.category || "Selected project")}</span>
+        <span>Randomly selected</span>
+      </div>
+      <h3>${escapeHtml(project.title)}</h3>
+      <p>${escapeHtml(project.description || "A selected project from the DesignLab archive.")}</p>
+      ${skills.length ? `<div class="spotlight-skills">${skills.map((skill) => `<span>${escapeHtml(skill)}</span>`).join("")}</div>` : ""}
+      <div class="spotlight-actions">
+        <a class="btn btn-primary" href="${projectUrl}">View case study ↗</a>
+        <button class="compact-text-link spotlight-preview" type="button">Quick preview</button>
+      </div>
+    </div>
+  `;
 
-    const featuredProjects = getFeaturedProjects(data.projects);
-    renderProjects(featuredProjects.length ? featuredProjects : fallbackProjects.slice(0, 6));
-  } catch (error) {
-    console.error(error);
-    renderProjects(fallbackProjects.slice(0, 6));
+  const previewProject = { ...project, image: getProjectImage(project) };
+  spotlightProject.querySelector(".spotlight-media")?.addEventListener("click", () => openModal(previewProject));
+  spotlightProject.querySelector(".spotlight-preview")?.addEventListener("click", () => openModal(previewProject));
+}
+
+function shuffleSpotlight() {
+  if (!projectArchive.length) return;
+  const nextProject = chooseRandomProject(projectArchive, currentSpotlightKey);
+  renderSpotlight(nextProject);
+
+  if (spotlightProject && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    spotlightProject.animate(
+      [
+        { opacity: 0.2, transform: "translateY(8px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ],
+      { duration: 320, easing: "cubic-bezier(.2,.7,.2,1)" }
+    );
   }
 }
+
+spotlightShuffle?.addEventListener("click", shuffleSpotlight);
 
 function getFeaturedProjects(projects = []) {
   return projects

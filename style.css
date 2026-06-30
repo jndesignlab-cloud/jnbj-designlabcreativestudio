@@ -9434,7 +9434,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.10 — unified editorial system
+   v3.3.0 — unified editorial system
    ========================================================= */
 .editorial-system {
   --editorial-max: 1180px;
@@ -9686,7 +9686,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.10 — Services package grid + contact spacing repair
+   v3.3.0 — Services package grid + contact spacing repair
    ========================================================= */
 
 /* Services: tighter category rows and a contained open panel */
@@ -10032,7 +10032,7 @@ body.signal-theme .footer:not(.compact-footer) {
 
 
 /* =========================================================
-   v3.2.10 — refined headings, wide Insights banners,
+   v3.3.0 — refined headings, wide Insights banners,
    project search, flat project stories, full-page reveal
    ========================================================= */
 
@@ -10271,7 +10271,7 @@ body.signal-theme h2,
 
 
 /* =========================================================
-   v3.2.10 — Interactive services, compact CV, modal cleanup
+   v3.3.0 — Interactive services, compact CV, modal cleanup
    ========================================================= */
 
 /* Footer: explicit left-aligned studio identity */
@@ -10587,7 +10587,7 @@ body.signal-theme h2,
 }
 
 
-/* v3.2.10 refinement: custom scope points stay editorial, not card-like */
+/* v3.3.0 refinement: custom scope points stay editorial, not card-like */
 .custom-project-points {
   gap: 0;
   border-top: 1px solid var(--theme-line);
@@ -10606,7 +10606,7 @@ body.signal-theme h2,
   .custom-project-points article:last-child { border-bottom: 0; }
 }
 
-/* v3.2.10 — wider CV portrait + package-first service interaction */
+/* v3.3.0 — wider CV portrait + package-first service interaction */
 .cv-hero-compact {
   grid-template-columns: minmax(240px, 280px) minmax(0, 1fr) !important;
   gap: 34px !important;
@@ -10942,7 +10942,7 @@ body.signal-theme h2,
   }
 }
 
-/* v3.2.10 — CV editorial rebuild: fewer cards, structured rows, detail modals */
+/* v3.3.0 — CV editorial rebuild: fewer cards, structured rows, detail modals */
 .cv-editorial-body {
   display: grid;
   gap: 0;
@@ -11280,7 +11280,7 @@ body.modal-open { overflow: hidden; }
 }
 
 /* =========================================================
-   v3.2.10 — Flat editorial project case study
+   v3.3.0 — Flat editorial project case study
    Removes the legacy split-card visual from project.html.
    ========================================================= */
 .project-case-page {
@@ -11482,7 +11482,7 @@ html[data-theme="blue"] .project-media-stage img { background: #fff; }
 }
 
 
-/* v3.2.10 — CV modal viewport-layer fix */
+/* v3.3.0 — CV modal viewport-layer fix */
 body.modal-open .site-header,
 body.modal-open .theme-dock,
 body.modal-open .visitor-float {
@@ -11502,5 +11502,246 @@ body.modal-open .visitor-float {
   }
   .cv-detail-modal-head {
     padding-right: 54px;
+  }
+}
+
+
+/* v3.3.0 — Random project spotlight */
+.project-spotlight {
+  border-top: 1px solid var(--theme-line);
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.spotlight-section-head {
+  margin-bottom: 18px;
+}
+
+.spotlight-section-head h2 {
+  max-width: 720px;
+}
+
+.spotlight-shuffle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--theme-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--theme-text);
+  font: inherit;
+  font-size: .72rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.spotlight-shuffle:hover,
+.spotlight-shuffle:focus-visible {
+  border-color: var(--theme-accent);
+  color: var(--theme-accent);
+  background: color-mix(in srgb, var(--theme-accent) 7%, transparent);
+  transform: translateY(-1px);
+}
+
+.spotlight-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1.42fr) minmax(300px, .78fr);
+  min-height: 340px;
+  border-top: 1px solid var(--theme-line);
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.spotlight-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 340px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-right: 1px solid var(--theme-line);
+  background: var(--theme-surface-soft);
+  cursor: pointer;
+}
+
+.spotlight-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1), filter .3s ease;
+}
+
+.spotlight-media:hover img,
+.spotlight-media:focus-visible img {
+  transform: scale(1.018);
+  filter: saturate(1.04);
+}
+
+.spotlight-number {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,.48);
+  border-radius: 999px;
+  background: rgba(8,25,62,.76);
+  color: #fff;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.spotlight-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 0 28px 30px;
+}
+
+.spotlight-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 18px;
+  color: var(--theme-muted);
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.spotlight-meta span + span::before {
+  content: "•";
+  margin-right: 14px;
+  color: var(--theme-accent);
+}
+
+.spotlight-copy h3 {
+  max-width: 580px;
+  margin: 0 0 12px;
+  color: var(--theme-text);
+  font-size: clamp(1.55rem, 2.45vw, 2.7rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.spotlight-copy > p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--theme-muted);
+  font-size: .88rem;
+  line-height: 1.65;
+}
+
+.spotlight-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 14px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--theme-line);
+}
+
+.spotlight-skills span {
+  color: var(--theme-text);
+  font-size: .66rem;
+  font-weight: 700;
+}
+
+.spotlight-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.spotlight-preview {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.spotlight-loading {
+  grid-column: 1 / -1;
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  color: var(--theme-muted);
+  font-size: .82rem;
+}
+
+html[data-theme="blue"] .spotlight-number {
+  background: rgba(4,19,58,.82);
+}
+
+@media (max-width: 880px) {
+  .spotlight-project {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-media {
+    min-height: 280px;
+    aspect-ratio: 16 / 7.2;
+    border-right: 0;
+    border-bottom: 1px solid var(--theme-line);
+  }
+
+  .spotlight-media img {
+    min-height: 280px;
+  }
+
+  .spotlight-copy {
+    padding: 24px 0 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .spotlight-section-head {
+    align-items: flex-end;
+  }
+
+  .spotlight-shuffle {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: .65rem;
+  }
+
+  .spotlight-shuffle span + * {
+    display: none;
+  }
+
+  .spotlight-project {
+    min-height: 0;
+  }
+
+  .spotlight-media,
+  .spotlight-media img {
+    min-height: 210px;
+  }
+
+  .spotlight-copy h3 {
+    font-size: clamp(1.42rem, 8vw, 2rem);
+  }
+
+  .spotlight-copy > p {
+    font-size: .78rem;
+  }
+
+  .spotlight-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .spotlight-preview {
+    text-align: left;
   }
 }

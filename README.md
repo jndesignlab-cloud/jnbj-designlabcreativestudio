@@ -1,26 +1,14 @@
-# DesignLab Portfolio Website v3.2.10 — Project Editorial Rebuild
+# DesignLab Portfolio Website v3.3.0 — Random Project Spotlight
 
-## Changes
-- Wider Online CV portrait on desktop, tablet, and mobile.
-- Service categories now reveal their package/service selections inline.
-- Design and website packages retain a three-column desktop layout.
-- Clicking an individual package or service opens a focused detail modal.
-- Each modal includes a summary, best-fit use cases, inclusions, notes, and a pre-filled inquiry CTA.
-- Individual Services now includes Social Media Design, Carousel Design, Poster & Event Design, Logo Design, Packaging Design, Story Adaptation, Simple Motion Graphics, and Rush Delivery.
+This release adds a database-driven featured project section above Recent Projects.
 
-No Google Apps Script redeployment is required for this visual and interaction update.
+## v3.3.0 updates
 
+- Random project spotlight selected from the live Projects database
+- Shuffle control to display another project without reloading
+- Highlight links to the full case study and existing project preview modal
+- Spotlight project is excluded from the immediate Recent Projects list when possible
+- Responsive Light and Blue Mode styling
+- Existing inquiry, tracking, CV, services, notes, admin, and visitor systems preserved
 
-## v3.2.10 CV editorial rebuild
-- Replaced the scattered post-stats card layout with flat editorial rows.
-- Added detailed, accessible modals for capabilities, tools, remote work, and both professional roles.
-- Combined education, certifications, and working principles into a single aligned section.
-- Preserved the output statistics, print support, themes, navigation, and current systems.
-
-This release rebuilds the individual project case-study page into a flat editorial layout with smaller headings, a full-width title, a cleaner gallery, and fewer card-style containers.
-
-
-## v3.2.10
-- Fixed CV detail dialogs appearing underneath the sticky navigation.
-- CV modal is now mounted directly under the document body and covers the full viewport.
-- Improved mobile dialog height and spacing.
+No Apps Script or Code.gs update is required.
