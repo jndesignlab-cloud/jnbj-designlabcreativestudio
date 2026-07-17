@@ -13008,3 +13008,347 @@ html[data-theme="blue"] .admin-status-chip {
   .designlab-landing-page .concept-label-left { left:16px; }
   .designlab-landing-page .concept-proof { grid-template-columns:1fr; }
 }
+
+
+/* ===== v3.5.5 — Reference-matched homepage hero ===== */
+.designlab-landing-page {
+  background:
+    radial-gradient(circle at 88% 22%, rgba(72, 117, 255, .14), transparent 30%),
+    radial-gradient(circle at 8% 12%, rgba(92, 127, 255, .08), transparent 26%),
+    #fbfcff;
+}
+[data-theme="blue"] .designlab-landing-page {
+  background:
+    radial-gradient(circle at 88% 22%, rgba(76, 112, 255, .23), transparent 30%),
+    radial-gradient(circle at 8% 12%, rgba(92, 127, 255, .12), transparent 26%),
+    #071833;
+}
+.designlab-landing-page .reference-header {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) auto auto;
+  align-items: center;
+  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  position: relative;
+  z-index: 30;
+}
+.designlab-landing-page .reference-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  width: fit-content;
+  color: var(--text);
+  text-decoration: none;
+}
+.designlab-landing-page .reference-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #24358d, #3348b6);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(40, 58, 145, .22);
+}
+.designlab-landing-page .reference-brand strong {
+  display: block;
+  font-size: 1.13rem;
+  letter-spacing: -.025em;
+}
+.designlab-landing-page .reference-brand small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted-text);
+  font-size: .57rem;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+.designlab-landing-page .reference-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 3vw, 42px);
+}
+.designlab-landing-page .reference-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 700;
+}
+.designlab-landing-page .reference-nav a:hover { color: #3159ec; }
+.designlab-landing-page .reference-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 10px;
+  background: #1649f5;
+  color: #fff;
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 800;
+  box-shadow: 0 14px 28px rgba(22, 73, 245, .2);
+}
+.designlab-landing-page .reference-hero {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding-top: clamp(36px, 4.3vw, 66px);
+  padding-bottom: 28px;
+  overflow: visible;
+}
+.designlab-landing-page .reference-hero-copy {
+  position: relative;
+  z-index: 5;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.designlab-landing-page .reference-eyebrow {
+  margin: 0 0 18px;
+  color: #1650f5;
+  text-transform: uppercase;
+  font-size: .78rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+.designlab-landing-page .reference-hero h1 {
+  margin: 0;
+  color: #08132f;
+  font-size: clamp(3.55rem, 6.25vw, 6rem);
+  line-height: .98;
+  letter-spacing: -.076em;
+  font-weight: 800;
+}
+[data-theme="blue"] .designlab-landing-page .reference-hero h1 { color: #fff; }
+.designlab-landing-page .reference-hero h1 span { color: #164cf5; }
+.designlab-landing-page .reference-lead {
+  margin: 20px auto 0;
+  color: #64718e;
+  font-size: clamp(1rem, 1.3vw, 1.14rem);
+  line-height: 1.55;
+}
+[data-theme="blue"] .designlab-landing-page .reference-lead { color: #b8c6e6; }
+.designlab-landing-page .reference-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+.designlab-landing-page .reference-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-width: 210px;
+  min-height: 48px;
+  padding: 0 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 800;
+}
+.designlab-landing-page .reference-btn-primary {
+  background: #164cf5;
+  color: #fff;
+  box-shadow: 0 15px 32px rgba(22, 76, 245, .2);
+}
+.designlab-landing-page .reference-btn-secondary {
+  background: rgba(255,255,255,.76);
+  color: #164cf5;
+  border: 1.5px solid #164cf5;
+}
+[data-theme="blue"] .designlab-landing-page .reference-btn-secondary { background: rgba(7,24,51,.74); }
+.designlab-landing-page .reference-transformation {
+  position: relative;
+  height: clamp(430px, 36vw, 570px);
+  margin-top: 8px;
+  isolation: isolate;
+}
+.designlab-landing-page .reference-dot-field {
+  position: absolute;
+  left: 2%;
+  top: 16%;
+  width: 220px;
+  height: 230px;
+  opacity: .32;
+  background-image: radial-gradient(circle, #88a6ff 1.4px, transparent 1.6px);
+  background-size: 12px 12px;
+  mask-image: linear-gradient(90deg, #000, transparent);
+}
+.designlab-landing-page .reference-scatter {
+  position: absolute;
+  z-index: 5;
+  left: 2.2%;
+  top: 10%;
+  width: 39%;
+  height: 78%;
+  transform: scale(.94);
+  transform-origin: center;
+}
+.designlab-landing-page .reference-scatter > div {
+  position: absolute;
+  box-shadow: 0 15px 30px rgba(24, 41, 83, .14);
+}
+.designlab-landing-page .scatter-photo {
+  width: 110px;
+  height: 96px;
+  padding: 9px 9px 20px;
+  background: #fff;
+  border-radius: 3px;
+}
+.designlab-landing-page .scatter-photo i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(160deg, transparent 0 48%, rgba(25,58,116,.9) 49% 63%, transparent 64%),
+    linear-gradient(22deg, transparent 0 47%, rgba(58,91,148,.95) 48% 66%, transparent 67%),
+    linear-gradient(#9ab5d9, #eaf0f8 62%);
+}
+.designlab-landing-page .scatter-photo-left { left: 1%; top: 30%; transform: rotate(-12deg); }
+.designlab-landing-page .scatter-photo-right { left: 62%; top: 20%; transform: rotate(13deg); width: 96px; height: 88px; }
+.designlab-landing-page .scatter-note {
+  left: 10%; top: 9%; width: 94px; height: 88px; padding: 16px 10px; background: #d5e3ff; color: #173164; font-size: .78rem; line-height: 1.22; text-align: center; transform: rotate(-7deg);
+}
+.designlab-landing-page .scatter-note strong { font-size: .88rem; }
+.designlab-landing-page .scatter-paper {
+  left: 28%; top: 4%; width: 132px; height: 166px; padding: 24px 14px; background: #f9f5e9; color: #2d3548; transform: rotate(-4deg); border-radius: 2px;
+}
+.designlab-landing-page .scatter-paper span { display:block; text-align:center; font-size:.92rem; line-height:1.05; letter-spacing:.04em; }
+.designlab-landing-page .scatter-paper i { display:block; height:2px; margin:14px 8px 0; background:#aeb3bc; transform:rotate(-3deg); }
+.designlab-landing-page .scatter-paper i:nth-of-type(2){ width:70%; }
+.designlab-landing-page .scatter-paper i:nth-of-type(3){ width:48%; }
+.designlab-landing-page .scatter-paper b { position:absolute; right:18px; bottom:22px; font-size:1.3rem; font-weight:500; }
+.designlab-landing-page .scatter-card { left: 50%; top: 15%; width: 105px; height: 126px; display:grid; place-items:center; background:#122451; color:#fff; font-weight:900; font-size:1.05rem; line-height:1.05; text-align:center; transform:rotate(2deg); }
+.designlab-landing-page .scatter-palette { left: 9%; top: 56%; width: 140px; padding: 13px; background:#fff; border-radius:4px; transform:rotate(-6deg); }
+.designlab-landing-page .scatter-palette small { display:block; font-size:.55rem; font-weight:900; color:#34415e; }
+.designlab-landing-page .scatter-palette div { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; margin-top:10px; }
+.designlab-landing-page .scatter-palette i { height:27px; border-radius:2px; background:#0f4dbd; }
+.designlab-landing-page .scatter-palette i:nth-child(2){ background:#254e8f; }.designlab-landing-page .scatter-palette i:nth-child(3){ background:#60789e; }.designlab-landing-page .scatter-palette i:nth-child(4){ background:#a9b2c1; }
+.designlab-landing-page .scatter-wire { left: 46%; top: 54%; width: 130px; height: 115px; padding:12px; background:#fff; transform:rotate(2deg); }
+.designlab-landing-page .scatter-wire > div { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-bottom:7px; }
+.designlab-landing-page .scatter-wire i { height:36px; border:1px solid #b9c0cf; position:relative; }
+.designlab-landing-page .scatter-wire i::before, .designlab-landing-page .scatter-wire i::after { content:""; position:absolute; left:50%; top:50%; width:42px; height:1px; background:#c8ced9; transform-origin:center; }
+.designlab-landing-page .scatter-wire i::before { transform:translate(-50%,-50%) rotate(35deg); }.designlab-landing-page .scatter-wire i::after { transform:translate(-50%,-50%) rotate(-35deg); }
+.designlab-landing-page .scatter-wire span { display:block; width:62%; height:3px; border-radius:9px; background:#c3c9d4; }
+.designlab-landing-page .scatter-sticky { left: 72%; top: 62%; width:88px; height:82px; display:grid; place-items:center; background:#fff0a8; color:#403d28; font-size:.76rem; line-height:1.2; text-align:center; transform:rotate(9deg); }
+.designlab-landing-page .scatter-logo-options { left: 24%; top: 77%; width:130px; padding:12px; background:#fff; transform:rotate(1deg); }
+.designlab-landing-page .scatter-logo-options small { display:block; color:#56637e; font-size:.55rem; }
+.designlab-landing-page .scatter-logo-options div { display:flex; gap:10px; margin-top:8px; }.designlab-landing-page .scatter-logo-options span { display:grid; place-items:center; width:26px; height:24px; background:#24358d; color:#fff; border-radius:4px; font-size:.54rem; font-weight:900; }
+.designlab-landing-page .scatter-type { left: 67%; top: 79%; width:72px; height:62px; display:grid; place-items:center; background:#fff; color:#15213d; font-size:1.55rem; transform:rotate(9deg); }
+.designlab-landing-page .scatter-chip { left: 38%; top: -1%; width:29px; height:29px; background:#16315f; transform:rotate(-11deg); }
+.designlab-landing-page .reference-flow {
+  position: absolute;
+  z-index: 4;
+  left: 32%;
+  top: 35%;
+  width: 34%;
+  height: 38%;
+}
+.designlab-landing-page .reference-flow svg { width:100%; height:100%; overflow:visible; }
+.designlab-landing-page .reference-flow path { fill:none; stroke:#76a0ff; stroke-width:1.7; opacity:.72; }
+.designlab-landing-page .reference-flow circle { fill:#4a79f7; opacity:.85; }
+.designlab-landing-page .reference-logo-node { position:absolute; right:4%; top:42%; width:58px; height:58px; display:grid; place-items:center; border-radius:50%; background:linear-gradient(145deg,#263891,#3552cf); color:#fff; font-size:.8rem; font-weight:900; border:4px solid #fff; box-shadow:0 14px 28px rgba(31,55,145,.24); }
+.designlab-landing-page .reference-arrow { position:absolute; right:-13%; top:44%; color:#164cf5; font-size:2.4rem; font-weight:400; }
+.designlab-landing-page .reference-output {
+  position: absolute;
+  z-index: 6;
+  right: 1.5%;
+  top: 8%;
+  width: 38%;
+  height: 82%;
+  padding: 30px 28px 36px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px;
+  gap: 18px;
+  align-items: stretch;
+  border-radius: 24px 24px 18px 18px;
+  background: rgba(255,255,255,.76);
+  border: 1px solid rgba(102,126,181,.15);
+  box-shadow: 0 30px 65px rgba(28,43,88,.15);
+  transform: perspective(1100px) rotateY(-2deg);
+}
+[data-theme="blue"] .designlab-landing-page .reference-output { background: rgba(255,255,255,.06); }
+.designlab-landing-page .reference-output-base { position:absolute; left:-8%; right:-3%; bottom:-21px; height:22px; border-radius:0 0 60px 60px; background:linear-gradient(180deg,#e9edf6,#cfd7e7); box-shadow:0 10px 18px rgba(27,42,81,.14); }
+.designlab-landing-page .reference-final-poster { position:relative; overflow:hidden; min-height:100%; border-radius:7px; background:linear-gradient(180deg,#09244c 0%,#071833 100%); box-shadow:0 18px 30px rgba(9,25,58,.24); }
+.designlab-landing-page .final-mini-logo { position:absolute; z-index:4; left:16px; top:16px; width:27px; height:27px; display:grid; place-items:center; border-radius:5px; background:#fff; color:#172b70; font-size:.55rem; font-weight:900; }
+.designlab-landing-page .final-copy { position:absolute; z-index:4; left:18px; top:74px; color:#fff; }
+.designlab-landing-page .final-copy h2 { margin:0; font-size:clamp(2rem,3vw,3.2rem); line-height:.88; letter-spacing:-.06em; }
+.designlab-landing-page .final-copy p { margin:14px 0 0; color:#dbe6ff; font-size:.57rem; line-height:1.25; letter-spacing:.08em; }
+.designlab-landing-page .final-copy span { display:block; width:45px; height:3px; margin-top:9px; background:#4d84ff; }
+.designlab-landing-page .final-scene { position:absolute; inset:44% 0 0; overflow:hidden; background:linear-gradient(180deg,#17335f,#06162e); }
+.designlab-landing-page .final-scene::before, .designlab-landing-page .final-scene::after { content:""; position:absolute; bottom:-8%; width:72%; height:75%; background:linear-gradient(145deg,#1f467d,#061830); clip-path:polygon(50% 0,100% 100%,0 100%); }
+.designlab-landing-page .final-scene::before { left:-10%; }.designlab-landing-page .final-scene::after { right:-18%; height:90%; background:linear-gradient(145deg,#28558c,#071a36); }
+.designlab-landing-page .final-scene i, .designlab-landing-page .final-scene b { position:absolute; z-index:3; bottom:20%; width:12px; height:30px; background:#7e9cc9; clip-path:polygon(50% 0,100% 100%,0 100%); opacity:.75; }.designlab-landing-page .final-scene i{left:19%}.designlab-landing-page .final-scene b{left:26%;height:22px}
+.designlab-landing-page .final-footer { position:absolute; z-index:5; left:18px; right:18px; bottom:14px; display:flex; justify-content:space-between; gap:10px; color:#fff; }
+.designlab-landing-page .final-footer strong { font-size:.52rem; }.designlab-landing-page .final-footer small { font-size:.47rem; opacity:.72; }
+.designlab-landing-page .reference-campaign-kit { display:flex; flex-direction:column; padding:16px 12px; border-radius:10px; background:#fff; box-shadow:0 12px 24px rgba(28,43,88,.1); }
+[data-theme="blue"] .designlab-landing-page .reference-campaign-kit { background:#0d244a; }
+.designlab-landing-page .reference-campaign-kit h3 { margin:0; color:var(--text); font-size:.62rem; letter-spacing:.08em; }
+.designlab-landing-page .reference-campaign-kit ul { list-style:none; padding:0; margin:17px 0 12px; display:grid; gap:14px; }
+.designlab-landing-page .reference-campaign-kit li { display:grid; grid-template-columns:22px 1fr; gap:8px; align-items:center; color:var(--text); font-size:.55rem; font-weight:700; }
+.designlab-landing-page .reference-campaign-kit li i { width:18px; height:24px; border-radius:2px; background:#18366a; box-shadow:inset 0 0 0 2px rgba(255,255,255,.12); }
+.designlab-landing-page .reference-campaign-kit li span { display:block; line-height:1.15; }.designlab-landing-page .reference-campaign-kit li small { display:block; margin-top:2px; color:#9aa6bd; font-size:.43rem; }
+.designlab-landing-page .reference-kit-palette { margin-top:auto; padding-top:14px; border-top:1px solid var(--line); }
+.designlab-landing-page .reference-kit-palette strong { display:block; margin-bottom:9px; color:var(--text); font-size:.48rem; letter-spacing:.08em; }
+.designlab-landing-page .reference-kit-palette span { display:inline-block; width:20px; height:22px; margin-right:3px; border-radius:2px; background:#0d4db4; }.designlab-landing-page .reference-kit-palette span:nth-of-type(2){background:#244f8e}.designlab-landing-page .reference-kit-palette span:nth-of-type(3){background:#5d769e}.designlab-landing-page .reference-kit-palette span:nth-of-type(4){background:#abb5c6}
+.designlab-landing-page .reference-trust-strip {
+  margin: -4px auto 0;
+  padding: 28px 36px 30px;
+  border: 1px solid rgba(99,122,177,.13);
+  border-radius: 24px;
+  background: rgba(255,255,255,.74);
+  box-shadow: 0 20px 45px rgba(29,45,88,.08);
+  text-align: center;
+}
+[data-theme="blue"] .designlab-landing-page .reference-trust-strip { background: rgba(255,255,255,.04); }
+.designlab-landing-page .reference-trust-strip p { margin:0; color:#1650f5; text-transform:uppercase; font-size:.63rem; font-weight:900; letter-spacing:.04em; }
+.designlab-landing-page .reference-trust-strip div { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:24px; align-items:center; margin-top:24px; }
+.designlab-landing-page .reference-trust-strip span { color:#7a86a1; font-size:.8rem; font-weight:800; white-space:nowrap; }
+@media (max-width: 1180px) {
+  .designlab-landing-page .reference-header { grid-template-columns:1fr auto; }
+  .designlab-landing-page .reference-nav { display:none; }
+  .designlab-landing-page .reference-transformation { height:720px; }
+  .designlab-landing-page .reference-scatter { left:4%; top:5%; width:50%; height:48%; }
+  .designlab-landing-page .reference-flow { left:35%; top:30%; width:34%; }
+  .designlab-landing-page .reference-output { right:4%; top:42%; width:56%; height:52%; }
+  .designlab-landing-page .reference-trust-strip div { grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width: 760px) {
+  .designlab-landing-page .reference-header { min-height:72px; padding-top:12px; padding-bottom:10px; }
+  .designlab-landing-page .reference-brand-mark { width:42px; height:42px; }
+  .designlab-landing-page .reference-brand strong { font-size:1rem; }
+  .designlab-landing-page .reference-header-cta { min-height:42px; padding:0 16px; font-size:.78rem; }
+  .designlab-landing-page .reference-hero { padding-top:36px; }
+  .designlab-landing-page .reference-hero h1 { font-size:clamp(3rem,13vw,4.6rem); }
+  .designlab-landing-page .reference-desktop-break { display:none; }
+  .designlab-landing-page .reference-actions { display:grid; }
+  .designlab-landing-page .reference-btn { min-width:0; width:100%; }
+  .designlab-landing-page .reference-transformation { height:920px; margin-top:10px; }
+  .designlab-landing-page .reference-scatter { left:1%; top:2%; width:95%; height:38%; transform:scale(.82); }
+  .designlab-landing-page .reference-flow { left:15%; top:35%; width:70%; height:20%; transform:rotate(90deg); }
+  .designlab-landing-page .reference-logo-node { right:14%; }
+  .designlab-landing-page .reference-arrow { display:none; }
+  .designlab-landing-page .reference-output { left:3%; right:3%; top:54%; width:auto; height:42%; grid-template-columns:minmax(0,1fr) 104px; padding:20px; }
+  .designlab-landing-page .reference-trust-strip { padding:24px 20px; }
+  .designlab-landing-page .reference-trust-strip div { grid-template-columns:repeat(2,1fr); gap:18px; }
+  .designlab-landing-page .reference-trust-strip span { white-space:normal; }
+}
+@media (max-width: 480px) {
+  .designlab-landing-page .reference-header { gap:10px; }
+  .designlab-landing-page .reference-brand small { display:none; }
+  .designlab-landing-page .reference-header-cta { padding:0 12px; }
+  .designlab-landing-page .reference-scatter { transform:scale(.68); transform-origin:left top; width:130%; }
+  .designlab-landing-page .reference-output { grid-template-columns:1fr 86px; }
+  .designlab-landing-page .reference-campaign-kit { padding:12px 8px; }
+  .designlab-landing-page .reference-campaign-kit li { grid-template-columns:17px 1fr; gap:5px; }
+  .designlab-landing-page .reference-campaign-kit li i { width:15px; height:20px; }
+}
