@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.5.3";
+const SITE_VERSION = "3.5.4";
 
 const yearElement = document.querySelector("#year");
 const versionElement = document.querySelector("#siteVersion");

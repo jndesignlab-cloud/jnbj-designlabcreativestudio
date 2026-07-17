@@ -12763,165 +12763,248 @@ html[data-theme="blue"] .admin-status-chip {
 
 
 
-/* ===== v3.5.3 — Single-column story hero ===== */
-.designlab-landing-page .story-hero {
+/* ===== v3.5.4 — Native scattered-to-polished homepage hero ===== */
+.designlab-landing-page .concept-hero {
   position: relative;
-  display: grid;
-  gap: clamp(26px, 4vw, 40px);
-  align-items: start;
-  padding-top: clamp(54px, 7vw, 96px);
-  padding-bottom: clamp(56px, 8vw, 104px);
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(54px, 7vw, 92px);
+  overflow: hidden;
 }
-.designlab-landing-page .story-hero-copy {
-  max-width: 900px;
+.designlab-landing-page .concept-hero::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  right: -250px;
+  top: -240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(54,92,229,.16), transparent 68%);
+  pointer-events: none;
 }
-.designlab-landing-page .story-hero-copy .studio-eyebrow {
-  margin-bottom: 18px;
+.designlab-landing-page .concept-hero-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
 }
-.designlab-landing-page .story-hero-copy h1 {
-  margin: 0;
-  max-width: 11ch;
-  font-size: clamp(3.6rem, 8vw, 7rem);
+.designlab-landing-page .concept-hero-copy .studio-eyebrow {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.designlab-landing-page .concept-hero h1 {
+  margin: 0 auto;
+  max-width: 13ch;
+  color: var(--text);
+  font-size: clamp(3.7rem, 7.8vw, 7rem);
   line-height: .92;
   letter-spacing: -.085em;
-  color: var(--text);
 }
-.designlab-landing-page .story-hero-copy h1 span {
-  color: var(--accent);
+.designlab-landing-page .concept-hero h1 span {
+  color: #375de5;
 }
-.designlab-landing-page .story-hero-lead {
-  margin: 22px 0 0;
-  max-width: 64ch;
+[data-theme="blue"] .designlab-landing-page .concept-hero h1 span {
+  color: #86a7ff;
+}
+.designlab-landing-page .concept-hero-lead {
+  max-width: 760px;
+  margin: 24px auto 0;
   color: var(--muted-text);
-  font-size: clamp(1.02rem, 1.45vw, 1.18rem);
-  line-height: 1.78;
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  line-height: 1.75;
 }
-.designlab-landing-page .story-hero-actions {
+.designlab-landing-page .concept-hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
   margin-top: 32px;
 }
-.designlab-landing-page .story-proof-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 30px;
-}
-.designlab-landing-page .story-proof-row div {
-  padding: 18px 18px 16px;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.66);
-  box-shadow: var(--soft-shadow);
-}
-[data-theme="blue"] .designlab-landing-page .story-proof-row div {
-  background: rgba(255,255,255,.05);
-}
-.designlab-landing-page .story-proof-row strong {
-  display: block;
-  color: var(--text);
-  font-size: 1rem;
-}
-.designlab-landing-page .story-proof-row span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted-text);
-  font-size: .9rem;
-}
-.designlab-landing-page .story-hero-stage {
+.designlab-landing-page .concept-transform {
   position: relative;
-  min-height: 620px;
+  display: grid;
+  grid-template-columns: minmax(300px, .9fr) minmax(230px, .55fr) minmax(430px, 1.15fr);
+  gap: 18px;
+  align-items: center;
+  min-height: 590px;
+  margin-top: clamp(42px, 6vw, 70px);
+  padding: clamp(24px, 3vw, 38px);
   border: 1px solid var(--line);
-  border-radius: 34px;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(243,246,252,.98));
+  border-radius: 36px;
+  background: linear-gradient(180deg, rgba(255,255,255,.93), rgba(244,247,253,.98));
   box-shadow: var(--soft-shadow);
-  padding: clamp(22px, 3vw, 34px);
+  overflow: hidden;
 }
-[data-theme="blue"] .designlab-landing-page .story-hero-stage {
-  background: linear-gradient(180deg, rgba(9,28,59,.96), rgba(7,23,50,.98));
+[data-theme="blue"] .designlab-landing-page .concept-transform {
+  background: linear-gradient(180deg, rgba(8,28,61,.96), rgba(6,21,47,.98));
 }
-.designlab-landing-page .story-stage-surface {
+.designlab-landing-page .concept-glow {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 16% 16%, rgba(53,107,255,.16), transparent 25%), radial-gradient(circle at 85% 18%, rgba(122,86,255,.10), transparent 24%), linear-gradient(rgba(53,107,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(53,107,255,.05) 1px, transparent 1px);
-  background-size: auto, auto, 44px 44px, 44px 44px;
-  opacity: .75;
+  border-radius: 50%;
+  filter: blur(8px);
   pointer-events: none;
 }
-.designlab-landing-page .story-stage-illustration {
+.designlab-landing-page .concept-glow-left {
+  width: 430px;
+  height: 430px;
+  left: -170px;
+  top: 20px;
+  background: radial-gradient(circle, rgba(62,102,235,.13), transparent 68%);
+}
+.designlab-landing-page .concept-glow-right {
+  width: 520px;
+  height: 520px;
+  right: -160px;
+  bottom: -210px;
+  background: radial-gradient(circle, rgba(116,78,232,.13), transparent 68%);
+}
+.designlab-landing-page .concept-label {
+  position: absolute;
+  z-index: 8;
+  padding: 10px 14px;
+  border: 1px solid rgba(73,97,158,.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  color: #1b2947;
+  font-size: .76rem;
+  font-weight: 850;
+  box-shadow: 0 12px 30px rgba(27,43,86,.1);
+  backdrop-filter: blur(10px);
+}
+[data-theme="blue"] .designlab-landing-page .concept-label {
+  background: rgba(10,31,68,.88);
+  color: #edf3ff;
+}
+.designlab-landing-page .concept-label-left { left: 34px; top: 28px; }
+.designlab-landing-page .concept-label-right { right: 34px; top: 28px; }
+.designlab-landing-page .concept-scattered {
+  position: relative;
+  min-height: 460px;
+  z-index: 3;
+}
+.designlab-landing-page .idea-piece {
+  position: absolute;
+  border: 1px solid rgba(69,92,150,.16);
+  background: rgba(255,255,255,.92);
+  color: #1a2745;
+  box-shadow: 0 16px 32px rgba(27,43,84,.13);
+}
+[data-theme="blue"] .designlab-landing-page .idea-piece {
+  background: rgba(255,255,255,.94);
+}
+.designlab-landing-page .idea-launch {
+  left: 18px; top: 62px; width: 112px; padding: 17px 16px; border-radius: 10px; transform: rotate(-8deg); background: #bcd0ff;
+  font-family: Georgia, serif; font-size: .8rem; line-height: 1.24;
+}
+.designlab-landing-page .idea-headlines {
+  left: 102px; top: 42px; width: 150px; height: 170px; padding: 22px 18px; border-radius: 9px; transform: rotate(-4deg); background: #f8f1df;
+}
+.designlab-landing-page .idea-headlines span { font-size: .78rem; letter-spacing: .06em; }
+.designlab-landing-page .idea-headlines i { display: block; width: 82%; height: 2px; margin-top: 18px; background: #a2a9b7; transform: rotate(-3deg); }
+.designlab-landing-page .idea-headlines i:nth-of-type(2) { width: 65%; transform: rotate(2deg); }
+.designlab-landing-page .idea-headlines i:nth-of-type(3) { width: 74%; transform: rotate(-1deg); }
+.designlab-landing-page .idea-headlines b { position: absolute; right: 20px; bottom: 18px; font-size: 1.25rem; }
+.designlab-landing-page .idea-bold {
+  left: 225px; top: 78px; width: 104px; padding: 26px 14px; border-radius: 8px; transform: rotate(2deg); background: #102a67; color: #fff; font-size: 1.34rem; line-height: .95; font-weight: 900;
+}
+.designlab-landing-page .idea-photo {
+  left: 280px; top: 46px; width: 108px; height: 112px; padding: 8px; border-radius: 8px; transform: rotate(9deg); overflow: hidden;
+}
+.designlab-landing-page .idea-photo span { position: absolute; inset: 8px 8px 28px; background: linear-gradient(180deg,#a8cdf5,#eef5ff 58%,#416494 59%,#183458); }
+.designlab-landing-page .idea-photo i { position:absolute; left:14px; right:14px; bottom:17px; height:2px; background:#b9c2d2; }
+.designlab-landing-page .idea-photo b { position:absolute; width:52px; height:38px; left:20px; top:44px; clip-path: polygon(0 100%,50% 0,100% 100%); background:#23436c; }
+.designlab-landing-page .idea-palette {
+  left: 20px; top: 230px; width: 150px; padding: 15px; border-radius: 10px; transform: rotate(-2deg);
+}
+.designlab-landing-page .idea-palette small { font-size: .62rem; font-weight: 850; }
+.designlab-landing-page .idea-palette div { display:flex; gap:5px; margin-top:10px; }
+.designlab-landing-page .idea-palette i { width:26px; height:26px; border-radius:3px; background:#16459c; }
+.designlab-landing-page .idea-palette i:nth-child(2){background:#3363c7}.designlab-landing-page .idea-palette i:nth-child(3){background:#6f8dc5}.designlab-landing-page .idea-palette i:nth-child(4){background:#a9b4c5}
+.designlab-landing-page .idea-wireframe {
+  left: 175px; top: 244px; width: 145px; height: 112px; padding: 13px; border-radius: 8px; transform: rotate(5deg);
+}
+.designlab-landing-page .idea-wireframe > div { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-bottom:7px; }
+.designlab-landing-page .idea-wireframe i { height:36px; border:1px solid #aeb8cb; position:relative; }
+.designlab-landing-page .idea-wireframe i::before, .designlab-landing-page .idea-wireframe i::after { content:""; position:absolute; left:4px; right:4px; top:50%; height:1px; background:#b7c0cf; transform:rotate(28deg); }
+.designlab-landing-page .idea-wireframe i::after { transform:rotate(-28deg); }
+.designlab-landing-page .idea-sticky {
+  left: 309px; top: 210px; width: 92px; padding: 18px 12px; border-radius: 4px; transform: rotate(7deg); background: #ffe88b; font-family: Georgia, serif; text-align:center; font-size:.78rem; line-height:1.15;
+}
+.designlab-landing-page .idea-logo-options {
+  left: 64px; top: 352px; width: 134px; padding: 14px; border-radius: 8px; transform: rotate(2deg);
+}
+.designlab-landing-page .idea-logo-options small { font-size:.62rem; font-weight:850; }
+.designlab-landing-page .idea-logo-options div { display:flex; gap:8px; margin-top:10px; }
+.designlab-landing-page .idea-logo-options span { display:grid; place-items:center; width:34px; height:34px; border-radius:6px; background:#172e69; color:#fff; font-size:.65rem; font-weight:900; }
+.designlab-landing-page .idea-type {
+  left: 235px; top: 372px; width: 86px; padding: 15px 10px; border-radius: 8px; transform: rotate(9deg); text-align:center; font-size:1.55rem; font-weight:700;
+}
+.designlab-landing-page .concept-flow {
   position: relative;
   z-index: 2;
-  display: block;
-  width: min(100%, 1240px);
-  margin: 10px auto 0;
-  border-radius: 22px;
-  box-shadow: 0 28px 60px rgba(20,35,72,.14);
+  min-height: 300px;
+  display: grid;
+  place-items: center;
 }
-.designlab-landing-page .story-floating-logo {
-  position: absolute;
-  z-index: 3;
-  top: 22px;
-  right: 28px;
-  width: clamp(76px, 10vw, 120px);
-  filter: drop-shadow(0 18px 30px rgba(18,34,72,.18));
-  animation: studioLogoFloat 6.4s ease-in-out infinite;
+.designlab-landing-page .concept-flow svg { width: 100%; overflow: visible; }
+.designlab-landing-page .concept-flow path { fill:none; stroke:#79a2ff; stroke-width:2; opacity:.48; }
+.designlab-landing-page .concept-flow circle { fill:#507bea; opacity:.72; }
+.designlab-landing-page .concept-logo-node {
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:74px; height:74px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(145deg,#3158df,#714ee7); box-shadow:0 18px 32px rgba(52,78,167,.24); border:8px solid rgba(255,255,255,.72);
 }
-.designlab-landing-page .story-float-chip,
-.designlab-landing-page .story-float-note {
-  position: absolute;
-  z-index: 4;
-  border: 1px solid rgba(79,102,162,.18);
-  background: rgba(255,255,255,.92);
-  box-shadow: 0 16px 36px rgba(24,35,75,.12);
-  backdrop-filter: blur(14px);
+.designlab-landing-page .concept-logo-node span { color:#fff; font-weight:900; font-size:1.05rem; }
+.designlab-landing-page .concept-arrow { position:absolute; right:3px; top:50%; transform:translateY(-50%); color:#3763e9; font-size:3rem; font-weight:300; }
+.designlab-landing-page .concept-output { position:relative; z-index:3; }
+.designlab-landing-page .campaign-board {
+  display:grid; grid-template-columns:minmax(0,1fr) 142px; gap:14px; padding:18px; border:1px solid rgba(69,91,150,.15); border-radius:24px; background:rgba(255,255,255,.82); box-shadow:0 25px 50px rgba(22,38,80,.15); transform:rotate(-1.5deg);
 }
-[data-theme="blue"] .designlab-landing-page .story-float-chip,
-[data-theme="blue"] .designlab-landing-page .story-float-note {
-  background: rgba(8,26,58,.86);
-}
-.designlab-landing-page .story-float-chip {
-  padding: 12px 16px;
-  border-radius: 999px;
-  color: var(--text);
-  font-size: .82rem;
-  font-weight: 800;
-}
-.designlab-landing-page .chip-scattered { left: 28px; top: 26px; }
-.designlab-landing-page .chip-polished { right: 30px; bottom: 28px; }
-.designlab-landing-page .story-float-note {
-  left: 30px;
-  bottom: 34px;
-  max-width: 280px;
-  padding: 16px 18px;
-  border-radius: 20px;
-}
-.designlab-landing-page .story-float-note small {
-  display: block;
-  color: var(--accent);
-  letter-spacing: .12em;
-  font-size: .58rem;
-  font-weight: 900;
-}
-.designlab-landing-page .story-float-note strong {
-  display: block;
-  margin-top: 8px;
-  color: var(--text);
-  font-size: .9rem;
-  line-height: 1.45;
+[data-theme="blue"] .designlab-landing-page .campaign-board { background:rgba(255,255,255,.9); }
+.designlab-landing-page .campaign-poster { position:relative; min-height:430px; border-radius:17px; overflow:hidden; background:linear-gradient(180deg,#0b2458 0%,#163b77 55%,#0c1e44 100%); color:#fff; padding:24px; }
+.designlab-landing-page .poster-brand { position:relative; z-index:4; display:grid; place-items:center; width:30px; height:30px; border-radius:8px; background:#fff; color:#163b77; font-size:.62rem; font-weight:900; }
+.designlab-landing-page .poster-copy { position:relative; z-index:4; margin-top:36px; }
+.designlab-landing-page .poster-copy small { color:#b8c8ec; font-size:.62rem; letter-spacing:.14em; font-weight:900; }
+.designlab-landing-page .poster-copy h2 { margin:10px 0 12px; max-width:7ch; font-size:clamp(2.2rem,4vw,4rem); line-height:.86; letter-spacing:-.06em; }
+.designlab-landing-page .poster-copy p { max-width:22ch; color:#dce6fb; font-size:.78rem; line-height:1.5; }
+.designlab-landing-page .poster-mountain { position:absolute; bottom:-3px; background:#223d6d; clip-path:polygon(0 100%,35% 26%,52% 67%,70% 15%,100% 100%); }
+.designlab-landing-page .mountain-one { left:-15%; width:92%; height:47%; opacity:.92; }
+.designlab-landing-page .mountain-two { right:-12%; width:82%; height:58%; background:#10284f; clip-path:polygon(0 100%,28% 52%,48% 7%,64% 62%,83% 29%,100% 100%); }
+.designlab-landing-page .poster-accent { position:absolute; right:24px; top:24px; width:92px; height:92px; border-radius:50%; border:1px solid rgba(255,255,255,.18); box-shadow:0 0 0 18px rgba(255,255,255,.035),0 0 0 36px rgba(255,255,255,.025); }
+.designlab-landing-page .campaign-kit { display:flex; flex-direction:column; gap:16px; padding:8px 2px; color:#152441; }
+.designlab-landing-page .campaign-kit > div > small, .designlab-landing-page .kit-palette small { font-size:.58rem; letter-spacing:.11em; font-weight:900; }
+.designlab-landing-page .campaign-kit ul { display:grid; gap:10px; margin:0; padding:0; list-style:none; }
+.designlab-landing-page .campaign-kit li { display:grid; grid-template-columns:24px 1fr; gap:8px; align-items:center; }
+.designlab-landing-page .campaign-kit li > i { width:22px; height:26px; border-radius:5px; background:#173769; box-shadow:inset 0 0 0 3px #2f5ba2; }
+.designlab-landing-page .campaign-kit li span { font-size:.62rem; font-weight:800; }
+.designlab-landing-page .campaign-kit li small { display:block; margin-top:2px; color:#7e8ba4; font-size:.47rem; font-weight:600; }
+.designlab-landing-page .kit-palette { margin-top:auto; }
+.designlab-landing-page .kit-palette span { display:inline-block; width:23px; height:23px; margin:9px 3px 0 0; border-radius:4px; background:#163b77; }
+.designlab-landing-page .kit-palette span:nth-of-type(2){background:#315f9f}.designlab-landing-page .kit-palette span:nth-of-type(3){background:#6d89b2}.designlab-landing-page .kit-palette span:nth-of-type(4){background:#a6b2c5}
+.designlab-landing-page .concept-proof { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:24px; }
+.designlab-landing-page .concept-proof div { padding:18px 20px; border-top:1px solid var(--line); }
+.designlab-landing-page .concept-proof strong { display:block; color:var(--text); font-size:1rem; }
+.designlab-landing-page .concept-proof span { display:block; margin-top:5px; color:var(--muted-text); font-size:.88rem; }
+@media (max-width: 1180px) {
+  .designlab-landing-page .concept-transform { grid-template-columns: minmax(280px,.9fr) minmax(190px,.45fr) minmax(380px,1.05fr); }
+  .designlab-landing-page .campaign-board { grid-template-columns:minmax(0,1fr) 118px; }
 }
 @media (max-width: 980px) {
-  .designlab-landing-page .story-proof-row { grid-template-columns: 1fr; }
-  .designlab-landing-page .story-hero-stage { min-height: 480px; }
+  .designlab-landing-page .concept-transform { grid-template-columns:1fr; gap:28px; min-height:auto; padding-top:76px; }
+  .designlab-landing-page .concept-scattered { width:min(100%,430px); min-height:450px; margin:0 auto; }
+  .designlab-landing-page .concept-flow { min-height:130px; transform:rotate(90deg); width:220px; margin:0 auto; }
+  .designlab-landing-page .concept-arrow { right:-18px; }
+  .designlab-landing-page .concept-output { width:min(100%,620px); margin:0 auto; }
 }
-@media (max-width: 700px) {
-  .designlab-landing-page .story-hero-copy h1 { font-size: clamp(3rem, 15vw, 5rem); max-width: 9.5ch; }
-  .designlab-landing-page .story-hero-actions { display: grid; }
-  .designlab-landing-page .story-hero-actions .btn { width: 100%; }
-  .designlab-landing-page .story-hero-stage { min-height: 360px; padding: 18px; border-radius: 26px; }
-  .designlab-landing-page .story-floating-logo { width: 74px; right: 14px; top: 14px; }
-  .designlab-landing-page .chip-scattered { left: 14px; top: 14px; }
-  .designlab-landing-page .chip-polished { right: 14px; bottom: 14px; }
-  .designlab-landing-page .story-float-note { position: static; margin-top: 14px; max-width: none; }
+@media (max-width: 680px) {
+  .designlab-landing-page .concept-hero h1 { font-size:clamp(3rem,14vw,5rem); max-width:10ch; }
+  .designlab-landing-page .concept-hero-actions { display:grid; }
+  .designlab-landing-page .concept-hero-actions .btn { width:100%; }
+  .designlab-landing-page .concept-transform { padding:72px 14px 22px; border-radius:26px; }
+  .designlab-landing-page .concept-scattered { transform:scale(.82); transform-origin:center top; margin-bottom:-74px; }
+  .designlab-landing-page .campaign-board { grid-template-columns:1fr; transform:none; }
+  .designlab-landing-page .campaign-kit { display:grid; grid-template-columns:1fr 1fr; }
+  .designlab-landing-page .campaign-kit > div:first-child { grid-column:1 / -1; }
+  .designlab-landing-page .kit-palette { margin-top:0; }
+  .designlab-landing-page .concept-label-right { right:16px; }
+  .designlab-landing-page .concept-label-left { left:16px; }
+  .designlab-landing-page .concept-proof { grid-template-columns:1fr; }
 }
