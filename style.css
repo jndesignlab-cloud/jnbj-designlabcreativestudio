@@ -12246,3 +12246,229 @@ html[data-theme="blue"] .admin-status-chip {
   .landing-strip div:last-child { border-bottom: 0; }
   .landing-founder, .landing-pages { padding-left: 0; padding-right: 0; border-left: 0; border-right: 0; border-radius: 0; box-shadow: none; background: transparent; }
 }
+
+
+/* ===== v3.5.1 landing refresh + legal pages ===== */
+.designlab-landing-page .landing-main-v2 {
+  display: grid;
+  gap: 28px;
+  padding-bottom: 72px;
+}
+.designlab-landing-page .landing-hero-v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+  gap: clamp(24px, 3vw, 42px);
+  align-items: stretch;
+}
+.designlab-landing-page .landing-copy-v2,
+.designlab-landing-page .landing-stage-v2,
+.designlab-landing-page .landing-rail-v2 article,
+.designlab-landing-page .landing-service-grid a,
+.designlab-landing-page .landing-work-board article,
+.designlab-landing-page .landing-note-card,
+.designlab-landing-page .landing-founder,
+.designlab-landing-page .landing-pages,
+.legal-page .legal-hero,
+.legal-page .legal-content {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--soft-shadow);
+}
+.designlab-landing-page .landing-copy-v2 {
+  position: relative;
+  padding: clamp(30px, 4vw, 46px);
+  background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(246,248,252,.92));
+  overflow: hidden;
+}
+[data-theme="blue"] .designlab-landing-page .landing-copy-v2 {
+  background: linear-gradient(180deg, rgba(11,35,74,.96), rgba(9,28,58,.93));
+}
+.designlab-landing-page .landing-copy-v2::before {
+  content: "";
+  position: absolute;
+  inset: auto -12% -28% auto;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle at center, rgba(53,107,255,.16), rgba(53,107,255,0));
+  pointer-events: none;
+}
+.designlab-landing-page .landing-copy-v2 h1 {
+  margin: 0;
+  font-size: clamp(3rem, 6.2vw, 6.4rem);
+  line-height: .92;
+  letter-spacing: -.08em;
+  max-width: 11.2ch;
+}
+.designlab-landing-page .landing-lead {
+  margin-top: 18px;
+  max-width: 62ch;
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.designlab-landing-page .landing-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.designlab-landing-page .landing-chip-row span {
+  padding: 11px 14px;
+  border-radius: 999px;
+  background: rgba(53,107,255,.08);
+  color: var(--text);
+  border: 1px solid rgba(53,107,255,.16);
+  font-size: .92rem;
+  font-weight: 700;
+}
+[data-theme="blue"] .designlab-landing-page .landing-chip-row span {
+  background: rgba(255,255,255,.05);
+  border-color: rgba(255,255,255,.08);
+}
+.designlab-landing-page .landing-mini-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+.designlab-landing-page .landing-mini-metrics div {
+  padding: 18px 18px 16px;
+  border-radius: 20px;
+  background: rgba(53,107,255,.06);
+  border: 1px solid rgba(53,107,255,.14);
+}
+[data-theme="blue"] .designlab-landing-page .landing-mini-metrics div {
+  background: rgba(255,255,255,.05);
+  border-color: rgba(255,255,255,.08);
+}
+.designlab-landing-page .landing-mini-metrics strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.designlab-landing-page .landing-mini-metrics span {
+  display: block;
+  margin-top: 4px;
+  font-size: .9rem;
+  color: var(--muted-text);
+}
+.designlab-landing-page .landing-stage-v2 {
+  position: relative;
+  min-height: 100%;
+  padding: 28px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255,255,255,.86), rgba(239,244,252,.98));
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(12, minmax(0, 1fr));
+}
+[data-theme="blue"] .designlab-landing-page .landing-stage-v2 {
+  background: linear-gradient(145deg, rgba(7,27,58,.98), rgba(9,40,86,.94));
+}
+.designlab-landing-page .landing-stage-surface {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(103,146,255,.18), transparent 32%),
+    linear-gradient(rgba(53,107,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53,107,255,.08) 1px, transparent 1px);
+  background-size: auto, 36px 36px, 36px 36px;
+  opacity: .75;
+  pointer-events: none;
+}
+.designlab-landing-page .landing-logo-float-v2 {
+  position: absolute;
+  right: 10%;
+  top: 6%;
+  width: min(38vw, 250px);
+  filter: drop-shadow(0 20px 30px rgba(11,25,51,.18));
+  animation: floatLogo 7s ease-in-out infinite;
+}
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.designlab-landing-page .landing-stage-card {
+  position: relative;
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.82);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+[data-theme="blue"] .designlab-landing-page .landing-stage-card {
+  background: rgba(255,255,255,.06);
+}
+.designlab-landing-page .landing-stage-card small,
+.designlab-landing-page .landing-rail-v2 small {
+  display: block;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+.designlab-landing-page .landing-stage-card strong,
+.designlab-landing-page .landing-rail-v2 strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--text);
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  line-height: 1.08;
+}
+.designlab-landing-page .landing-stage-card p,
+.designlab-landing-page .landing-rail-v2 p { margin-top: 10px; color: var(--muted-text); line-height: 1.65; }
+.designlab-landing-page .landing-stage-card-a { grid-column: 1 / span 7; grid-row: 2 / span 4; }
+.designlab-landing-page .landing-stage-card-b { grid-column: 2 / span 6; grid-row: 7 / span 4; }
+.designlab-landing-page .landing-stage-card-c { grid-column: 8 / span 4; grid-row: 6 / span 5; }
+.designlab-landing-page .landing-rail-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.designlab-landing-page .landing-rail-v2 article {
+  padding: 26px;
+  background: rgba(255,255,255,.78);
+}
+[data-theme="blue"] .designlab-landing-page .landing-rail-v2 article { background: rgba(255,255,255,.04); }
+.designlab-landing-page .landing-note-promo .landing-note-card { margin-top: 0; }
+.designlab-landing-page .landing-note-card img { min-height: 300px; }
+.footer-legal-links { margin-top: 8px; font-size: .88rem; }
+.footer-legal-links a { color: var(--muted-text); text-decoration: none; }
+.footer-legal-links a:hover { color: var(--link); }
+.legal-page .legal-main { display: grid; gap: 24px; padding-bottom: 60px; }
+.legal-page .legal-hero, .legal-page .legal-content {
+  padding: clamp(24px, 3vw, 36px);
+  background: rgba(255,255,255,.82);
+}
+[data-theme="blue"] .legal-page .legal-hero,
+[data-theme="blue"] .legal-page .legal-content { background: rgba(255,255,255,.04); }
+.legal-page .legal-hero h1 { margin: 0; font-size: clamp(2.7rem, 6vw, 5.4rem); line-height: .95; letter-spacing: -.07em; }
+.legal-page .legal-hero p { margin-top: 14px; max-width: 72ch; color: var(--muted-text); line-height: 1.75; }
+.legal-page .legal-content h2 { margin: 28px 0 10px; font-size: clamp(1.4rem, 2vw, 2rem); letter-spacing: -.04em; }
+.legal-page .legal-content p, .legal-page .legal-content li { color: var(--muted-text); line-height: 1.8; }
+.legal-page .legal-content ul { padding-left: 20px; }
+@media (max-width: 1120px) {
+  .designlab-landing-page .landing-hero-v2 { grid-template-columns: 1fr; }
+  .designlab-landing-page .landing-stage-v2 { min-height: 620px; }
+}
+@media (max-width: 860px) {
+  .designlab-landing-page .landing-mini-metrics,
+  .designlab-landing-page .landing-rail-v2 { grid-template-columns: 1fr; }
+  .designlab-landing-page .landing-stage-v2 { min-height: 580px; }
+  .designlab-landing-page .landing-logo-float-v2 { width: 200px; right: 20px; top: 20px; }
+  .designlab-landing-page .landing-stage-card-a { grid-column: 1 / span 9; }
+  .designlab-landing-page .landing-stage-card-b { grid-column: 1 / span 8; grid-row: 7 / span 4; }
+  .designlab-landing-page .landing-stage-card-c { grid-column: 7 / span 6; grid-row: 8 / span 4; }
+}
+@media (max-width: 640px) {
+  .designlab-landing-page .landing-copy-v2,
+  .designlab-landing-page .landing-stage-v2 { padding: 22px; border-radius: 24px; }
+  .designlab-landing-page .landing-copy-v2 h1 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .designlab-landing-page .landing-stage-v2 { min-height: 560px; grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .designlab-landing-page .landing-stage-card-a { grid-column: 1 / span 7; grid-row: 3 / span 3; }
+  .designlab-landing-page .landing-stage-card-b { grid-column: 1 / span 6; grid-row: 7 / span 3; }
+  .designlab-landing-page .landing-stage-card-c { grid-column: 3 / span 6; grid-row: 10 / span 3; }
+  .designlab-landing-page .landing-logo-float-v2 { width: 160px; right: 10px; top: 18px; }
+}
+
