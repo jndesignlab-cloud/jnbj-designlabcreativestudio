@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -9,7 +8,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.5.2" rel="stylesheet"/>
+<link href="style.css?v=3.5.1" rel="stylesheet"/>
 <script>
 (function(){const themes=["blue","light"];let theme="light";try{const saved=localStorage.getItem("designlab-theme");if(themes.includes(saved))theme=saved;}catch(error){}document.documentElement.dataset.theme=theme;})();
 </script>
@@ -28,6 +27,7 @@
 </nav>
 <a class="signal-header-cta" href="addproject.html">Add project</a>
 </header>
+
 <main class="admin-dashboard-shell section-pad">
 <section class="admin-dashboard-intro">
 <div>
@@ -35,11 +35,12 @@
 <h1>Admin Dashboard</h1>
 <p>A compact overview of portfolio activity, inquiries, daily work, and the tools used across DesignLab.</p>
 </div>
-<div aria-label="Current date and time" class="admin-live-clock">
+<div class="admin-live-clock" aria-label="Current date and time">
 <strong id="adminClock">--:--</strong>
 <span id="adminDate">Loading date…</span>
 </div>
 </section>
+
 <section class="admin-unlock" id="adminUnlockPanel">
 <div>
 <p class="compact-overline">Protected overview</p>
@@ -49,13 +50,14 @@
 <form id="adminUnlockForm">
 <label for="adminPassword">Admin password</label>
 <div class="admin-unlock-row">
-<input autocomplete="current-password" id="adminPassword" name="password" placeholder="Enter admin password" required="" type="password"/>
+<input autocomplete="current-password" id="adminPassword" name="password" placeholder="Enter admin password" required type="password"/>
 <button class="btn btn-primary" type="submit">Open dashboard</button>
 </div>
 <p class="form-status" id="adminUnlockStatus"></p>
 </form>
 </section>
-<div class="admin-dashboard-content" hidden="" id="adminDashboardContent">
+
+<div class="admin-dashboard-content" hidden id="adminDashboardContent">
 <section aria-label="Workspace overview" class="admin-metrics-grid">
 <article><span>Open inquiries</span><strong id="metricOpenInquiries">—</strong><small id="metricInquiryNote">Awaiting data</small></article>
 <article><span>New today</span><strong id="metricTodayInquiries">—</strong><small>Portfolio inquiries</small></article>
@@ -64,6 +66,7 @@
 <article><span>Pending tasks</span><strong id="metricPendingTasks">—</strong><small>Across all dates</small></article>
 <article><span>Tasks today</span><strong id="metricTodayTasks">—</strong><small id="metricCompletedToday">— completed</small></article>
 </section>
+
 <section class="admin-dashboard-columns">
 <article class="admin-dashboard-section">
 <div class="admin-section-heading">
@@ -72,6 +75,7 @@
 </div>
 <div class="admin-data-list" id="todayTaskList"><p class="admin-empty">Loading tasks…</p></div>
 </article>
+
 <article class="admin-dashboard-section">
 <div class="admin-section-heading">
 <div><p class="compact-overline">Portfolio</p><h2>Recent inquiries</h2></div>
@@ -80,6 +84,7 @@
 <div class="admin-data-list" id="recentInquiryList"><p class="admin-empty">Loading inquiries…</p></div>
 </article>
 </section>
+
 <section class="admin-dashboard-columns admin-secondary-columns">
 <article class="admin-dashboard-section">
 <div class="admin-section-heading">
@@ -87,6 +92,7 @@
 </div>
 <div class="admin-data-list" id="pendingTaskList"><p class="admin-empty">Loading queue…</p></div>
 </article>
+
 <article class="admin-dashboard-section">
 <div class="admin-section-heading">
 <div><p class="compact-overline">Inquiry pipeline</p><h2>Status overview</h2></div>
@@ -94,6 +100,7 @@
 <div class="admin-status-list" id="inquiryStatusList"><p class="admin-empty">Loading status summary…</p></div>
 </article>
 </section>
+
 <section class="admin-tools-section">
 <div class="admin-section-heading">
 <div><p class="compact-overline">Workspace directory</p><h2>Tools and managed pages</h2></div>
@@ -120,15 +127,16 @@
 </section>
 </div>
 </main>
+
 <div aria-label="Portfolio appearance" class="theme-dock"><div aria-label="Choose website theme" class="theme-switcher" role="group"><button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button><button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button></div></div>
 <footer class="footer compact-footer unified-footer editorial-footer">
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion">3.4.0</span> · Private admin workspace</p></div>
 </footer>
-<script src="config.js?v=3.5.2"></script>
-<script src="theme.js?v=3.5.2"></script>
-<script src="admin.js?v=3.5.2"></script>
-<script src="navigation.js?v=3.5.2"></script>
-<script src="reveal.js?v=3.5.2"></script>
+<script src="config.js?v=3.5.1"></script>
+<script src="theme.js?v=3.5.1"></script>
+<script src="admin.js?v=3.5.1"></script>
+<script src="navigation.js?v=3.5.1"></script>
+<script src="reveal.js?v=3.5.1"></script>
 </body>
 </html>
