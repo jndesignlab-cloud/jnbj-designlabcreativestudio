@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /addproject.html
 
-Sitemap: https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio/sitemap.xml
+Sitemap: https://madebydesignlab.com/sitemap.xml

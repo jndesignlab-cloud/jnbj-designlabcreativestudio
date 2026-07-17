@@ -1,12 +1,9 @@
-# Studio Notes Image Credits
+# Image credits
 
-The three Studio Notes cover photographs are used under the Pexels license and were cropped for the website's 1200 × 630 article-cover format.
+All local website assets in this package are stored as `.webp` for faster loading.
 
-- `assets/insights-osc-system.png` — Jonathan Borba / Pexels  
-  Source: https://www.pexels.com/photo/graphic-designer-working-on-computer-13451104/
-
-- `assets/insights-task-tracker.png` — Julio Lopez / Pexels  
-  Source: https://www.pexels.com/photo/graphic-designer-works-on-laptop-in-office-34225003/
-
-- `assets/insights-60-days.png` — Ivan S / Pexels  
-  Source: https://www.pexels.com/photo/graphic-designer-making-a-design-5428676/
+- `profile-photo.webp` — Portrait supplied by Jann Nathaniel Jaravata.
+- `assets/insights-osc-system.webp` and `assets/insights-osc-system-wide.webp` — Converted from previous Studio Notes cover asset.
+- `assets/insights-task-tracker.webp` and `assets/insights-task-tracker-wide.webp` — Converted from previous Studio Notes cover asset.
+- `assets/insights-60-days.webp` and `assets/insights-60-days-wide.webp` — Converted from previous Studio Notes cover asset.
+- `assets/insights-daily-grind.webp` and `assets/insights-daily-grind-wide.webp` — Custom generated web graphic for the Daily Grind Studio Note.

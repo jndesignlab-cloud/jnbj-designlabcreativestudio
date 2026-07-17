@@ -25,8 +25,8 @@ import shutil
 import sys
 
 ROOT = Path(__file__).resolve().parent
-BASE_URL = "https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio"
-VERSION = "3.2.2"
+BASE_URL = "https://madebydesignlab.com"
+VERSION = "3.5.0"
 REQUIRED_COLUMNS = [
     "title", "slug", "category", "excerpt", "meta_title", "meta_description",
     "published_date", "reading_time", "featured", "status", "cover_image", "body"
@@ -159,7 +159,7 @@ def make_listing(posts):
       </article>''')
 
     page = f'''<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Studio Notes | DesignLab Creative Studio</title><meta name="description" content="DesignLab Studio Notes: practical articles about design systems, creative workflows, Google Apps Script tools, and digital product development."><link rel="canonical" href="{BASE_URL}/insights.html"><meta property="og:type" content="website"><meta property="og:title" content="Studio Notes | DesignLab Creative Studio"><meta property="og:description" content="Practical notes on design systems, creative workflows, web tools, and digital products."><meta property="og:url" content="{BASE_URL}/insights.html"><meta property="og:image" content="{BASE_URL}/{posts[0]['cover_image'] if posts else 'profile-photo.png'}"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v={VERSION}">{BOOT_SCRIPT}</head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Studio Notes | DesignLab Creative Studio</title><meta name="description" content="DesignLab Studio Notes: practical articles about design systems, creative workflows, Google Apps Script tools, and digital product development."><link rel="canonical" href="{BASE_URL}/insights.html"><meta property="og:type" content="website"><meta property="og:title" content="Studio Notes | DesignLab Creative Studio"><meta property="og:description" content="Practical notes on design systems, creative workflows, web tools, and digital products."><meta property="og:url" content="{BASE_URL}/insights.html"><meta property="og:image" content="{BASE_URL}/{posts[0]['cover_image'] if posts else 'profile-photo.webp'}"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v={VERSION}">{BOOT_SCRIPT}</head>
 <body class="signal-theme unified-page">{root_header()}<main class="insights-page section-pad"><section class="insights-hero"><div><p class="signal-kicker">Studio Notes</p><h1>Notes behind the work.</h1></div><p>Short notes on design, workflows, and useful digital tools.</p></section><section class="insights-list" aria-label="Published articles">{''.join(cards)}</section></main>{THEME_DOCK}<footer class="footer unified-footer"><p>© <span id="year"></span> Jann Nathaniel Jaravata / DesignLab Creative Studio</p><p class="footer-meta">Version <span id="siteVersion"></span> · Static SEO-ready articles</p></footer><script src="theme.js?v={VERSION}"></script><script src="navigation.js?v={VERSION}"></script><script src="insights.js?v={VERSION}"></script><script src="reveal.js?v={VERSION}"></script></body></html>'''
     (ROOT / "insights.html").write_text(page, encoding="utf-8")
 

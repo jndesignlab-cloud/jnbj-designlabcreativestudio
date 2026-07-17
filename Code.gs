@@ -65,6 +65,20 @@ function doPost(e) {
       return handleInquiryTracking(data);
     }
 
+    if (data.action === "getAdminDashboard") {
+      if (data.password !== ADMIN_PASSWORD) {
+        return jsonResponse({
+          success: false,
+          message: "Incorrect admin password."
+        });
+      }
+
+      return jsonResponse({
+        success: true,
+        dashboard: getAdminDashboardData()
+      });
+    }
+
     if (data.action === "addProject") {
       if (data.password !== ADMIN_PASSWORD) {
         return jsonResponse({
@@ -740,6 +754,97 @@ function testInquiryEmailSystem() {
 
 function testInquiryEmail() {
   return authorizeInquiryEmail();
+}
+
+
+function getAdminDashboardData() {
+  const projects = getProjectDashboardStats();
+  const inquiries = getInquiryDashboardStats();
+
+  return {
+    generatedAt: Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "MMM d, yyyy h:mm a"),
+    projects: projects,
+    inquiries: inquiries,
+    visits: getVisitCount()
+  };
+}
+
+function getProjectDashboardStats() {
+  const sheet = getProjectSheet();
+  const values = sheet.getDataRange().getValues();
+  if (values.length <= 1) {
+    return { total: 0, published: 0, featured: 0 };
+  }
+
+  const headers = values[0];
+  const rows = values.slice(1).filter(function(row) {
+    return String(getCell(row, headers, "Title") || "").trim();
+  });
+
+  return {
+    total: rows.length,
+    published: rows.filter(function(row) {
+      return String(getCell(row, headers, "Status") || "").trim().toLowerCase() === "published";
+    }).length,
+    featured: rows.filter(function(row) {
+      const value = String(getCell(row, headers, "Featured") || "").trim().toLowerCase();
+      return value === "true" || value === "yes" || value === "1";
+    }).length
+  };
+}
+
+function getInquiryDashboardStats() {
+  const sheet = getInquirySheet();
+  const values = sheet.getDataRange().getValues();
+  if (values.length <= 1) {
+    return { total: 0, open: 0, new: 0, today: 0, completed: 0, byStatus: {}, recent: [] };
+  }
+
+  const headers = values[0];
+  const rows = values.slice(1).filter(function(row) {
+    return String(getCell(row, headers, "Inquiry ID") || "").trim();
+  });
+  const closedStatuses = ["completed", "delivered", "closed"];
+  const todayKey = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd");
+  const byStatus = {};
+
+  rows.forEach(function(row) {
+    const status = String(getCell(row, headers, "Status") || "New").trim() || "New";
+    byStatus[status] = (byStatus[status] || 0) + 1;
+  });
+
+  const recent = rows.slice(-6).reverse().map(function(row) {
+    const createdAt = getCell(row, headers, "Created At");
+    return {
+      inquiryId: getCell(row, headers, "Inquiry ID"),
+      name: [getCell(row, headers, "First Name"), getCell(row, headers, "Last Name")].filter(Boolean).join(" "),
+      service: getCell(row, headers, "Service Interest") || getCell(row, headers, "Package / Project"),
+      status: getCell(row, headers, "Status") || "New",
+      createdAt: formatInquiryDate(createdAt)
+    };
+  });
+
+  return {
+    total: rows.length,
+    open: rows.filter(function(row) {
+      const status = String(getCell(row, headers, "Status") || "New").trim().toLowerCase();
+      return closedStatuses.indexOf(status) === -1;
+    }).length,
+    new: rows.filter(function(row) {
+      return String(getCell(row, headers, "Status") || "New").trim().toLowerCase() === "new";
+    }).length,
+    today: rows.filter(function(row) {
+      const createdAt = getCell(row, headers, "Created At");
+      if (!createdAt) return false;
+      return Utilities.formatDate(new Date(createdAt), Session.getScriptTimeZone(), "yyyy-MM-dd") === todayKey;
+    }).length,
+    completed: rows.filter(function(row) {
+      const status = String(getCell(row, headers, "Status") || "").trim().toLowerCase();
+      return closedStatuses.indexOf(status) >= 0;
+    }).length,
+    byStatus: byStatus,
+    recent: recent
+  };
 }
 
 function getProjects() {

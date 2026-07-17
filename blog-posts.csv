@@ -1,5 +1,32 @@
 ﻿title,slug,category,excerpt,meta_title,meta_description,published_date,reading_time,featured,status,cover_image,body
-Building an Internal Creative Request System,building-an-internal-creative-request-system,Digital Systems,"How I connected a request form, tracker, dashboard, and status workflow.",Internal Creative Request System | DesignLab,"A behind-the-scenes look at building a creative request form, tracker, dashboard, and workflow using Google Apps Script and Google Sheets.",2026-06-23,8 min read,TRUE,Published,assets/insights-osc-system.png,"Creative requests can become difficult to manage when they arrive through different channels. A request may start in Messenger, continue through email, and end with a file shared in a separate Google Drive folder. The design work itself may be manageable, but the surrounding communication can quickly become confusing.
+Grinding Daily: What Happens Behind the Work,daily-grind-behind-the-work,Creative Practice,"A note on daily creative output, shifting priorities, current projects, and what happens behind the scenes while building DesignLab.",Grinding Daily Behind the Work | DesignLab,"A studio note about daily creative output, current projects, systems, client work, and the practical grind behind DesignLab Creative Studio.",2026-07-17,5 min read,TRUE,Published,assets/insights-daily-grind.webp,"There are days when the work looks simple from the outside. A poster gets posted. A project goes live. A new page appears on the website. A client sees the finished output and approves it.
+
+But behind those small public updates is a lot of invisible work: planning, correcting, uploading, revising, checking links, preparing captions, organizing files, testing pages, and deciding what should be improved next.
+
+## The current rhythm
+
+Right now, DesignLab is not only about creating visuals. It is also about building the system around the visuals. The portfolio is being revised into a clearer front page for the studio. Projects are being added one by one. Case studies are being cleaned up. Admin pages, inquiry tracking, project forms, and daily task trackers are becoming part of the same workflow.
+
+At the same time, the usual design work continues. Client campaigns, university visuals, Facebook captions, portfolio updates, content calendars, and template-selling posts all move together. Some days are focused on output. Some days are focused on cleanup. Some days are focused on making the next version easier to manage.
+
+## What the grind actually looks like
+
+The daily grind is not always dramatic. Most of it is small and repetitive. It is checking if a button leads to the correct page. It is renaming a file so it makes sense later. It is turning one project into a short case study. It is refining the wording until the work sounds clear but still honest.
+
+It is also learning when to simplify. Not every page needs to be heavy. Not every section needs to explain everything. Sometimes the better update is a cleaner landing page, a faster image format, a shorter paragraph, or a more direct call to action.
+
+## Building while still working
+
+The challenging part is that DesignLab is being built while the work is still happening. The studio is not paused for a perfect relaunch. It is improving in public: new projects, better systems, sharper pages, more organized tools, and clearer positioning.
+
+That is currently the main direction. Keep designing. Keep posting. Keep documenting. Keep cleaning up the system behind the work.
+
+## The point of doing it daily
+
+Doing it daily builds evidence. Every project added to the portfolio makes the studio easier to understand. Every tool connected to the admin page makes the workflow less scattered. Every note written explains the process behind the final output.
+
+The grind is not just about being busy. It is about slowly turning scattered work into a more usable creative practice."
+Building an Internal Creative Request System,building-an-internal-creative-request-system,Digital Systems,"How I connected a request form, tracker, dashboard, and status workflow.",Internal Creative Request System | DesignLab,"A behind-the-scenes look at building a creative request form, tracker, dashboard, and workflow using Google Apps Script and Google Sheets.",2026-06-23,8 min read,TRUE,Published,assets/insights-osc-system.webp,"Creative requests can become difficult to manage when they arrive through different channels. A request may start in Messenger, continue through email, and end with a file shared in a separate Google Drive folder. The design work itself may be manageable, but the surrounding communication can quickly become confusing.
 
 That was the problem behind the OSC Request Form, Tracker, and Dashboard project. I wanted to create one connected system where requests could be submitted, reviewed, assigned, monitored, and completed without relying on scattered messages.
 
@@ -46,7 +73,7 @@ The project transformed an informal request process into a connected operational
 More importantly, it showed me that design can solve operational problems—not only visual ones. The interface matters, but the real value comes from making a process clearer, faster, and easier to maintain.
 
 The system is still designed to evolve. Future improvements may include deeper analytics, automated summaries, expanded notifications, and more administrative controls. The foundation, however, is already in place: one source of information and a workflow that is easier for both requesters and the creative team."
-Turning My Task Tracker into a Digital Product,from-personal-tool-to-digital-product,Product Development,How a personal planning tool became a working digital product.,Building a Daily Task Tracker | DesignLab,"How I designed and developed a daily task tracker with categories, prioritization, notifications, and a path toward becoming a digital product.",2026-06-22,7 min read,TRUE,Published,assets/insights-task-tracker.png,"The DesignLab Daily Task Tracker began as a personal solution to a simple problem: I had too many responsibilities stored in too many places.
+Turning My Task Tracker into a Digital Product,from-personal-tool-to-digital-product,Product Development,How a personal planning tool became a working digital product.,Building a Daily Task Tracker | DesignLab,"How I designed and developed a daily task tracker with categories, prioritization, notifications, and a path toward becoming a digital product.",2026-06-22,7 min read,TRUE,Published,assets/insights-task-tracker.webp,"The DesignLab Daily Task Tracker began as a personal solution to a simple problem: I had too many responsibilities stored in too many places.
 
 Some tasks were written in notes. Others were sent to myself through messages. Work responsibilities, DesignLab content, business ideas, personal errands, and leisure plans were mixed together. I did not need another complicated productivity platform. I needed one clear daily view built around the way I actually work.
 
@@ -95,7 +122,7 @@ It also taught me that product development is continuous. A working first versio
 The Daily Task Tracker now works as a personal productivity system and a product prototype. The next steps may include editable categories, configurable time slots, better summaries, packaged setup options, and a cleaner onboarding process.
 
 My goal is not to recreate every feature found in large task-management platforms. The value of this product is its focus: a simple, visual daily dashboard that helps users see what matters without adding more complexity to their day."
-Lessons from 60 Days of Design Content,what-60-days-of-design-taught-me,Creative Practice,Lessons from building a consistent 60-day content system.,Lessons from 60 Days of Design Content | DesignLab,"Practical lessons about consistency, visual systems, content planning, and creative workflow from producing 60 days of DesignLab content.",2026-06-21,6 min read,TRUE,Published,assets/insights-60-days.png,"Creating one good social media design is very different from creating content consistently for weeks.
+Lessons from 60 Days of Design Content,what-60-days-of-design-taught-me,Creative Practice,Lessons from building a consistent 60-day content system.,Lessons from 60 Days of Design Content | DesignLab,"Practical lessons about consistency, visual systems, content planning, and creative workflow from producing 60 days of DesignLab content.",2026-06-21,6 min read,TRUE,Published,assets/insights-60-days.webp,"Creating one good social media design is very different from creating content consistently for weeks.
 
 A single post can be built around a sudden idea. A 60-day content series needs a system. It requires topic planning, visual rules, reusable structures, and enough flexibility to avoid making every post feel identical.
 

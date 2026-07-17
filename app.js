@@ -201,7 +201,7 @@ document.querySelectorAll("[data-close-stat-modal]").forEach((element) => {
   element.addEventListener("click", closeStatModal);
 });
 
-const SITE_VERSION = "3.4.0";
+const SITE_VERSION = "3.5.0";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -339,7 +339,7 @@ function buildRecentProjects(preferred = [], allProjects = [], spotlight = null,
 function getProjectImage(project = {}) {
   if (project.image) return project.image;
   if (Array.isArray(project.galleryImages) && project.galleryImages.length) return project.galleryImages[0];
-  return "profile-photo.png";
+  return "profile-photo.webp";
 }
 
 function renderSpotlight(project) {
