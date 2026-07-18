@@ -13456,3 +13456,99 @@ html[data-theme="blue"] .admin-status-chip {
 .rp-brand-row a:nth-child(4) { color:#3159ec; font-size:1rem; font-weight:900; }
 .rp-brand-row a:nth-child(5) { letter-spacing:.16em; font-weight:900; }
 .rp-brand-row a:nth-child(6) { font-style:italic; letter-spacing:.04em; font-weight:850; }
+
+
+/* ===== v3.5.7 — Alignment, sticky navigation, brand logos, and action image ===== */
+.reference-polish-page,
+.unified-page { font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+/* Same pinned landing navigation on public pages */
+.rp-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 28px;
+  background: rgba(248,250,255,.88);
+  border-bottom: 1px solid rgba(98,119,170,.10);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+[data-theme="blue"] .rp-header { background: rgba(7,24,51,.88); }
+.rp-header-inner { width: min(100%,1360px); }
+
+/* Visually centered hero typography */
+.rp-hero-copy { display:flex; flex-direction:column; align-items:center; text-align:center; }
+.rp-hero h1 {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  text-wrap: balance;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(3.45rem,5.45vw,5.65rem);
+  line-height: .99;
+  letter-spacing: -.065em;
+}
+.rp-lead { width:100%; text-align:center; }
+
+/* Breathing room between the hero art and logo strip */
+.rp-visual-wrap { padding-top: 16px; padding-bottom: 42px; }
+.rp-trust { margin-top: 0; }
+
+/* Grayscale sample logo strip */
+.rp-brand-row { gap: clamp(14px,2vw,30px); }
+.rp-brand-row a { display:flex; align-items:center; justify-content:center; min-width:0; }
+.rp-brand-row a img {
+  display:block;
+  width:100%;
+  max-width:170px;
+  height:58px;
+  object-fit:contain;
+  filter: grayscale(1);
+  opacity:.66;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.rp-brand-row a:hover img { opacity:.95; transform:translateY(-2px); }
+
+/* Keep all lower sections in the same airy product-landing language */
+.rp-section {
+  background: linear-gradient(180deg,rgba(255,255,255,.92),rgba(247,250,255,.86));
+  border-color: rgba(94,119,180,.12);
+}
+[data-theme="blue"] .rp-section { background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025)); }
+.rp-section-head.centered h2 { max-width: 860px; margin-left:auto; margin-right:auto; text-wrap:balance; }
+.rp-service-card,.rp-ecosystem-grid a { box-shadow:0 18px 44px rgba(27,43,88,.055); }
+.rp-work-visual { box-shadow: inset 0 0 0 1px rgba(255,255,255,.55); }
+
+/* Readable final CTA */
+.reference-polish-page .rp-cta { background:linear-gradient(125deg,#0b2c70 0%,#164cf5 100%); }
+.reference-polish-page .rp-cta .rp-eyebrow { color:#d6e0ff !important; }
+.reference-polish-page .rp-cta h2 {
+  color:#ffffff !important;
+  text-shadow:0 2px 18px rgba(0,0,0,.10);
+}
+.reference-polish-page .rp-cta .rp-btn-primary { background:#ffffff; color:#164cf5; box-shadow:none; }
+.reference-polish-page .rp-cta .rp-btn-secondary { background:transparent; color:#ffffff; border-color:rgba(255,255,255,.76); }
+
+/* New normal action-designing image */
+.rp-note-media { background:#0d2147; }
+.rp-note-media img { object-position:center center; }
+.article-cover img { object-fit:cover; object-position:center; }
+
+/* Mobile header behavior for the shared navigation */
+@media (max-width: 1100px) {
+  .rp-header-inner { grid-template-columns:1fr auto; }
+  .rp-header-inner > .rp-header-cta { display:none; }
+}
+@media (max-width: 900px) {
+  .rp-header { padding:0 16px; overflow:visible; }
+  .rp-header-inner { min-height:74px; }
+  .rp-header > .mobile-menu-toggle { position:absolute; right:16px; top:15px; z-index:3; }
+  .rp-header .mobile-nav-panel { top:calc(100% + 8px); left:16px; right:16px; }
+}
+@media (max-width: 720px) {
+  .rp-hero h1 { max-width: 620px; font-size:clamp(3rem,12.7vw,4.4rem); }
+  .rp-visual-wrap { padding-bottom:30px; }
+  .rp-brand-row { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .rp-brand-row a img { height:48px; }
+}

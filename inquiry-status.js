@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.5.2";
+const SITE_VERSION = "3.5.7";
 const LAST_EDIT = "June 25, 2026";
 
 const trackingForm = document.querySelector("#trackingForm");
