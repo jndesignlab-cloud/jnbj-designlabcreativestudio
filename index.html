@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -36,7 +37,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.5.7" rel="stylesheet"/>
+<link href="style.css?v=3.5.8" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -44,8 +45,8 @@
 <body class="signal-theme editorial-system unified-page designlab-landing-page reference-polish-page">
 <header class="site-header signal-header rp-header">
 <div class="rp-header-inner">
-<a aria-label="DesignLab Creative Studio home" class="rp-brand" href="index.html"><img src="assets/designlab-header-logo.webp" alt="DesignLab Creative Studio"/></a>
-<nav aria-label="Primary navigation" class="nav-links rp-nav"><a href="projects.html">Work</a><a href="services.html">Services</a><a href="creator.html">About</a><a href="insights.html">Process</a><a href="insights.html">Resources</a></nav>
+<a aria-label="DesignLab Creative Studio home" class="rp-brand" href="index.html"><img alt="DesignLab Creative Studio" src="assets/designlab-header-logo.webp"/></a>
+<nav aria-label="Primary navigation" class="nav-links rp-nav"><a href="projects.html">Work</a><a href="services.html">Services</a><a href="insights.html">Notes</a><a href="creator.html">Creator</a></nav>
 <a class="signal-header-cta rp-header-cta" href="contact.html?source=site-header">Start a project</a>
 </div>
 </header>
@@ -61,56 +62,40 @@
 </div>
 </div>
 <div class="rp-visual-wrap">
-<img src="assets/designlab-transformation-hero.webp" alt="Scattered creative drafts transforming into a polished campaign poster and campaign kit" class="rp-visual" loading="eager" decoding="async"/>
+<img alt="Scattered creative drafts transforming into a polished campaign poster and campaign kit" class="rp-visual" decoding="async" loading="eager" src="assets/designlab-transformation-hero.webp"/>
 </div>
 <div class="rp-trust">
 <p>Selected work across brands, campaigns, and institutions</p>
-<div class="rp-brand-row">
-<a href="projects.html"><img src="assets/placeholder-logo-1.webp" alt="Sample grayscale brand logo 1"/></a>
-<a href="projects.html"><img src="assets/placeholder-logo-2.webp" alt="Sample grayscale brand logo 2"/></a>
-<a href="projects.html"><img src="assets/placeholder-logo-3.webp" alt="Sample grayscale brand logo 3"/></a>
-<a href="projects.html"><img src="assets/placeholder-logo-4.webp" alt="Sample grayscale brand logo 4"/></a>
-<a href="projects.html"><img src="assets/placeholder-logo-5.webp" alt="Sample grayscale brand logo 5"/></a>
-<a href="projects.html"><img src="assets/placeholder-logo-6.webp" alt="Sample grayscale brand logo 6"/></a>
-</div>
+<div class="rp-brand-row"><a href="projects.html?category=University"><img alt="Temporary grayscale logo for Panpacific University" src="assets/client-panpacific.webp"/><span>Panpacific University</span></a><a href="projects.html?category=Client%20Work"><img alt="Temporary grayscale logo for CoziSleep" src="assets/client-cozisleep.webp"/><span>CoziSleep</span></a><a href="projects.html?category=Client%20Work"><img alt="Temporary grayscale logo for SoleProtect" src="assets/client-soleprotect.webp"/><span>SoleProtect</span></a><a href="projects.html?category=Web%20%2F%20Digital"><img alt="Temporary grayscale logo for Planora" src="assets/client-planora.webp"/><span>Planora</span></a><a href="projects.html?category=University"><img alt="Temporary grayscale logo for PACE" src="assets/client-pace.webp"/><span>PACE</span></a><a href="projects.html?category=Client%20Work"><img alt="Temporary grayscale logo for Overdrive PH" src="assets/client-overdrive.webp"/><span>Overdrive PH</span></a></div>
 </div>
 </section>
-
-<section class="rp-section rp-services reveal-up" aria-labelledby="rp-services-title">
+<section aria-labelledby="rp-services-title" class="rp-section rp-services reveal-up">
 <div class="rp-section-head centered">
 <p class="rp-eyebrow">Creative support, structured clearly</p>
 <h2 id="rp-services-title">Built for the way campaigns actually move.</h2>
 <p>From one urgent pubmat to a full campaign system, every service is designed to keep the work clear, consistent, and ready to use.</p>
 </div>
 <div class="rp-service-grid">
-<a href="services.html#design-packages" class="rp-service-card">
+<a class="rp-service-card" href="services.html#design-packages">
 <div class="rp-service-icon"><span></span><span></span><span></span></div>
 <small>01 · Ongoing support</small><h3>Design Packages</h3><p>Recurring social content, campaign visuals, and planned creative output.</p><b>Explore packages →</b>
 </a>
-<a href="services.html#individual-services" class="rp-service-card">
+<a class="rp-service-card" href="services.html#individual-services">
 <div class="rp-service-icon icon-layout"><span></span><span></span><span></span><span></span></div>
 <small>02 · Flexible requests</small><h3>Individual Services</h3><p>Posters, brochures, presentations, branding materials, and publication layouts.</p><b>View services →</b>
 </a>
-<a href="services.html#website-packages" class="rp-service-card">
+<a class="rp-service-card" href="services.html#website-packages">
 <div class="rp-service-icon icon-system"><span></span><span></span><span></span></div>
 <small>03 · Digital builds</small><h3>Website / System Packages</h3><p>Landing pages, portfolio sites, trackers, forms, and lightweight dashboards.</p><b>See digital packages →</b>
 </a>
 </div>
 </section>
-
-<section class="rp-section rp-work reveal-up" aria-labelledby="rp-work-title">
-<div class="rp-section-head">
-<div><p class="rp-eyebrow">Selected capabilities</p><h2 id="rp-work-title">One studio, different kinds of creative work.</h2></div>
-<a href="projects.html" class="rp-inline-link">Browse all projects →</a>
-</div>
-<div class="rp-work-grid">
-<a class="rp-work-card work-university" href="projects.html?category=University"><div class="rp-work-visual"><span class="poster-one">UNIVERSITY<br/>CAMPAIGNS</span><span class="poster-two">EVENT<br/>VISUALS</span><span class="poster-three">PROGRAM<br/>ADS</span></div><small>University communications</small><h3>Enrollment, programs, events, publications, and institutional campaigns.</h3></a>
-<a class="rp-work-card work-client" href="projects.html?category=Client%20Work"><div class="rp-work-visual"><span class="product-card">COZISLEEP</span><span class="carousel-card">CAROUSEL<br/>CAMPAIGN</span><span class="shop-card">STORE<br/>VISUALS</span></div><small>Client and commerce</small><h3>Social media campaigns, product graphics, storefront visuals, and branding support.</h3></a>
-<a class="rp-work-card work-systems" href="projects.html?category=Web%20%2F%20Digital"><div class="rp-work-visual"><span class="screen-main">WORKFLOW<br/>DASHBOARD</span><span class="screen-side">FORM</span><span class="screen-stat">TRACKER</span></div><small>Web and digital systems</small><h3>Request systems, content planners, task trackers, forms, and portfolio tools.</h3></a>
-</div>
-</section>
-
-<section class="rp-section rp-process reveal-up" aria-labelledby="rp-process-title">
+<section aria-labelledby="rp-work-title" class="rp-section rp-work reveal-up"><div class="rp-section-head rp-section-head-compact"><div><p class="rp-eyebrow">Selected capabilities</p><h2 id="rp-work-title">Creative support across three focused areas.</h2></div><a class="rp-inline-link" href="projects.html">Browse all projects →</a></div><div class="rp-capability-grid">
+<a href="projects.html?category=University"><span class="rp-capability-mark">UC</span><div><small>University communications</small><strong>Campaigns, events, programs, and publications.</strong></div><b>→</b></a>
+<a href="projects.html?category=Client%20Work"><span class="rp-capability-mark">CB</span><div><small>Client and brand work</small><strong>Social campaigns, storefronts, and product visuals.</strong></div><b>→</b></a>
+<a href="projects.html?category=Web%20%2F%20Digital"><span class="rp-capability-mark">WD</span><div><small>Web and digital systems</small><strong>Landing pages, trackers, forms, and dashboards.</strong></div><b>→</b></a>
+</div></section>
+<section aria-labelledby="rp-process-title" class="rp-section rp-process reveal-up">
 <div class="rp-section-head centered"><p class="rp-eyebrow">A practical creative process</p><h2 id="rp-process-title">From brief to ready-to-use output.</h2><p>A clear workflow keeps revisions focused and the final delivery easier to manage.</p></div>
 <div class="rp-process-line">
 <article><span>01</span><strong>Understand</strong><p>Clarify the goal, audience, platform, and required deliverables.</p></article>
@@ -119,30 +104,26 @@
 <article><span>04</span><strong>Refine</strong><p>Apply feedback, prepare final sizes, and deliver clean files.</p></article>
 </div>
 </section>
-
-<section class="rp-section rp-note reveal-up" aria-labelledby="rp-note-title">
-<div class="rp-note-media"><img src="assets/insights-daily-grind-wide.webp" alt="A person actively working at a desk" loading="lazy" decoding="async"/></div>
-<div class="rp-note-copy"><p class="rp-eyebrow">Studio notes</p><h2 id="rp-note-title">Grinding Daily: What Happens Behind the Work</h2><p>A look at the current rhythm behind DesignLab—live client work, university campaigns, portfolio cleanup, admin tools, revisions, and the systems being built around the creative work.</p><a href="insights/daily-grind-behind-the-work/" class="rp-btn rp-btn-primary">Read the note <span>→</span></a></div>
+<section aria-labelledby="rp-note-title" class="rp-section rp-note reveal-up">
+<div class="rp-note-media"><img alt="A person actively working at a desk" decoding="async" loading="lazy" src="assets/insights-daily-grind-wide.webp"/></div>
+<div class="rp-note-copy"><p class="rp-eyebrow">Studio notes</p><h2 id="rp-note-title">Grinding Daily: What Happens Behind the Work</h2><p>A look at the current rhythm behind DesignLab—live client work, university campaigns, portfolio cleanup, admin tools, revisions, and the systems being built around the creative work.</p><a class="rp-btn rp-btn-primary" href="insights/daily-grind-behind-the-work/">Read the note <span>→</span></a></div>
 </section>
-
-<section class="rp-section rp-founder reveal-up" aria-labelledby="rp-founder-title">
-<div class="rp-founder-photo"><img src="profile-photo.webp" alt="Jann Nathaniel Jaravata" loading="lazy" decoding="async"/></div>
-<div class="rp-founder-copy"><p class="rp-eyebrow">Behind DesignLab</p><h2 id="rp-founder-title">Created and directed by Jann Jaravata.</h2><p>Graphic designer, social media manager, and creative developer working across campaigns, university communications, publication design, and practical web systems.</p><div class="rp-founder-stats"><span><strong>8+ years</strong>Creative experience</span><span><strong>Adobe ACP</strong>Certified professional</span><span><strong>Remote ready</strong>Organized online workflow</span></div><a href="creator.html" class="rp-inline-link">Meet the creator →</a></div>
+<section aria-labelledby="rp-founder-title" class="rp-section rp-founder reveal-up">
+<div class="rp-founder-photo"><img alt="Jann Nathaniel Jaravata" decoding="async" loading="lazy" src="profile-photo.webp"/></div>
+<div class="rp-founder-copy"><p class="rp-eyebrow">Behind DesignLab</p><h2 id="rp-founder-title">Created and directed by Jann Jaravata.</h2><p>Graphic designer, social media manager, and creative developer working across campaigns, university communications, publication design, and practical web systems.</p><div class="rp-founder-stats"><span><strong>8+ years</strong>Creative experience</span><span><strong>Adobe ACP</strong>Certified professional</span><span><strong>Remote ready</strong>Organized online workflow</span></div><a class="rp-inline-link" href="creator.html">Meet the creator →</a></div>
 </section>
-
-<section class="rp-section rp-ecosystem reveal-up" aria-labelledby="rp-ecosystem-title">
+<section aria-labelledby="rp-ecosystem-title" class="rp-section rp-ecosystem reveal-up">
 <div class="rp-section-head centered"><p class="rp-eyebrow">DesignLab ecosystem</p><h2 id="rp-ecosystem-title">More pages, products, and projects being built.</h2></div>
 <div class="rp-ecosystem-grid">
-<a href="https://www.facebook.com/DesignLabCreativeStudio" target="_blank" rel="noopener"><span>DL</span><div><strong>DesignLab Creative Studio</strong><small>Creative services and studio updates</small></div><b>↗</b></a>
-<a href="https://www.facebook.com/profile.php?id=61573673860829" target="_blank" rel="noopener"><span>DD</span><div><strong>DesignLab Downloads</strong><small>Templates and digital design products</small></div><b>↗</b></a>
-<a href="https://www.facebook.com/profile.php?id=61591691631074" target="_blank" rel="noopener"><span>OP</span><div><strong>Overdrive.PH</strong><small>Automotive content and visual direction</small></div><b>↗</b></a>
+<a href="https://www.facebook.com/DesignLabCreativeStudio" rel="noopener" target="_blank"><span>DL</span><div><strong>DesignLab Creative Studio</strong><small>Creative services and studio updates</small></div><b>↗</b></a>
+<a href="https://www.facebook.com/profile.php?id=61573673860829" rel="noopener" target="_blank"><span>DD</span><div><strong>DesignLab Downloads</strong><small>Templates and digital design products</small></div><b>↗</b></a>
+<a href="https://www.facebook.com/profile.php?id=61591691631074" rel="noopener" target="_blank"><span>OP</span><div><strong>Overdrive.PH</strong><small>Automotive content and visual direction</small></div><b>↗</b></a>
 </div>
 </section>
-
-<section class="rp-cta reveal-up">
-<p class="rp-eyebrow">Ready to move the idea forward?</p>
-<h2>Let’s turn the brief into something clearer, stronger, and ready to publish.</h2>
-<div class="rp-actions"><a class="rp-btn rp-btn-primary" href="contact.html?source=landing-footer">Start a project <span>→</span></a><a class="rp-btn rp-btn-secondary" href="projects.html">View selected work <span>→</span></a></div>
+<section class="rp-footer-cta reveal-up">
+<div class="rp-footer-cta-image"><img alt="Designer working on a visual layout at a desktop computer" decoding="async" loading="lazy" src="assets/insights-daily-grind-wide.webp"/></div>
+<div class="rp-footer-cta-copy"><p class="rp-eyebrow">Ready to move the idea forward?</p><h2>Let’s turn the brief into something clearer, stronger, and ready to publish.</h2></div>
+<div class="rp-footer-cta-actions"><a class="rp-btn rp-btn-primary" href="contact.html?source=landing-footer">Start a project <span>→</span></a><a class="rp-btn rp-btn-secondary" href="projects.html">View selected work <span>→</span></a></div>
 </section>
 </main>
 <div aria-label="Portfolio appearance" class="theme-dock"><div aria-label="Choose website theme" class="theme-switcher" role="group"><button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button><button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button></div></div>
@@ -151,10 +132,10 @@
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.5.6"></script>
-<script src="theme.js?v=3.5.7"></script>
-<script src="landing.js?v=3.5.7"></script>
-<script src="navigation.js?v=3.5.7"></script>
-<script src="reveal.js?v=3.5.7"></script>
+<script src="config.js?v=3.5.8"></script>
+<script src="theme.js?v=3.5.8"></script>
+<script src="landing.js?v=3.5.8"></script>
+<script src="navigation.js?v=3.5.8"></script>
+<script src="reveal.js?v=3.5.8"></script>
 </body>
 </html>
