@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.5.9";
+const SITE_VERSION = "3.6.0";
 
 const fallbackProjects = [
   {
@@ -42,6 +42,7 @@ let allProjects = [];
 let activeFilter = "All";
 const initialSearchParams = new URLSearchParams(window.location.search);
 let searchQuery = initialSearchParams.get("search") || "";
+if (searchInput && searchQuery) searchInput.value = searchQuery;
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 

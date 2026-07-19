@@ -1,4 +1,4 @@
-# Update v3.5.9
+# Update v3.6.0
 
 - Forced high-contrast white text in the bottom CTA panel.
 - Expanded the handled pages and brands section to Panpacific University, CoziSleep, SoleProtect, Planora, PACE, and Overdrive PH.

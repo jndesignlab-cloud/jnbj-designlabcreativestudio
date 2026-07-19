@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.5.9" rel="stylesheet"/>
+<link href="style.css?v=3.6.0" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -54,7 +54,7 @@
 <section aria-labelledby="landing-title" class="rp-hero reveal-up">
 <div class="rp-hero-copy">
 <p class="rp-eyebrow">Creative that moves brands forward</p>
-<h1 id="landing-title">Turn scattered ideas into campaign-ready design<span>.</span></h1>
+<h1 id="landing-title">Turn scattered ideas into <span>campaign-ready design.</span></h1>
 <p class="rp-lead">DesignLab helps brands turn ideas, drafts, and requests<br class="rp-desktop-break"/> into polished visuals, campaigns, and digital assets—fast.</p>
 <div class="rp-actions">
 <a class="rp-btn rp-btn-primary" href="projects.html">View selected work <span aria-hidden="true">→</span></a>
@@ -70,28 +70,34 @@
 </div>
 </section>
 <section aria-labelledby="rp-services-title" class="rp-section rp-services rp-services-interactive reveal-up">
-<div class="rp-section-head centered">
+<div class="rp-section-head centered rp-service-heading">
 <p class="rp-eyebrow">Creative support, structured clearly</p>
 <h2 id="rp-services-title">Choose the kind of support your project needs.</h2>
-<p>Select a service category to preview its best use, common deliverables, and next step.</p>
+<p>Select a category to see its common deliverables, ideal use, and next step.</p>
 </div>
-<div class="rp-service-explorer" data-service-explorer>
-<div class="rp-service-tabs" role="tablist" aria-label="DesignLab service categories">
-<button class="rp-service-tab active" type="button" role="tab" aria-selected="true" aria-controls="home-service-preview" data-home-service="packages"><span>01</span><strong>Design Packages</strong><small>Ongoing content support</small></button>
-<button class="rp-service-tab" type="button" role="tab" aria-selected="false" aria-controls="home-service-preview" data-home-service="individual"><span>02</span><strong>Individual Services</strong><small>Focused one-off requests</small></button>
-<button class="rp-service-tab" type="button" role="tab" aria-selected="false" aria-controls="home-service-preview" data-home-service="web"><span>03</span><strong>Website / Systems</strong><small>Practical digital builds</small></button>
+<div class="rp-service-selector" role="tablist" aria-label="DesignLab service categories">
+<button class="rp-service-choice active" type="button" role="tab" aria-selected="true" aria-controls="home-service-preview" data-home-service="packages">
+<span class="rp-service-choice-number">01</span><span class="rp-service-choice-copy"><strong>Design Packages</strong><small>Ongoing content and campaign support</small></span><b aria-hidden="true">→</b>
+</button>
+<button class="rp-service-choice" type="button" role="tab" aria-selected="false" aria-controls="home-service-preview" data-home-service="individual">
+<span class="rp-service-choice-number">02</span><span class="rp-service-choice-copy"><strong>Individual Services</strong><small>Focused one-off creative requests</small></span><b aria-hidden="true">→</b>
+</button>
+<button class="rp-service-choice" type="button" role="tab" aria-selected="false" aria-controls="home-service-preview" data-home-service="web">
+<span class="rp-service-choice-number">03</span><span class="rp-service-choice-copy"><strong>Website / Systems</strong><small>Practical digital experiences and tools</small></span><b aria-hidden="true">→</b>
+</button>
 </div>
-<div class="rp-service-preview" id="home-service-preview" role="tabpanel" aria-live="polite">
-<div class="rp-service-preview-copy">
+<div class="rp-service-detail" id="home-service-preview" role="tabpanel" aria-live="polite">
+<div class="rp-service-detail-main">
+<div class="rp-service-detail-intro">
 <p class="rp-eyebrow" id="homeServiceEyebrow">Ongoing creative support</p>
 <h3 id="homeServiceTitle">Design Packages</h3>
 <p id="homeServiceDescription">Planned social media and campaign visuals for brands that need consistent creative output.</p>
-<ul id="homeServiceList"><li>Static social media graphics</li><li>Carousel posts and campaign sets</li><li>Organized revisions and delivery</li></ul>
 </div>
-<div class="rp-service-preview-action">
-<span id="homeServiceFit">Best for recurring monthly or campaign-based content.</span>
+<ul class="rp-service-detail-list" id="homeServiceList"><li>Static social media graphics</li><li>Carousel posts and campaign sets</li><li>Organized revisions and delivery</li></ul>
+</div>
+<div class="rp-service-detail-footer">
+<div><small>IDEAL FOR</small><span id="homeServiceFit">Best for recurring monthly or campaign-based content.</span></div>
 <a class="rp-btn rp-btn-primary" id="homeServiceLink" href="services.html#design-packages">Explore design packages <b aria-hidden="true">→</b></a>
-</div>
 </div>
 </div>
 </section>
@@ -140,10 +146,10 @@
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.5.9"></script>
-<script src="theme.js?v=3.5.9"></script>
-<script src="landing.js?v=3.5.9"></script>
-<script src="navigation.js?v=3.5.9"></script>
-<script src="reveal.js?v=3.5.9"></script>
+<script src="config.js?v=3.6.0"></script>
+<script src="theme.js?v=3.6.0"></script>
+<script src="landing.js?v=3.6.0"></script>
+<script src="navigation.js?v=3.6.0"></script>
+<script src="reveal.js?v=3.6.0"></script>
 </body>
 </html>

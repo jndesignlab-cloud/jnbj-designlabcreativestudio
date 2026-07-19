@@ -13554,7 +13554,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.5.9 — Compact navigation, real client names, compact capabilities, and footer CTA ===== */
+/* ===== v3.6.0 — Compact navigation, real client names, compact capabilities, and footer CTA ===== */
 .rp-header { padding:0 18px; }
 .rp-header-inner {
   width:min(100%,1320px);
@@ -13713,7 +13713,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.5.9 — CTA contrast, six handled pages, interactive services ===== */
+/* ===== v3.6.0 — CTA contrast, six handled pages, interactive services ===== */
 .reference-polish-page .rp-footer-cta-copy,
 .reference-polish-page .rp-footer-cta-copy * {
   color: #ffffff !important;
@@ -13845,4 +13845,222 @@ html[data-theme="blue"] .admin-status-chip {
   .rp-service-preview-action { padding: 18px; }
   .rp-ecosystem-grid-six { grid-template-columns: 1fr; }
   .rp-footer-cta-copy h2 { font-size: clamp(1.7rem,8vw,2.45rem); }
+}
+
+
+/* ===== v3.6.0 — Full phrase hero highlight + aligned service selector ===== */
+.reference-polish-page .rp-hero h1 span,
+.rp-hero h1 span {
+  display: inline;
+  background: linear-gradient(100deg, #164cf5 0%, #4165f4 48%, #7650e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.rp-services-interactive {
+  overflow: visible;
+}
+.rp-service-heading {
+  margin-bottom: 26px !important;
+}
+.rp-service-selector {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.rp-service-choice {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  min-height: 96px;
+  padding: 17px 18px;
+  border: 1px solid rgba(94,119,180,.15);
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(30,47,91,.04);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+[data-theme="blue"] .rp-service-choice {
+  background: rgba(255,255,255,.035);
+}
+.rp-service-choice:hover {
+  transform: translateY(-2px);
+  border-color: rgba(22,76,245,.30);
+  box-shadow: 0 15px 34px rgba(30,47,91,.08);
+}
+.rp-service-choice.active {
+  border-color: rgba(22,76,245,.48);
+  background: linear-gradient(145deg, rgba(22,76,245,.13), rgba(118,80,232,.06));
+  box-shadow: 0 16px 38px rgba(22,76,245,.10);
+}
+.rp-service-choice-number {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(22,76,245,.10);
+  color: #164cf5;
+  font-size: .7rem;
+  font-weight: 900;
+}
+.rp-service-choice.active .rp-service-choice-number {
+  background: linear-gradient(145deg,#143eae,#164cf5);
+  color: #fff;
+}
+.rp-service-choice-copy {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+.rp-service-choice-copy strong {
+  color: var(--text);
+  font-size: .95rem;
+  line-height: 1.2;
+}
+.rp-service-choice-copy small {
+  overflow: hidden;
+  color: var(--muted-text);
+  font-size: .75rem;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+}
+.rp-service-choice > b {
+  color: #164cf5;
+  font-size: 1rem;
+}
+.rp-service-detail {
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(94,119,180,.15);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(22,76,245,.11), transparent 31%),
+    linear-gradient(145deg, #ffffff, #f7f9ff);
+  box-shadow: 0 18px 46px rgba(30,47,91,.06);
+}
+[data-theme="blue"] .rp-service-detail {
+  background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+}
+.rp-service-detail-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr);
+  gap: 34px;
+  align-items: center;
+  padding: 30px 32px 26px;
+}
+.rp-service-detail-intro h3 {
+  margin: 8px 0 12px;
+  color: var(--text);
+  font-size: clamp(1.9rem, 3.2vw, 3.05rem);
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+.rp-service-detail-intro > p:not(.rp-eyebrow) {
+  max-width: 58ch;
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.65;
+}
+.rp-service-detail-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rp-service-detail-list li {
+  position: relative;
+  padding: 13px 14px 13px 42px;
+  border: 1px solid rgba(94,119,180,.12);
+  border-radius: 13px;
+  background: rgba(255,255,255,.64);
+  color: var(--text);
+  font-size: .86rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+[data-theme="blue"] .rp-service-detail-list li {
+  background: rgba(255,255,255,.035);
+}
+.rp-service-detail-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(22,76,245,.10);
+  color: #164cf5;
+  font-size: .68rem;
+  font-weight: 900;
+}
+.rp-service-detail-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  padding: 18px 20px 18px 32px;
+  border-top: 1px solid rgba(94,119,180,.13);
+  background: linear-gradient(90deg, rgba(10,42,104,.98), rgba(22,76,245,.98));
+}
+.rp-service-detail-footer > div {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+.rp-service-detail-footer small {
+  color: #aebfff;
+  font-size: .58rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+.rp-service-detail-footer span {
+  color: #ffffff;
+  font-size: .9rem;
+  line-height: 1.45;
+}
+.rp-service-detail-footer .rp-btn {
+  min-width: 220px;
+  margin: 0;
+  background: #ffffff;
+  color: #164cf5;
+  box-shadow: none;
+}
+
+@media (max-width: 1000px) {
+  .rp-service-selector {
+    grid-template-columns: 1fr;
+  }
+  .rp-service-choice {
+    min-height: 82px;
+  }
+  .rp-service-detail-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .rp-service-detail-main {
+    padding: 24px 20px 20px;
+  }
+  .rp-service-detail-footer {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .rp-service-detail-footer .rp-btn {
+    width: 100%;
+    min-width: 0;
+  }
 }
