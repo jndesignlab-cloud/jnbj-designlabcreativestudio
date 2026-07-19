@@ -16332,3 +16332,99 @@ html[data-theme="blue"] .services-journey-page .journey-footer { width:min(1240p
     padding-right: 18px;
   }
 }
+
+/* ===== v3.7.0 — Gradient contrast and Services footer polish ===== */
+/* Use body-qualified selectors so gradient surfaces keep white text in every theme. */
+body.services-guided-page .guided-featured-package,
+body.services-guided-page .guided-featured-package h3,
+body.services-guided-page .guided-featured-package p,
+body.services-guided-page .guided-featured-package strong,
+body.services-guided-page .guided-featured-package small,
+body.services-guided-page .guided-featured-package li,
+body.services-guided-page .guided-featured-package .guided-package-price strong,
+body.services-guided-page .guided-featured-package .guided-package-price span,
+body.services-guided-page .guided-path-tab.active,
+body.services-guided-page .guided-path-tab.active span,
+body.services-guided-page .guided-path-tab.active small,
+body.services-guided-page .guided-path-tab.active strong,
+body.services-guided-page .guided-path-tab.active b,
+body.services-guided-page .guided-final-cta,
+body.services-guided-page .guided-final-cta .guided-services-kicker,
+body.services-guided-page .guided-final-cta h2,
+body.services-guided-page .guided-final-cta p,
+body.services-guided-page .guided-final-cta p:not(.guided-services-kicker),
+body.services-guided-page .guided-final-cta a,
+body.services-guided-page .guided-final-cta a span {
+  color: #ffffff !important;
+}
+
+body.services-guided-page .guided-featured-package .guided-package-content p,
+body.services-guided-page .guided-featured-package .guided-package-price span,
+body.services-guided-page .guided-featured-package li,
+body.services-guided-page .guided-final-cta p:not(.guided-services-kicker) {
+  color: rgba(255,255,255,.82) !important;
+}
+
+body.services-guided-page .guided-featured-package .guided-package-top small {
+  color: rgba(255,255,255,.74) !important;
+}
+
+body.services-guided-page .guided-featured-package .guided-package-top span {
+  color: #5231c9 !important;
+  background: #ffffff !important;
+}
+
+/* Calm, contained footer aligned with the Services page content width. */
+body.services-guided-page .guided-services-footer {
+  width: min(1220px, calc(100% - 36px));
+  min-height: 0;
+  margin: 0 auto 24px;
+  padding: 20px 22px;
+  align-items: center;
+  border: 1px solid var(--theme-line) !important;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--theme-surface) 96%, transparent) !important;
+  box-shadow: 0 12px 34px rgba(19,36,72,.07) !important;
+}
+
+body.services-guided-page .guided-services-footer .footer-brand-block {
+  gap: 5px;
+}
+
+body.services-guided-page .guided-services-footer strong {
+  color: var(--theme-text) !important;
+  font-size: .78rem;
+  letter-spacing: -.01em;
+}
+
+body.services-guided-page .guided-services-footer p,
+body.services-guided-page .guided-services-footer span,
+body.services-guided-page .guided-services-footer .footer-meta {
+  color: var(--theme-muted) !important;
+  line-height: 1.45;
+}
+
+html[data-theme="blue"] body.services-guided-page .guided-services-footer {
+  border-color: rgba(255,255,255,.10) !important;
+  background: rgba(255,255,255,.035) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="blue"] body.services-guided-page .guided-services-footer strong {
+  color: #ffffff !important;
+}
+
+html[data-theme="blue"] body.services-guided-page .guided-services-footer p,
+html[data-theme="blue"] body.services-guided-page .guided-services-footer span,
+html[data-theme="blue"] body.services-guided-page .guided-services-footer .footer-meta {
+  color: rgba(255,255,255,.64) !important;
+}
+
+@media (max-width: 760px) {
+  body.services-guided-page .guided-services-footer {
+    width: min(100% - 24px, 1220px);
+    margin-bottom: 84px;
+    padding: 18px;
+    align-items: flex-start;
+  }
+}
