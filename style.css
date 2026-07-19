@@ -16108,3 +16108,188 @@ html[data-theme="blue"] .services-journey-page .journey-footer { width:min(1240p
   .services-guided-page .guided-process-grid { grid-template-columns: 1fr; }
   .services-guided-page .guided-final-cta a { width: 100%; min-width: 0; }
 }
+
+
+/* ===== v3.6.8 — Guided Services spacing, gradient CTAs, and light contrast ===== */
+.services-guided-page {
+  --guided-gradient: linear-gradient(135deg, #245cff 0%, #6647e8 58%, #8a3ffc 100%);
+  --guided-gradient-soft: linear-gradient(135deg, rgba(36,92,255,.10), rgba(138,63,252,.09));
+  --guided-shadow: 0 16px 34px rgba(79, 61, 196, .18);
+}
+.services-guided-page .guided-services-main {
+  gap: clamp(22px, 2.6vw, 34px);
+  padding-bottom: clamp(54px, 7vw, 82px);
+}
+.services-guided-page .guided-services-hero {
+  gap: clamp(30px, 4vw, 56px);
+  padding-top: clamp(48px, 6vw, 78px);
+  padding-bottom: clamp(42px, 5vw, 68px);
+}
+.services-guided-page .guided-paths,
+.services-guided-page .guided-service-panel,
+.services-guided-page .guided-final-cta {
+  padding-top: clamp(34px, 4vw, 50px);
+  padding-bottom: clamp(34px, 4vw, 50px);
+}
+.services-guided-page .guided-section-heading,
+.services-guided-page .guided-panel-heading {
+  gap: clamp(18px, 2.5vw, 30px);
+  margin-bottom: clamp(20px, 2.8vw, 30px);
+}
+.services-guided-page .guided-path-tabs {
+  gap: 12px;
+}
+.services-guided-page .guided-path-tab {
+  min-height: 106px;
+  padding: 18px 20px;
+}
+.services-guided-page .guided-package-layout {
+  gap: 16px;
+}
+.services-guided-page .guided-featured-package {
+  gap: 18px;
+  padding: clamp(24px, 3vw, 34px);
+}
+.services-guided-page .guided-supporting-packages,
+.services-guided-page .guided-web-steps {
+  gap: 14px;
+}
+.services-guided-page .guided-supporting-packages article,
+.services-guided-page .guided-web-step {
+  padding: 21px;
+}
+.services-guided-page .guided-individual-grid {
+  gap: 11px;
+}
+.services-guided-page .guided-service-row {
+  min-height: 116px;
+  padding: 18px;
+}
+.services-guided-page .guided-addons {
+  margin-top: 14px;
+  padding: 16px 18px;
+}
+
+/* DesignLab blue-to-violet treatment for every service CTA. */
+.services-guided-page .rp-header-cta,
+.services-guided-page .guided-primary,
+.services-guided-page .guided-path-tab.active,
+.services-guided-page .guided-detail-button,
+.services-guided-page .guided-package-actions a,
+.services-guided-page .guided-supporting-packages button,
+.services-guided-page .guided-addons button,
+.services-guided-page .guided-final-cta > a {
+  color: #fff !important;
+  border-color: transparent !important;
+  background: var(--guided-gradient) !important;
+  box-shadow: var(--guided-shadow);
+}
+.services-guided-page .guided-secondary {
+  color: #4d35c6 !important;
+  border: 1px solid rgba(102,71,232,.35) !important;
+  background: rgba(255,255,255,.92) !important;
+}
+.services-guided-page .guided-secondary:hover {
+  color: #fff !important;
+  background: var(--guided-gradient) !important;
+  border-color: transparent !important;
+  box-shadow: var(--guided-shadow);
+}
+.services-guided-page .guided-package-actions button {
+  color: #fff !important;
+  background: var(--guided-gradient) !important;
+  box-shadow: 0 12px 25px rgba(73,55,187,.18);
+}
+.services-guided-page .guided-web-step > span,
+.services-guided-page .guided-service-row > span,
+.services-guided-page .guided-services-hero-visual article > span {
+  background: var(--guided-gradient) !important;
+}
+.services-guided-page .guided-final-cta {
+  color: #fff;
+  background: var(--guided-gradient) !important;
+  box-shadow: 0 22px 44px rgba(69, 49, 179, .22);
+}
+.services-guided-page .guided-final-cta > a {
+  min-width: 220px;
+  border: 1px solid rgba(255,255,255,.22) !important;
+}
+
+/* Force correct contrast in Light Mode and active gradient surfaces. */
+[data-theme="light"] .services-guided-page .guided-path-tab:not(.active),
+[data-theme="light"] .services-guided-page .guided-service-row,
+[data-theme="light"] .services-guided-page .guided-web-step,
+[data-theme="light"] .services-guided-page .guided-supporting-packages article {
+  color: #101b35 !important;
+  background: #fff !important;
+}
+[data-theme="light"] .services-guided-page .guided-path-tab:not(.active) strong,
+[data-theme="light"] .services-guided-page .guided-service-row strong,
+[data-theme="light"] .services-guided-page .guided-web-step h3,
+[data-theme="light"] .services-guided-page .guided-supporting-packages h3,
+[data-theme="light"] .services-guided-page .guided-mini-price strong {
+  color: #101b35 !important;
+}
+[data-theme="light"] .services-guided-page .guided-path-tab:not(.active) small,
+[data-theme="light"] .services-guided-page .guided-service-row p,
+[data-theme="light"] .services-guided-page .guided-web-step p,
+[data-theme="light"] .services-guided-page .guided-supporting-packages p,
+[data-theme="light"] .services-guided-page .guided-mini-price span {
+  color: #62708c !important;
+}
+.services-guided-page .guided-path-tab.active,
+.services-guided-page .guided-path-tab.active span,
+.services-guided-page .guided-path-tab.active small,
+.services-guided-page .guided-path-tab.active strong,
+.services-guided-page .guided-path-tab.active b,
+.services-guided-page .guided-final-cta .guided-services-kicker,
+.services-guided-page .guided-final-cta h2,
+.services-guided-page .guided-final-cta p,
+.services-guided-page .guided-featured-package,
+.services-guided-page .guided-featured-package h3,
+.services-guided-page .guided-featured-package p,
+.services-guided-page .guided-featured-package strong,
+.services-guided-page .guided-featured-package span,
+.services-guided-page .guided-featured-package small,
+.services-guided-page .guided-featured-package li {
+  color: #fff !important;
+}
+.services-guided-page .guided-featured-package {
+  background: var(--guided-gradient) !important;
+  box-shadow: 0 22px 44px rgba(69,49,179,.20);
+}
+.services-guided-page .guided-package-top span {
+  color: #4f35c5 !important;
+  background: #fff !important;
+}
+.services-guided-page .guided-services-kicker,
+.services-guided-page .guided-services-hero-copy h1 span,
+.services-guided-page .guided-service-row small,
+.services-guided-page .guided-supporting-packages small,
+.services-guided-page .guided-web-step small,
+.services-guided-page .guided-web-step > b {
+  color: #7047e8;
+}
+.services-guided-page .guided-final-cta {
+  margin-top: 2px;
+}
+
+@media (max-width: 880px) {
+  .services-guided-page .guided-path-tab { min-height: 92px; }
+  .services-guided-page .guided-paths,
+  .services-guided-page .guided-service-panel,
+  .services-guided-page .guided-final-cta {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 640px) {
+  .services-guided-page .guided-services-main { gap: 18px; }
+  .services-guided-page .guided-paths,
+  .services-guided-page .guided-service-panel,
+  .services-guided-page .guided-final-cta {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .services-guided-page .guided-path-tab { min-height: 88px; padding: 16px; }
+}
