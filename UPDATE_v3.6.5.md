@@ -1,4 +1,4 @@
-# Update v3.6.5
+# Update v3.6.6
 
 - Rebuilt `services.html` as an interactive service journey.
 - Added a goal-based service finder that recommends the right starting point.
