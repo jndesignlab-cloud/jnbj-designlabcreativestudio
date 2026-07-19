@@ -16293,3 +16293,42 @@ html[data-theme="blue"] .services-journey-page .journey-footer { width:min(1240p
   }
   .services-guided-page .guided-path-tab { min-height: 88px; padding: 16px; }
 }
+
+/* ===== v3.6.9 — Guided Services inner padding refinement ===== */
+.services-guided-page .guided-paths,
+.services-guided-page .guided-service-panel,
+.services-guided-page .guided-final-cta {
+  box-sizing: border-box;
+  padding-left: clamp(30px, 4vw, 54px);
+  padding-right: clamp(30px, 4vw, 54px);
+}
+
+.services-guided-page .guided-paths .guided-section-heading,
+.services-guided-page .guided-service-panel .guided-panel-heading {
+  width: 100%;
+}
+
+.services-guided-page .guided-path-tabs,
+.services-guided-page .guided-package-layout,
+.services-guided-page .guided-individual-grid,
+.services-guided-page .guided-web-steps {
+  width: 100%;
+}
+
+@media (max-width: 880px) {
+  .services-guided-page .guided-paths,
+  .services-guided-page .guided-service-panel,
+  .services-guided-page .guided-final-cta {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-guided-page .guided-paths,
+  .services-guided-page .guided-service-panel,
+  .services-guided-page .guided-final-cta {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
