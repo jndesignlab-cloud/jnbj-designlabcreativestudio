@@ -1,4 +1,4 @@
-# Update v3.6.1
+# Update v3.6.2
 
 - Reduced the height, padding, logo size, and spacing of the pinned navigation bar.
 - Replaced Process and Resources with Notes and Creator across public pages.

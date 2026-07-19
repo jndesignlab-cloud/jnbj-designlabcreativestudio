@@ -1,4 +1,4 @@
-# Update v3.6.1
+# Update v3.6.2
 
 - Removed the Selected Capabilities section from the homepage.
 - Added a random project picker connected to the live Projects database.
