@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.6.4";
+const SITE_VERSION = "3.6.5";
 const LAST_EDIT = "July 19, 2026";
 
 const categoryTriggers = [...document.querySelectorAll("[data-service-panel]")];
@@ -8,6 +8,13 @@ const modal = document.querySelector("#serviceModal");
 const modalContent = document.querySelector("#serviceModalContent");
 const modalDialog = modal?.querySelector(".service-modal-dialog");
 let lastServiceTrigger = null;
+
+const FINDER_RECOMMENDATIONS = {
+  content: { category: "Design Package", name: "Brand Growth", description: "A stronger content package for active brands that need several coordinated posts and a more recognizable visual direction.", tags: ["15 static pubmats", "3 carousels", "Priority revisions"], item: "brand-growth", step: "01 / 04" },
+  launch: { category: "Campaign Package", name: "Full Content System", description: "A coordinated visual system for launches, enrollment drives, promotions, and month-long campaigns with several formats.", tags: ["20–25 pubmats", "4–6 carousels", "Story versions"], item: "full-content-system", step: "02 / 04" },
+  focused: { category: "Individual Service", name: "Social Media Design", description: "A focused creative service for one clear announcement, promotion, campaign message, or branded post.", tags: ["Custom layout", "Brand-aligned", "Ready to post"], item: "social-media-design", step: "03 / 04" },
+  web: { category: "Website Package", name: "Business Landing Page", description: "A complete business landing page with custom direction, inquiry form, analytics, and practical lead-capture features.", tags: ["Up to 8 sections", "Inquiry form", "Analytics"], item: "business-landing-page", step: "04 / 04" }
+};
 
 const SERVICE_DETAILS = {
   "content-essentials": {
@@ -274,6 +281,36 @@ document.querySelectorAll("[data-close-service-modal]").forEach((element) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && modal?.classList.contains("active")) closeServiceModal();
 });
+
+const finderGoals = [...document.querySelectorAll("[data-brief-goal]")];
+const finderCategory = document.querySelector("#finderCategory");
+const finderName = document.querySelector("#finderName");
+const finderDescription = document.querySelector("#finderDescription");
+const finderTags = document.querySelector("#finderTags");
+const finderOpen = document.querySelector("#finderOpen");
+const finderStep = document.querySelector(".finder-step");
+
+function updateFinder(goalKey) {
+  const recommendation = FINDER_RECOMMENDATIONS[goalKey];
+  if (!recommendation) return;
+  finderGoals.forEach((button) => {
+    const active = button.dataset.briefGoal === goalKey;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+  if (finderCategory) finderCategory.textContent = recommendation.category;
+  if (finderName) finderName.textContent = recommendation.name;
+  if (finderDescription) finderDescription.textContent = recommendation.description;
+  if (finderTags) finderTags.innerHTML = recommendation.tags.map((tag) => `<span>${tag}</span>`).join("");
+  if (finderOpen) finderOpen.dataset.serviceItem = recommendation.item;
+  if (finderStep) finderStep.textContent = recommendation.step;
+  document.querySelector(".finder-result")?.animate([
+    { opacity: .4, transform: "translateY(8px)" },
+    { opacity: 1, transform: "translateY(0)" }
+  ], { duration: 260, easing: "ease-out" });
+}
+
+finderGoals.forEach((button) => button.addEventListener("click", () => updateFinder(button.dataset.briefGoal)));
 
 setFooterMeta();
 const initialHash = window.location.hash.replace("#", "");

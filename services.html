@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.6.4" rel="stylesheet"/>
+<link href="style.css?v=3.6.5" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -22,7 +22,7 @@
 <meta content="https://madebydesignlab.com/assets/designlab-transformation-hero.webp" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 </head>
-<body class="signal-theme editorial-system unified-page services-showcase-page">
+<body class="signal-theme editorial-system unified-page services-journey-page">
 <header class="site-header signal-header rp-header">
 <div class="rp-header-inner">
 <a aria-label="DesignLab Creative Studio home" class="rp-brand" href="index.html"><img alt="DesignLab Creative Studio" src="assets/designlab-header-logo.webp"/></a>
@@ -30,113 +30,108 @@
 <a class="signal-header-cta rp-header-cta" href="contact.html?source=site-header">Start a project</a>
 </div>
 </header>
-<main class="svc-showcase-main">
-<section class="svc-showcase-hero section-pad reveal-up" aria-labelledby="svc-main-title">
-<div class="svc-showcase-copy">
-<p class="svc-kicker">Creative support for real projects</p>
-<h1 id="svc-main-title">Choose a service that moves the work <span>forward.</span></h1>
-<p class="svc-showcase-lead">Whether you need one strong poster, a complete monthly content system, or a polished website, every option is built around a clear scope, practical deliverables, and a smoother creative process.</p>
-<div class="svc-showcase-actions">
-<a class="btn svc-primary" href="#service-browser">Explore services <span aria-hidden="true">↓</span></a>
-<a class="btn svc-secondary" href="contact.html?source=services-hero">Tell me about your project <span aria-hidden="true">↗</span></a>
+
+<main class="journey-main">
+<section class="journey-hero section-pad reveal-up" aria-labelledby="journey-title">
+<div class="journey-hero-copy">
+<p class="journey-kicker">Explore the studio menu</p>
+<h1 id="journey-title">Find the creative support that fits the <span>moment.</span></h1>
+<p class="journey-lead">Choose what you are trying to accomplish. DesignLab will point you toward a practical package, focused service, or lightweight web build—without making the process feel complicated.</p>
+<div class="journey-actions">
+<a class="journey-primary" href="#journey-finder">Find my best fit <span>↓</span></a>
+<a class="journey-secondary" href="contact.html?source=services-hero">Share the brief <span>↗</span></a>
 </div>
-<div class="svc-showcase-proof" aria-label="Service benefits">
-<span><b>Clear scope</b> before production</span>
-<span><b>Direct communication</b> with the designer</span>
-<span><b>Organized delivery</b> ready to use</span>
+<div class="journey-proof" aria-label="Service benefits"><span>Clear scope</span><span>Direct collaboration</span><span>Ready-to-use delivery</span></div>
 </div>
+
+<div class="journey-finder" id="journey-finder" aria-labelledby="finder-title">
+<div class="finder-head"><div><small>START HERE</small><h2 id="finder-title">What needs to move forward?</h2></div><span class="finder-step">01 / 04</span></div>
+<div class="finder-goals" role="tablist" aria-label="Project goals">
+<button class="finder-goal active" data-brief-goal="content" type="button"><span>01</span><strong>Post consistently</strong><small>Build a reliable content rhythm</small></button>
+<button class="finder-goal" data-brief-goal="launch" type="button"><span>02</span><strong>Launch something</strong><small>Coordinate a campaign or promotion</small></button>
+<button class="finder-goal" data-brief-goal="focused" type="button"><span>03</span><strong>Create one output</strong><small>Get a focused deliverable done well</small></button>
+<button class="finder-goal" data-brief-goal="web" type="button"><span>04</span><strong>Build online</strong><small>Create a landing page or system</small></button>
 </div>
-<div class="svc-showcase-visual" aria-label="DesignLab service map">
-<div class="svc-visual-glow"></div>
-<div class="svc-visual-center"><span>DL</span><strong>Your project</strong><small>Choose the right support</small></div>
-<div class="svc-orbit-card svc-orbit-one"><span>01</span><strong>Content systems</strong><small>Recurring campaign support</small></div>
-<div class="svc-orbit-card svc-orbit-two"><span>02</span><strong>Focused design</strong><small>One service at a time</small></div>
-<div class="svc-orbit-card svc-orbit-three"><span>03</span><strong>Web presence</strong><small>Landing pages and systems</small></div>
-<svg aria-hidden="true" class="svc-orbit-lines" viewBox="0 0 640 460" preserveAspectRatio="none"><path d="M320 230 C238 170 190 140 112 105"/><path d="M320 230 C405 168 472 135 545 110"/><path d="M320 230 C397 298 468 338 550 364"/></svg>
+<div class="finder-result" aria-live="polite">
+<div class="finder-result-top"><small>RECOMMENDED START</small><span id="finderCategory">Design Package</span></div>
+<h3 id="finderName">Brand Growth</h3>
+<p id="finderDescription">A stronger content package for active brands that need several coordinated posts and a more recognizable visual direction.</p>
+<div class="finder-tags" id="finderTags"><span>15 static pubmats</span><span>3 carousels</span><span>Priority revisions</span></div>
+<button class="finder-open service-choice-card" data-service-item="brand-growth" id="finderOpen" type="button">Explore this recommendation <span>↗</span></button>
+</div>
 </div>
 </section>
 
-<section class="svc-why section-pad reveal-up" aria-label="Why choose DesignLab">
-<article><span>01</span><div><strong>Built around the objective</strong><p>The design direction starts with what the material needs to communicate or achieve.</p></div></article>
-<article><span>02</span><div><strong>Flexible enough to scale</strong><p>Start with one output, choose a package, or combine services into a custom scope.</p></div></article>
-<article><span>03</span><div><strong>Designed for actual use</strong><p>Files are prepared for posting, presenting, printing, or deployment—not only for display.</p></div></article>
+<section class="journey-value section-pad reveal-up" aria-label="How services are structured">
+<article><span>01</span><strong>Start with the goal</strong><p>The output is chosen around the objective, not around a generic checklist.</p></article>
+<article><span>02</span><strong>See the exact scope</strong><p>Every option opens a detailed view with pricing, inclusions, and ideal use.</p></article>
+<article><span>03</span><strong>Mix when needed</strong><p>Services can be combined into a custom scope when one package is not enough.</p></article>
 </section>
 
-<section id="service-browser" class="svc-browser section-pad reveal-up" aria-labelledby="serviceCategoryHeading">
-<div class="svc-browser-heading">
-<div><p class="svc-kicker">Find your starting point</p><h2 id="serviceCategoryHeading">What does the project need right now?</h2></div>
-<p>Select a category below. Every package or service opens a detailed scope, starting rate, and inquiry option.</p>
+<section class="journey-browser section-pad reveal-up" aria-labelledby="serviceCategoryHeading">
+<div class="journey-browser-head">
+<div><p class="journey-kicker">Browse the full menu</p><h2 id="serviceCategoryHeading">Three ways to work with DesignLab.</h2></div>
+<p>Switch lanes anytime. Click any package or service to see its full details without leaving the page.</p>
 </div>
-<div aria-label="Service categories" class="svc-category-grid" role="tablist">
-<button aria-controls="design-packages" aria-expanded="true" class="service-category-trigger svc-category-card active" data-service-panel="design-packages" type="button">
-<span class="svc-category-icon svc-icon-content"><i></i><i></i><i></i></span>
-<small>01 · Recurring support</small><strong>Design Packages</strong><p>Structured content batches for brands that need consistent visual output.</p><b>Explore 3 packages <span>→</span></b>
+<div class="journey-tabs" role="tablist" aria-label="Service categories">
+<button class="journey-tab active service-category-trigger" data-service-panel="design-packages" aria-controls="design-packages" aria-expanded="true" type="button"><span>01</span><strong>Design Packages</strong><small>Recurring content systems</small></button>
+<button class="journey-tab service-category-trigger" data-service-panel="individual-services" aria-controls="individual-services" aria-expanded="false" type="button"><span>02</span><strong>Individual Services</strong><small>Focused deliverables</small></button>
+<button class="journey-tab service-category-trigger" data-service-panel="website-packages" aria-controls="website-packages" aria-expanded="false" type="button"><span>03</span><strong>Web / Systems</strong><small>Landing pages and tools</small></button>
+</div>
+</section>
+
+<section class="journey-panel-shell section-pad reveal-up" aria-live="polite">
+<section class="journey-panel service-selection-panel active" data-service-section id="design-packages">
+<div class="journey-panel-intro"><div><p class="journey-kicker">Recurring creative support</p><h2>Choose the content rhythm that matches the season.</h2></div><p>Designed for brands and institutions that need more than isolated posts.</p></div>
+<div class="package-showcase">
+<button class="package-feature service-choice-card" data-service-item="brand-growth" type="button">
+<div class="package-feature-badge">MOST SELECTED</div><small>BEST BALANCE OF VOLUME + DIRECTION</small><h3>Brand Growth</h3><p>A stronger content package for active brands, product pushes, recurring promotions, and campaign-led posting.</p><div class="package-feature-price"><strong>₱7,500</strong><span>≈ $120 USD</span></div><ul><li>15 static pubmats</li><li>3 carousel posts</li><li>Priority revisions</li><li>Campaign-style direction</li></ul><b>Open complete details <span>↗</span></b>
 </button>
-<button aria-controls="individual-services" aria-expanded="false" class="service-category-trigger svc-category-card" data-service-panel="individual-services" type="button">
-<span class="svc-category-icon svc-icon-single"><i></i><i></i><i></i></span>
-<small>02 · Focused deliverables</small><strong>Individual Services</strong><p>Choose the exact creative output or add-on needed for the current request.</p><b>Explore 8 services <span>→</span></b>
-</button>
-<button aria-controls="website-packages" aria-expanded="false" class="service-category-trigger svc-category-card" data-service-panel="website-packages" type="button">
-<span class="svc-category-icon svc-icon-web"><i></i><i></i><i></i></span>
-<small>03 · Digital presence</small><strong>Website Packages</strong><p>Responsive landing pages for presenting, launching, and collecting inquiries.</p><b>Explore 3 packages <span>→</span></b>
-</button>
+<div class="package-side-stack">
+<button class="package-side service-choice-card" data-service-item="content-essentials" type="button"><div><small>STARTER</small><h3>Content Essentials</h3><p>A compact first batch for new pages and short promotions.</p></div><div><strong>₱3,500</strong><span>8 pubmats + 1 carousel</span><b>View package ↗</b></div></button>
+<button class="package-side service-choice-card" data-service-item="full-content-system" type="button"><div><small>COMPLETE</small><h3>Full Content System</h3><p>A coordinated visual system for larger campaigns and month-long plans.</p></div><div><strong>₱12,000</strong><span>20–25 pubmats + 4–6 carousels</span><b>View package ↗</b></div></button>
+</div>
 </div>
 </section>
 
-<section aria-live="polite" class="svc-panel-wrap section-pad reveal-up">
-<section class="service-selection-panel svc-selection-panel active" data-service-section="" id="design-packages">
-<div class="svc-panel-heading"><div><p class="svc-kicker">Content design packages</p><h2>Build consistency without requesting every post separately.</h2></div><p>Best for pages preparing a campaign, monthly content batch, or a more recognizable posting system.</p></div>
-<div class="svc-package-grid">
-<button class="svc-package-card service-choice-card" data-service-item="content-essentials" type="button">
-<div class="svc-package-top"><span>01</span><small>Starter</small></div><p class="svc-package-label">A dependable first batch</p><h3>Content Essentials</h3><div class="svc-package-price"><strong>₱3,500</strong><span>≈ $60 USD</span></div><p class="svc-best-for">Best for new pages, short promotions, and small businesses beginning a consistent content routine.</p><ul><li>1 carousel post</li><li>8 static pubmats</li><li>3 revisions per design</li></ul><b class="svc-card-cta">See the complete package <span>↗</span></b>
-</button>
-<button class="svc-package-card svc-package-featured service-choice-card" data-service-item="brand-growth" type="button">
-<div class="svc-package-top"><span>02</span><small>Most selected</small></div><p class="svc-package-label">More room to build momentum</p><h3>Brand Growth</h3><div class="svc-package-price"><strong>₱7,500</strong><span>≈ $120 USD</span></div><p class="svc-best-for">Best for active brands, product pushes, recurring promotions, and a stronger visual direction.</p><ul><li>15 static pubmats</li><li>3 carousel posts</li><li>Priority revisions</li></ul><b class="svc-card-cta">See the complete package <span>↗</span></b>
-</button>
-<button class="svc-package-card service-choice-card" data-service-item="full-content-system" type="button">
-<div class="svc-package-top"><span>03</span><small>Complete</small></div><p class="svc-package-label">A coordinated month of visuals</p><h3>Full Content System</h3><div class="svc-package-price"><strong>₱12,000</strong><span>≈ $190 USD</span></div><p class="svc-best-for">Best for full campaign cycles, enrollment drives, launches, and larger content requirements.</p><ul><li>20–25 static pubmats</li><li>4–6 carousel posts</li><li>Priority turnaround</li></ul><b class="svc-card-cta">See the complete package <span>↗</span></b>
-</button>
+<section class="journey-panel service-selection-panel" data-service-section hidden id="individual-services">
+<div class="journey-panel-intro"><div><p class="journey-kicker">Focused creative services</p><h2>Pick one output—or build your own combination.</h2></div><p>Ideal for one-off requests, specific deliverables, and campaign add-ons.</p></div>
+<div class="service-bento">
+<button class="bento-service bento-wide service-choice-card" data-service-item="social-media-design" type="button"><span class="bento-icon">SM</span><small>FROM ₱350</small><h3>Social Media Design</h3><p>Static pubmats, promotional graphics, and branded content for regular posting.</p><b>Explore ↗</b></button>
+<button class="bento-service bento-tall service-choice-card" data-service-item="carousel-design" type="button"><span class="bento-icon">CR</span><small>FROM ₱800</small><h3>Carousel Design</h3><p>Connected slides for education, storytelling, services, and product features.</p><b>Explore ↗</b></button>
+<button class="bento-service service-choice-card" data-service-item="poster-event-design" type="button"><span class="bento-icon">EV</span><small>₱500–₱1,500</small><h3>Poster &amp; Event Design</h3><b>Explore ↗</b></button>
+<button class="bento-service service-choice-card" data-service-item="logo-design" type="button"><span class="bento-icon">ID</span><small>FROM ₱2,000</small><h3>Logo &amp; Identity</h3><b>Explore ↗</b></button>
+<button class="bento-service service-choice-card" data-service-item="packaging-design" type="button"><span class="bento-icon">PK</span><small>FROM ₱1,500</small><h3>Packaging Design</h3><b>Explore ↗</b></button>
+<button class="bento-service service-choice-card" data-service-item="story-adaptation" type="button"><span class="bento-icon">ST</span><small>₱150 EACH</small><h3>Story Adaptation</h3><b>Explore ↗</b></button>
+<button class="bento-service service-choice-card" data-service-item="motion-graphics" type="button"><span class="bento-icon">MO</span><small>FROM ₱800</small><h3>Simple Motion</h3><b>Explore ↗</b></button>
+<button class="bento-service service-choice-card" data-service-item="rush-delivery" type="button"><span class="bento-icon">RU</span><small>+30%</small><h3>Rush Delivery</h3><b>Check availability ↗</b></button>
 </div>
 </section>
 
-<section class="service-selection-panel svc-selection-panel" data-service-section="" hidden id="individual-services">
-<div class="svc-panel-heading"><div><p class="svc-kicker">Individual services</p><h2>Choose one strong deliverable—or combine several.</h2></div><p>Ideal for specific requests, focused campaigns, and add-ons that do not need a full package.</p></div>
-<div class="svc-individual-grid">
-<button class="svc-mini-service service-choice-card" data-service-item="social-media-design" type="button"><span class="svc-mini-number">01</span><div><h3>Social Media Design</h3><p>Static pubmats, campaign graphics, and branded content.</p></div><strong>From ₱350</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="carousel-design" type="button"><span class="svc-mini-number">02</span><div><h3>Carousel Design</h3><p>Multi-slide educational, promotional, or narrative content.</p></div><strong>From ₱800</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="poster-event-design" type="button"><span class="svc-mini-number">03</span><div><h3>Poster &amp; Event Design</h3><p>Announcements, event visuals, and campaign key art.</p></div><strong>₱500–₱1,500</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="logo-design" type="button"><span class="svc-mini-number">04</span><div><h3>Logo Design</h3><p>A focused identity direction for a new brand or project.</p></div><strong>₱2,500–₱5,000</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="packaging-design" type="button"><span class="svc-mini-number">05</span><div><h3>Packaging Design</h3><p>Visual concepts and production-ready packaging layouts.</p></div><strong>From ₱3,000</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="story-adaptation" type="button"><span class="svc-mini-number">06</span><div><h3>Story Adaptation</h3><p>Approved artwork reformatted into a vertical story layout.</p></div><strong>₱150 each</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="motion-graphics" type="button"><span class="svc-mini-number">07</span><div><h3>Simple Motion Graphics</h3><p>Basic motion for announcements, loops, and presentations.</p></div><strong>From ₱800</strong><b>↗</b></button>
-<button class="svc-mini-service service-choice-card" data-service-item="rush-delivery" type="button"><span class="svc-mini-number">08</span><div><h3>Rush Delivery</h3><p>Priority scheduling for qualified urgent requirements.</p></div><strong>+30%</strong><b>↗</b></button>
-</div>
-</section>
-
-<section class="service-selection-panel svc-selection-panel" data-service-section="" hidden id="website-packages">
-<div class="svc-panel-heading"><div><p class="svc-kicker">Static websites and landing pages</p><h2>Give the project a clearer place to live online.</h2></div><p>Responsive, branded, and lightweight websites prepared for GitHub Pages and custom-domain support.</p></div>
-<div class="svc-package-grid">
-<button class="svc-package-card service-choice-card" data-service-item="launch-landing-page" type="button"><div class="svc-package-top"><span>01</span><small>Launch</small></div><p class="svc-package-label">A focused online introduction</p><h3>Launch Landing Page</h3><div class="svc-package-price"><strong>₱12,000</strong><span>≈ $210 USD</span></div><p class="svc-best-for">Best for personal brands, new services, events, portfolios, and simple project launches.</p><ul><li>Up to 5 sections</li><li>Responsive layout</li><li>Basic SEO setup</li></ul><b class="svc-card-cta">See the complete package <span>↗</span></b></button>
-<button class="svc-package-card svc-package-featured service-choice-card" data-service-item="business-landing-page" type="button"><div class="svc-package-top"><span>02</span><small>Recommended</small></div><p class="svc-package-label">A complete business presence</p><h3>Business Landing Page</h3><div class="svc-package-price"><strong>₱18,000</strong><span>≈ $310 USD</span></div><p class="svc-best-for">Best for service businesses, studios, consultants, and brands that need project inquiries.</p><ul><li>Up to 8 sections</li><li>Inquiry form integration</li><li>Analytics setup</li></ul><b class="svc-card-cta">See the complete package <span>↗</span></b></button>
-<button class="svc-package-card service-choice-card" data-service-item="premium-landing-system" type="button"><div class="svc-package-top"><span>03</span><small>Premium</small></div><p class="svc-package-label">A conversion-focused system</p><h3>Premium Landing System</h3><div class="svc-package-price"><strong>₱25,000</strong><span>≈ $430 USD</span></div><p class="svc-best-for">Best for premium services, major campaigns, and projects with a more detailed inquiry journey.</p><ul><li>Up to 10 sections</li><li>Advanced form</li><li>30-day support</li></ul><b class="svc-card-cta">See the complete package <span>↗</span></b></button>
+<section class="journey-panel service-selection-panel" data-service-section hidden id="website-packages">
+<div class="journey-panel-intro"><div><p class="journey-kicker">Web presence and lightweight systems</p><h2>Choose how far the digital experience needs to go.</h2></div><p>Responsive builds prepared for GitHub Pages, inquiry workflows, and custom-domain support.</p></div>
+<div class="web-levels">
+<button class="web-level service-choice-card" data-service-item="launch-landing-page" type="button"><span class="web-level-number">01</span><div><small>LAUNCH</small><h3>Launch Landing Page</h3><p>A focused online introduction for a new service, event, portfolio, or project.</p></div><div class="web-level-meta"><strong>₱12,000</strong><span>Up to 5 sections</span><b>Open package ↗</b></div></button>
+<button class="web-level web-level-featured service-choice-card" data-service-item="business-landing-page" type="button"><span class="web-level-number">02</span><div><small>RECOMMENDED</small><h3>Business Landing Page</h3><p>A complete service presence with inquiry form, analytics, and stronger content hierarchy.</p></div><div class="web-level-meta"><strong>₱18,000</strong><span>Up to 8 sections</span><b>Open package ↗</b></div></button>
+<button class="web-level service-choice-card" data-service-item="premium-landing-system" type="button"><span class="web-level-number">03</span><div><small>PREMIUM</small><h3>Premium Landing System</h3><p>A more detailed lead journey for campaigns, premium services, and institutional microsites.</p></div><div class="web-level-meta"><strong>₱25,000</strong><span>Up to 10 sections</span><b>Open package ↗</b></div></button>
 </div>
 </section>
 </section>
 
-<section class="svc-process section-pad reveal-up" aria-labelledby="svc-process-title">
-<div class="svc-process-head"><p class="svc-kicker">Simple working process</p><h2 id="svc-process-title">From request to ready-to-use files.</h2></div>
-<div class="svc-process-grid"><article><span>01</span><strong>Share the brief</strong><p>Tell me the goal, formats, deadline, content, and available assets.</p></article><article><span>02</span><strong>Confirm the scope</strong><p>You receive the recommended service, timeline, price, and deliverables.</p></article><article><span>03</span><strong>Design and review</strong><p>The project moves through production, feedback, and agreed revisions.</p></article><article><span>04</span><strong>Receive the output</strong><p>Approved files are organized and prepared for their intended use.</p></article></div>
+<section class="journey-process section-pad reveal-up" aria-labelledby="journey-process-title">
+<div class="journey-process-copy"><p class="journey-kicker">What happens next</p><h2 id="journey-process-title">A simple route from idea to finished output.</h2><p>The process is intentionally light: clarify the goal, confirm the scope, review the work, and receive organized files.</p></div>
+<div class="journey-process-track"><article><span>01</span><strong>Brief</strong><p>Share the objective, formats, deadline, and available assets.</p></article><article><span>02</span><strong>Scope</strong><p>Receive the recommended service, timeline, price, and inclusions.</p></article><article><span>03</span><strong>Create</strong><p>Design production, feedback, and agreed revisions happen here.</p></article><article><span>04</span><strong>Deliver</strong><p>Approved outputs are organized and prepared for their intended use.</p></article></div>
 </section>
 
-<section class="svc-custom-cta section-pad reveal-up">
-<div><p class="svc-kicker">Still deciding?</p><h2>The project does not need to fit perfectly into a package.</h2><p>Send the objective, required outputs, and timeline. I can recommend a practical combination of design, publication, or web support.</p></div>
-<div class="svc-custom-actions"><button class="btn svc-primary service-choice-card" data-service-item="custom-project" type="button">Build a custom scope <span>↗</span></button><a class="svc-text-link" href="projects.html">See past work first →</a></div>
+<section class="journey-custom section-pad reveal-up">
+<div><p class="journey-kicker">Need a mixed setup?</p><h2>Build a custom creative stack around the project.</h2><p>Combine design, campaign, publication, adaptation, and web support into one clear scope.</p></div>
+<div class="journey-custom-actions"><button class="journey-custom-button service-choice-card" data-service-item="custom-project" type="button">Build a custom scope <span>↗</span></button><a href="projects.html">See past work first →</a></div>
 </section>
 </main>
 
-<div aria-hidden="true" class="service-modal" id="serviceModal"><div class="service-modal-backdrop" data-close-service-modal=""></div><section aria-label="Selected service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1"><button aria-label="Close service details" class="service-modal-close" data-close-service-modal="" type="button">×</button><div class="service-modal-content" id="serviceModalContent"></div></section></div>
+<div aria-hidden="true" class="service-modal" id="serviceModal"><div class="service-modal-backdrop" data-close-service-modal></div><section aria-label="Selected service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1"><button aria-label="Close service details" class="service-modal-close" data-close-service-modal type="button">×</button><div class="service-modal-content" id="serviceModalContent"></div></section></div>
 <div aria-label="Portfolio appearance" class="theme-dock"><div aria-label="Choose website theme" class="theme-switcher" role="group"><button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button><button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button></div></div>
-<footer class="footer compact-footer unified-footer editorial-footer"><div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div><div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div></footer>
-<script src="config.js?v=3.6.4"></script><script src="theme.js?v=3.6.4"></script><script src="services.js?v=3.6.4"></script><script src="navigation.js?v=3.6.4"></script><script src="reveal.js?v=3.6.4"></script>
+<footer class="footer compact-footer unified-footer editorial-footer journey-footer"><div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div><div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div></footer>
+<script src="config.js?v=3.6.5"></script><script src="theme.js?v=3.6.5"></script><script src="services.js?v=3.6.5"></script><script src="navigation.js?v=3.6.5"></script><script src="reveal.js?v=3.6.5"></script>
 </body>
 </html>
