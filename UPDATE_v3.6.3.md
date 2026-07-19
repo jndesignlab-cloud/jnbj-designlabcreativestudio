@@ -1,4 +1,4 @@
-# Update v3.6.3
+# Update v3.6.4
 
 - Added an animated DesignLab studio statistics section below the homepage hero illustration.
 - Added count-up animation when the statistics enter the viewport.

@@ -1,5 +1,5 @@
-const SITE_VERSION = "3.6.3";
-const LAST_EDIT = "June 25, 2026";
+const SITE_VERSION = "3.6.4";
+const LAST_EDIT = "July 19, 2026";
 
 const categoryTriggers = [...document.querySelectorAll("[data-service-panel]")];
 const categoryPanels = [...document.querySelectorAll("[data-service-section]")];

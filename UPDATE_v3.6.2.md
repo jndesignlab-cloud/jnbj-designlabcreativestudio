@@ -1,4 +1,4 @@
-# Update v3.6.3
+# Update v3.6.4
 
 - Updated the homepage random-project picker to preserve each project's original image aspect ratio.
 - Removed forced image cropping and reduced the overall project-card scale.
