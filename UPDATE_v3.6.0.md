@@ -1,4 +1,4 @@
-# Portfolio v3.6.2
+# Portfolio v3.6.3
 
 - Highlights the complete phrase “campaign-ready design.” in the homepage hero.
 - Rebuilt the interactive homepage services area with three aligned category selectors.

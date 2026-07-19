@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.6.2";
+const SITE_VERSION = "3.6.3";
 
 const yearElement = document.querySelector("#year");
 const versionElement = document.querySelector("#siteVersion");
@@ -242,3 +242,52 @@ async function loadRandomArchiveProject() {
 
 randomProjectShuffle?.addEventListener("click", showAnotherRandomProject);
 loadRandomArchiveProject();
+
+
+// Animated homepage statistics. Runs once when the record section enters view.
+const countUpNodes = document.querySelectorAll("[data-countup]");
+
+function formatCountUpValue(value) {
+  return Math.round(value).toLocaleString("en-PH");
+}
+
+function animateCountUp(node) {
+  if (!node || node.dataset.counted === "true") return;
+  node.dataset.counted = "true";
+  const target = Number(node.dataset.countup || 0);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    node.textContent = formatCountUpValue(target);
+    return;
+  }
+  const duration = target >= 1000 ? 1700 : 1300;
+  const started = performance.now();
+  function frame(now) {
+    const progress = Math.min(1, (now - started) / duration);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    node.textContent = formatCountUpValue(target * eased);
+    if (progress < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+if (countUpNodes.length) {
+  const statsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      countUpNodes.forEach(animateCountUp);
+      observer.disconnect();
+    });
+  }, { threshold: .28 });
+  const statsBand = document.querySelector(".rp-stats-band");
+  if (statsBand) statsObserver.observe(statsBand);
+}
+
+// Keep the FAQ concise by opening only one answer at a time.
+document.querySelectorAll(".rp-faq-item").forEach((item) => {
+  item.addEventListener("toggle", () => {
+    if (!item.open) return;
+    document.querySelectorAll(".rp-faq-item").forEach((other) => {
+      if (other !== item) other.open = false;
+    });
+  });
+});

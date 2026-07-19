@@ -13554,7 +13554,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.6.2 — Compact navigation, real client names, compact capabilities, and footer CTA ===== */
+/* ===== v3.6.3 — Compact navigation, real client names, compact capabilities, and footer CTA ===== */
 .rp-header { padding:0 18px; }
 .rp-header-inner {
   width:min(100%,1320px);
@@ -13713,7 +13713,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.6.2 — CTA contrast, six handled pages, interactive services ===== */
+/* ===== v3.6.3 — CTA contrast, six handled pages, interactive services ===== */
 .reference-polish-page .rp-footer-cta-copy,
 .reference-polish-page .rp-footer-cta-copy * {
   color: #ffffff !important;
@@ -13848,7 +13848,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.6.2 — Full phrase hero highlight + aligned service selector ===== */
+/* ===== v3.6.3 — Full phrase hero highlight + aligned service selector ===== */
 .reference-polish-page .rp-hero h1 span,
 .rp-hero h1 span {
   display: inline;
@@ -14066,7 +14066,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.6.2 — Interactive hover, section reveal, random project picker ===== */
+/* ===== v3.6.3 — Interactive hover, section reveal, random project picker ===== */
 .motion-enabled main.page-reveal {
   opacity: 0;
   transform: translate3d(0, 10px, 0);
@@ -14336,7 +14336,7 @@ html[data-theme="blue"] .admin-status-chip {
 }
 
 
-/* ===== v3.6.2 — Aspect-ratio project picker + uploaded grayscale logos ===== */
+/* ===== v3.6.3 — Aspect-ratio project picker + uploaded grayscale logos ===== */
 .reference-polish-page .rp-random-project-card {
   grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr);
   gap: clamp(22px, 3vw, 40px);
@@ -14410,4 +14410,173 @@ html[data-theme="blue"] .admin-status-chip {
   .rp-ecosystem-grid-eight a { grid-template-columns: 64px minmax(0,1fr) auto; }
   .rp-ecosystem-grid-eight a > img { width: 64px; height: 50px; }
   .reference-polish-page .rp-random-project-media { padding: 8px; }
+}
+
+
+/* ===== v3.6.3 — Animated stats, larger brand logos, and FAQ section ===== */
+.reference-polish-page .rp-stats-band {
+  margin: 34px auto 28px;
+  padding: clamp(34px,4vw,52px);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 85% 5%, rgba(55,128,255,.17), transparent 30%),
+    linear-gradient(145deg,#090d16,#121925);
+  box-shadow:0 26px 60px rgba(13,22,42,.18);
+  color:#fff;
+}
+.reference-polish-page .rp-stats-heading {
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 30px;
+}
+.reference-polish-page .rp-stats-kicker {
+  display:inline-flex;
+  margin:0 0 14px;
+  padding:8px 14px;
+  border:1px solid rgba(76,151,255,.45);
+  border-radius:999px;
+  color:#78b2ff;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.68rem;
+  font-weight:900;
+}
+.reference-polish-page .rp-stats-heading h2 {
+  margin:0;
+  color:#fff;
+  font-size:clamp(2.2rem,4.8vw,4.7rem);
+  line-height:1;
+  letter-spacing:-.065em;
+}
+.reference-polish-page .rp-stats-heading h2 span { color:#4d9aff; }
+.reference-polish-page .rp-stats-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.reference-polish-page .rp-stats-grid article {
+  min-width:0;
+  padding:28px 22px 24px;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));
+  text-align:center;
+  transition:transform .25s ease,border-color .25s ease,background .25s ease;
+}
+.reference-polish-page .rp-stats-grid article:hover {
+  transform:translateY(-5px);
+  border-color:rgba(72,153,255,.62);
+  background:linear-gradient(180deg,rgba(52,124,255,.10),rgba(255,255,255,.025));
+}
+.reference-polish-page .rp-stats-grid strong {
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  color:#4d9aff;
+  font-size:clamp(2.25rem,4vw,4rem);
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+.reference-polish-page .rp-stats-grid sup { margin:4px 0 0 2px; font-size:.48em; }
+.reference-polish-page .rp-stats-grid b { display:block; margin-top:18px; color:#fff; font-size:.95rem; line-height:1.35; }
+.reference-polish-page .rp-stats-grid p { margin:9px auto 0; max-width:28ch; color:#9da8bb; font-size:.82rem; line-height:1.55; }
+
+.reference-polish-page .rp-trust { margin-top:28px; padding:30px 28px 26px; }
+.reference-polish-page .rp-brand-row {
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:18px;
+  margin-top:22px;
+}
+.reference-polish-page .rp-brand-row a {
+  min-height:108px;
+  padding:10px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,.62);
+  border:1px solid transparent;
+}
+[data-theme="blue"] .reference-polish-page .rp-brand-row a { background:rgba(255,255,255,.92); }
+.reference-polish-page .rp-brand-row a:hover {
+  border-color:rgba(22,76,245,.18);
+  box-shadow:0 14px 30px rgba(25,47,103,.10);
+}
+.reference-polish-page .rp-brand-row a img {
+  width:100%;
+  height:82px;
+  max-width:190px;
+  object-fit:contain;
+  opacity:.67;
+  filter:grayscale(1) contrast(1.08);
+  transition:opacity .22s ease,transform .22s ease,filter .22s ease;
+}
+.reference-polish-page .rp-brand-row a:hover img {
+  opacity:.96;
+  filter:grayscale(1) contrast(1.25);
+  transform:translateY(-3px) scale(1.035);
+}
+
+.reference-polish-page .rp-faq-list {
+  max-width:920px;
+  margin:0 auto;
+  display:grid;
+  gap:12px;
+}
+.reference-polish-page .rp-faq-item {
+  border:1px solid rgba(91,117,181,.16);
+  border-radius:18px;
+  background:linear-gradient(180deg,#fff,#f8faff);
+  overflow:hidden;
+  transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease;
+}
+[data-theme="blue"] .reference-polish-page .rp-faq-item { background:rgba(255,255,255,.04); }
+.reference-polish-page .rp-faq-item:hover {
+  transform:translateY(-2px);
+  border-color:rgba(22,76,245,.25);
+  box-shadow:0 15px 32px rgba(24,42,91,.07);
+}
+.reference-polish-page .rp-faq-item summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:21px 22px;
+  color:var(--text);
+  cursor:pointer;
+  list-style:none;
+  font-weight:850;
+}
+.reference-polish-page .rp-faq-item summary::-webkit-details-marker { display:none; }
+.reference-polish-page .rp-faq-item summary b {
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  border-radius:50%;
+  color:#164cf5;
+  background:rgba(22,76,245,.08);
+  font-size:1.25rem;
+  transition:transform .2s ease,background .2s ease,color .2s ease;
+}
+.reference-polish-page .rp-faq-item[open] summary b { transform:rotate(45deg); color:#fff; background:#164cf5; }
+.reference-polish-page .rp-faq-item p {
+  margin:0;
+  padding:0 22px 22px;
+  max-width:78ch;
+  color:var(--muted-text);
+  line-height:1.72;
+}
+
+@media(max-width:1120px) {
+  .reference-polish-page .rp-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .reference-polish-page .rp-brand-row { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:680px) {
+  .reference-polish-page .rp-stats-band { margin-top:24px; padding:30px 18px; border-radius:24px; }
+  .reference-polish-page .rp-stats-grid { grid-template-columns:1fr; }
+  .reference-polish-page .rp-stats-grid article { padding:24px 18px; }
+  .reference-polish-page .rp-brand-row { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .reference-polish-page .rp-brand-row a { min-height:92px; padding:8px; }
+  .reference-polish-page .rp-brand-row a img { height:68px; }
+  .reference-polish-page .rp-faq-item summary { padding:18px; }
+  .reference-polish-page .rp-faq-item p { padding:0 18px 19px; }
 }
