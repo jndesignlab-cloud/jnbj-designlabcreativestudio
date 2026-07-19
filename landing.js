@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.6.0";
+const SITE_VERSION = "3.6.1";
 
 const yearElement = document.querySelector("#year");
 const versionElement = document.querySelector("#siteVersion");
@@ -108,3 +108,137 @@ homeServiceTabs.forEach((tab) => {
     selectHomeService(next.dataset.homeService);
   });
 });
+
+
+// Random project picker powered by the live Projects sheet.
+const randomProjectCard = document.querySelector("#randomProjectCard");
+const randomProjectShuffle = document.querySelector("#randomProjectShuffle");
+let randomProjectArchive = [];
+let currentRandomProjectKey = "";
+
+const RANDOM_PROJECT_FALLBACK = [
+  {
+    id: "pirc-evaluation-form",
+    title: "PIRC Evaluation Form and Automated Certificate System",
+    category: "Web / Digital System",
+    description: "A custom event evaluation workflow with response validation, Google Sheets storage, certificate generation, and automated email delivery.",
+    image: "assets/insights-osc-system-wide.webp",
+    skills: "Google Apps Script - Google Sheets - Workflow Automation"
+  },
+  {
+    id: "cozisleep-storefront",
+    title: "CoziSleep E-Commerce Storefront and Product Visuals",
+    category: "Client Work",
+    description: "A multi-platform e-commerce visual system covering storefront banners, product listing graphics, and feature-focused marketing assets.",
+    image: "assets/insights-daily-grind-wide.webp",
+    skills: "E-Commerce Design - Product Marketing - Visual Branding"
+  },
+  {
+    id: "pu-fest-2025",
+    title: "PU Fest 2025 — Gloc-9 Event Visuals",
+    category: "University Campaign",
+    description: "A complete concert-style event visual system covering campaign posters, IDs, merchandise, and supporting event materials.",
+    image: "assets/insights-60-days-wide.webp",
+    skills: "Event Visuals - Campaign Design - Print Collateral"
+  }
+];
+
+function escapeProjectText(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function randomProjectKey(project = {}) {
+  return String(project.id || project.title || "").trim().toLowerCase();
+}
+
+function randomProjectImage(project = {}) {
+  if (project.image) return project.image;
+  if (Array.isArray(project.galleryImages) && project.galleryImages.length) return project.galleryImages[0];
+  if (typeof project.galleryImages === "string" && project.galleryImages.trim()) {
+    return project.galleryImages.split(/[\n,|]/).map((item) => item.trim()).find(Boolean) || "profile-photo.webp";
+  }
+  return "profile-photo.webp";
+}
+
+function randomProjectSkills(value) {
+  if (Array.isArray(value)) return value.filter(Boolean).slice(0, 4);
+  return String(value || "")
+    .split(/\s+-\s+|[,|\n]/)
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, 4);
+}
+
+function chooseRandomArchiveProject(excludeKey = "") {
+  const available = randomProjectArchive.filter((project) => randomProjectKey(project) !== excludeKey);
+  const pool = available.length ? available : randomProjectArchive;
+  return pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
+}
+
+function renderRandomArchiveProject(project) {
+  if (!randomProjectCard) return;
+  if (!project) {
+    randomProjectCard.innerHTML = '<div class="rp-random-project-loading">No project is available yet.</div>';
+    return;
+  }
+
+  currentRandomProjectKey = randomProjectKey(project);
+  const projectId = project.id || String(project.title || "project").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const projectUrl = `project.html?id=${encodeURIComponent(projectId)}`;
+  const skills = randomProjectSkills(project.skills);
+  const image = randomProjectImage(project);
+  const description = project.description || project.shortDescription || "A selected project from the DesignLab Creative Studio archive.";
+
+  randomProjectCard.innerHTML = `
+    <a class="rp-random-project-media" href="${projectUrl}" aria-label="View ${escapeProjectText(project.title)}">
+      <img src="${escapeProjectText(image)}" alt="${escapeProjectText(project.title)}" loading="lazy" decoding="async">
+      <span>Random archive pick</span>
+    </a>
+    <div class="rp-random-project-copy">
+      <div class="rp-random-project-meta"><span>${escapeProjectText(project.category || "Selected project")}</span><span>DesignLab archive</span></div>
+      <h3>${escapeProjectText(project.title)}</h3>
+      <p>${escapeProjectText(description)}</p>
+      ${skills.length ? `<div class="rp-random-project-skills">${skills.map((skill) => `<span>${escapeProjectText(skill)}</span>`).join("")}</div>` : ""}
+      <div class="rp-random-project-actions">
+        <a class="rp-btn rp-btn-primary" href="${projectUrl}">View project <span aria-hidden="true">→</span></a>
+        <button class="rp-text-action" type="button" data-random-project-next>Show another <span aria-hidden="true">↻</span></button>
+      </div>
+    </div>`;
+
+  randomProjectCard.querySelector("[data-random-project-next]")?.addEventListener("click", showAnotherRandomProject);
+}
+
+function showAnotherRandomProject() {
+  const next = chooseRandomArchiveProject(currentRandomProjectKey);
+  renderRandomArchiveProject(next);
+  if (randomProjectCard && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    randomProjectCard.animate(
+      [{ opacity: .2, transform: "translateY(10px)" }, { opacity: 1, transform: "translateY(0)" }],
+      { duration: 360, easing: "cubic-bezier(.2,.75,.25,1)" }
+    );
+  }
+}
+
+async function loadRandomArchiveProject() {
+  randomProjectArchive = RANDOM_PROJECT_FALLBACK;
+  if (typeof API_URL !== "undefined" && API_URL && !API_URL.includes("PASTE_YOUR")) {
+    try {
+      const response = await fetch(`${API_URL}?action=listProjects&t=${Date.now()}`, { cache: "no-store" });
+      const data = await response.json();
+      if (data.success && Array.isArray(data.projects) && data.projects.some((project) => project && project.title)) {
+        randomProjectArchive = data.projects.filter((project) => project && project.title);
+      }
+    } catch (error) {
+      console.error("Random project picker error:", error);
+    }
+  }
+  renderRandomArchiveProject(chooseRandomArchiveProject());
+}
+
+randomProjectShuffle?.addEventListener("click", showAnotherRandomProject);
+loadRandomArchiveProject();

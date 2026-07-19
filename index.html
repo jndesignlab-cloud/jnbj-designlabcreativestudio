@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.6.0" rel="stylesheet"/>
+<link href="style.css?v=3.6.1" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -101,11 +101,18 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="rp-work-title" class="rp-section rp-work reveal-up"><div class="rp-section-head rp-section-head-compact"><div><p class="rp-eyebrow">Selected capabilities</p><h2 id="rp-work-title">Creative support across three focused areas.</h2></div><a class="rp-inline-link" href="projects.html">Browse all projects →</a></div><div class="rp-capability-grid">
-<a href="projects.html?category=University"><span class="rp-capability-mark">UC</span><div><small>University communications</small><strong>Campaigns, events, programs, and publications.</strong></div><b>→</b></a>
-<a href="projects.html?category=Client%20Work"><span class="rp-capability-mark">CB</span><div><small>Client and brand work</small><strong>Social campaigns, storefronts, and product visuals.</strong></div><b>→</b></a>
-<a href="projects.html?category=Web%20%2F%20Digital"><span class="rp-capability-mark">WD</span><div><small>Web and digital systems</small><strong>Landing pages, trackers, forms, and dashboards.</strong></div><b>→</b></a>
-</div></section>
+<section aria-labelledby="random-project-title" class="rp-section rp-random-project reveal-up">
+<div class="rp-section-head rp-section-head-compact rp-random-project-head">
+<div><p class="rp-eyebrow">Random project from the archive</p><h2 id="random-project-title">Discover a project you might have missed.</h2></div>
+<div class="rp-random-project-controls" aria-label="Project discovery controls">
+<button class="rp-icon-action" id="randomProjectShuffle" type="button" aria-label="Show another random project" title="Show another project"><span aria-hidden="true">↻</span></button>
+<a class="rp-icon-action" href="projects.html" aria-label="Browse all projects" title="Browse all projects"><span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<article class="rp-random-project-card" id="randomProjectCard" aria-live="polite">
+<div class="rp-random-project-loading">Loading a project from the DesignLab archive…</div>
+</article>
+</section>
 <section aria-labelledby="rp-process-title" class="rp-section rp-process reveal-up">
 <div class="rp-section-head centered"><p class="rp-eyebrow">A practical creative process</p><h2 id="rp-process-title">From brief to ready-to-use output.</h2><p>A clear workflow keeps revisions focused and the final delivery easier to manage.</p></div>
 <div class="rp-process-line">
@@ -146,10 +153,10 @@
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.6.0"></script>
-<script src="theme.js?v=3.6.0"></script>
-<script src="landing.js?v=3.6.0"></script>
-<script src="navigation.js?v=3.6.0"></script>
-<script src="reveal.js?v=3.6.0"></script>
+<script src="config.js?v=3.6.1"></script>
+<script src="theme.js?v=3.6.1"></script>
+<script src="landing.js?v=3.6.1"></script>
+<script src="navigation.js?v=3.6.1"></script>
+<script src="reveal.js?v=3.6.1"></script>
 </body>
 </html>
