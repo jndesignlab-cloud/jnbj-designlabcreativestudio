@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.5.8";
+const SITE_VERSION = "3.5.9";
 
 const fallbackProjects = [
   {
@@ -40,7 +40,8 @@ const clearSearchButton = document.querySelector("#clearProjectSearch");
 const resultCount = document.querySelector("#projectResultCount");
 let allProjects = [];
 let activeFilter = "All";
-let searchQuery = "";
+const initialSearchParams = new URLSearchParams(window.location.search);
+let searchQuery = initialSearchParams.get("search") || "";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 

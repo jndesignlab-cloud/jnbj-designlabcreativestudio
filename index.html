@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.5.8" rel="stylesheet"/>
+<link href="style.css?v=3.5.9" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -69,25 +69,30 @@
 <div class="rp-brand-row"><a href="projects.html?category=University"><img alt="Temporary grayscale logo for Panpacific University" src="assets/client-panpacific.webp"/><span>Panpacific University</span></a><a href="projects.html?category=Client%20Work"><img alt="Temporary grayscale logo for CoziSleep" src="assets/client-cozisleep.webp"/><span>CoziSleep</span></a><a href="projects.html?category=Client%20Work"><img alt="Temporary grayscale logo for SoleProtect" src="assets/client-soleprotect.webp"/><span>SoleProtect</span></a><a href="projects.html?category=Web%20%2F%20Digital"><img alt="Temporary grayscale logo for Planora" src="assets/client-planora.webp"/><span>Planora</span></a><a href="projects.html?category=University"><img alt="Temporary grayscale logo for PACE" src="assets/client-pace.webp"/><span>PACE</span></a><a href="projects.html?category=Client%20Work"><img alt="Temporary grayscale logo for Overdrive PH" src="assets/client-overdrive.webp"/><span>Overdrive PH</span></a></div>
 </div>
 </section>
-<section aria-labelledby="rp-services-title" class="rp-section rp-services reveal-up">
+<section aria-labelledby="rp-services-title" class="rp-section rp-services rp-services-interactive reveal-up">
 <div class="rp-section-head centered">
 <p class="rp-eyebrow">Creative support, structured clearly</p>
-<h2 id="rp-services-title">Built for the way campaigns actually move.</h2>
-<p>From one urgent pubmat to a full campaign system, every service is designed to keep the work clear, consistent, and ready to use.</p>
+<h2 id="rp-services-title">Choose the kind of support your project needs.</h2>
+<p>Select a service category to preview its best use, common deliverables, and next step.</p>
 </div>
-<div class="rp-service-grid">
-<a class="rp-service-card" href="services.html#design-packages">
-<div class="rp-service-icon"><span></span><span></span><span></span></div>
-<small>01 · Ongoing support</small><h3>Design Packages</h3><p>Recurring social content, campaign visuals, and planned creative output.</p><b>Explore packages →</b>
-</a>
-<a class="rp-service-card" href="services.html#individual-services">
-<div class="rp-service-icon icon-layout"><span></span><span></span><span></span><span></span></div>
-<small>02 · Flexible requests</small><h3>Individual Services</h3><p>Posters, brochures, presentations, branding materials, and publication layouts.</p><b>View services →</b>
-</a>
-<a class="rp-service-card" href="services.html#website-packages">
-<div class="rp-service-icon icon-system"><span></span><span></span><span></span></div>
-<small>03 · Digital builds</small><h3>Website / System Packages</h3><p>Landing pages, portfolio sites, trackers, forms, and lightweight dashboards.</p><b>See digital packages →</b>
-</a>
+<div class="rp-service-explorer" data-service-explorer>
+<div class="rp-service-tabs" role="tablist" aria-label="DesignLab service categories">
+<button class="rp-service-tab active" type="button" role="tab" aria-selected="true" aria-controls="home-service-preview" data-home-service="packages"><span>01</span><strong>Design Packages</strong><small>Ongoing content support</small></button>
+<button class="rp-service-tab" type="button" role="tab" aria-selected="false" aria-controls="home-service-preview" data-home-service="individual"><span>02</span><strong>Individual Services</strong><small>Focused one-off requests</small></button>
+<button class="rp-service-tab" type="button" role="tab" aria-selected="false" aria-controls="home-service-preview" data-home-service="web"><span>03</span><strong>Website / Systems</strong><small>Practical digital builds</small></button>
+</div>
+<div class="rp-service-preview" id="home-service-preview" role="tabpanel" aria-live="polite">
+<div class="rp-service-preview-copy">
+<p class="rp-eyebrow" id="homeServiceEyebrow">Ongoing creative support</p>
+<h3 id="homeServiceTitle">Design Packages</h3>
+<p id="homeServiceDescription">Planned social media and campaign visuals for brands that need consistent creative output.</p>
+<ul id="homeServiceList"><li>Static social media graphics</li><li>Carousel posts and campaign sets</li><li>Organized revisions and delivery</li></ul>
+</div>
+<div class="rp-service-preview-action">
+<span id="homeServiceFit">Best for recurring monthly or campaign-based content.</span>
+<a class="rp-btn rp-btn-primary" id="homeServiceLink" href="services.html#design-packages">Explore design packages <b aria-hidden="true">→</b></a>
+</div>
+</div>
 </div>
 </section>
 <section aria-labelledby="rp-work-title" class="rp-section rp-work reveal-up"><div class="rp-section-head rp-section-head-compact"><div><p class="rp-eyebrow">Selected capabilities</p><h2 id="rp-work-title">Creative support across three focused areas.</h2></div><a class="rp-inline-link" href="projects.html">Browse all projects →</a></div><div class="rp-capability-grid">
@@ -113,16 +118,19 @@
 <div class="rp-founder-copy"><p class="rp-eyebrow">Behind DesignLab</p><h2 id="rp-founder-title">Created and directed by Jann Jaravata.</h2><p>Graphic designer, social media manager, and creative developer working across campaigns, university communications, publication design, and practical web systems.</p><div class="rp-founder-stats"><span><strong>8+ years</strong>Creative experience</span><span><strong>Adobe ACP</strong>Certified professional</span><span><strong>Remote ready</strong>Organized online workflow</span></div><a class="rp-inline-link" href="creator.html">Meet the creator →</a></div>
 </section>
 <section aria-labelledby="rp-ecosystem-title" class="rp-section rp-ecosystem reveal-up">
-<div class="rp-section-head centered"><p class="rp-eyebrow">DesignLab ecosystem</p><h2 id="rp-ecosystem-title">More pages, products, and projects being built.</h2></div>
-<div class="rp-ecosystem-grid">
-<a href="https://www.facebook.com/DesignLabCreativeStudio" rel="noopener" target="_blank"><span>DL</span><div><strong>DesignLab Creative Studio</strong><small>Creative services and studio updates</small></div><b>↗</b></a>
-<a href="https://www.facebook.com/profile.php?id=61573673860829" rel="noopener" target="_blank"><span>DD</span><div><strong>DesignLab Downloads</strong><small>Templates and digital design products</small></div><b>↗</b></a>
-<a href="https://www.facebook.com/profile.php?id=61591691631074" rel="noopener" target="_blank"><span>OP</span><div><strong>Overdrive.PH</strong><small>Automotive content and visual direction</small></div><b>↗</b></a>
+<div class="rp-section-head centered"><p class="rp-eyebrow">Selected pages and brands handled</p><h2 id="rp-ecosystem-title">Creative work across institutions, products, and growing brands.</h2><p>Browse work connected to the pages and brands currently supported by DesignLab.</p></div>
+<div class="rp-ecosystem-grid rp-ecosystem-grid-six">
+<a href="projects.html?search=Panpacific%20University"><img src="assets/client-panpacific.webp" alt="Temporary grayscale logo for Panpacific University"/><div><strong>Panpacific University</strong><small>Institutional campaigns and university communications</small></div><b>→</b></a>
+<a href="projects.html?search=CoziSleep"><img src="assets/client-cozisleep.webp" alt="Temporary grayscale logo for CoziSleep"/><div><strong>CoziSleep</strong><small>E-commerce visuals and product campaigns</small></div><b>→</b></a>
+<a href="projects.html?search=SoleProtect"><img src="assets/client-soleprotect.webp" alt="Temporary grayscale logo for SoleProtect"/><div><strong>SoleProtect</strong><small>Brand and promotional design support</small></div><b>→</b></a>
+<a href="projects.html?search=Planora"><img src="assets/client-planora.webp" alt="Temporary grayscale logo for Planora"/><div><strong>Planora</strong><small>Product branding and social media planning app</small></div><b>→</b></a>
+<a href="projects.html?search=PACE"><img src="assets/client-pace.webp" alt="Temporary grayscale logo for PACE"/><div><strong>PACE</strong><small>Program advertising and infosession materials</small></div><b>→</b></a>
+<a href="projects.html?search=Overdrive"><img src="assets/client-overdrive.webp" alt="Temporary grayscale logo for Overdrive PH"/><div><strong>Overdrive PH</strong><small>Automotive content and visual direction</small></div><b>→</b></a>
 </div>
 </section>
 <section class="rp-footer-cta reveal-up">
 <div class="rp-footer-cta-image"><img alt="Designer working on a visual layout at a desktop computer" decoding="async" loading="lazy" src="assets/insights-daily-grind-wide.webp"/></div>
-<div class="rp-footer-cta-copy"><p class="rp-eyebrow">Ready to move the idea forward?</p><h2>Let’s turn the brief into something clearer, stronger, and ready to publish.</h2></div>
+<div class="rp-footer-cta-copy rp-footer-cta-copy-inverse"><p class="rp-eyebrow">Ready to move the idea forward?</p><h2 style="color:#ffffff;-webkit-text-fill-color:#ffffff;">Let’s turn the brief into something clearer, stronger, and ready to publish.</h2></div>
 <div class="rp-footer-cta-actions"><a class="rp-btn rp-btn-primary" href="contact.html?source=landing-footer">Start a project <span>→</span></a><a class="rp-btn rp-btn-secondary" href="projects.html">View selected work <span>→</span></a></div>
 </section>
 </main>
@@ -132,10 +140,10 @@
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.5.8"></script>
-<script src="theme.js?v=3.5.8"></script>
-<script src="landing.js?v=3.5.8"></script>
-<script src="navigation.js?v=3.5.8"></script>
-<script src="reveal.js?v=3.5.8"></script>
+<script src="config.js?v=3.5.9"></script>
+<script src="theme.js?v=3.5.9"></script>
+<script src="landing.js?v=3.5.9"></script>
+<script src="navigation.js?v=3.5.9"></script>
+<script src="reveal.js?v=3.5.9"></script>
 </body>
 </html>
