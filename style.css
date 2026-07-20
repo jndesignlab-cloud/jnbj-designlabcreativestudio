@@ -16428,3 +16428,62 @@ html[data-theme="blue"] body.services-guided-page .guided-services-footer .foote
     align-items: flex-start;
   }
 }
+
+/* ===== v3.7.1 — Blue-forward gradients and alternating service icons ===== */
+body.services-guided-page {
+  /* Keep the signature blue-to-violet transition, but let blue dominate. */
+  --guided-gradient: linear-gradient(110deg, #1557ff 0%, #315ff4 58%, #6257e8 100%);
+  --guided-gradient-soft: linear-gradient(135deg, rgba(21,87,255,.11), rgba(98,87,232,.07));
+  --guided-shadow: 0 16px 34px rgba(39, 82, 214, .19);
+}
+
+/* Match the preferred headline treatment: vivid royal blue with a restrained violet finish. */
+body.services-guided-page .guided-services-hero-copy h1 span {
+  color: transparent !important;
+  background: linear-gradient(90deg, #1557ff 0%, #315ff4 68%, #6257e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reduce purple dominance on large gradient surfaces. */
+body.services-guided-page .guided-featured-package,
+body.services-guided-page .guided-final-cta,
+body.services-guided-page .guided-path-tab.active {
+  background: var(--guided-gradient) !important;
+}
+
+/* Alternating icon colors keep each item distinct and visible on gradient-heavy sections. */
+body.services-guided-page .guided-services-hero-visual article:nth-child(2n+1) > span,
+body.services-guided-page .guided-service-row:nth-child(3n+1) > span,
+body.services-guided-page .guided-web-step:nth-child(3n+1) > span {
+  background: linear-gradient(135deg, #0f55e8, #2877ff) !important;
+  box-shadow: 0 10px 22px rgba(27, 103, 239, .24);
+}
+body.services-guided-page .guided-services-hero-visual article:nth-child(2n) > span,
+body.services-guided-page .guided-service-row:nth-child(3n+2) > span,
+body.services-guided-page .guided-web-step:nth-child(3n+2) > span {
+  background: linear-gradient(135deg, #0877c9, #19a7e8) !important;
+  box-shadow: 0 10px 22px rgba(12, 137, 205, .22);
+}
+body.services-guided-page .guided-service-row:nth-child(3n) > span,
+body.services-guided-page .guided-web-step:nth-child(3n) > span {
+  background: linear-gradient(135deg, #2345b8, #4169e8) !important;
+  box-shadow: 0 10px 22px rgba(41, 73, 185, .22);
+}
+
+/* Active path number stays readable without blending into the panel gradient. */
+body.services-guided-page .guided-path-tab.active > span {
+  color: #174fd7 !important;
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 8px 20px rgba(18, 55, 154, .16);
+}
+
+/* Small labels lean blue instead of purple. */
+body.services-guided-page .guided-services-kicker,
+body.services-guided-page .guided-service-row small,
+body.services-guided-page .guided-supporting-packages small,
+body.services-guided-page .guided-web-step small,
+body.services-guided-page .guided-web-step > b {
+  color: #315ff4;
+}
