@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.6.4";
+const SITE_VERSION = "3.9.0";
 
 const yearNode = document.getElementById("year");
 const versionNode = document.getElementById("siteVersion");

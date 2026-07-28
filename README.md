@@ -1,3 +1,11 @@
+# DesignLab Portfolio Website v3.9.0
+
+Current release: homepage and creator-page simplification.
+
+- Removed Random Project, Studio Notes, and Behind DesignLab from the homepage.
+- Simplified Creator into a profile header, brief About, Active Pages, and personal-portfolio CTA.
+- Personal portfolio: `https://jannjaravata.madebydesignlab.com`
+
 # DesignLab Portfolio v3.4.0
 
 ## New in v3.4.0
