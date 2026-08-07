@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -8,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.8.0" rel="stylesheet"/>
+<link href="style.css?v=3.10.0" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -30,9 +31,8 @@
 <a class="signal-header-cta rp-header-cta" href="contact.html?source=site-header">Start a project</a>
 </div>
 </header>
-
 <main class="guided-services-main">
-<section class="guided-services-hero section-pad reveal-up" aria-labelledby="guided-services-title">
+<section aria-labelledby="guided-services-title" class="guided-services-hero section-pad reveal-up">
 <div class="guided-services-hero-copy">
 <p class="guided-services-kicker">Creative support, made easier</p>
 <h1 id="guided-services-title">Choose the kind of help you need. <span>DesignLab will guide the rest.</span></h1>
@@ -41,31 +41,29 @@
 <a class="guided-primary" href="#service-paths">Explore the service paths <span>↓</span></a>
 <a class="guided-secondary" href="contact.html?source=services-hero">Share your brief <span>↗</span></a>
 </div>
-<div class="guided-services-assurance" aria-label="Service assurances">
+<div aria-label="Service assurances" class="guided-services-assurance">
 <span>Clear scope</span><span>Transparent starting rates</span><span>Direct collaboration</span>
 </div>
 </div>
-<div class="guided-services-hero-visual" aria-label="Three simple paths to DesignLab services">
+<div aria-label="Three simple paths to DesignLab services" class="guided-services-hero-visual">
 <div class="guided-visual-line"></div>
 <article><span>01</span><small>ONGOING SUPPORT</small><strong>Content &amp; Campaigns</strong><p>For recurring posts, launches, enrollment drives, and coordinated visual systems.</p></article>
 <article><span>02</span><small>ONE CLEAR OUTPUT</small><strong>Brand &amp; Marketing</strong><p>For posters, carousels, logos, packaging, event visuals, and focused creative needs.</p></article>
 <article><span>03</span><small>DIGITAL PRESENCE</small><strong>Websites &amp; Systems</strong><p>For landing pages, inquiry experiences, trackers, and practical online tools.</p></article>
 </div>
 </section>
-
-<section class="guided-paths section-pad reveal-up" id="service-paths" aria-labelledby="guided-paths-title">
+<section aria-labelledby="guided-paths-title" class="guided-paths section-pad reveal-up" id="service-paths">
 <div class="guided-section-heading">
 <div><p class="guided-services-kicker">Start with one question</p><h2 id="guided-paths-title">What are you trying to accomplish?</h2></div>
 <p>Select one path. Only the relevant options will appear below.</p>
 </div>
-<div class="guided-path-tabs" role="tablist" aria-label="Service categories">
-<button class="guided-path-tab active" data-service-panel="design-packages" type="button" aria-expanded="true"><span>01</span><div><small>Post consistently or launch a campaign</small><strong>Content &amp; Campaign Design</strong></div><b>→</b></button>
-<button class="guided-path-tab" data-service-panel="individual-services" type="button" aria-expanded="false"><span>02</span><div><small>Create one polished deliverable</small><strong>Brand &amp; Marketing Materials</strong></div><b>→</b></button>
-<button class="guided-path-tab" data-service-panel="website-packages" type="button" aria-expanded="false"><span>03</span><div><small>Build an online presence or tool</small><strong>Websites &amp; Digital Systems</strong></div><b>→</b></button>
+<div aria-label="Service categories" class="guided-path-tabs" role="tablist">
+<button aria-expanded="true" class="guided-path-tab active" data-service-panel="design-packages" type="button"><span>01</span><div><small>Post consistently or launch a campaign</small><strong>Content &amp; Campaign Design</strong></div><b>→</b></button>
+<button aria-expanded="false" class="guided-path-tab" data-service-panel="individual-services" type="button"><span>02</span><div><small>Create one polished deliverable</small><strong>Brand &amp; Marketing Materials</strong></div><b>→</b></button>
+<button aria-expanded="false" class="guided-path-tab" data-service-panel="website-packages" type="button"><span>03</span><div><small>Build an online presence or tool</small><strong>Websites &amp; Digital Systems</strong></div><b>→</b></button>
 </div>
 </section>
-
-<section class="guided-service-panel active section-pad reveal-up" id="design-packages" data-service-section aria-labelledby="design-packages-title">
+<section aria-labelledby="design-packages-title" class="guided-service-panel active section-pad reveal-up" data-service-section="" id="design-packages">
 <div class="guided-panel-heading">
 <div><p class="guided-services-kicker">Content &amp; Campaign Design</p><h2 id="design-packages-title">Choose the level of creative support your campaign needs.</h2></div>
 <p>Start small, build a stronger content rhythm, or prepare a complete campaign system.</p>
@@ -75,7 +73,7 @@
 <div class="guided-package-top"><span>Recommended</span><small>BRAND GROWTH</small></div>
 <div class="guided-package-content"><div><h3>A balanced system for active brands.</h3><p>Best for businesses and pages that need several coordinated posts, stronger visual consistency, and enough variety to support real campaign activity.</p></div><div class="guided-package-price"><strong>₱7,500</strong><span>15 pubmats + 3 carousels</span></div></div>
 <ul><li>Stronger campaign direction</li><li>Priority revisions</li><li>Organized Google Drive delivery</li></ul>
-<div class="guided-package-actions"><button class="guided-detail-button service-choice-card" data-service-item="brand-growth" type="button">Explore Brand Growth <span>↗</span></button><a href="contact.html?source=services-guided&service=Brand%20Growth">Choose this package <span>→</span></a></div>
+<div class="guided-package-actions"><button class="guided-detail-button service-choice-card" data-service-item="brand-growth" type="button">Explore Brand Growth <span>↗</span></button><a href="contact.html?source=services-guided&amp;service=Brand%20Growth">Choose this package <span>→</span></a></div>
 </article>
 <div class="guided-supporting-packages">
 <article><div><small>STARTER SUPPORT</small><h3>Content Essentials</h3><p>A compact first batch for new pages, short promotions, or brands organizing their initial content.</p></div><div class="guided-mini-price"><strong>₱3,500</strong><span>8 pubmats + 1 carousel</span></div><button class="service-choice-card" data-service-item="content-essentials" type="button">View package details <span>↗</span></button></article>
@@ -83,8 +81,7 @@
 </div>
 </div>
 </section>
-
-<section class="guided-service-panel section-pad reveal-up" id="individual-services" data-service-section hidden aria-labelledby="individual-services-title">
+<section aria-labelledby="individual-services-title" class="guided-service-panel section-pad reveal-up" data-service-section="" hidden="" id="individual-services">
 <div class="guided-panel-heading">
 <div><p class="guided-services-kicker">Brand &amp; Marketing Materials</p><h2 id="individual-services-title">Pick one clear deliverable and build from there.</h2></div>
 <p>These services work well for focused requests, campaign add-ons, and standalone creative needs.</p>
@@ -102,8 +99,7 @@
 <div><button class="service-choice-card" data-service-item="story-adaptation" type="button">Story adaptation ↗</button><button class="service-choice-card" data-service-item="rush-delivery" type="button">Rush delivery ↗</button><button class="service-choice-card" data-service-item="custom-project" type="button">Custom combination ↗</button></div>
 </div>
 </section>
-
-<section class="guided-service-panel section-pad reveal-up" id="website-packages" data-service-section hidden aria-labelledby="website-packages-title">
+<section aria-labelledby="website-packages-title" class="guided-service-panel section-pad reveal-up" data-service-section="" hidden="" id="website-packages">
 <div class="guided-panel-heading">
 <div><p class="guided-services-kicker">Websites &amp; Digital Systems</p><h2 id="website-packages-title">Choose the simplest digital build that solves the real need.</h2></div>
 <p>All website options are responsive and prepared for practical deployment. More complex systems are scoped separately.</p>
@@ -114,17 +110,14 @@
 <button class="guided-web-step service-choice-card" data-service-item="premium-landing-system" type="button"><span>03</span><div><small>COMPLETE SYSTEM · ₱25,000</small><h3>Premium Landing System</h3><p>A more complete lead journey with up to ten sections, advanced forms, tracking, and support.</p><ul><li>Conversion-focused structure</li><li>Advanced inquiry workflow</li><li>Thirty days minor support</li></ul></div><b>Explore ↗</b></button>
 </div>
 </section>
-
-
 <section class="guided-final-cta section-pad reveal-up">
 <div><p class="guided-services-kicker">Ready when you are</p><h2>Tell DesignLab what needs to be created.</h2><p>The right service can be confirmed after the brief is reviewed.</p></div>
 <a href="contact.html?source=services-final">Start a project <span>↗</span></a>
 </section>
 </main>
-
-<div aria-hidden="true" class="service-modal" id="serviceModal"><div class="service-modal-backdrop" data-close-service-modal></div><section aria-label="Selected service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1"><button aria-label="Close service details" class="service-modal-close" data-close-service-modal type="button">×</button><div class="service-modal-content" id="serviceModalContent"></div></section></div>
+<div aria-hidden="true" class="service-modal" id="serviceModal"><div class="service-modal-backdrop" data-close-service-modal=""></div><section aria-label="Selected service details" aria-modal="true" class="service-modal-dialog" role="dialog" tabindex="-1"><button aria-label="Close service details" class="service-modal-close" data-close-service-modal="" type="button">×</button><div class="service-modal-content" id="serviceModalContent"></div></section></div>
 <div aria-label="Portfolio appearance" class="theme-dock"><div aria-label="Choose website theme" class="theme-switcher" role="group"><button aria-label="Use Blue Mode" data-theme-choice="blue" title="Blue Mode" type="button"><span class="theme-swatch theme-swatch-blue"></span><span>Blue</span></button><button aria-label="Use Light Mode" data-theme-choice="light" title="Light Mode" type="button"><span class="theme-swatch theme-swatch-light"></span><span>Light</span></button></div></div>
 <footer class="footer compact-footer unified-footer editorial-footer guided-services-footer"><div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div><div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div></footer>
-<script src="config.js?v=3.8.0"></script><script src="theme.js?v=3.8.0"></script><script src="services.js?v=3.8.0"></script><script src="navigation.js?v=3.8.0"></script><script src="reveal.js?v=3.8.0"></script>
+<script src="config.js?v=3.10.0"></script><script src="theme.js?v=3.10.0"></script><script src="services.js?v=3.10.0"></script><script src="navigation.js?v=3.10.0"></script><script src="reveal.js?v=3.10.0"></script>
 </body>
 </html>

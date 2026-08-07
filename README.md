@@ -1,3 +1,11 @@
+# DesignLab Portfolio Website v3.10.0
+
+Current release: Downloads Resource Library.
+
+- First live free resource: DesignLab Financial Planner (Google Sheets)
+- Flat resource grid, no blob/orbit hero
+- Guided copy/download modal and resource-use reminders
+
 # DesignLab Portfolio Website v3.9.0
 
 Current release: homepage and creator-page simplification.
