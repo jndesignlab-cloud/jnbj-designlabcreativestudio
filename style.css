@@ -17309,3 +17309,414 @@ html[data-theme="blue"] .resume-flat-preview {
     transition: none;
   }
 }
+
+
+/* =========================================================
+   v3.11.0 — Compact Downloads Search Library
+   ========================================================= */
+
+.downloads-compact-page {
+  background: var(--theme-bg);
+}
+
+.downloads-compact-main {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.downloads-compact-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  align-items: end;
+  gap: 36px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.downloads-compact-head h1 {
+  margin: 0;
+  color: var(--theme-text);
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: .95;
+  letter-spacing: -.065em;
+}
+
+.downloads-kicker {
+  margin: 0 0 12px;
+  color: #315ff4;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.downloads-search {
+  min-height: 48px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--theme-line);
+  border-radius: 10px;
+  background: var(--theme-surface);
+}
+
+.downloads-search:focus-within {
+  border-color: #315ff4;
+  box-shadow: 0 0 0 3px rgba(49, 95, 244, .09);
+}
+
+.downloads-search > span {
+  width: 18px;
+  height: 18px;
+  color: var(--theme-muted);
+}
+
+.downloads-search svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.downloads-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--theme-text);
+  background: transparent;
+  font: inherit;
+  font-size: .82rem;
+}
+
+.downloads-search input::placeholder {
+  color: var(--theme-muted);
+}
+
+.downloads-compact-library {
+  padding-top: 30px;
+}
+
+.downloads-compact-meta {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.downloads-compact-meta h2 {
+  margin: 0;
+  color: var(--theme-text);
+  font-size: 1rem;
+  letter-spacing: -.02em;
+}
+
+.downloads-compact-meta span {
+  color: var(--theme-muted);
+  font-size: .66rem;
+}
+
+.downloads-file-grid.compact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.compact-download-card {
+  border-radius: 12px;
+}
+
+.compact-file-visual {
+  height: 190px;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--theme-line);
+  background: #eef3ff;
+}
+
+.compact-file-visual-green {
+  background: #eef8f1;
+}
+
+.compact-file-visual-blue {
+  background: #eef4ff;
+}
+
+.compact-file-visual-violet {
+  background: #f3f0ff;
+}
+
+html[data-theme="blue"] .compact-file-visual-green {
+  background: #0f2d28;
+}
+
+html[data-theme="blue"] .compact-file-visual-blue {
+  background: #10295a;
+}
+
+html[data-theme="blue"] .compact-file-visual-violet {
+  background: #211d49;
+}
+
+.compact-sheet-ui {
+  width: min(100%, 240px);
+  overflow: hidden;
+  border: 1px solid rgba(30, 52, 86, .12);
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(25, 46, 88, .11);
+}
+
+.compact-sheet-bar {
+  height: 32px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #e7ebf1;
+}
+
+.compact-sheet-bar span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d0d7e2;
+}
+
+.compact-sheet-bar b {
+  margin-left: auto;
+  color: #60708b;
+  font-size: .44rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.compact-sheet-content {
+  min-height: 105px;
+  display: grid;
+  grid-template-columns: 55px 1fr;
+}
+
+.compact-sheet-side {
+  padding: 12px 8px;
+  border-right: 1px solid #e7ebf1;
+  background: #f6f8fb;
+}
+
+.compact-sheet-side i {
+  height: 8px;
+  display: block;
+  margin-bottom: 7px;
+  border-radius: 2px;
+  background: #dfe5ee;
+}
+
+.compact-sheet-main {
+  padding: 14px;
+}
+
+.compact-sheet-main strong {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  color: #fff;
+  background: #315ff4;
+  font-size: .7rem;
+}
+
+.compact-file-visual-green .compact-sheet-main strong {
+  background: #168447;
+}
+
+.compact-file-visual-violet .compact-sheet-main strong {
+  background: #6f55e8;
+}
+
+.compact-sheet-main div {
+  height: 7px;
+  margin-top: 7px;
+  border-radius: 2px;
+  background: #e7ebf1;
+}
+
+.compact-sheet-main div:nth-of-type(2) {
+  width: 82%;
+}
+
+.compact-sheet-main div:nth-of-type(3) {
+  width: 64%;
+}
+
+.compact-download-body {
+  padding: 18px;
+}
+
+.compact-download-body .download-file-topline {
+  margin-bottom: 12px;
+}
+
+.compact-download-body h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.12;
+}
+
+.compact-download-body p {
+  min-height: 58px;
+  font-size: .73rem;
+  line-height: 1.55;
+}
+
+.compact-download-body .download-file-actions {
+  margin-top: 16px;
+}
+
+.download-empty-state {
+  min-height: 180px;
+  place-items: center;
+  align-content: center;
+  gap: 5px;
+  border-top: 1px solid var(--theme-line);
+  border-bottom: 1px solid var(--theme-line);
+  text-align: center;
+}
+
+.download-empty-state:not([hidden]) {
+  display: grid;
+}
+
+.download-empty-state strong {
+  color: var(--theme-text);
+  font-size: .85rem;
+}
+
+.download-empty-state span {
+  color: var(--theme-muted);
+  font-size: .72rem;
+}
+
+/* Compact modal additions */
+.compact-download-dialog {
+  width: min(600px, 100%);
+}
+
+.download-expect {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid var(--theme-line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--theme-bg) 78%, var(--theme-surface) 22%);
+}
+
+.download-modal-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #315ff4;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.download-expect h3 {
+  margin: 0 0 12px;
+  color: var(--theme-text);
+  font-size: 1rem;
+}
+
+.download-expect ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+  list-style: none;
+}
+
+.download-expect li {
+  position: relative;
+  padding-left: 17px;
+  color: var(--theme-muted);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.download-expect li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #168447;
+  font-weight: 800;
+}
+
+.download-copy-note {
+  margin-top: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--theme-line);
+  border-radius: 10px;
+}
+
+.download-copy-note p {
+  margin: 7px 0 0;
+  color: var(--theme-muted);
+  font-size: .72rem;
+  line-height: 1.55;
+}
+
+.download-license-note {
+  margin: 14px 0 0;
+  color: var(--theme-muted);
+  font-size: .62rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 880px) {
+  .downloads-compact-head {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .downloads-search {
+    max-width: 520px;
+  }
+
+  .downloads-file-grid.compact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .downloads-compact-main {
+    width: min(100% - 24px, 1180px);
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+
+  .downloads-compact-head {
+    padding-bottom: 24px;
+  }
+
+  .downloads-compact-head h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .downloads-file-grid.compact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compact-file-visual {
+    height: 180px;
+  }
+
+  .compact-download-body p {
+    min-height: 0;
+  }
+}

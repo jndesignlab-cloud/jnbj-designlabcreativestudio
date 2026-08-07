@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.10.0";
+const SITE_VERSION = "3.11.0";
 
 const fallbackProjects = [
   {
