@@ -17720,3 +17720,32 @@ html[data-theme="blue"] .compact-file-visual-violet {
     min-height: 0;
   }
 }
+
+
+/* v3.12.0 — one-stop services and localized pricing */
+.services-one-stop-page{background:var(--theme-bg)}
+.one-stop-services-main{width:min(1180px,calc(100% - 36px));margin:auto;padding:58px 0 76px}
+.one-stop-hero{padding:24px 0 42px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:44px;border-bottom:1px solid var(--theme-line)}
+.services-simple-kicker{margin:0 0 11px;color:#315ff4;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.one-stop-hero h1{max-width:920px;margin:0;color:var(--theme-text);font-size:clamp(3rem,6vw,6rem);line-height:.93;letter-spacing:-.07em}
+.one-stop-hero h1 span{color:#315ff4}.one-stop-hero p:not(.services-simple-kicker){max-width:720px;margin:20px 0 0;color:var(--theme-muted);font-size:.92rem;line-height:1.7}
+.one-stop-hero>a,.one-stop-final-cta>a{min-height:46px;padding:0 17px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;color:#fff;background:#315ff4;font-size:.72rem;font-weight:800;white-space:nowrap;text-decoration:none}
+.localized-pricing-bar{margin:18px 0 56px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid var(--theme-line);border-radius:10px;background:var(--theme-surface)}
+.localized-pricing-bar>div{min-width:0;display:grid;grid-template-columns:auto 1fr;column-gap:9px}.pricing-status-dot{grid-row:1/3;align-self:center;width:8px;height:8px;border-radius:50%;background:#315ff4}
+.localized-pricing-bar strong{color:var(--theme-text);font-size:.74rem}.localized-pricing-bar small{margin-top:2px;color:var(--theme-muted);font-size:.62rem}
+.localized-pricing-bar button{min-height:34px;padding:0 11px;border:1px solid var(--theme-line);border-radius:7px;color:var(--theme-text);background:transparent;font:inherit;font-size:.62rem;font-weight:800;cursor:pointer}
+.one-stop-category-list{display:grid;gap:62px}.one-stop-category-head{margin-bottom:20px;display:grid;grid-template-columns:1fr minmax(260px,410px);gap:36px;align-items:end}
+.one-stop-category-head h2{margin:0;color:var(--theme-text);font-size:clamp(2rem,3.5vw,3.3rem);line-height:1;letter-spacing:-.055em}.one-stop-category-head>p{margin:0;color:var(--theme-muted);font-size:.76rem;line-height:1.6}
+.one-stop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--theme-line);border-left:1px solid var(--theme-line)}
+.one-stop-card{position:relative;min-height:250px;padding:22px;display:flex;flex-direction:column;border:0;border-right:1px solid var(--theme-line);border-bottom:1px solid var(--theme-line);color:var(--theme-text);background:var(--theme-surface);text-align:left;font:inherit;cursor:pointer}
+.one-stop-card:hover,.one-stop-card:focus-visible{z-index:1;background:color-mix(in srgb,var(--theme-surface) 94%,#315ff4 6%);outline:2px solid #315ff4;outline-offset:-2px}.one-stop-card.featured{background:color-mix(in srgb,var(--theme-surface) 90%,#315ff4 10%)}
+.one-stop-card-top{min-height:22px;display:flex;align-items:center;justify-content:space-between;gap:12px}.one-stop-card-top>span:not(.one-stop-badge){color:var(--theme-muted);font-size:.55rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.one-stop-badge{padding:5px 7px;border-radius:999px;color:#315ff4;background:rgba(49,95,244,.1);font-size:.52rem;font-weight:800;text-transform:uppercase}
+.one-stop-card h3{margin:22px 0 9px;font-size:1.3rem;line-height:1.05;letter-spacing:-.04em}.one-stop-card>p{margin:0;color:var(--theme-muted);font-size:.74rem;line-height:1.58}
+.one-stop-card-bottom{margin-top:auto;padding-top:28px;display:flex;align-items:end;justify-content:space-between;gap:16px}.one-stop-card-bottom strong{display:block;color:var(--theme-text);font-size:.94rem;line-height:1.28}.one-stop-card-bottom span{display:block;margin-top:4px;color:var(--theme-muted);font-size:.58rem}.one-stop-card-bottom>b{color:#315ff4}
+.one-stop-pricing-note{margin-top:56px;padding:20px 0;display:grid;grid-template-columns:150px minmax(0,1fr);gap:32px;border-top:1px solid var(--theme-line);border-bottom:1px solid var(--theme-line)}.one-stop-pricing-note strong{color:var(--theme-text);font-size:.72rem}.one-stop-pricing-note p{max-width:820px;margin:0;color:var(--theme-muted);font-size:.72rem;line-height:1.65}
+.one-stop-final-cta{margin-top:62px;min-height:210px;padding:34px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:40px;border:1px solid var(--theme-line);border-radius:18px;background:linear-gradient(105deg,#1745c6 0%,#315ff4 64%,#6659e8 100%)}.one-stop-final-cta .services-simple-kicker{color:rgba(255,255,255,.7)}.one-stop-final-cta h2{max-width:760px;margin:0;color:#fff;font-size:clamp(2rem,4vw,3.6rem);line-height:1;letter-spacing:-.055em}.one-stop-final-cta>a{color:#13254d;background:#fff}
+.one-stop-service-modal .service-detail-intro,.one-stop-service-modal .service-detail-modal-grid p,.one-stop-service-modal .service-detail-modal-grid li,.one-stop-service-modal .service-detail-note p{color:color-mix(in srgb,var(--theme-text) 78%,var(--theme-muted) 22%)}.one-stop-service-modal .service-detail-price{display:grid;gap:3px}.one-stop-service-modal .service-detail-price strong{font-size:clamp(1.5rem,3vw,2.35rem)}.one-stop-service-modal .service-detail-price span{color:var(--theme-muted);font-size:.66rem}
+@media(max-width:940px){.one-stop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.one-stop-category-head{grid-template-columns:1fr;gap:10px}}
+@media(max-width:720px){.one-stop-services-main{width:min(100% - 24px,1180px);padding-top:38px}.one-stop-hero{grid-template-columns:1fr;gap:24px}.one-stop-hero h1{font-size:clamp(2.8rem,13vw,4.7rem)}.one-stop-hero>a{justify-self:start}.localized-pricing-bar{margin-bottom:44px;align-items:flex-start}.one-stop-grid{grid-template-columns:1fr}.one-stop-card{min-height:225px}.one-stop-pricing-note{grid-template-columns:1fr;gap:8px}.one-stop-final-cta{grid-template-columns:1fr;padding:28px 22px}.one-stop-final-cta>a{justify-self:start}}
+@media(max-width:480px){.localized-pricing-bar{flex-direction:column;gap:12px}}
