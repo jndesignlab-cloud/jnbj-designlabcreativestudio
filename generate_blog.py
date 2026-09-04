@@ -26,7 +26,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 BASE_URL = "https://madebydesignlab.com"
-VERSION = "3.5.0"
+VERSION = "3.13.0"
 REQUIRED_COLUMNS = [
     "title", "slug", "category", "excerpt", "meta_title", "meta_description",
     "published_date", "reading_time", "featured", "status", "cover_image", "body"
