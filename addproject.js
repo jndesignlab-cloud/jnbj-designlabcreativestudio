@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.13.0";
+const SITE_VERSION = "3.14.0";
 
 const loginPanel = document.querySelector("#supabaseAuthPanel");
 const editorPanel = document.querySelector("#projectEditorPanel");

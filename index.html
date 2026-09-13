@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=3.13.0" rel="stylesheet"/>
+<link href="style.css?v=3.14.0" rel="stylesheet"/><link href="premium.css?v=3.14.0" rel="stylesheet"/>
 <script>
 (function(){const validThemes=["blue","light"];let selectedTheme="light";try{const savedTheme=localStorage.getItem("designlab-theme");if(validThemes.includes(savedTheme))selectedTheme=savedTheme;}catch(error){}document.documentElement.dataset.theme=selectedTheme;})();
 </script>
@@ -88,7 +88,18 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="rp-services-title" class="rp-section rp-services rp-services-interactive reveal-up">
+<section aria-labelledby="premiumWorkTitle" class="premium-work-section reveal-up" id="selected-work">
+<div class="premium-work-head">
+<div>
+<p class="rp-eyebrow">Selected work</p>
+<h2 id="premiumWorkTitle">A closer look at recent creative work.</h2>
+</div>
+<a href="projects.html">View all projects ↗</a>
+</div>
+<div aria-live="polite" class="premium-work-grid" id="premiumWorkGrid">
+<div class="loading-card">Loading selected work...</div>
+</div>
+</section><section aria-labelledby="rp-services-title" class="rp-section rp-services rp-services-interactive reveal-up">
 <div class="rp-section-head centered rp-service-heading">
 <p class="rp-eyebrow">Creative support, structured clearly</p>
 <h2 id="rp-services-title">Choose the kind of support your project needs.</h2>
@@ -152,10 +163,10 @@
 <div class="footer-brand-block"><strong>DesignLab Creative Studio</strong><span>Independent creative practice of Jann Nathaniel Jaravata.</span></div>
 <div><p>© <span id="year"></span> Jann Nathaniel Jaravata</p><p class="footer-meta">Version <span id="siteVersion"></span> · Last edit: <span id="lastEdit"></span></p></div>
 </footer>
-<script src="config.js?v=3.13.0"></script>
-<script src="theme.js?v=3.13.0"></script>
-<script src="landing.js?v=3.13.0"></script>
-<script src="navigation.js?v=3.13.0"></script>
-<script src="reveal.js?v=3.13.0"></script>
+<script src="config.js?v=3.14.0"></script><script src="project-db.js?v=3.14.0"></script>
+<script src="theme.js?v=3.14.0"></script>
+<script src="landing.js?v=3.14.0"></script>
+<script src="navigation.js?v=3.14.0"></script>
+<script src="reveal.js?v=3.14.0"></script>
 </body>
 </html>

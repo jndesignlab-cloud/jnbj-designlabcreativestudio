@@ -1,6 +1,6 @@
 # DesignLab Creative Studio Website
 
-Current production package: **v3.13.0**
+Current production package: **v3.14.0**
 
 Website: https://madebydesignlab.com  
 Personal portfolio: https://jannjaravata.madebydesignlab.com
@@ -48,3 +48,12 @@ current site without updating its templates first.
 
 Files in `legacy/` and `docs/` are reference material only. The browser does not
 depend on them for the public site.
+
+
+## v3.14.0 visual architecture
+
+`premium.css` is now the active visual-system override layer. Future interface
+refinements should preferably be made there rather than appending more page-specific
+patches to the legacy `style.css`.
+
+The Supabase project migration from v3.13.0 is unchanged.

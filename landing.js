@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.13.0";
+const SITE_VERSION = "3.14.0";
 
 const yearElement = document.querySelector("#year");
 const versionElement = document.querySelector("#siteVersion");
@@ -157,3 +157,73 @@ document.querySelectorAll(".rp-faq-item").forEach((item) => {
     });
   });
 });
+
+
+// Premium Selected Work — existing Supabase data, no duplicate content source.
+const premiumWorkGrid = document.querySelector("#premiumWorkGrid");
+
+function escapeWorkHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+async function loadPremiumSelectedWork() {
+  if (!premiumWorkGrid || !window.DesignLabProjects) return;
+
+  try {
+    let projects = await window.DesignLabProjects.listPublished({
+      featured: true,
+      limit: 4
+    });
+
+    // Keep the homepage useful even if Featured has fewer than four records.
+    if (projects.length < 4) {
+      const allPublished = await window.DesignLabProjects.listPublished({ limit: 8 });
+      const existing = new Set(projects.map((project) => project.id));
+      for (const project of allPublished) {
+        if (!existing.has(project.id)) {
+          projects.push(project);
+          existing.add(project.id);
+        }
+        if (projects.length >= 4) break;
+      }
+    }
+
+    premiumWorkGrid.innerHTML = projects.slice(0, 4).map((project, index) => {
+      const media = project.image
+        ? `<img src="${escapeWorkHtml(project.image)}" alt="${escapeWorkHtml(project.title)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async">`
+        : `<span class="project-thumb-empty">No preview</span>`;
+
+      return `
+        <a class="premium-work-card" href="project.html?id=${encodeURIComponent(project.id)}">
+          <div class="premium-work-media">${media}</div>
+          <div class="premium-work-card-copy">
+            <div class="premium-work-meta">
+              <span>${escapeWorkHtml(project.category || "Project")}</span>
+              <span>${String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <h3>${escapeWorkHtml(project.title)}</h3>
+            <p>${escapeWorkHtml(project.description || "")}</p>
+          </div>
+        </a>`;
+    }).join("");
+
+    premiumWorkGrid.querySelectorAll(".premium-work-card").forEach((card, index) => {
+      card.classList.add("motion-stagger-child");
+      card.style.setProperty("--stagger-delay", `${index * 70}ms`);
+    });
+  } catch (error) {
+    console.error("Homepage selected work:", error);
+    premiumWorkGrid.innerHTML = `
+      <div class="project-empty-state">
+        <strong>Selected work is temporarily unavailable.</strong>
+        <a href="projects.html">Open the full project archive ↗</a>
+      </div>`;
+  }
+}
+
+loadPremiumSelectedWork();

@@ -8,11 +8,59 @@
     panel.setAttribute("aria-hidden", "true");
   }
 
-  function initHeader(header, index) {
-    if (header.querySelector(".mobile-menu-toggle")) return;
+  function markActiveNavigation(nav) {
+    if (!nav) return;
 
+    const currentPath = (window.location.pathname.split("/").pop() || "index.html")
+      .toLowerCase();
+
+    nav.querySelectorAll("a[href]").forEach((link) => {
+      const href = (link.getAttribute("href") || "").split("?")[0].split("#")[0];
+      const linkPath = (href.split("/").pop() || "index.html").toLowerCase();
+
+      const projectFamily =
+        ["projects.html", "project.html"].includes(currentPath) &&
+        linkPath === "projects.html";
+
+      const active = linkPath === currentPath || projectFamily;
+
+      if (active) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function initScrollState(header) {
+    let ticking = false;
+
+    function update() {
+      header.classList.toggle("is-scrolled", window.scrollY > 18);
+      ticking = false;
+    }
+
+    update();
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      },
+      { passive: true }
+    );
+  }
+
+  function initHeader(header, index) {
     const desktopNav = header.querySelector(".nav-links");
     if (!desktopNav) return;
+
+    markActiveNavigation(desktopNav);
+    initScrollState(header);
+
+    if (header.querySelector(".mobile-menu-toggle")) return;
 
     const desktopCta = header.querySelector(".signal-header-cta");
     const menuId = `mobileNavigation${index + 1}`;
@@ -23,7 +71,7 @@
     button.setAttribute("aria-label", "Open navigation menu");
     button.setAttribute("aria-controls", menuId);
     button.setAttribute("aria-expanded", "false");
-    button.innerHTML = '<span></span><span></span><span></span>';
+    button.innerHTML = "<span></span><span></span><span></span>";
 
     const panel = document.createElement("div");
     panel.className = "mobile-nav-panel";
@@ -50,6 +98,8 @@
       panel.appendChild(ctaClone);
     }
 
+    markActiveNavigation(mobileLinks);
+
     header.appendChild(button);
     header.appendChild(panel);
 
@@ -57,38 +107,50 @@
       const willOpen = !header.classList.contains("mobile-menu-open");
       header.classList.toggle("mobile-menu-open", willOpen);
       button.setAttribute("aria-expanded", String(willOpen));
-      button.setAttribute("aria-label", willOpen ? "Close navigation menu" : "Open navigation menu");
+      button.setAttribute(
+        "aria-label",
+        willOpen ? "Close navigation menu" : "Open navigation menu"
+      );
       panel.hidden = !willOpen;
       panel.setAttribute("aria-hidden", String(!willOpen));
     });
 
     document.addEventListener("click", (event) => {
-      if (!header.contains(event.target) && header.classList.contains("mobile-menu-open")) {
+      if (
+        !header.contains(event.target) &&
+        header.classList.contains("mobile-menu-open")
+      ) {
         closeMenu(header, button, panel);
       }
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && header.classList.contains("mobile-menu-open")) {
+      if (
+        event.key === "Escape" &&
+        header.classList.contains("mobile-menu-open")
+      ) {
         closeMenu(header, button, panel);
         button.focus();
       }
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > MOBILE_BREAKPOINT && header.classList.contains("mobile-menu-open")) {
+      if (
+        window.innerWidth > MOBILE_BREAKPOINT &&
+        header.classList.contains("mobile-menu-open")
+      ) {
         closeMenu(header, button, panel);
       }
     });
   }
 
-  function initMobileNavigation() {
+  function initNavigation() {
     document.querySelectorAll(".site-header").forEach(initHeader);
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMobileNavigation);
+    document.addEventListener("DOMContentLoaded", initNavigation, { once: true });
   } else {
-    initMobileNavigation();
+    initNavigation();
   }
 })();
