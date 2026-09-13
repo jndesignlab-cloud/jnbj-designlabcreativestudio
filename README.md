@@ -1,6 +1,6 @@
 # DesignLab Creative Studio Website
 
-Current production package: **v3.15.1**
+Current production package: **v3.15.2**
 
 Website: https://madebydesignlab.com  
 Personal portfolio: https://jannjaravata.madebydesignlab.com
@@ -52,7 +52,7 @@ depend on them for the public site.
 
 ## Editorial agency visual system
 
-`agency.css` is the active DesignLab visual layer for v3.15.1.
+`agency.css` is the active DesignLab visual layer for v3.15.2.
 
 The design direction borrows high-level editorial agency principles—large type,
 work-first presentation, simple service grouping, client proof, and confident
@@ -60,6 +60,11 @@ calls to action—while keeping original DesignLab branding, content, structure,
 and implementation.
 
 
-## v3.15.1 homepage note
+## v3.15.2 homepage note
 
 The homepage now follows a Bou-inspired structure: cinematic hero, selected work grid, brand wall, and project spotlight, while still using DesignLab content and Supabase-driven work data.
+
+
+## v3.15.2 note
+
+This patch specifically fixes the homepage hero layout so it is full-screen and no longer constrained by the shared main container width.

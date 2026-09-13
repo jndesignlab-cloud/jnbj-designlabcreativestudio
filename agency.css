@@ -1,6 +1,6 @@
 
 /* =========================================================
-   DesignLab v3.15.1 — Editorial Agency System
+   DesignLab v3.15.2 — Editorial Agency System
    Inspired by modern editorial agency structure, rebuilt for
    DesignLab's blue-forward identity and compact preferences.
    ========================================================= */
@@ -750,7 +750,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.15.1 — Bou-inspired homepage structure, DesignLab style
+   v3.15.2 — Bou-inspired homepage structure, DesignLab style
    ========================================================= */
 
 .bou-home-hero {
@@ -1092,4 +1092,140 @@ body.agency-system .editorial-form-shell {
   .bou-brand-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .bou-brand-wall-title { font-size: clamp(1.85rem, 7vw, 3rem); }
   .bou-spotlight-media img { min-height: 280px; }
+}
+
+
+/* =========================================================
+   v3.15.2 — Homepage fullscreen fix
+   ========================================================= */
+body.designlab-agency-home .rp-main {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+body.designlab-agency-home .site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  border-bottom-color: transparent;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.designlab-agency-home .site-header .rp-header-inner {
+  width: min(100%, 1360px);
+}
+
+body.designlab-agency-home .site-header:not(.is-scrolled) .rp-nav a {
+  color: rgba(255,255,255,.88);
+}
+
+body.designlab-agency-home .site-header:not(.is-scrolled) .signal-header-cta {
+  background: rgba(255,255,255,.96);
+  color: #10131d;
+  border-color: rgba(255,255,255,.25);
+}
+
+body.designlab-agency-home .site-header:not(.is-scrolled) .rp-brand img {
+  filter: brightness(0) invert(1);
+}
+
+body.designlab-agency-home .site-header.is-scrolled {
+  background: color-mix(in srgb, var(--agency-bg) 88%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+body.designlab-agency-home .site-header.is-scrolled .rp-brand img {
+  filter: none;
+}
+
+body.designlab-agency-home .bou-home-hero {
+  width: 100%;
+  min-height: 100svh;
+  padding: 132px 24px 72px;
+  margin: 0;
+}
+
+body.designlab-agency-home .bou-home-hero-bg {
+  background-position: center center;
+  transform: none;
+}
+
+body.designlab-agency-home .bou-home-hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(4, 10, 26, .14) 0%, rgba(4, 10, 26, .54) 100%),
+    linear-gradient(90deg, rgba(7, 24, 82, .58) 0%, rgba(8, 18, 38, .46) 100%);
+}
+
+body.designlab-agency-home .bou-home-hero-inner {
+  width: min(1080px, calc(100% - 36px));
+  max-width: 1080px;
+}
+
+body.designlab-agency-home .bou-home-kicker {
+  margin-bottom: 18px;
+  color: rgba(255,255,255,.82);
+}
+
+body.designlab-agency-home .bou-home-hero-inner h1 {
+  max-width: 980px;
+  margin-inline: auto;
+  color: #fff !important;
+  font-size: clamp(3rem, 6vw, 5.55rem) !important;
+  line-height: .97 !important;
+  letter-spacing: -.065em !important;
+  text-wrap: balance;
+  text-shadow: 0 10px 28px rgba(0,0,0,.18);
+}
+
+body.designlab-agency-home .bou-home-actions {
+  margin-top: 30px;
+}
+
+body.designlab-agency-home .bou-pill {
+  min-height: 46px;
+  padding: 0 20px;
+  background: rgba(255,255,255,.92);
+  border-color: rgba(255,255,255,.16);
+}
+
+body.designlab-agency-home .bou-pill-primary {
+  background: #fff;
+  color: #1748ee;
+}
+
+body.designlab-agency-home .bou-home-meta {
+  margin-top: 26px;
+}
+
+body.designlab-agency-home .bou-home-meta span {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.2);
+}
+
+@media (max-width: 900px) {
+  body.designlab-agency-home .site-header .rp-header-inner {
+    width: min(100%, calc(100% - 24px));
+  }
+}
+
+@media (max-width: 720px) {
+  body.designlab-agency-home .bou-home-hero {
+    min-height: 100svh;
+    padding: 118px 16px 54px;
+  }
+
+  body.designlab-agency-home .bou-home-hero-inner {
+    width: min(100%, 620px);
+  }
+
+  body.designlab-agency-home .bou-home-hero-inner h1 {
+    font-size: clamp(2.5rem, 10.2vw, 4.15rem) !important;
+  }
+
+  body.designlab-agency-home .site-header:not(.is-scrolled) .rp-brand img {
+    filter: brightness(0) invert(1);
+  }
 }
