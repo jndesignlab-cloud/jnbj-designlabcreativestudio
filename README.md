@@ -1,46 +1,52 @@
-# DesignLab Portfolio Website v3.10.0
+# DesignLab Creative Studio Website
 
-Current release: Downloads Resource Library.
+Current production package: **v3.12.1**
 
-- First live free resource: DesignLab Financial Planner (Google Sheets)
-- Flat resource grid, no blob/orbit hero
-- Guided copy/download modal and resource-use reminders
+Website: https://madebydesignlab.com  
+Personal portfolio: https://jannjaravata.madebydesignlab.com
 
-# DesignLab Portfolio Website v3.9.0
+## Public pages
 
-Current release: homepage and creator-page simplification.
+- `index.html` — homepage
+- `projects.html` — project archive
+- `project.html` — individual project view
+- `services.html` — services and localized pricing
+- `downloads.html` — free DesignLab downloads
+- `insights.html` + `insights/` — Studio Notes
+- `creator.html` — creator overview
+- `contact.html` — project inquiry
+- `inquiry-status.html` — inquiry tracking
+- `cv.html` — redirect to the personal portfolio CV
 
-- Removed Random Project, Studio Notes, and Behind DesignLab from the homepage.
-- Simplified Creator into a profile header, brief About, Active Pages, and personal-portfolio CTA.
-- Personal portfolio: `https://jannjaravata.madebydesignlab.com`
+## Private / admin pages
 
-# DesignLab Portfolio v3.4.0
+- `admin.html`
+- `addproject.html`
 
-## New in v3.4.0
+These pages are excluded from search indexing through `robots.txt`.
 
-- `admin.html` is now a private overview dashboard.
-- The previous add-project form moved to `addproject.html`.
-- Dashboard metrics include portfolio projects, site visits, inquiry totals/statuses, and Daily Task Tracker summaries.
-- Added a compact tools directory for portfolio, planning, Meta Business Suite, and managed Facebook pages.
-- Added Overdrive.PH to the public homepage's Active Pages section.
-- Dashboard data requires the existing portfolio admin password.
-- The task summary uses the existing Daily Task Tracker Apps Script URL in `config.js`.
+## Current backend
 
-### Apps Script update
+The live site still uses the deployed Google Apps Script endpoints in `config.js`
+for projects, inquiries, visitor counts, and admin data.
 
-Replace the deployed portfolio `Code.gs`, restore your private `ADMIN_PASSWORD`, then deploy a **New version** of the existing Web App. The Web App URL can remain unchanged.
+A copy of the current Apps Script backend is preserved in:
 
-# DesignLab Portfolio Website v3.4.0 — Random Project Spotlight
+`legacy/google-apps-script/Code.gs`
 
-This release adds a database-driven featured project section above Recent Projects.
+This is being kept only as a migration/reference copy while the project database
+is prepared for Supabase.
 
-## v3.4.0 updates
+## Studio Notes tooling
 
-- Random project spotlight selected from the live Projects database
-- Shuffle control to display another project without reloading
-- Highlight links to the full case study and existing project preview modal
-- Spotlight project is excluded from the immediate Recent Projects list when possible
-- Responsive Light and Blue Mode styling
-- Existing inquiry, tracking, CV, services, notes, admin, and visitor systems preserved
+The old CSV/Python generator is archived under:
 
-No Apps Script or Code.gs update is required.
+`legacy/blog-generator/`
+
+It is **not part of the live website runtime** and should not be run against the
+current site without updating its templates first.
+
+## Clean production rule
+
+Files in `legacy/` and `docs/` are reference material only. The browser does not
+depend on them for the public site.
