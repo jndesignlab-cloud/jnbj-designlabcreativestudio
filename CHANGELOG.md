@@ -1,6 +1,16 @@
 # Changelog
 
-## v3.15.0 — Editorial Agency System
+## v3.15.1 — Bou-style Home Refresh
+
+- Rebuilt the homepage structure to follow a Bou-inspired flow while keeping DesignLab content and branding.
+- Added a fullscreen cinematic hero with centered message and compact CTA pills.
+- Replaced the previous editorial home sequence with a 6-item work showcase grid.
+- Added a brand and organization logo wall.
+- Added a project spotlight section driven by a featured Supabase project.
+- Kept the existing Supabase project source and site structure intact.
+- Maintained the closing CTA and overall compact spacing preference.
+
+## v3.15.1 — Editorial Agency System
 
 - Reset the visual direction from v3.14 and rebuilt from the v3.13 Supabase baseline.
 - Added a bold editorial agency-style homepage with DesignLab branding.

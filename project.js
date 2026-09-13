@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.15.0";
+const SITE_VERSION = "3.15.1";
 
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get("id");
