@@ -1,13 +1,21 @@
 # Changelog
 
-## v3.15.2 — Homepage Fullscreen Fix
+## v3.15.3 — Bou-style Hero Refinement
+
+- Rebuilt the homepage hero to more closely match the Bou-style reference while keeping DesignLab branding.
+- Reduced the headline size and centered the composition for a cleaner premium first screen.
+- Simplified the header navigation to Work, Services, About, and Contact for a more editorial homepage feel.
+- Removed homepage floating utility UI so the landing screen feels cleaner and more focused.
+- Created a new cinematic hero background asset using DesignLab visuals with a warm-to-blue gradient treatment.
+
+## v3.15.3 — Homepage Fullscreen Fix
 
 - Fixed the homepage hero so it now spans the full screen instead of sitting inside a constrained centered container.
 - Made the homepage header float transparently over the hero for a closer Bou-style first impression.
 - Improved hero readability with stronger overlay treatment and a larger white headline.
 - Kept the remaining homepage sections intact while preserving the Supabase project connection.
 
-## v3.15.2 — Bou-style Home Refresh
+## v3.15.3 — Bou-style Home Refresh
 
 - Rebuilt the homepage structure to follow a Bou-inspired flow while keeping DesignLab content and branding.
 - Added a fullscreen cinematic hero with centered message and compact CTA pills.
@@ -17,7 +25,7 @@
 - Kept the existing Supabase project source and site structure intact.
 - Maintained the closing CTA and overall compact spacing preference.
 
-## v3.15.2 — Editorial Agency System
+## v3.15.3 — Editorial Agency System
 
 - Reset the visual direction from v3.14 and rebuilt from the v3.13 Supabase baseline.
 - Added a bold editorial agency-style homepage with DesignLab branding.

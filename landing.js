@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.15.2";
+const SITE_VERSION = "3.15.3";
 const LAST_EDIT = "September 13, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => el.textContent = SITE_VERSION);
