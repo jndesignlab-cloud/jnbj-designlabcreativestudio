@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.13.0 — Supabase Projects migration
+
+- Migrated the public project archive from Google Sheets / Apps Script to Supabase.
+- Migrated individual project loading to Supabase.
+- Rebuilt Add Project around Supabase Auth and RLS.
+- Added Draft / Published support to Add Project.
+- Added `show_on_personal_portfolio` when adding projects.
+- Project totals on the private dashboard now come from Supabase.
+- Inquiries, visitor tracking, and task data remain on Apps Script for now.
+- Removed sample/fallback projects from the public archive.
+- Added a small reusable `project-db.js` Supabase client.
+
 ## v3.12.1 — Repository cleanup
 
 - Removed unused `app.js`.

@@ -1,61 +1,4 @@
-const SITE_VERSION = "3.12.1";
-
-const fallbackProjects = [
-  {
-    id: "sample-university-postings",
-    title: "Recent University Postings",
-    category: "Social Media Design",
-    filterCategory: "Social Media",
-    featured: true,
-    skills: "Campaign Posters - Social Media Management - Graphic Design",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
-    description: "A curated presentation of campaign visuals, announcements, and social media postings designed for university communications.",
-    problem: "The university needed clear, consistent, and professional campaign visuals for announcements and enrollment-related communications.",
-    solution: "I created organized social media layouts with strong hierarchy, clean typography, and brand-aligned visuals to make each announcement easier to understand.",
-    outcome: "The final outputs created a more consistent and polished online presence for university communications.",
-    link: "https://bit.ly/JNBJ-Porfolio",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1600&auto=format&fit=crop"
-    ]
-  },
-  {
-    id: "sample-designlab-downloads",
-    title: "DesignLab Downloads",
-    category: "Digital Products",
-    filterCategory: "DesignLab",
-    featured: true,
-    skills: "Canva Templates - Digital Product Design - Content Systems",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
-    description: "Editable Canva template collections for professionals, business owners, and content creators.",
-    problem: "Business owners and professionals needed ready-made content templates that looked professional without starting from scratch.",
-    solution: "I designed editable Canva templates with structured layouts, reusable visual systems, and clear content sections.",
-    outcome: "The template sets helped users save time, post more consistently, and maintain a more professional brand presence.",
-    link: "https://bit.ly/JNBJ-Porfolio",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600&auto=format&fit=crop"
-    ]
-  },
-  {
-    id: "sample-brand-identity",
-    title: "Brand Identity Projects",
-    category: "Logo & Branding",
-    filterCategory: "Branding",
-    featured: true,
-    skills: "Logo Design - Brand Identity - Visual Systems",
-    image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
-    description: "Logo concepts, visual systems, and brand direction projects for different clients and small businesses.",
-    problem: "Clients needed brand visuals that felt more recognizable, credible, and aligned with their business identity.",
-    solution: "I developed logo concepts, visual directions, and supporting brand elements based on each client’s positioning and audience.",
-    outcome: "The final brand assets gave each client a clearer and more professional visual identity.",
-    link: "https://bit.ly/JNBJ-Porfolio",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop"
-    ]
-  }
-];
+const SITE_VERSION = "3.13.0";
 
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get("id");
@@ -84,52 +27,53 @@ const versionElement = document.querySelector("#siteVersion");
 const lastEditElement = document.querySelector("#lastEdit");
 
 if (versionElement) versionElement.textContent = SITE_VERSION;
-
-if (lastEditElement) {
-  const lastModified = new Date(document.lastModified);
-  lastEditElement.textContent = lastModified.toLocaleString("en-PH", {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit"
-  });
-}
+if (lastEditElement) lastEditElement.textContent = "September 13, 2026";
 
 async function loadProject() {
-  let projects = fallbackProjects;
-
-  if (API_URL && !API_URL.includes("PASTE_YOUR")) {
-    try {
-      const response = await fetch(`${API_URL}?action=listProjects`);
-      const data = await response.json();
-
-      if (data.success && Array.isArray(data.projects) && data.projects.length) {
-        projects = data.projects;
-      }
-    } catch (error) {
-      console.error(error);
-    }
+  if (!projectId) {
+    renderNotFound();
+    return;
   }
 
-  const project = projects.find((item) => {
-    const id = item.id || createSlug(item.title);
-    return id === projectId;
-  }) || projects[0];
+  if (!window.DesignLabProjects) {
+    renderUnavailable();
+    return;
+  }
 
-  renderProject(project);
+  try {
+    const project = await window.DesignLabProjects.getPublishedProject(projectId);
+
+    if (!project) {
+      renderNotFound();
+      return;
+    }
+
+    renderProject(project);
+  } catch (error) {
+    console.error("Supabase project:", error);
+    renderUnavailable();
+  }
 }
 
 function renderProject(project) {
   const projectTitle = project.title || "Untitled Project";
+
   titleElement.textContent = projectTitle;
-  document.title = `${projectTitle} | Jann Nathaniel Jaravata`;
+  document.title = `${projectTitle} | DesignLab Creative Studio`;
   categoryElement.textContent = project.category || "Project";
+
   renderSkillTags(skillsElement, project.skills);
+
   descriptionElement.textContent = project.description || "";
-  problemElement.textContent = project.problem || "This project focused on solving a communication, branding, or presentation need through clearer and more strategic visuals.";
-  solutionElement.textContent = project.solution || "I handled the design direction, layout structure, visual hierarchy, and final creative execution based on the project requirements.";
-  outcomeElement.textContent = project.outcome || "The final output provided a more polished, organized, and professional visual presentation.";
+  problemElement.textContent =
+    project.problem ||
+    "This project focused on solving a communication, branding, or presentation need through clearer and more strategic visuals.";
+  solutionElement.textContent =
+    project.solution ||
+    "I handled the design direction, layout structure, visual hierarchy, and final creative execution based on the project requirements.";
+  outcomeElement.textContent =
+    project.outcome ||
+    "The final output provided a more polished, organized, and professional visual presentation.";
 
   if (project.link) {
     externalLink.href = project.link;
@@ -144,8 +88,11 @@ function renderProject(project) {
       service: project.category || "General Inquiry",
       package: `Similar to: ${projectTitle}`
     });
+
     similarProjectCta.href = `contact.html?${inquiryParams.toString()}`;
   }
+
+  updateProjectMetadata(project);
 
   gallery = normalizeGallery(project);
   currentSlide = 0;
@@ -153,7 +100,63 @@ function renderProject(project) {
   renderSlide();
 }
 
+function updateProjectMetadata(project) {
+  const description =
+    project.description ||
+    `View ${project.title} by DesignLab Creative Studio.`;
 
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute("content", description);
+
+  document
+    .querySelector('meta[property="og:title"]')
+    ?.setAttribute("content", `${project.title} | DesignLab Creative Studio`);
+
+  document
+    .querySelector('meta[property="og:description"]')
+    ?.setAttribute("content", description);
+
+  if (project.image) {
+    document
+      .querySelector('meta[property="og:image"]')
+      ?.setAttribute("content", project.image);
+  }
+}
+
+function renderNotFound() {
+  titleElement.textContent = "Project not found";
+  categoryElement.textContent = "Portfolio";
+  descriptionElement.textContent =
+    "This project is unavailable, unpublished, or the link is no longer valid.";
+
+  skillsElement.style.display = "none";
+  problemElement.textContent = "Return to the project archive to browse published work.";
+  solutionElement.textContent = "";
+  outcomeElement.textContent = "";
+  externalLink.style.display = "none";
+
+  gallery = [];
+  renderDots();
+  renderSlide();
+}
+
+function renderUnavailable() {
+  titleElement.textContent = "Project temporarily unavailable";
+  categoryElement.textContent = "Portfolio";
+  descriptionElement.textContent =
+    "The project database could not be reached. Please try again shortly.";
+
+  skillsElement.style.display = "none";
+  problemElement.textContent = "";
+  solutionElement.textContent = "";
+  outcomeElement.textContent = "";
+  externalLink.style.display = "none";
+
+  gallery = [];
+  renderDots();
+  renderSlide();
+}
 
 function normalizeGallery(project) {
   if (Array.isArray(project.galleryImages) && project.galleryImages.length) {
@@ -161,16 +164,33 @@ function normalizeGallery(project) {
   }
 
   if (typeof project.galleryImages === "string" && project.galleryImages.trim()) {
-    return project.galleryImages
+    const images = project.galleryImages
       .split(/\n|,/)
       .map((url) => url.trim())
       .filter(Boolean);
+
+    if (project.image && !images.includes(project.image)) {
+      images.unshift(project.image);
+    }
+
+    return images;
   }
 
   return [project.image].filter(Boolean);
 }
 
 function renderSlide() {
+  if (!gallery.length) {
+    carouselImage.removeAttribute("src");
+    carouselImage.alt = "";
+    carouselImage.style.display = "none";
+    slideCounter.textContent = "0 / 0";
+    prevButton.disabled = true;
+    nextButton.disabled = true;
+    return;
+  }
+
+  carouselImage.style.display = "";
   const image = gallery[currentSlide];
 
   carouselImage.src = image || "";
@@ -195,16 +215,19 @@ function renderDots() {
       currentSlide = index;
       renderSlide();
     });
+
     dotsWrapper.appendChild(button);
   });
 }
 
 prevButton.addEventListener("click", () => {
+  if (!gallery.length) return;
   currentSlide = (currentSlide - 1 + gallery.length) % gallery.length;
   renderSlide();
 });
 
 nextButton.addEventListener("click", () => {
+  if (!gallery.length) return;
   currentSlide = (currentSlide + 1) % gallery.length;
   renderSlide();
 });
@@ -243,14 +266,6 @@ function parseSkills(skills = "") {
     .split(/\n|-|,/)
     .map((item) => item.trim())
     .filter(Boolean);
-}
-
-function createSlug(value = "") {
-  return String(value)
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
 }
 
 loadProject();

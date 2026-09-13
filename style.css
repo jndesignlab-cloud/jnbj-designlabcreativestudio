@@ -17749,3 +17749,111 @@ html[data-theme="blue"] .compact-file-visual-violet {
 @media(max-width:940px){.one-stop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.one-stop-category-head{grid-template-columns:1fr;gap:10px}}
 @media(max-width:720px){.one-stop-services-main{width:min(100% - 24px,1180px);padding-top:38px}.one-stop-hero{grid-template-columns:1fr;gap:24px}.one-stop-hero h1{font-size:clamp(2.8rem,13vw,4.7rem)}.one-stop-hero>a{justify-self:start}.localized-pricing-bar{margin-bottom:44px;align-items:flex-start}.one-stop-grid{grid-template-columns:1fr}.one-stop-card{min-height:225px}.one-stop-pricing-note{grid-template-columns:1fr;gap:8px}.one-stop-final-cta{grid-template-columns:1fr;padding:28px 22px}.one-stop-final-cta>a{justify-self:start}}
 @media(max-width:480px){.localized-pricing-bar{flex-direction:column;gap:12px}}
+
+
+/* =========================================================
+   v3.13.0 — Supabase Projects migration
+   ========================================================= */
+
+.supabase-project-admin {
+  display: grid;
+  gap: 22px;
+}
+
+.supabase-auth-panel {
+  max-width: 680px;
+}
+
+.compact-auth-form {
+  max-width: 520px;
+}
+
+.supabase-editor-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.supabase-admin-session {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.supabase-admin-session span {
+  max-width: 260px;
+  color: var(--theme-muted);
+  font-size: .7rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.supabase-admin-session button {
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--theme-line);
+  border-radius: 7px;
+  color: var(--theme-text);
+  background: transparent;
+  font: inherit;
+  font-size: .62rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.supabase-project-toggles {
+  display: grid;
+  gap: 8px;
+}
+
+.supabase-project-note {
+  padding: 16px 18px;
+  border: 1px solid var(--theme-line);
+  border-radius: 10px;
+  background: var(--theme-surface);
+}
+
+.supabase-project-note strong {
+  color: var(--theme-text);
+  font-size: .72rem;
+}
+
+.supabase-project-note p {
+  margin: 5px 0 0;
+  color: var(--theme-muted);
+  font-size: .7rem;
+  line-height: 1.55;
+}
+
+.admin-form select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--theme-line);
+  border-radius: 8px;
+  color: var(--theme-text);
+  background: var(--theme-surface);
+  font: inherit;
+}
+
+.project-thumb-empty {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--theme-muted);
+  font-size: .65rem;
+}
+
+@media (max-width: 720px) {
+  .supabase-editor-heading {
+    flex-direction: column;
+  }
+
+  .supabase-admin-session {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

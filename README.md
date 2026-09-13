@@ -1,6 +1,6 @@
 # DesignLab Creative Studio Website
 
-Current production package: **v3.12.1**
+Current production package: **v3.13.0**
 
 Website: https://madebydesignlab.com  
 Personal portfolio: https://jannjaravata.madebydesignlab.com
@@ -27,15 +27,13 @@ These pages are excluded from search indexing through `robots.txt`.
 
 ## Current backend
 
-The live site still uses the deployed Google Apps Script endpoints in `config.js`
-for projects, inquiries, visitor counts, and admin data.
+Portfolio projects now use **Supabase**.
 
-A copy of the current Apps Script backend is preserved in:
+Apps Script remains active only for inquiries, visitor analytics, and the private
+dashboard's legacy inquiry data. The archived Apps Script backend remains in
+`legacy/google-apps-script/` while the remaining systems are migrated.
 
-`legacy/google-apps-script/Code.gs`
-
-This is being kept only as a migration/reference copy while the project database
-is prepared for Supabase.
+See `docs/SUPABASE_PROJECTS_SETUP.md` for the project-database setup.
 
 ## Studio Notes tooling
 

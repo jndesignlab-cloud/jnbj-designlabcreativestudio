@@ -4,6 +4,7 @@ const dashboardContent = document.querySelector("#adminDashboardContent");
 const unlockStatus = document.querySelector("#adminUnlockStatus");
 const passwordInput = document.querySelector("#adminPassword");
 
+const SITE_VERSION = "3.13.0";
 const TOOL_TIMEZONE = "Asia/Manila";
 
 document.querySelector("#year").textContent = new Date().getFullYear();
@@ -24,13 +25,19 @@ unlockForm?.addEventListener("submit", async (event) => {
     }).then((response) => response.json());
 
     const taskRequest = loadTaskData();
-    const [portfolioData, taskData] = await Promise.all([portfolioRequest, taskRequest]);
+    const projectRequest = loadSupabaseProjectData();
+
+    const [portfolioData, taskData, projectData] = await Promise.all([
+      portfolioRequest,
+      taskRequest,
+      projectRequest
+    ]);
 
     if (!portfolioData.success) {
       throw new Error(portfolioData.message || "Unable to unlock dashboard.");
     }
 
-    renderPortfolioDashboard(portfolioData.dashboard || {});
+    renderPortfolioDashboard(portfolioData.dashboard || {}, projectData);
     renderTaskDashboard(taskData);
 
     unlockPanel.hidden = true;
@@ -45,6 +52,24 @@ unlockForm?.addEventListener("submit", async (event) => {
   }
 });
 
+async function loadSupabaseProjectData() {
+  if (!window.DesignLabProjects) {
+    return { success: false, published: 0, featured: 0 };
+  }
+
+  try {
+    const projects = await window.DesignLabProjects.listPublished();
+    return {
+      success: true,
+      published: projects.length,
+      featured: projects.filter((project) => project.featured).length
+    };
+  } catch (error) {
+    console.error("Supabase project metrics:", error);
+    return { success: false, published: 0, featured: 0 };
+  }
+}
+
 async function loadTaskData() {
   if (!TASK_API_URL) return { success: false, tasks: [] };
   try {
@@ -58,14 +83,22 @@ async function loadTaskData() {
   }
 }
 
-function renderPortfolioDashboard(data) {
+function renderPortfolioDashboard(data, projectData = null) {
   const inquiries = data.inquiries || {};
   const projects = data.projects || {};
 
   setText("metricOpenInquiries", formatNumber(inquiries.open));
   setText("metricTodayInquiries", formatNumber(inquiries.today));
-  setText("metricProjects", formatNumber(projects.published));
-  setText("metricFeaturedProjects", `${formatNumber(projects.featured)} featured`);
+  const publishedProjectCount =
+    projectData?.success ? projectData.published : projects.published;
+  const featuredProjectCount =
+    projectData?.success ? projectData.featured : projects.featured;
+
+  setText("metricProjects", formatNumber(publishedProjectCount));
+  setText(
+    "metricFeaturedProjects",
+    `${formatNumber(featuredProjectCount)} featured · Supabase`
+  );
   setText("metricVisits", formatNumber(data.visits));
   setText("metricInquiryNote", `${formatNumber(inquiries.total)} total · ${formatNumber(inquiries.new)} new`);
 
