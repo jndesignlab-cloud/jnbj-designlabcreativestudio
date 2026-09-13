@@ -1,39 +1,19 @@
 # Changelog
 
-## v3.14.0 — Premium UI System
+## v3.15.0 — Editorial Agency System
 
-A visual and motion refinement release. No backend or database architecture changed.
-
-### Visual system
-- Added a dedicated `premium.css` design-system layer instead of adding more one-off rules to the legacy stylesheet.
-- Unified page width, gutters, section spacing, typography hierarchy, radii, borders, shadows, and button behavior.
-- Reduced the boxed/card-heavy appearance throughout the site.
-- Refined Light and Blue themes around a cleaner neutral + blue visual language.
-- Rebuilt header behavior with active-page indicators and a compact blurred scroll state.
-
-### Homepage
-- Refined the hero composition and visual hierarchy.
-- Restyled Studio Record as a cleaner editorial data band.
-- Added a Supabase-driven Selected Work section using the existing project database.
-- Simplified the service selector presentation.
-- Refined process, FAQ, trust logos, and final CTA.
-
-### Work
-- Made the project archive more image-led with larger previews, lighter dividers, and restrained hover motion.
-- Refined individual project galleries and story sections.
-
-### Services / Downloads / Contact
-- Reduced visible card chrome and standardized component styling.
-- Refined service modal and download modal motion.
-- Refined forms, filters, search fields, and pricing presentation.
-
-### Motion
-- Rebuilt section reveal timing.
-- Added subtle staggered grid/list reveals.
-- Added header scroll transition.
-- Added restrained image hover zoom.
-- Added polished modal entrance motion.
-- Added full `prefers-reduced-motion` support.
+- Reset the visual direction from v3.14 and rebuilt from the v3.13 Supabase baseline.
+- Added a bold editorial agency-style homepage with DesignLab branding.
+- Kept a single-column hero with oversized typography.
+- Added one primary Featured Work case selected from Supabase `featured=true` projects.
+- Added a compact secondary work stream driven by Supabase.
+- Added a proof section combining studio statistics and selected client logos.
+- Rebuilt homepage services as large editorial service rows instead of cards/tabs.
+- Added a verified-testimonial-ready section that remains hidden until real quotes are supplied.
+- Added a clearer independent-studio positioning section and closing CTA.
+- Refined Work and Services page hierarchy to match the new agency system.
+- Added `agency.css` as the dedicated visual layer.
+- Supabase, Apps Script, inquiries, downloads, and authentication behavior remain unchanged.
 
 ## v3.13.0 — Supabase Projects migration
 

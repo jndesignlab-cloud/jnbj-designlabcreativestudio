@@ -8,59 +8,11 @@
     panel.setAttribute("aria-hidden", "true");
   }
 
-  function markActiveNavigation(nav) {
-    if (!nav) return;
-
-    const currentPath = (window.location.pathname.split("/").pop() || "index.html")
-      .toLowerCase();
-
-    nav.querySelectorAll("a[href]").forEach((link) => {
-      const href = (link.getAttribute("href") || "").split("?")[0].split("#")[0];
-      const linkPath = (href.split("/").pop() || "index.html").toLowerCase();
-
-      const projectFamily =
-        ["projects.html", "project.html"].includes(currentPath) &&
-        linkPath === "projects.html";
-
-      const active = linkPath === currentPath || projectFamily;
-
-      if (active) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-  }
-
-  function initScrollState(header) {
-    let ticking = false;
-
-    function update() {
-      header.classList.toggle("is-scrolled", window.scrollY > 18);
-      ticking = false;
-    }
-
-    update();
-
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(update);
-      },
-      { passive: true }
-    );
-  }
-
   function initHeader(header, index) {
+    if (header.querySelector(".mobile-menu-toggle")) return;
+
     const desktopNav = header.querySelector(".nav-links");
     if (!desktopNav) return;
-
-    markActiveNavigation(desktopNav);
-    initScrollState(header);
-
-    if (header.querySelector(".mobile-menu-toggle")) return;
 
     const desktopCta = header.querySelector(".signal-header-cta");
     const menuId = `mobileNavigation${index + 1}`;
@@ -71,7 +23,7 @@
     button.setAttribute("aria-label", "Open navigation menu");
     button.setAttribute("aria-controls", menuId);
     button.setAttribute("aria-expanded", "false");
-    button.innerHTML = "<span></span><span></span><span></span>";
+    button.innerHTML = '<span></span><span></span><span></span>';
 
     const panel = document.createElement("div");
     panel.className = "mobile-nav-panel";
@@ -98,8 +50,6 @@
       panel.appendChild(ctaClone);
     }
 
-    markActiveNavigation(mobileLinks);
-
     header.appendChild(button);
     header.appendChild(panel);
 
@@ -107,50 +57,67 @@
       const willOpen = !header.classList.contains("mobile-menu-open");
       header.classList.toggle("mobile-menu-open", willOpen);
       button.setAttribute("aria-expanded", String(willOpen));
-      button.setAttribute(
-        "aria-label",
-        willOpen ? "Close navigation menu" : "Open navigation menu"
-      );
+      button.setAttribute("aria-label", willOpen ? "Close navigation menu" : "Open navigation menu");
       panel.hidden = !willOpen;
       panel.setAttribute("aria-hidden", String(!willOpen));
     });
 
     document.addEventListener("click", (event) => {
-      if (
-        !header.contains(event.target) &&
-        header.classList.contains("mobile-menu-open")
-      ) {
+      if (!header.contains(event.target) && header.classList.contains("mobile-menu-open")) {
         closeMenu(header, button, panel);
       }
     });
 
     document.addEventListener("keydown", (event) => {
-      if (
-        event.key === "Escape" &&
-        header.classList.contains("mobile-menu-open")
-      ) {
+      if (event.key === "Escape" && header.classList.contains("mobile-menu-open")) {
         closeMenu(header, button, panel);
         button.focus();
       }
     });
 
     window.addEventListener("resize", () => {
-      if (
-        window.innerWidth > MOBILE_BREAKPOINT &&
-        header.classList.contains("mobile-menu-open")
-      ) {
+      if (window.innerWidth > MOBILE_BREAKPOINT && header.classList.contains("mobile-menu-open")) {
         closeMenu(header, button, panel);
       }
     });
   }
 
-  function initNavigation() {
+  function initMobileNavigation() {
     document.querySelectorAll(".site-header").forEach(initHeader);
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initNavigation, { once: true });
+    document.addEventListener("DOMContentLoaded", initMobileNavigation);
   } else {
-    initNavigation();
+    initMobileNavigation();
   }
+})();
+
+
+// v3.15.0 editorial agency header refinement
+(() => {
+  const headers = document.querySelectorAll(".site-header");
+  const current = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+
+  document.querySelectorAll(".nav-links a[href]").forEach((link) => {
+    const target = (link.getAttribute("href") || "").split("?")[0].split("#")[0].split("/").pop().toLowerCase();
+    const active =
+      target === current ||
+      (["projects.html", "project.html"].includes(current) && target === "projects.html");
+
+    if (active) link.setAttribute("aria-current", "page");
+  });
+
+  let ticking = false;
+  function update() {
+    headers.forEach((header) => header.classList.toggle("is-scrolled", window.scrollY > 14));
+    ticking = false;
+  }
+
+  update();
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }, { passive: true });
 })();
