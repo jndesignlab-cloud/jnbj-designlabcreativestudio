@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.5";
+const SITE_VERSION = "3.16.6";
 const LAST_EDIT = "September 14, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -250,7 +250,7 @@ loadFeaturedProject();
 loadTestimonials();
 
 /* =========================================================
-   v3.16.5 — Premium hero motion
+   v3.16.6 — Premium hero motion
    More visible network lines, cursor-follow glow and parallax.
    ========================================================= */
 (() => {

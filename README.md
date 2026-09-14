@@ -1,24 +1,11 @@
-# DesignLab Portfolio Website — v3.16.5
+# DesignLab Portfolio Website — v3.16.6
 
-## Version focus
-Homepage restructure, hero content polish, client grid refinement, and stronger motion visibility.
+Compact polish pass focused on scale and readability.
 
-## Main updates
-- Hero remains full-screen and centered.
-- Highlighted Project now appears directly below the hero.
-- Clients section is now a 2-column grid.
-- Testimonials remain as styled placeholder blobs.
-- Header is slimmer and logo visibility is improved.
-- Hero now includes:
-  - stronger moving line network
-  - cursor-follow glow/parallax
-  - small auto-scrolling project highlight strip
-  - clickable scroll arrow
-
-## Notes
-- Other pages remain intact.
-- Homepage logic is controlled mainly by:
-  - `index.html`
-  - `home.css`
-  - `landing.js`
-  - `testimonials.js`
+## Main changes
+- Smaller hero headline and better surrounding breathing room.
+- Clearer secondary text on dark hero background.
+- Smaller project preview cards.
+- Narrower content width and more side margins.
+- Smaller Highlight Project, Client, and Testimonial sections.
+- Existing motion and homepage structure remain intact.
