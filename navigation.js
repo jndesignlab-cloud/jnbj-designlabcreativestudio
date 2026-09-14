@@ -121,3 +121,49 @@
     requestAnimationFrame(update);
   }, { passive: true });
 })();
+
+
+/* v3.16.9 homepage smart navbar */
+(() => {
+  const body = document.body;
+  const header = document.querySelector(".site-header");
+  const hero = document.querySelector(".dl-hero-panel");
+
+  if (!body?.classList.contains("designlab-home") || !header || !hero) return;
+
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  function updateHeaderVisibility() {
+    const y = Math.max(0, window.scrollY);
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const onHero = y < Math.max(heroBottom - 90, 0);
+    const movingDown = y > lastY + 4;
+    const movingUp = y < lastY - 4;
+    const menuOpen = header.classList.contains("mobile-menu-open");
+
+    if (onHero || y < 24 || menuOpen) {
+      header.classList.remove("nav-hidden");
+    } else if (movingDown) {
+      header.classList.add("nav-hidden");
+    } else if (movingUp) {
+      header.classList.remove("nav-hidden");
+    }
+
+    lastY = y;
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateHeaderVisibility);
+  }, { passive: true });
+
+  window.addEventListener("resize", () => {
+    header.classList.remove("nav-hidden");
+    lastY = window.scrollY;
+  }, { passive: true });
+
+  updateHeaderVisibility();
+})();

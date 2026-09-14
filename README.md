@@ -1,3 +1,3 @@
-# DesignLab Portfolio Website v3.16.8
+# DesignLab Portfolio Website v3.16.9
 
-Homepage refinement build focused on testimonial presentation, improved spacing, and a new featured-project strip below the Highlighted Work section.
+Homepage polish release focused on professional compact sizing, stronger whitespace, centered Highlighted Work, one-line section headings, a SoleProtect highlighted testimonial, and directional navbar behavior.

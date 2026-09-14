@@ -1,9 +1,19 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.8 — Testimonial Refresh + Featured Strip
-- Redesigned the testimonial section into a cleaner editorial layout with one highlighted quote and smaller supporting quotes below.
-- Changed testimonial cards to all-white surfaces with clearer readability and stronger hover feedback.
-- Removed the word "sample" from the testimonial presentation.
-- Added a horizontal featured-project strip below Highlighted Work using featured projects as the source.
-- Tightened client and section spacing for a cleaner premium presentation.
-- Refined homepage readability, card sizing, and visual breathing room.
+## v3.16.9 — Compact Whitespace + Smart Navbar
+
+- Reduced the visual scale of all homepage panels for a more compact, professional presentation.
+- Added more white space around section content and narrowed homepage content widths.
+- Re-centered Highlighted Work and reduced featured project image, text, tag, and strip sizes.
+- Simplified homepage section headings to one-line wording:
+  - Highlighted Work
+  - Trusted by teams here and abroad.
+  - What clients say.
+- Reduced Trusted By card density and typography.
+- Made the testimonial layout more compact while preserving one highlighted comment above smaller supporting quotes.
+- Updated the highlighted testimonial to SoleProtect.
+- Added smart navbar behavior:
+  - always visible while on the hero
+  - hides while scrolling down after the hero
+  - reappears while scrolling up
+- Preserved the fullscreen panel behavior and hero motion system.

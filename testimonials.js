@@ -1,6 +1,11 @@
 window.DESIGNLAB_TESTIMONIALS = [
   {
-    quote: "DesignLab is one of the best creative partners I have worked with in recent years. The process felt organized, the communication stayed clear, and every output arrived polished and ready to use.",
+    quote: "DesignLab is one of the best creative partners I have worked with in the past few years. The way they handle projects is tip-top, communication stays clear, and you are always kept updated.",
+    name: "Brand Owner",
+    role: "SoleProtect"
+  },
+  {
+    quote: "DesignLab made the entire process easier to manage. The work was clean, fast, and ready to use without unnecessary back-and-forth.",
     name: "Marketing Office",
     role: "Panpacific University"
   },
@@ -18,10 +23,5 @@ window.DESIGNLAB_TESTIMONIALS = [
     quote: "What we valued most was the consistency. The creative direction remained strong across different deliverables without losing clarity.",
     name: "Founder",
     role: "MyITHub Australia"
-  },
-  {
-    quote: "The visuals made the product feel more market-ready. Everything looked cleaner, sharper, and easier to promote online.",
-    name: "Brand Owner",
-    role: "Sole Protect"
   }
 ];
