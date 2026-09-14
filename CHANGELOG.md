@@ -1,10 +1,8 @@
-# Changelog — v3.16.14
+# Changelog — v3.16.15
 
-## Hero color refinement
-- shifted the hero overlay to a cleaner DesignLab blue-to-violet palette
-- removed the warm/orange emphasis from the hero color treatment
-- made “DesignLab Creative Studio” solid white
-- made the supporting hero description solid white
-- refined the highlighted headline gradient to blue/lavender/violet tones
-
-No structural layout changes were made in this release.
+## Hero text correction
+- forced “DesignLab Creative Studio” to true white using both `color` and `-webkit-text-fill-color`
+- forced the hero supporting sentence to true white for consistent Chromium/Edge rendering
+- made “campaign-ready design.” a stronger separate focal line
+- increased its visual weight and added a clearer DesignLab blue-to-violet gradient
+- added a subtle blue/violet glow without changing the homepage layout

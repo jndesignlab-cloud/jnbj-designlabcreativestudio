@@ -1930,3 +1930,54 @@ body.designlab-home .dl-hero-highlight {
   background-clip: text !important;
   color: transparent !important;
 }
+
+/* =========================================================
+   v3.16.15 — Force true-white hero copy + stronger focal gradient
+   ========================================================= */
+body.designlab-home .dl-hero-kicker,
+body.designlab-home .dl-hero-lead {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.designlab-home .dl-hero-kicker {
+  text-shadow: 0 8px 22px rgba(7, 13, 32, 0.34) !important;
+}
+
+body.designlab-home .dl-hero-lead {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 500 !important;
+  text-shadow: 0 8px 26px rgba(5, 10, 26, 0.42) !important;
+}
+
+body.designlab-home .dl-hero-highlight {
+  display: block !important;
+  margin-top: 0.045em !important;
+  font-size: 1.08em !important;
+  line-height: 0.94 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.078em !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(
+    92deg,
+    #eef4ff 0%,
+    #c9d8ff 18%,
+    #86a7ff 48%,
+    #777fff 72%,
+    #a875ff 100%
+  ) !important;
+  background-size: 210% 100% !important;
+  background-position: 20% 50% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 8px 22px rgba(94, 105, 255, 0.26)) !important;
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-hero-highlight {
+    font-size: 1.04em !important;
+  }
+}
