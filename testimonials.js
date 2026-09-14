@@ -10,9 +10,9 @@ window.DESIGNLAB_TESTIMONIALS = [
     role: "Panpacific University"
   },
   {
-    quote: "The work looked refined, but it also stayed practical. We appreciated how each material was easy to roll out and aligned with what the program needed.",
-    name: "Program Representative",
-    role: "PACE"
+    quote: "The creative work helped our promotions feel more consistent and easier to publish. The process was straightforward and revisions were handled well.",
+    name: "Owner",
+    role: "C&B Cafe"
   },
   {
     quote: "DesignLab helped us present the brand in a more premium way. Turnaround was dependable and revisions were handled smoothly.",

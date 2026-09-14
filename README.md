@@ -1,3 +1,3 @@
-# DesignLab Portfolio Website v3.16.9
+# DesignLab Portfolio Website v3.16.10
 
-Homepage polish release focused on professional compact sizing, stronger whitespace, centered Highlighted Work, one-line section headings, a SoleProtect highlighted testimonial, and directional navbar behavior.
+Compact 100% zoom refinement. The hero is cleaner with no duplicate project scroller; Highlighted Work owns the single featured-project strip. PACE was replaced with C&B Cafe across Clients and Testimonials.

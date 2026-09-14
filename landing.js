@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.9";
+const SITE_VERSION = "3.16.10";
 const LAST_EDIT = "September 14, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -65,12 +65,11 @@ const HOME_CLIENTS = [
     projects: "Projects done: campaigns, publications, event visuals, internal systems"
   },
   {
-    name: "PACE",
-    markType: "text",
-    markClass: "pace",
-    markText: "PACE",
-    description: "Professional Advancement Continuing Education provides flexible and career-oriented learning opportunities for aspiring professionals and educators.",
-    projects: "Projects done: website system, enrollment materials, promotional visuals"
+    name: "C&B Cafe",
+    markType: "image",
+    markSrc: "assets/client-cb-cafe.webp",
+    description: "A café and food brand focused on approachable customer communication, menu-led promotions, and consistent social content.",
+    projects: "Projects done: promotional graphics, food content, branded social materials"
   },
   {
     name: "Ion Ready Distribution Group",
@@ -105,14 +104,6 @@ const HOME_CLIENTS = [
   }
 ];
 
-const HERO_HIGHLIGHTS = [
-  { title: "OSC Request System", subtitle: "Dashboard & tracking", image: "assets/insights-osc-system-wide.webp", href: "projects.html" },
-  { title: "Task Tracker", subtitle: "Visual productivity tool", image: "assets/insights-task-tracker-wide.webp", href: "projects.html" },
-  { title: "60 Days of Design", subtitle: "Content series", image: "assets/insights-60-days-wide.webp", href: "projects.html" },
-  { title: "Daily Grind", subtitle: "Poster concept set", image: "assets/insights-daily-grind-wide.webp", href: "projects.html" },
-  { title: "Sole Protect", subtitle: "Product visuals", image: "assets/client-soleprotect.webp", href: "projects.html" },
-  { title: "CoziSleep", subtitle: "Promo creative", image: "assets/client-cozisleep.webp", href: "projects.html" }
-];
 
 function clientMarkup(item) {
   const mark = item.markType === "image"
@@ -128,17 +119,6 @@ function clientMarkup(item) {
         <small>${escapeAgency(item.projects)}</small>
       </div>
     </article>`;
-}
-
-function heroHighlightMarkup(item) {
-  return `
-    <a class="dl-mini-project" href="${escapeAgency(item.href || "projects.html")}">
-      <span class="dl-mini-project-media"><img src="${escapeAgency(item.image)}" alt="${escapeAgency(item.title)}" loading="lazy" decoding="async"></span>
-      <span class="dl-mini-project-copy">
-        <strong>${escapeAgency(item.title)}</strong>
-        <span>${escapeAgency(item.subtitle)}</span>
-      </span>
-    </a>`;
 }
 
 function featureStripMarkup(project) {
@@ -216,12 +196,6 @@ async function loadFeaturedProject() {
   }
 }
 
-function loadHeroHighlights() {
-  const root = document.querySelector("#homeHeroHighlights");
-  if (!root) return;
-  root.innerHTML = HERO_HIGHLIGHTS.concat(HERO_HIGHLIGHTS).map(heroHighlightMarkup).join("");
-}
-
 function loadClients() {
   const root = document.querySelector("#homeClientsGrid");
   if (!root) return;
@@ -245,7 +219,6 @@ function loadTestimonials() {
     </div>`;
 }
 
-loadHeroHighlights();
 loadClients();
 loadFeaturedProject();
 loadTestimonials();

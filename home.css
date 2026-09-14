@@ -1192,3 +1192,267 @@ body.designlab-home .dl-testimonial-mini-grid {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* =========================================================
+   v3.16.10 — 100% zoom compact scale + centered highlight
+   ========================================================= */
+body.designlab-home {
+  --dl-page: 1080px;
+}
+
+/* Hero: same fullscreen behavior, smaller content at 100% browser zoom. */
+body.designlab-home .dl-hero-inner {
+  width: min(100%, 780px) !important;
+  max-width: 780px !important;
+}
+
+body.designlab-home .dl-hero-kicker {
+  margin-bottom: 12px !important;
+  font-size: .70rem !important;
+  letter-spacing: .20em !important;
+}
+
+body.designlab-home .dl-hero-inner h1 {
+  max-width: 780px !important;
+  font-size: clamp(2.55rem, 4.25vw, 4.35rem) !important;
+  line-height: .97 !important;
+  letter-spacing: -.068em !important;
+}
+
+body.designlab-home .dl-hero-lead {
+  width: min(100%, 620px) !important;
+  margin-top: 16px !important;
+  font-size: .91rem !important;
+  line-height: 1.58 !important;
+}
+
+body.designlab-home .dl-hero-links {
+  margin-top: 22px !important;
+  gap: 9px !important;
+}
+
+body.designlab-home .dl-hero-links a {
+  min-height: 42px !important;
+  padding: 0 18px !important;
+  font-size: .84rem !important;
+}
+
+body.designlab-home .dl-hero-scroll {
+  margin-top: 28px !important;
+  font-size: .70rem !important;
+}
+
+/* Hero no longer carries a second project scroller; Highlighted Work owns it. */
+body.designlab-home .dl-hero-marquee {
+  display: none !important;
+}
+
+/* Fullscreen panels with smaller centered islands of content. */
+body.designlab-home .dl-home-panel {
+  padding:
+    calc(var(--dl-header) + clamp(54px, 8vh, 88px))
+    clamp(28px, 6vw, 92px)
+    clamp(56px, 8vh, 92px) !important;
+}
+
+body.designlab-home .dl-panel-inner {
+  width: min(100%, 980px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-section-head {
+  width: min(100%, 900px) !important;
+  margin: 0 auto 24px !important;
+  gap: 34px !important;
+}
+
+body.designlab-home .dl-section-head h2 {
+  font-size: clamp(1.48rem, 1.95vw, 1.95rem) !important;
+  letter-spacing: -.04em !important;
+}
+
+body.designlab-home .dl-section-intro {
+  max-width: 340px !important;
+  font-size: .80rem !important;
+  line-height: 1.56 !important;
+}
+
+/* Highlighted Work: explicitly center every layer. */
+body.designlab-home .dl-feature-panel .dl-panel-inner {
+  width: min(100%, 980px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-section-head {
+  width: min(100%, 900px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-feature-shell {
+  width: min(100%, 900px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-feature-card {
+  width: 100% !important;
+  margin: 0 auto !important;
+  grid-template-columns: minmax(0, 1.04fr) minmax(260px, .96fr) !important;
+  gap: 34px !important;
+}
+
+body.designlab-home .dl-feature-media {
+  border-radius: 18px !important;
+}
+
+body.designlab-home .dl-feature-copy h3 {
+  font-size: clamp(1.42rem, 1.9vw, 1.9rem) !important;
+}
+
+body.designlab-home .dl-feature-description {
+  max-width: 390px !important;
+  font-size: .80rem !important;
+  line-height: 1.58 !important;
+}
+
+body.designlab-home .dl-feature-meta {
+  margin-top: 12px !important;
+  gap: 6px !important;
+}
+
+body.designlab-home .dl-feature-category,
+body.designlab-home .dl-feature-tags span {
+  min-height: 26px !important;
+  padding-inline: 8px !important;
+  font-size: .64rem !important;
+}
+
+body.designlab-home .dl-feature-actions {
+  margin-top: 15px !important;
+}
+
+body.designlab-home .dl-feature-link {
+  font-size: .76rem !important;
+}
+
+body.designlab-home .dl-feature-strip {
+  width: min(100%, 900px) !important;
+  margin: 20px auto 0 !important;
+}
+
+body.designlab-home .dl-feature-strip-track {
+  gap: 11px !important;
+}
+
+body.designlab-home .dl-feature-strip-item {
+  width: 150px !important;
+  gap: 6px !important;
+}
+
+body.designlab-home .dl-feature-strip-media {
+  border-radius: 10px !important;
+}
+
+body.designlab-home .dl-feature-strip-name {
+  font-size: .68rem !important;
+  line-height: 1.22 !important;
+}
+
+/* Clients: keep the two-column format but with more air around smaller cards. */
+body.designlab-home .dl-clients-panel .dl-panel-inner {
+  width: min(100%, 940px) !important;
+}
+
+body.designlab-home .dl-section-head-clients {
+  width: min(100%, 900px) !important;
+  grid-template-columns: minmax(0,1fr) minmax(240px,310px) !important;
+}
+
+body.designlab-home .dl-clients-grid {
+  width: min(100%, 900px) !important;
+  margin-inline: auto !important;
+  gap: 11px !important;
+}
+
+body.designlab-home .dl-client-card {
+  min-height: 98px !important;
+  padding: 12px !important;
+  grid-template-columns: 54px minmax(0,1fr) !important;
+  gap: 11px !important;
+  border-radius: 14px !important;
+}
+
+body.designlab-home .dl-client-mark {
+  width: 54px !important;
+  height: 54px !important;
+  padding: 7px !important;
+  border-radius: 11px !important;
+}
+
+body.designlab-home .dl-client-copy h3 {
+  font-size: .82rem !important;
+}
+
+body.designlab-home .dl-client-copy p {
+  font-size: .69rem !important;
+  line-height: 1.43 !important;
+}
+
+body.designlab-home .dl-client-copy small {
+  margin-top: 4px !important;
+  font-size: .59rem !important;
+}
+
+/* Testimonials: compact content centered in the fullscreen panel. */
+body.designlab-home .dl-testimonials-panel .dl-panel-inner {
+  width: min(100%, 920px) !important;
+}
+
+body.designlab-home .dl-testimonials-panel .dl-section-head,
+body.designlab-home .dl-testimonials-grid {
+  width: min(100%, 880px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-testimonial-card.is-featured {
+  min-height: 176px !important;
+  padding: 22px !important;
+}
+
+body.designlab-home .dl-testimonial-card.is-compact {
+  min-height: 118px !important;
+  padding: 15px !important;
+}
+
+body.designlab-home .dl-testimonial-card.is-featured .dl-testimonial-quote {
+  font-size: clamp(.96rem, 1.15vw, 1.08rem) !important;
+}
+
+body.designlab-home .dl-testimonial-card.is-compact .dl-testimonial-quote {
+  font-size: .74rem !important;
+  line-height: 1.52 !important;
+}
+
+body.designlab-home .dl-testimonial-meta {
+  margin-top: 13px !important;
+}
+
+body.designlab-home .dl-testimonial-meta strong {
+  font-size: .74rem !important;
+}
+
+body.designlab-home .dl-testimonial-meta span {
+  font-size: .65rem !important;
+}
+
+@media (max-width: 900px) {
+  body.designlab-home .dl-feature-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.designlab-home .dl-feature-media,
+  body.designlab-home .dl-feature-copy {
+    width: min(100%, 700px) !important;
+    margin-inline: auto !important;
+  }
+}
