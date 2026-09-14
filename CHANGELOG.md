@@ -1,9 +1,9 @@
-# Changelog — v3.16.12
+# Changelog — v3.16.13
 
-## Home page
-- fixed the Highlighted Work section layout so the content block stays centered instead of feeling pushed to one side
-- tightened the featured-project grid using a more controlled media/copy width balance
-- reduced strip-card sizing slightly to prevent the section from feeling oversized or unstable at 100% zoom
-- added stronger overflow protection around the Highlighted Work panel
+## Home page refinement
+- fixed the Highlighted Work section so its container stays centered more reliably across zoom levels
+- reduced the featured media/copy footprint for a more compact, whitespace-friendly layout
+- improved hero subtext readability by pushing the supporting text to a brighter white treatment
+- changed the hero service links so they no longer look too similar to the main CTA buttons
 
-This is a focused bug-fix pass only before any new design changes.
+This is still a focused polish pass, not a full redesign change.

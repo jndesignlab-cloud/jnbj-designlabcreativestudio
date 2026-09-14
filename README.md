@@ -1,4 +1,6 @@
-DesignLab Portfolio Website — v3.16.12
+DesignLab Portfolio Website — v3.16.13
 
-Focused fix:
-- Highlighted Work section centering and stability
+Focused refinements:
+- more stable centered Highlighted Work section
+- brighter hero supporting text
+- differentiated hero service links
