@@ -27,16 +27,14 @@
     "logo": "https://madebydesignlab.com/assets/designlab-header-logo.webp",
     "founder": {"@type": "Person", "name": "Jann Nathaniel Jaravata"},
     "description": "Independent creative studio focused on campaign visuals, publication layouts, social media systems, and lightweight web tools.",
-    "sameAs": [
-      "https://www.facebook.com/DesignLabCreativeStudio"
-    ]
+    "sameAs": ["https://www.facebook.com/DesignLabCreativeStudio"]
   }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link href="style.css?v=3.16.4" rel="stylesheet"/>
-  <link href="agency.css?v=3.16.4" rel="stylesheet"/>
-  <link href="home.css?v=3.16.4" rel="stylesheet"/>
+  <link href="style.css?v=3.16.5" rel="stylesheet"/>
+  <link href="agency.css?v=3.16.5" rel="stylesheet"/>
+  <link href="home.css?v=3.16.5" rel="stylesheet"/>
 </head>
 <body class="signal-theme editorial-system unified-page agency-system designlab-home">
   <header class="site-header signal-header rp-header designlab-home-header">
@@ -59,75 +57,38 @@
       <div class="dl-hero-overlay" aria-hidden="true"></div>
       <canvas class="dl-hero-particles" id="dlHeroParticles" aria-hidden="true"></canvas>
       <div class="dl-hero-cursor-glow" id="dlHeroCursorGlow" aria-hidden="true"></div>
+
       <div class="dl-hero-inner">
-        <h1 id="dlHeroTitle"><span class="dl-hero-base">Turn scattered ideas into</span> <span class="dl-hero-highlight">campaign-ready design.</span></h1>
+        <p class="dl-hero-kicker">DesignLab Creative Studio</p>
+        <h1 id="dlHeroTitle">
+          <span class="dl-hero-base">Turn scattered ideas into</span>
+          <span class="dl-hero-highlight">campaign-ready design.</span>
+        </h1>
+        <p class="dl-hero-lead">Social visuals, branding, print design, content systems, and lightweight web support built for practical use.</p>
+
         <div class="dl-hero-links" aria-label="Homepage actions">
           <a href="projects.html">View work →</a>
           <a href="contact.html?source=home-hero">Start a project →</a>
         </div>
+
+        <div class="dl-hero-marquee" aria-label="Project highlights preview">
+          <div class="dl-hero-marquee-track" id="homeHeroHighlights"></div>
+        </div>
+
+        <a class="dl-hero-scroll" href="#homeFeatureSection" aria-label="Scroll to featured project">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </a>
       </div>
     </section>
 
-    <section class="dl-clients-panel agency-reveal" aria-labelledby="dlClientsTitle">
+    <section class="dl-feature-panel agency-reveal" id="homeFeatureSection" aria-labelledby="dlFeatureTitle">
       <div class="dl-section-head compact">
         <div>
-          <p class="agency-kicker">Clients</p>
-          <h2 id="dlClientsTitle">Selected collaborations</h2>
+          <p class="agency-kicker">Highlighted work</p>
+          <h2 id="dlFeatureTitle">One selected project, presented properly.</h2>
         </div>
-        <p>Brands, institutions, and growing businesses DesignLab has supported through design and digital work.</p>
-      </div>
-      <div class="dl-clients-grid">
-        <article class="dl-client-card">
-          <img src="assets/client-panpacific.webp" alt="Panpacific University" loading="lazy" decoding="async"/>
-          <div>
-            <h3>Panpacific University</h3>
-            <p>Institutional campaigns, academic announcements, event visuals, and internal creative systems.</p>
-          </div>
-        </article>
-        <article class="dl-client-card">
-          <img src="assets/client-pace.webp" alt="PACE" loading="lazy" decoding="async"/>
-          <div>
-            <h3>PACE</h3>
-            <p>Program promotions, educational materials, and a clean website system for continuing education.</p>
-          </div>
-        </article>
-        <article class="dl-client-card">
-          <img src="assets/client-soleprotect.webp" alt="Sole Protect" loading="lazy" decoding="async"/>
-          <div>
-            <h3>Sole Protect</h3>
-            <p>Product visuals, ad layouts, and e-commerce-ready branding materials for a cleaning kit line.</p>
-          </div>
-        </article>
-        <article class="dl-client-card">
-          <img src="assets/client-cozisleep.webp" alt="CoziSleep" loading="lazy" decoding="async"/>
-          <div>
-            <h3>CoziSleep</h3>
-            <p>Campaign concepts, promo visuals, and product-focused social content for mattress marketing.</p>
-          </div>
-        </article>
-        <article class="dl-client-card">
-          <img src="assets/client-planora.webp" alt="Planora" loading="lazy" decoding="async"/>
-          <div>
-            <h3>Planora</h3>
-            <p>Digital product branding and visual materials structured for clarity, utility, and consistency.</p>
-          </div>
-        </article>
-        <article class="dl-client-card">
-          <img src="assets/client-cb-cafe.webp" alt="C&amp;B Cafe" loading="lazy" decoding="async"/>
-          <div>
-            <h3>C&amp;B Cafe</h3>
-            <p>Food and café promotional content, menu-facing graphics, and social assets for day-to-day posting.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="dl-feature-panel agency-reveal" aria-labelledby="dlFeatureTitle">
-      <div class="dl-section-head compact">
-        <div>
-          <p class="agency-kicker">Featured project</p>
-          <h2 id="dlFeatureTitle">One main work, highlighted properly.</h2>
-        </div>
+        <p>A closer look at one of DesignLab's core projects — built for real use, clear communication, and polished output.</p>
       </div>
       <div id="homeFeaturedProject" class="dl-feature-shell">
         <article class="dl-feature-card loading">
@@ -141,13 +102,24 @@
       </div>
     </section>
 
+    <section class="dl-clients-panel agency-reveal" aria-labelledby="dlClientsTitle">
+      <div class="dl-section-head compact">
+        <div>
+          <p class="agency-kicker">Clients</p>
+          <h2 id="dlClientsTitle">Working with institutions, businesses, and brands in the Philippines and beyond.</h2>
+        </div>
+        <p>From academic institutions to product-based businesses and international clients, DesignLab supports teams that need practical creative work with clarity, speed, and consistency.</p>
+      </div>
+      <div class="dl-clients-grid" id="homeClientsGrid"></div>
+    </section>
+
     <section class="dl-testimonials-panel agency-reveal" aria-labelledby="dlTestimonialsTitle">
       <div class="dl-section-head compact">
         <div>
           <p class="agency-kicker">Testimonials</p>
-          <h2 id="dlTestimonialsTitle">Client feedback</h2>
+          <h2 id="dlTestimonialsTitle">What collaborators say about working with DesignLab.</h2>
         </div>
-        <p>Placeholder layout for testimonials. These can be replaced with verified client quotes anytime.</p>
+        <p>Sample testimonial placeholders for now, styled as client feedback and ready to be replaced with approved quotes anytime.</p>
       </div>
       <div class="dl-testimonials-grid" id="homeTestimonialsGrid"></div>
     </section>
@@ -164,11 +136,11 @@
     </div>
   </footer>
 
-  <script src="config.js?v=3.16.4"></script>
-  <script src="project-db.js?v=3.16.4"></script>
-  <script src="testimonials.js?v=3.16.4"></script>
-  <script src="landing.js?v=3.16.4"></script>
-  <script src="navigation.js?v=3.16.4"></script>
-  <script src="reveal.js?v=3.16.4"></script>
+  <script src="config.js?v=3.16.5"></script>
+  <script src="project-db.js?v=3.16.5"></script>
+  <script src="testimonials.js?v=3.16.5"></script>
+  <script src="landing.js?v=3.16.5"></script>
+  <script src="navigation.js?v=3.16.5"></script>
+  <script src="reveal.js?v=3.16.5"></script>
 </body>
 </html>

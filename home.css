@@ -1,16 +1,17 @@
 /* =========================================================
-   DesignLab v3.16.4 — Stable homepage layer
-   This file intentionally owns the homepage from top to bottom.
-   It does not rely on version-numbered body selectors.
+   DesignLab v3.16.5 — Homepage restructure + premium hero
    ========================================================= */
 
 body.designlab-home {
   --dl-bg: #f4f7fb;
+  --dl-surface: #ffffff;
+  --dl-surface-soft: #eef3ee;
   --dl-ink: #14213c;
-  --dl-muted: #64718c;
-  --dl-line: rgba(20, 33, 60, .09);
+  --dl-muted: #66748d;
+  --dl-line: rgba(20, 33, 60, .08);
   --dl-blue: #2d5cff;
   --dl-violet: #8b78ff;
+  --dl-orange: #f39b5c;
   --dl-page: 1380px;
   margin: 0;
   background: var(--dl-bg);
@@ -29,7 +30,7 @@ body.designlab-home main {
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow: clip;
+  overflow: clip !important;
 }
 
 /* Header */
@@ -37,21 +38,21 @@ body.designlab-home .site-header {
   position: fixed !important;
   inset: 0 0 auto 0 !important;
   z-index: 100 !important;
-  height: 64px !important;
-  min-height: 64px !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  height: 58px !important;
+  min-height: 58px !important;
+  background: rgba(245, 247, 251, .88) !important;
+  border-bottom: 1px solid rgba(20,33,60,.08) !important;
+  backdrop-filter: blur(16px) saturate(1.04) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.04) !important;
+  box-shadow: 0 8px 24px rgba(12, 21, 40, .04) !important;
 }
 
 body.designlab-home .site-header .rp-header-inner {
   width: min(100%, var(--dl-page)) !important;
-  height: 64px !important;
-  min-height: 64px !important;
+  height: 58px !important;
+  min-height: 58px !important;
   margin: 0 auto !important;
-  padding: 0 28px !important;
+  padding: 0 26px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
@@ -67,45 +68,33 @@ body.designlab-home .rp-brand {
 
 body.designlab-home .rp-brand img {
   display: block !important;
-  width: 148px !important;
+  width: 150px !important;
   height: auto !important;
-  max-height: 36px !important;
+  max-height: 34px !important;
   object-fit: contain !important;
-  filter: brightness(0) invert(1) drop-shadow(0 1px 4px rgba(0,0,0,.18)) !important;
+  filter: none !important;
   opacity: 1 !important;
 }
 
 body.designlab-home .rp-nav {
   display: flex !important;
   align-items: center !important;
-  gap: 28px !important;
+  gap: 18px !important;
   margin-left: auto !important;
 }
 
 body.designlab-home .site-header .rp-nav a {
   padding: 0 !important;
-  color: rgba(255,255,255,.9) !important;
-  font-size: .88rem !important;
+  color: var(--dl-ink) !important;
+  font-size: .98rem !important;
   font-weight: 600 !important;
   line-height: 1 !important;
-  letter-spacing: -.01em !important;
-  text-shadow: 0 1px 8px rgba(0,0,0,.18) !important;
+  letter-spacing: -.02em !important;
+  text-decoration: none !important;
 }
 
-body.designlab-home .site-header.is-scrolled {
-  background: rgba(248,250,253,.94) !important;
-  border-bottom: 1px solid rgba(20,33,60,.08) !important;
-  backdrop-filter: blur(16px) saturate(1.05) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(1.05) !important;
-}
-
-body.designlab-home .site-header.is-scrolled .rp-brand img {
-  filter: none !important;
-}
-
-body.designlab-home .site-header.is-scrolled .rp-nav a {
-  color: var(--dl-ink) !important;
-  text-shadow: none !important;
+body.designlab-home .site-header .rp-nav a:hover {
+  color: var(--dl-blue) !important;
 }
 
 /* Hero */
@@ -116,16 +105,15 @@ body.designlab-home .dl-hero-panel {
   --parallax-y: 0px;
   position: relative !important;
   width: 100% !important;
-  height: 100svh !important;
-  min-height: 650px !important;
+  min-height: 100svh !important;
   margin: 0 !important;
-  padding: 64px 24px 24px !important;
+  padding: 58px 20px 32px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   overflow: hidden !important;
   isolation: isolate !important;
-  background: #081125 !important;
+  background: #071126 !important;
   box-sizing: border-box !important;
 }
 
@@ -151,16 +139,18 @@ body.designlab-home .dl-hero-media {
 body.designlab-home .dl-hero-overlay {
   z-index: 1 !important;
   background:
-    linear-gradient(180deg, rgba(5,8,16,.10) 0%, rgba(5,8,16,.26) 44%, rgba(5,8,16,.72) 100%),
-    radial-gradient(circle at 17% 18%, rgba(255,135,56,.25), transparent 34%),
-    radial-gradient(circle at 76% 22%, rgba(67,106,255,.24), transparent 34%) !important;
+    linear-gradient(180deg, rgba(8,12,21,.22) 0%, rgba(8,12,21,.28) 28%, rgba(6,9,17,.64) 100%),
+    linear-gradient(90deg, rgba(255,143,74,.30) 0%, rgba(255,143,74,.12) 28%, rgba(75,110,255,.14) 58%, rgba(17,44,130,.24) 100%),
+    radial-gradient(circle at 26% 22%, rgba(255,183,128,.26), transparent 30%),
+    radial-gradient(circle at 70% 20%, rgba(117,142,255,.24), transparent 28%),
+    radial-gradient(circle at 50% 60%, rgba(255,255,255,.08), transparent 20%) !important;
 }
 
 body.designlab-home .dl-hero-particles {
   z-index: 2 !important;
   width: 100% !important;
   height: 100% !important;
-  opacity: .92 !important;
+  opacity: 1 !important;
   mix-blend-mode: screen !important;
 }
 
@@ -169,14 +159,14 @@ body.designlab-home .dl-hero-cursor-glow {
   left: var(--cursor-x) !important;
   top: var(--cursor-y) !important;
   z-index: 2 !important;
-  width: min(46vw, 620px) !important;
-  height: min(46vw, 620px) !important;
+  width: min(44vw, 560px) !important;
+  height: min(44vw, 560px) !important;
   border-radius: 50% !important;
   transform: translate(-50%, -50%) !important;
   background: radial-gradient(circle,
     rgba(132,151,255,.28) 0%,
-    rgba(95,99,255,.14) 32%,
-    rgba(95,99,255,.05) 52%,
+    rgba(95,99,255,.16) 30%,
+    rgba(255,163,93,.08) 52%,
     rgba(95,99,255,0) 72%) !important;
   filter: blur(10px) !important;
 }
@@ -184,29 +174,36 @@ body.designlab-home .dl-hero-cursor-glow {
 body.designlab-home .dl-hero-inner {
   position: relative !important;
   z-index: 3 !important;
-  width: min(100%, 900px) !important;
-  max-width: 900px !important;
+  width: min(100%, 980px) !important;
+  max-width: 980px !important;
   margin: 0 auto !important;
   padding: 0 !important;
   text-align: center !important;
-  transform: translateY(-10px) !important;
   box-sizing: border-box !important;
+}
+
+body.designlab-home .dl-hero-kicker {
+  margin: 0 0 16px !important;
+  color: rgba(240, 244, 255, .78) !important;
+  font-size: .84rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .24em !important;
+  text-transform: uppercase !important;
 }
 
 body.designlab-home .dl-hero-inner h1 {
   display: block !important;
   width: auto !important;
-  max-width: 900px !important;
+  max-width: 980px !important;
   margin: 0 auto !important;
-  padding: 0 !important;
   color: #fff !important;
-  font-size: clamp(3.1rem, 5.1vw, 5.25rem) !important;
-  line-height: 1 !important;
-  letter-spacing: -.064em !important;
-  font-weight: 600 !important;
+  font-size: clamp(3.2rem, 6vw, 6.25rem) !important;
+  line-height: .96 !important;
+  letter-spacing: -.075em !important;
+  font-weight: 700 !important;
   text-align: center !important;
   text-wrap: balance !important;
-  overflow: visible !important;
+  text-shadow: 0 6px 30px rgba(5, 12, 28, .22) !important;
 }
 
 body.designlab-home .dl-hero-base,
@@ -215,19 +212,27 @@ body.designlab-home .dl-hero-highlight {
 }
 
 body.designlab-home .dl-hero-base {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  color: rgba(255,255,255,.98) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.98) !important;
 }
 
 body.designlab-home .dl-hero-highlight {
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
-  background: linear-gradient(90deg, #ffffff 0%, #c7d2ff 22%, #83a7ff 60%, #8b78ff 100%) !important;
-  background-size: 220% 100% !important;
+  background: linear-gradient(90deg, #ffffff 0%, #edf0ff 15%, #a6bdff 54%, #7f94ff 80%, #9b86ff 100%) !important;
+  background-size: 230% 100% !important;
   background-position: 0% 50% !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
-  animation: dlHomeGradient 5.5s ease-in-out infinite alternate !important;
+  animation: dlHomeGradient 5.8s ease-in-out infinite alternate !important;
+}
+
+body.designlab-home .dl-hero-lead {
+  width: min(100%, 760px) !important;
+  margin: 20px auto 0 !important;
+  color: rgba(239, 244, 255, .84) !important;
+  font-size: clamp(1rem, 1.35vw, 1.18rem) !important;
+  line-height: 1.62 !important;
 }
 
 body.designlab-home .dl-hero-links {
@@ -235,37 +240,122 @@ body.designlab-home .dl-hero-links {
   align-items: center !important;
   justify-content: center !important;
   gap: 12px !important;
-  margin: 32px auto 0 !important;
+  margin: 28px auto 0 !important;
   padding: 0 !important;
   flex-wrap: wrap !important;
 }
 
 body.designlab-home .dl-hero-links a {
-  min-height: 48px !important;
-  padding: 0 20px !important;
+  min-height: 50px !important;
+  padding: 0 24px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 999px !important;
-  border: 1px solid rgba(255,255,255,.20) !important;
-  background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  background: rgba(255,255,255,.10) !important;
   color: #fff !important;
-  font-size: .92rem !important;
+  font-size: .96rem !important;
   font-weight: 700 !important;
   text-decoration: none !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 10px 30px rgba(7, 16, 36, .10) !important;
 }
 
 body.designlab-home .dl-hero-links a:first-child {
   background: #fff !important;
-  color: #1748e8 !important;
+  color: #1c49ea !important;
   border-color: #fff !important;
 }
 
-/* Main sections */
-body.designlab-home .dl-clients-panel,
+body.designlab-home .dl-hero-marquee {
+  width: min(100%, 1080px) !important;
+  margin: 30px auto 0 !important;
+  overflow: hidden !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%) !important;
+}
+
+body.designlab-home .dl-hero-marquee-track {
+  display: inline-flex !important;
+  gap: 16px !important;
+  min-width: max-content !important;
+  animation: dlHeroMarquee 34s linear infinite !important;
+}
+
+body.designlab-home .dl-hero-marquee:hover .dl-hero-marquee-track {
+  animation-play-state: paused !important;
+}
+
+body.designlab-home .dl-mini-project {
+  width: 230px !important;
+  display: grid !important;
+  gap: 9px !important;
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+body.designlab-home .dl-mini-project-media {
+  position: relative !important;
+  display: block !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  box-shadow: 0 18px 40px rgba(6, 12, 24, .18) !important;
+}
+
+body.designlab-home .dl-mini-project-media img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+body.designlab-home .dl-mini-project-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  padding: 0 2px !important;
+}
+
+body.designlab-home .dl-mini-project-copy strong {
+  font-size: .92rem !important;
+  line-height: 1.2 !important;
+  color: rgba(255,255,255,.96) !important;
+}
+
+body.designlab-home .dl-mini-project-copy span {
+  color: rgba(239,244,255,.72) !important;
+  font-size: .8rem !important;
+  line-height: 1.35 !important;
+}
+
+body.designlab-home .dl-hero-scroll {
+  width: fit-content !important;
+  margin: 22px auto 0 !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: rgba(244, 247, 255, .84) !important;
+  font-size: .82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+body.designlab-home .dl-hero-scroll svg {
+  width: 20px !important;
+  height: 20px !important;
+  animation: dlHeroArrow 1.6s ease-in-out infinite !important;
+}
+
+/* Sections */
 body.designlab-home .dl-feature-panel,
+body.designlab-home .dl-clients-panel,
 body.designlab-home .dl-testimonials-panel {
   width: min(100%, var(--dl-page)) !important;
   margin: 0 auto !important;
@@ -279,76 +369,29 @@ body.designlab-home .dl-testimonials-panel {
 
 body.designlab-home .dl-section-head {
   display: grid !important;
-  grid-template-columns: minmax(0,1fr) minmax(280px,440px) !important;
+  grid-template-columns: minmax(0,1fr) minmax(290px,470px) !important;
   gap: 28px !important;
   align-items: end !important;
   margin: 0 0 28px !important;
 }
 
 body.designlab-home .dl-section-head h2 {
-  margin: 5px 0 0 !important;
+  margin: 4px 0 0 !important;
   color: var(--dl-ink) !important;
-  font-size: clamp(1.9rem, 3vw, 2.8rem) !important;
-  line-height: 1.05 !important;
-  letter-spacing: -.045em !important;
+  font-size: clamp(1.95rem, 3vw, 3rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.055em !important;
+  text-wrap: balance !important;
 }
 
 body.designlab-home .dl-section-head > p:last-child {
   margin: 0 !important;
   color: var(--dl-muted) !important;
   font-size: 1rem !important;
-  line-height: 1.65 !important;
+  line-height: 1.7 !important;
 }
 
-body.designlab-home .dl-clients-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0,1fr)) !important;
-  gap: 18px !important;
-}
-
-body.designlab-home .dl-client-card {
-  min-width: 0 !important;
-  min-height: 168px !important;
-  padding: 24px !important;
-  display: grid !important;
-  grid-template-columns: 88px minmax(0,1fr) !important;
-  gap: 18px !important;
-  align-items: center !important;
-  border: 1px solid var(--dl-line) !important;
-  border-radius: 26px !important;
-  background: rgba(255,255,255,.92) !important;
-  box-shadow: 0 16px 44px rgba(18,35,74,.06) !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-body.designlab-home .dl-client-card img {
-  width: 88px !important;
-  height: 88px !important;
-  max-width: 88px !important;
-  max-height: 88px !important;
-  display: block !important;
-  object-fit: contain !important;
-  padding: 12px !important;
-  border-radius: 18px !important;
-  background: #f7f9fd !important;
-  box-sizing: border-box !important;
-}
-
-body.designlab-home .dl-client-card h3 {
-  margin: 0 0 7px !important;
-  color: var(--dl-ink) !important;
-  font-size: 1.08rem !important;
-  letter-spacing: -.03em !important;
-}
-
-body.designlab-home .dl-client-card p {
-  margin: 0 !important;
-  color: var(--dl-muted) !important;
-  font-size: .94rem !important;
-  line-height: 1.58 !important;
-}
-
+/* Highlight project */
 body.designlab-home .dl-feature-card {
   display: grid !important;
   grid-template-columns: minmax(0,1.08fr) minmax(340px,.92fr) !important;
@@ -360,14 +403,14 @@ body.designlab-home .dl-feature-card {
 }
 
 body.designlab-home .dl-feature-media {
-  min-height: 440px !important;
+  min-height: 460px !important;
   background: #edf2fb !important;
 }
 
 body.designlab-home .dl-feature-media img {
   width: 100% !important;
   height: 100% !important;
-  min-height: 440px !important;
+  min-height: 460px !important;
   display: block !important;
   object-fit: cover !important;
 }
@@ -425,20 +468,112 @@ body.designlab-home .dl-feature-link {
   text-decoration: none !important;
 }
 
-body.designlab-home .dl-testimonials-grid {
+/* Clients */
+body.designlab-home .dl-clients-grid {
   display: grid !important;
-  grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  grid-template-columns: repeat(2, minmax(0,1fr)) !important;
   gap: 18px !important;
 }
 
+body.designlab-home .dl-client-card {
+  min-width: 0 !important;
+  min-height: 190px !important;
+  padding: 24px !important;
+  display: grid !important;
+  grid-template-columns: 108px minmax(0,1fr) !important;
+  gap: 18px !important;
+  align-items: center !important;
+  border: 1px solid var(--dl-line) !important;
+  border-radius: 26px !important;
+  background: rgba(255,255,255,.94) !important;
+  box-shadow: 0 16px 44px rgba(18,35,74,.06) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+body.designlab-home .dl-client-mark {
+  width: 108px !important;
+  height: 108px !important;
+  border-radius: 24px !important;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f8 100%) !important;
+  border: 1px solid rgba(20,33,60,.06) !important;
+  display: grid !important;
+  place-items: center !important;
+  box-sizing: border-box !important;
+  padding: 16px !important;
+}
+
+body.designlab-home .dl-client-mark.image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+body.designlab-home .dl-client-mark.wordmark span {
+  display: block !important;
+  text-align: center !important;
+  color: var(--dl-ink) !important;
+  font-weight: 800 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.04em !important;
+}
+
+body.designlab-home .dl-client-mark.wordmark.pace span {
+  font-size: 1.7rem !important;
+  letter-spacing: .08em !important;
+}
+
+body.designlab-home .dl-client-mark.wordmark.ionready span {
+  font-size: 1.02rem !important;
+}
+
+body.designlab-home .dl-client-mark.wordmark.catchoftheday span {
+  font-size: .84rem !important;
+}
+
+body.designlab-home .dl-client-mark.wordmark.myithub span {
+  font-size: .96rem !important;
+}
+
+body.designlab-home .dl-client-copy h3 {
+  margin: 0 0 8px !important;
+  color: var(--dl-ink) !important;
+  font-size: 1.14rem !important;
+  letter-spacing: -.03em !important;
+}
+
+body.designlab-home .dl-client-copy p {
+  margin: 0 !important;
+  color: var(--dl-muted) !important;
+  font-size: .95rem !important;
+  line-height: 1.62 !important;
+}
+
+body.designlab-home .dl-client-copy small {
+  display: block !important;
+  margin-top: 12px !important;
+  color: #41516f !important;
+  font-size: .82rem !important;
+  line-height: 1.45 !important;
+  font-weight: 600 !important;
+}
+
+/* Testimonials */
+body.designlab-home .dl-testimonials-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+  gap: 20px !important;
+}
+
 body.designlab-home .dl-testimonial-card {
-  min-height: 250px !important;
-  padding: 30px !important;
+  min-height: 248px !important;
+  padding: 32px !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   border: 1px solid var(--dl-line) !important;
-  border-radius: 38% 62% 42% 58% / 55% 38% 62% 45% !important;
+  border-radius: 40% 60% 52% 48% / 51% 42% 58% 49% !important;
   background: radial-gradient(circle at top left, rgba(94,124,255,.14), transparent 42%), #fff !important;
   box-shadow: 0 16px 42px rgba(18,34,73,.06) !important;
 }
@@ -447,7 +582,7 @@ body.designlab-home .dl-testimonial-quote {
   margin: 0 !important;
   color: #1d2b48 !important;
   font-size: 1rem !important;
-  line-height: 1.72 !important;
+  line-height: 1.75 !important;
 }
 
 body.designlab-home .dl-testimonial-meta {
@@ -455,6 +590,14 @@ body.designlab-home .dl-testimonial-meta {
   display: flex !important;
   flex-direction: column !important;
   gap: 4px !important;
+}
+
+body.designlab-home .dl-testimonial-meta strong {
+  color: var(--dl-ink) !important;
+}
+
+body.designlab-home .dl-testimonial-meta span {
+  color: var(--dl-muted) !important;
 }
 
 body.designlab-home .dl-home-footer {
@@ -469,22 +612,34 @@ body.designlab-home .dl-home-footer {
   to { background-position: 100% 50%; }
 }
 
-@media (max-width: 1050px) {
+@keyframes dlHeroMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 8px)); }
+}
+
+@keyframes dlHeroArrow {
+  0%, 100% { transform: translateY(0); opacity: .85; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+@media (max-width: 1100px) {
+  body.designlab-home .dl-feature-card,
+  body.designlab-home .dl-section-head,
   body.designlab-home .dl-clients-grid,
   body.designlab-home .dl-testimonials-grid {
-    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    grid-template-columns: 1fr !important;
   }
 
-  body.designlab-home .dl-feature-card {
-    grid-template-columns: 1fr !important;
+  body.designlab-home .dl-client-card {
+    grid-template-columns: 108px minmax(0,1fr) !important;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 780px) {
   body.designlab-home .site-header,
   body.designlab-home .site-header .rp-header-inner {
-    height: 58px !important;
-    min-height: 58px !important;
+    height: 56px !important;
+    min-height: 56px !important;
   }
 
   body.designlab-home .site-header .rp-header-inner {
@@ -493,7 +648,7 @@ body.designlab-home .dl-home-footer {
 
   body.designlab-home .rp-brand img {
     width: 130px !important;
-    max-height: 32px !important;
+    max-height: 30px !important;
   }
 
   body.designlab-home .rp-nav {
@@ -501,25 +656,29 @@ body.designlab-home .dl-home-footer {
   }
 
   body.designlab-home .site-header .rp-nav a {
-    font-size: .74rem !important;
+    font-size: .8rem !important;
   }
 
   body.designlab-home .dl-hero-panel {
-    min-height: 620px !important;
-    padding: 58px 16px 18px !important;
+    padding: 56px 16px 24px !important;
+    min-height: 760px !important;
   }
 
   body.designlab-home .dl-hero-inner h1 {
-    font-size: clamp(2.55rem,10.6vw,3.9rem) !important;
+    font-size: clamp(2.7rem, 11vw, 4.1rem) !important;
+    line-height: .98 !important;
   }
 
-  body.designlab-home .dl-section-head {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
+  body.designlab-home .dl-hero-lead {
+    font-size: .98rem !important;
   }
 
-  body.designlab-home .dl-clients-panel,
+  body.designlab-home .dl-mini-project {
+    width: 190px !important;
+  }
+
   body.designlab-home .dl-feature-panel,
+  body.designlab-home .dl-clients-panel,
   body.designlab-home .dl-testimonials-panel {
     padding: 66px 18px 0 !important;
   }
@@ -527,29 +686,33 @@ body.designlab-home .dl-home-footer {
   body.designlab-home .dl-testimonials-panel {
     padding-bottom: 68px !important;
   }
-}
-
-@media (max-width: 620px) {
-  body.designlab-home .dl-clients-grid,
-  body.designlab-home .dl-testimonials-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  body.designlab-home .dl-client-card {
-    grid-template-columns: 68px minmax(0,1fr) !important;
-    min-height: 0 !important;
-    padding: 18px !important;
-  }
-
-  body.designlab-home .dl-client-card img {
-    width: 68px !important;
-    height: 68px !important;
-    max-width: 68px !important;
-    max-height: 68px !important;
-  }
 
   body.designlab-home .dl-feature-copy {
     padding: 26px 20px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body.designlab-home .dl-client-card {
+    grid-template-columns: 82px minmax(0,1fr) !important;
+    min-height: 0 !important;
+    padding: 18px !important;
+    gap: 14px !important;
+  }
+
+  body.designlab-home .dl-client-mark {
+    width: 82px !important;
+    height: 82px !important;
+    border-radius: 18px !important;
+    padding: 12px !important;
+  }
+
+  body.designlab-home .dl-client-mark.wordmark.pace span {
+    font-size: 1.35rem !important;
+  }
+
+  body.designlab-home .dl-testimonials-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -564,7 +727,9 @@ body.designlab-home .dl-home-footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.designlab-home .dl-hero-highlight {
+  body.designlab-home .dl-hero-highlight,
+  body.designlab-home .dl-hero-marquee-track,
+  body.designlab-home .dl-hero-scroll svg {
     animation: none !important;
   }
 
