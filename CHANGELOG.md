@@ -1,12 +1,36 @@
 # Changelog
 
-## v3.16.6 — Compact Scale & Breathing-Space Polish
+## v3.16.7 — Fullscreen Homepage Panels + Readability Refinement
 
-- Reduced hero headline scale to create more breathing room.
-- Improved readability of the hero kicker, supporting line, project scroller labels, and scroll cue.
-- Reduced hero project highlight card sizes while keeping the 16:9 treatment.
-- Tightened CTA dimensions without losing prominence.
-- Reduced the page content width from 1380px to 1240px for a calmer editorial feel.
-- Reduced size and height of Highlight Project, Client, and Testimonial components.
-- Preserved the current Hero → Highlight Project → Clients → Testimonials order.
-- Preserved the visible network motion, cursor glow, gradient text animation, and auto-scrolling project strip.
+### Homepage structure
+- Converted all four homepage sections into full-viewport panels:
+  1. Hero
+  2. Highlighted Work
+  3. Trusted By
+  4. Testimonials
+- Added subtle scroll-snap behavior so each panel feels intentional without forcing hard scrolling.
+
+### Highlighted Work
+- Removed the Problem / Goal, What I Did, and Result blocks from the homepage feature.
+- Simplified the project presentation to image, category, title, short project description, classifications, and `See more`.
+- Removed the oversized rounded container and changed the section to a flatter editorial layout.
+- Improved spacing between the category and classification chips.
+
+### Trusted By
+- Renamed the client section to a stronger trust statement:
+  `Brands, companies, and institutions in the Philippines and beyond.`
+- Kept the 2-column client grid.
+- Tightened client cards and improved body-text contrast.
+- Kept a small `Projects done` summary under each company description.
+
+### Testimonials
+- Removed blob-shaped testimonial cards.
+- Added four distinct card backgrounds for visual variety.
+- Added lift, border, and shadow hover effects.
+- Kept testimonial content marked as sample feedback until approved quotes are available.
+
+### Readability
+- Increased contrast for supporting text throughout the homepage.
+- Reduced oversized text where needed and constrained line lengths.
+- Improved spacing and hierarchy on all homepage panels.
+- Preserved the hero network motion, cursor glow, parallax, gradient headline, and scrolling project highlights.

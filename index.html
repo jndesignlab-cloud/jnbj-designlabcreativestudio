@@ -32,11 +32,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link href="style.css?v=3.16.6" rel="stylesheet"/>
-  <link href="agency.css?v=3.16.6" rel="stylesheet"/>
-  <link href="home.css?v=3.16.6" rel="stylesheet"/>
+  <link href="style.css?v=3.16.7" rel="stylesheet"/>
+    <link href="home.css?v=3.16.7" rel="stylesheet"/>
 </head>
-<body class="signal-theme editorial-system unified-page agency-system designlab-home">
+<body class="signal-theme editorial-system unified-page designlab-home">
   <header class="site-header signal-header rp-header designlab-home-header">
     <div class="rp-header-inner">
       <a class="rp-brand" href="index.html" aria-label="DesignLab Creative Studio home">
@@ -82,46 +81,53 @@
       </div>
     </section>
 
-    <section class="dl-feature-panel agency-reveal" id="homeFeatureSection" aria-labelledby="dlFeatureTitle">
-      <div class="dl-section-head compact">
-        <div>
-          <p class="agency-kicker">Highlighted work</p>
-          <h2 id="dlFeatureTitle">One selected project, presented properly.</h2>
-        </div>
-        <p>A closer look at one of DesignLab's core projects — built for real use, clear communication, and polished output.</p>
-      </div>
-      <div id="homeFeaturedProject" class="dl-feature-shell">
-        <article class="dl-feature-card loading">
-          <div class="dl-feature-media"></div>
-          <div class="dl-feature-copy">
-            <p class="agency-kicker">Loading</p>
-            <h3>Loading featured project…</h3>
-            <p>Please wait while the project data loads.</p>
+    <section class="dl-home-panel dl-feature-panel agency-reveal" id="homeFeatureSection" aria-labelledby="dlFeatureTitle">
+      <div class="dl-panel-inner">
+        <div class="dl-section-head">
+          <div>
+            <p class="dl-eyebrow">Selected project</p>
+            <h2 id="dlFeatureTitle">Highlighted Work</h2>
           </div>
-        </article>
+          <a class="dl-section-cta" href="projects.html">See more →</a>
+        </div>
+
+        <div id="homeFeaturedProject" class="dl-feature-shell">
+          <article class="dl-feature-card loading">
+            <div class="dl-feature-media"></div>
+            <div class="dl-feature-copy">
+              <p class="dl-eyebrow">Loading</p>
+              <h3>Loading featured project…</h3>
+              <p>Please wait while the project data loads.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="dl-clients-panel agency-reveal" aria-labelledby="dlClientsTitle">
-      <div class="dl-section-head compact">
-        <div>
-          <p class="agency-kicker">Clients</p>
-          <h2 id="dlClientsTitle">Working with institutions, businesses, and brands in the Philippines and beyond.</h2>
+    <section class="dl-home-panel dl-clients-panel agency-reveal" aria-labelledby="dlClientsTitle">
+      <div class="dl-panel-inner">
+        <div class="dl-section-head dl-section-head-clients">
+          <div>
+            <p class="dl-eyebrow">Trusted by</p>
+            <h2 id="dlClientsTitle">Brands, companies, and institutions in the Philippines and beyond.</h2>
+          </div>
+          <p class="dl-section-intro">DesignLab works with organizations of different sizes—from local teams and institutions to international businesses that need dependable creative support.</p>
         </div>
-        <p>From academic institutions to product-based businesses and international clients, DesignLab supports teams that need practical creative work with clarity, speed, and consistency.</p>
+        <div class="dl-clients-grid" id="homeClientsGrid"></div>
       </div>
-      <div class="dl-clients-grid" id="homeClientsGrid"></div>
     </section>
 
-    <section class="dl-testimonials-panel agency-reveal" aria-labelledby="dlTestimonialsTitle">
-      <div class="dl-section-head compact">
-        <div>
-          <p class="agency-kicker">Testimonials</p>
-          <h2 id="dlTestimonialsTitle">What collaborators say about working with DesignLab.</h2>
+    <section class="dl-home-panel dl-testimonials-panel agency-reveal" aria-labelledby="dlTestimonialsTitle">
+      <div class="dl-panel-inner">
+        <div class="dl-section-head">
+          <div>
+            <p class="dl-eyebrow">Client feedback</p>
+            <h2 id="dlTestimonialsTitle">What working with DesignLab feels like.</h2>
+          </div>
+          <p class="dl-section-intro">Sample testimonial layout for now. Approved client quotes can replace these without changing the design.</p>
         </div>
-        <p>Sample testimonial placeholders for now, styled as client feedback and ready to be replaced with approved quotes anytime.</p>
+        <div class="dl-testimonials-grid" id="homeTestimonialsGrid"></div>
       </div>
-      <div class="dl-testimonials-grid" id="homeTestimonialsGrid"></div>
     </section>
   </main>
 
@@ -136,11 +142,11 @@
     </div>
   </footer>
 
-  <script src="config.js?v=3.16.6"></script>
-  <script src="project-db.js?v=3.16.6"></script>
-  <script src="testimonials.js?v=3.16.6"></script>
-  <script src="landing.js?v=3.16.6"></script>
-  <script src="navigation.js?v=3.16.6"></script>
-  <script src="reveal.js?v=3.16.6"></script>
+  <script src="config.js?v=3.16.7"></script>
+  <script src="project-db.js?v=3.16.7"></script>
+  <script src="testimonials.js?v=3.16.7"></script>
+  <script src="landing.js?v=3.16.7"></script>
+  <script src="navigation.js?v=3.16.7"></script>
+  <script src="reveal.js?v=3.16.7"></script>
 </body>
 </html>

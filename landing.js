@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.6";
+const SITE_VERSION = "3.16.7";
 const LAST_EDIT = "September 14, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -23,11 +23,10 @@ function splitSkills(value = "") {
 
 function getProjectTags(project) {
   const tags = [];
-  if (project.category) tags.push(project.category);
   splitSkills(project.skills).forEach((skill) => {
-    if (tags.length < 4 && !tags.includes(skill)) tags.push(skill);
+    if (tags.length < 3 && !tags.includes(skill)) tags.push(skill);
   });
-  return tags.slice(0, 4);
+  return tags.slice(0, 3);
 }
 
 function featureMarkup(project) {
@@ -43,15 +42,15 @@ function featureMarkup(project) {
           : `<div class="dl-feature-empty">No preview available</div>`}
       </div>
       <div class="dl-feature-copy">
-        <p class="agency-kicker">Featured work</p>
+        <p class="dl-eyebrow">${escapeAgency(project.category || "Featured project")}</p>
         <h3>${escapeAgency(project.title)}</h3>
         <p class="dl-feature-description">${escapeAgency(project.description || "Selected work from the DesignLab archive.")}</p>
-        ${project.problem ? `<p><strong>The goal:</strong> ${escapeAgency(project.problem)}</p>` : ""}
-        ${project.solution ? `<p><strong>What DesignLab did:</strong> ${escapeAgency(project.solution)}</p>` : ""}
-        ${project.outcome ? `<p><strong>Result:</strong> ${escapeAgency(project.outcome)}</p>` : ""}
-        ${tags ? `<div class="dl-feature-tags">${tags}</div>` : ""}
+        <div class="dl-feature-meta">
+          ${project.category ? `<span class="dl-feature-category">${escapeAgency(project.category)}</span>` : ""}
+          ${tags ? `<div class="dl-feature-tags">${tags}</div>` : ""}
+        </div>
         <div class="dl-feature-actions">
-          <a class="dl-feature-link" href="project.html?id=${encodeURIComponent(project.id)}">View full project</a>
+          <a class="dl-feature-link" href="project.html?id=${encodeURIComponent(project.id)}">See more →</a>
         </div>
       </div>
     </article>`;
@@ -63,22 +62,22 @@ const HOME_CLIENTS = [
     markType: "image",
     markSrc: "assets/client-panpacific.webp",
     description: "A private higher education institution serving students through academic programs, institutional communication, and campus-wide initiatives.",
-    projects: "Projects done: academic campaigns, event visuals, admissions materials, internal systems"
+    projects: "Projects done: campaigns, publications, event visuals, internal systems"
   },
   {
     name: "PACE",
     markType: "text",
     markClass: "pace",
     markText: "PACE",
-    description: "Professional Advancement Continuing Education is focused on flexible and career-oriented learning opportunities for aspiring professionals and educators.",
-    projects: "Projects done: website system, enrollment materials, promotional posters"
+    description: "Professional Advancement Continuing Education provides flexible and career-oriented learning opportunities for aspiring professionals and educators.",
+    projects: "Projects done: website system, enrollment materials, promotional visuals"
   },
   {
     name: "Ion Ready Distribution Group",
     markType: "text",
     markClass: "ionready",
     markText: "ION READY",
-    description: "A distribution-focused business handling product marketing materials, sales presentations, and product-facing brand communication.",
+    description: "A distribution-focused business handling product marketing, sales communication, and branded collateral across different product lines.",
     projects: "Projects done: catalogue brochures, product collaterals, branded layouts"
   },
   {
@@ -86,7 +85,7 @@ const HOME_CLIENTS = [
     markType: "text",
     markClass: "catchoftheday",
     markText: "CATCH OF THE DAY",
-    description: "A seafood and food concept brand that benefits from clear, appetizing visuals and promotional materials built for customer-facing communication.",
+    description: "A food-focused brand built around customer-facing communication, visual appetite appeal, and promotional content.",
     projects: "Projects done: brand visuals, food content, promotional graphics"
   },
   {
@@ -94,55 +93,25 @@ const HOME_CLIENTS = [
     markType: "text",
     markClass: "myithub",
     markText: "MyITHub Australia",
-    description: "An IT-focused business serving clients with digital support and professional services, requiring clean and credible brand presentation.",
+    description: "An Australia-based IT business supporting clients through digital services and professional technology solutions.",
     projects: "Projects done: social graphics, digital materials, brand support"
   },
   {
     name: "Sole Protect",
     markType: "image",
     markSrc: "assets/client-soleprotect.webp",
-    description: "A product brand centered on sneaker care, product presentation, and e-commerce-friendly visuals for modern online marketing.",
-    projects: "Projects done: product hero visuals, campaign ads, launch graphics"
+    description: "A sneaker-care product brand focused on clean product presentation, digital campaigns, and e-commerce-friendly creative materials.",
+    projects: "Projects done: product visuals, campaign ads, launch graphics"
   }
 ];
 
 const HERO_HIGHLIGHTS = [
-  {
-    title: "OSC Request System",
-    subtitle: "Dashboard & tracking",
-    image: "assets/insights-osc-system-wide.webp",
-    href: "projects.html"
-  },
-  {
-    title: "Task Tracker",
-    subtitle: "Visual productivity tool",
-    image: "assets/insights-task-tracker-wide.webp",
-    href: "projects.html"
-  },
-  {
-    title: "60 Days of Design",
-    subtitle: "Content series",
-    image: "assets/insights-60-days-wide.webp",
-    href: "projects.html"
-  },
-  {
-    title: "Daily Grind",
-    subtitle: "Poster concept set",
-    image: "assets/insights-daily-grind-wide.webp",
-    href: "projects.html"
-  },
-  {
-    title: "Sole Protect",
-    subtitle: "Product visuals",
-    image: "assets/client-soleprotect.webp",
-    href: "projects.html"
-  },
-  {
-    title: "CoziSleep",
-    subtitle: "Promo creative",
-    image: "assets/client-cozisleep.webp",
-    href: "projects.html"
-  }
+  { title: "OSC Request System", subtitle: "Dashboard & tracking", image: "assets/insights-osc-system-wide.webp", href: "projects.html" },
+  { title: "Task Tracker", subtitle: "Visual productivity tool", image: "assets/insights-task-tracker-wide.webp", href: "projects.html" },
+  { title: "60 Days of Design", subtitle: "Content series", image: "assets/insights-60-days-wide.webp", href: "projects.html" },
+  { title: "Daily Grind", subtitle: "Poster concept set", image: "assets/insights-daily-grind-wide.webp", href: "projects.html" },
+  { title: "Sole Protect", subtitle: "Product visuals", image: "assets/client-soleprotect.webp", href: "projects.html" },
+  { title: "CoziSleep", subtitle: "Promo creative", image: "assets/client-cozisleep.webp", href: "projects.html" }
 ];
 
 function clientMarkup(item) {
@@ -163,7 +132,7 @@ function clientMarkup(item) {
 
 function heroHighlightMarkup(item) {
   return `
-    <a class="dl-mini-project" href="${escapeAgency(item.href || 'projects.html')}">
+    <a class="dl-mini-project" href="${escapeAgency(item.href || "projects.html")}">
       <span class="dl-mini-project-media"><img src="${escapeAgency(item.image)}" alt="${escapeAgency(item.title)}" loading="lazy" decoding="async"></span>
       <span class="dl-mini-project-copy">
         <strong>${escapeAgency(item.title)}</strong>
@@ -174,7 +143,8 @@ function heroHighlightMarkup(item) {
 
 function testimonialMarkup(item) {
   return `
-    <article class="dl-testimonial-card agency-stagger">
+    <article class="dl-testimonial-card">
+      <span class="dl-testimonial-sample">Sample feedback</span>
       <p class="dl-testimonial-quote">“${escapeAgency(item.quote)}”</p>
       <div class="dl-testimonial-meta">
         <strong>${escapeAgency(item.name)}</strong>
@@ -197,10 +167,10 @@ async function loadFeaturedProject() {
     if (!project) {
       featureRoot.innerHTML = `
         <article class="dl-feature-card">
-          <div class="dl-feature-copy only-copy">
-            <p class="agency-kicker">Featured work</p>
+          <div class="dl-feature-copy">
+            <p class="dl-eyebrow">Highlighted Work</p>
             <h3>No featured project yet</h3>
-            <p>Add or publish at least one project to show it here.</p>
+            <p class="dl-feature-description">Add or publish at least one project to show it here.</p>
           </div>
         </article>`;
       return;
@@ -211,10 +181,10 @@ async function loadFeaturedProject() {
     console.error("Featured project load error:", error);
     featureRoot.innerHTML = `
       <article class="dl-feature-card">
-        <div class="dl-feature-copy only-copy">
-          <p class="agency-kicker">Featured work</p>
+        <div class="dl-feature-copy">
+          <p class="dl-eyebrow">Highlighted Work</p>
           <h3>Unable to load the featured project</h3>
-          <p>Please check the Supabase connection and published project entries.</p>
+          <p class="dl-feature-description">Please check the Supabase connection and published project entries.</p>
         </div>
       </article>`;
   }
@@ -223,8 +193,7 @@ async function loadFeaturedProject() {
 function loadHeroHighlights() {
   const root = document.querySelector("#homeHeroHighlights");
   if (!root) return;
-  const items = HERO_HIGHLIGHTS.concat(HERO_HIGHLIGHTS);
-  root.innerHTML = items.map(heroHighlightMarkup).join("");
+  root.innerHTML = HERO_HIGHLIGHTS.concat(HERO_HIGHLIGHTS).map(heroHighlightMarkup).join("");
 }
 
 function loadClients() {
@@ -236,11 +205,7 @@ function loadClients() {
 function loadTestimonials() {
   const grid = document.querySelector("#homeTestimonialsGrid");
   if (!grid) return;
-
-  const items = Array.isArray(window.DESIGNLAB_TESTIMONIALS) && window.DESIGNLAB_TESTIMONIALS.length
-    ? window.DESIGNLAB_TESTIMONIALS
-    : [];
-
+  const items = Array.isArray(window.DESIGNLAB_TESTIMONIALS) ? window.DESIGNLAB_TESTIMONIALS : [];
   grid.innerHTML = items.map(testimonialMarkup).join("");
 }
 
@@ -249,10 +214,7 @@ loadClients();
 loadFeaturedProject();
 loadTestimonials();
 
-/* =========================================================
-   v3.16.6 — Premium hero motion
-   More visible network lines, cursor-follow glow and parallax.
-   ========================================================= */
+/* Premium hero motion */
 (() => {
   const hero = document.querySelector(".dl-hero-panel");
   const canvas = document.querySelector("#dlHeroParticles");
@@ -277,13 +239,13 @@ loadTestimonials();
   let parallaxX = 0;
   let parallaxY = 0;
 
-  const nodeCount = Math.max(24, Math.min(36, Math.round(window.innerWidth / 60)));
+  const nodeCount = Math.max(26, Math.min(38, Math.round(window.innerWidth / 58)));
   const nodes = Array.from({ length: nodeCount }, () => ({
     x: Math.random(),
     y: Math.random(),
     vx: (Math.random() - 0.5) * 0.00018,
     vy: (Math.random() - 0.5) * 0.00018,
-    radius: 1.2 + Math.random() * 1.7,
+    radius: 1.25 + Math.random() * 1.8,
     phase: Math.random() * Math.PI * 2
   }));
 
@@ -306,7 +268,6 @@ loadTestimonials();
     if (node.x > 1.04) node.x = -0.04;
     if (node.y < -0.04) node.y = 1.04;
     if (node.y > 1.04) node.y = -0.04;
-
     return {
       x: node.x * width + Math.sin(time * 0.00048 + node.phase) * 10,
       y: node.y * height + Math.cos(time * 0.00039 + node.phase) * 9
@@ -321,27 +282,23 @@ loadTestimonials();
 
     ctx.clearRect(0, 0, width, height);
     const positions = nodes.map((node) => updateNode(node, time));
-    const maxDistance = Math.min(Math.max(width * 0.22, 210), 320);
+    const maxDistance = Math.min(Math.max(width * 0.22, 220), 330);
 
     for (let i = 0; i < positions.length; i++) {
       for (let j = i + 1; j < positions.length; j++) {
         const a = positions[i];
         const b = positions[j];
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        const distance = Math.hypot(dx, dy);
+        const distance = Math.hypot(a.x - b.x, a.y - b.y);
         if (distance > maxDistance) continue;
-
-        const alpha = (1 - distance / maxDistance) * 0.34;
+        const alpha = (1 - distance / maxDistance) * 0.38;
         const gradient = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
-        gradient.addColorStop(0, `rgba(255, 198, 145, ${alpha * 0.72})`);
-        gradient.addColorStop(1, `rgba(176, 197, 255, ${alpha})`);
-
+        gradient.addColorStop(0, `rgba(255, 205, 158, ${alpha * 0.78})`);
+        gradient.addColorStop(1, `rgba(188, 207, 255, ${alpha})`);
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
         ctx.strokeStyle = gradient;
-        ctx.lineWidth = 1.15;
+        ctx.lineWidth = 1.2;
         ctx.stroke();
       }
     }
@@ -350,7 +307,7 @@ loadTestimonials();
       const pulse = 0.85 + Math.sin(time * 0.0015 + nodes[index].phase) * 0.22;
       ctx.beginPath();
       ctx.arc(point.x, point.y, nodes[index].radius * pulse, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(241, 244, 255, 0.84)";
+      ctx.fillStyle = "rgba(244, 247, 255, 0.88)";
       ctx.fill();
     });
 
