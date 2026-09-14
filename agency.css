@@ -1,6 +1,6 @@
 
 /* =========================================================
-   DesignLab v3.16.2 — Editorial Agency System
+   DesignLab v3.16.3 — Editorial Agency System
    Inspired by modern editorial agency structure, rebuilt for
    DesignLab's blue-forward identity and compact preferences.
    ========================================================= */
@@ -750,7 +750,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.16.2 — Bou-inspired homepage structure, DesignLab style
+   v3.16.3 — Bou-inspired homepage structure, DesignLab style
    ========================================================= */
 
 .bou-home-hero {
@@ -1096,7 +1096,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.16.2 — Homepage fullscreen fix
+   v3.16.3 — Homepage fullscreen fix
    ========================================================= */
 body.designlab-agency-home .rp-main {
   width: 100% !important;
@@ -1232,7 +1232,7 @@ body.designlab-agency-home .bou-home-meta span {
 
 
 /* =========================================================
-   v3.16.2 — Bou-style homepage refinement
+   v3.16.3 — Bou-style homepage refinement
    ========================================================= */
 body.designlab-agency-home {
   background: #f5f6fb;
@@ -1437,7 +1437,7 @@ body.designlab-agency-home .agency-closing {
 }
 
 /* =========================================================
-   v3.16.2 — Homepage structure overhaul
+   v3.16.3 — Homepage structure overhaul
    ========================================================= */
 body.designlab-home-v316 {
   background: #f3f6fb;
@@ -1936,7 +1936,7 @@ body.agency-system .site-header .rp-header-inner {
 
 
 /* =========================================================
-   v3.16.2 — Hero readability, alignment, and motion fix
+   v3.16.3 — Hero readability, alignment, and motion fix
    ========================================================= */
 html,
 body.designlab-home-v3161 {
@@ -2197,7 +2197,7 @@ html.motion-soft .motion-stagger-child {
 }
 
 /* =========================================================
-   v3.16.2 — Section Repair + Premium Hero Motion
+   v3.16.3 — Section Repair + Premium Hero Motion
    Homepage styles are fully isolated to .designlab-home-v3162
    ========================================================= */
 html,
@@ -2857,5 +2857,215 @@ html.motion-soft .motion-stagger-child {
   html.motion-soft .reveal-up {
     opacity: 1 !important;
     transition: none !important;
+  }
+}
+
+
+/* =========================================================
+   v3.16.3 — Hero alignment + navbar + motion visibility fix
+   ========================================================= */
+body.designlab-home-v3162,
+body.designlab-home-v3163 {
+  --home-nav-height: 64px;
+}
+
+body.designlab-home-v3162 .site-header,
+body.designlab-home-v3163 .site-header {
+  min-height: var(--home-nav-height) !important;
+  height: var(--home-nav-height) !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,.07) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.designlab-home-v3162 .site-header .rp-header-inner,
+body.designlab-home-v3163 .site-header .rp-header-inner {
+  width: min(100%, 1380px) !important;
+  min-height: var(--home-nav-height) !important;
+  height: var(--home-nav-height) !important;
+  padding: 0 28px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+body.designlab-home-v3162 .rp-brand,
+body.designlab-home-v3163 .rp-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+}
+
+body.designlab-home-v3162 .rp-brand img,
+body.designlab-home-v3163 .rp-brand img {
+  width: 154px !important;
+  height: auto !important;
+  max-height: 38px !important;
+  object-fit: contain !important;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 4px rgba(0,0,0,.16)) !important;
+  opacity: 1 !important;
+}
+
+body.designlab-home-v3162 .rp-nav,
+body.designlab-home-v3163 .rp-nav {
+  margin-left: auto !important;
+  gap: 28px !important;
+}
+
+body.designlab-home-v3162 .site-header .rp-nav a,
+body.designlab-home-v3163 .site-header .rp-nav a {
+  padding: 0 !important;
+  color: rgba(255,255,255,.88) !important;
+  font-size: .88rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,.16) !important;
+}
+
+body.designlab-home-v3162 .site-header.is-scrolled,
+body.designlab-home-v3163 .site-header.is-scrolled {
+  background: rgba(248,250,253,.94) !important;
+  border-bottom: 1px solid rgba(19,36,76,.08) !important;
+  backdrop-filter: blur(16px) saturate(1.05) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.05) !important;
+}
+
+body.designlab-home-v3162 .site-header.is-scrolled .rp-brand img,
+body.designlab-home-v3163 .site-header.is-scrolled .rp-brand img {
+  filter: none !important;
+}
+
+body.designlab-home-v3162 .site-header.is-scrolled .rp-nav a,
+body.designlab-home-v3163 .site-header.is-scrolled .rp-nav a {
+  color: #17233d !important;
+  text-shadow: none !important;
+}
+
+body.designlab-home-v3162 .dl-hero-panel,
+body.designlab-home-v3163 .dl-hero-panel {
+  --cursor-x: 50%;
+  --cursor-y: 48%;
+  --parallax-x: 0px;
+  --parallax-y: 0px;
+  height: 100svh !important;
+  min-height: 620px !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.designlab-home-v3162 .dl-hero-media,
+body.designlab-home-v3163 .dl-hero-media {
+  transform: translate3d(var(--parallax-x), var(--parallax-y), 0) scale(1.055) !important;
+  transition: transform .18s linear;
+  will-change: transform;
+}
+
+body.designlab-home-v3162 .dl-hero-particles,
+body.designlab-home-v3163 .dl-hero-particles {
+  z-index: 2 !important;
+  opacity: .82 !important;
+  mix-blend-mode: screen;
+}
+
+body.designlab-home-v3162 .dl-hero-cursor-glow,
+body.designlab-home-v3163 .dl-hero-cursor-glow {
+  z-index: 2 !important;
+  inset: auto !important;
+  width: min(48vw, 620px) !important;
+  height: min(48vw, 620px) !important;
+  left: var(--cursor-x) !important;
+  top: var(--cursor-y) !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle,
+    rgba(113,139,255,.28) 0%,
+    rgba(96,102,255,.15) 28%,
+    rgba(84,83,255,.06) 48%,
+    rgba(84,83,255,0) 72%) !important;
+  filter: blur(8px) !important;
+  transform: translate(-50%, -50%) !important;
+  opacity: .9 !important;
+  will-change: left, top;
+}
+
+body.designlab-home-v3162 .dl-hero-inner,
+body.designlab-home-v3163 .dl-hero-inner {
+  width: min(100%, 890px) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  transform: translateY(-1.5vh) !important;
+}
+
+body.designlab-home-v3162 .dl-hero-inner h1,
+body.designlab-home-v3163 .dl-hero-inner h1 {
+  max-width: 890px !important;
+  margin: 0 auto !important;
+  font-size: clamp(3.1rem, 5.05vw, 5.2rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.064em !important;
+}
+
+body.designlab-home-v3162 .dl-hero-links,
+body.designlab-home-v3163 .dl-hero-links {
+  margin-top: 34px !important;
+}
+
+body.designlab-home-v3162 .dl-hero-highlight,
+body.designlab-home-v3163 .dl-hero-highlight {
+  background-size: 220% 100% !important;
+  animation: dlGradientFlow 6s ease-in-out infinite alternate !important;
+}
+
+@keyframes dlGradientFlow {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@media (max-width: 760px) {
+  body.designlab-home-v3162,
+  body.designlab-home-v3163 {
+    --home-nav-height: 58px;
+  }
+
+  body.designlab-home-v3162 .site-header .rp-header-inner,
+  body.designlab-home-v3163 .site-header .rp-header-inner {
+    padding: 0 16px !important;
+  }
+
+  body.designlab-home-v3162 .rp-brand img,
+  body.designlab-home-v3163 .rp-brand img {
+    width: 136px !important;
+    max-height: 34px !important;
+  }
+
+  body.designlab-home-v3162 .rp-nav,
+  body.designlab-home-v3163 .rp-nav {
+    gap: 14px !important;
+  }
+
+  body.designlab-home-v3162 .site-header .rp-nav a,
+  body.designlab-home-v3163 .site-header .rp-nav a {
+    font-size: .76rem !important;
+  }
+
+  body.designlab-home-v3162 .dl-hero-inner,
+  body.designlab-home-v3163 .dl-hero-inner {
+    transform: translateY(-1vh) !important;
+  }
+
+  body.designlab-home-v3162 .dl-hero-inner h1,
+  body.designlab-home-v3163 .dl-hero-inner h1 {
+    font-size: clamp(2.65rem, 10.5vw, 4rem) !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  body.designlab-home-v3162 .dl-hero-media,
+  body.designlab-home-v3163 .dl-hero-media {
+    transform: scale(1.045) !important;
   }
 }

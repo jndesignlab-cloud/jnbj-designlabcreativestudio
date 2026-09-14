@@ -94,7 +94,7 @@
 })();
 
 
-// v3.16.2 editorial agency header refinement
+// v3.16.3 editorial agency header refinement
 (() => {
   const headers = document.querySelectorAll(".site-header");
   const current = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();

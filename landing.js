@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.2";
+const SITE_VERSION = "3.16.3";
 const LAST_EDIT = "September 14, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -137,8 +137,8 @@ loadTestimonials();
 
 
 /* =========================================================
-   v3.16.2 — Premium hero motion
-   Subtle connected particles + cursor-follow glow.
+   v3.16.3 — Premium hero motion
+   More visible connected particles, cursor glow + parallax.
    ========================================================= */
 (() => {
   const hero = document.querySelector(".dl-hero-panel");
@@ -159,17 +159,20 @@ loadTestimonials();
   let dpr = Math.min(window.devicePixelRatio || 1, 1.75);
   let raf = 0;
   let isVisible = true;
-  let targetGlowX = 50;
-  let targetGlowY = 48;
-  let glowX = targetGlowX;
-  let glowY = targetGlowY;
+  let mouseX = 0.5;
+  let mouseY = 0.48;
+  let smoothX = mouseX;
+  let smoothY = mouseY;
+  let parallaxX = 0;
+  let parallaxY = 0;
 
-  const nodes = Array.from({ length: 14 }, (_, index) => ({
+  const nodeCount = Math.max(20, Math.min(30, Math.round(window.innerWidth / 70)));
+  const nodes = Array.from({ length: nodeCount }, (_, index) => ({
     x: Math.random(),
     y: Math.random(),
-    vx: (Math.random() - .5) * .000075,
-    vy: (Math.random() - .5) * .000075,
-    radius: 1 + Math.random() * 1.15,
+    vx: (Math.random() - 0.5) * 0.00013,
+    vy: (Math.random() - 0.5) * 0.00013,
+    radius: 1.05 + Math.random() * 1.45,
     phase: Math.random() * Math.PI * 2,
     seed: index
   }));
@@ -191,14 +194,14 @@ loadTestimonials();
     node.x += node.vx;
     node.y += node.vy;
 
-    if (node.x < -.03) node.x = 1.03;
-    if (node.x > 1.03) node.x = -.03;
-    if (node.y < -.03) node.y = 1.03;
-    if (node.y > 1.03) node.y = -.03;
+    if (node.x < -0.04) node.x = 1.04;
+    if (node.x > 1.04) node.x = -0.04;
+    if (node.y < -0.04) node.y = 1.04;
+    if (node.y > 1.04) node.y = -0.04;
 
     return {
-      x: node.x * width + Math.sin(time * .00035 + node.phase) * 5,
-      y: node.y * height + Math.cos(time * .00028 + node.phase) * 4
+      x: node.x * width + Math.sin(time * 0.00048 + node.phase) * 8,
+      y: node.y * height + Math.cos(time * 0.00039 + node.phase) * 7
     };
   }
 
@@ -210,8 +213,8 @@ loadTestimonials();
 
     ctx.clearRect(0, 0, width, height);
     const positions = nodes.map((node) => updateNode(node, time));
+    const maxDistance = Math.min(Math.max(width * 0.17, 150), 245);
 
-    // Lines remain sparse and soft.
     for (let i = 0; i < positions.length; i++) {
       for (let j = i + 1; j < positions.length; j++) {
         const a = positions[i];
@@ -219,32 +222,36 @@ loadTestimonials();
         const dx = a.x - b.x;
         const dy = a.y - b.y;
         const distance = Math.hypot(dx, dy);
-        const maxDistance = Math.min(width, 1280) * .22;
         if (distance > maxDistance) continue;
 
-        const alpha = (1 - distance / maxDistance) * .105;
+        const alpha = (1 - distance / maxDistance) * 0.22;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = `rgba(184, 201, 255, ${alpha})`;
-        ctx.lineWidth = .8;
+        ctx.strokeStyle = `rgba(176, 197, 255, ${alpha})`;
+        ctx.lineWidth = 0.9;
         ctx.stroke();
       }
     }
 
     positions.forEach((point, index) => {
-      const pulse = .65 + Math.sin(time * .001 + nodes[index].phase) * .18;
+      const pulse = 0.82 + Math.sin(time * 0.0015 + nodes[index].phase) * 0.2;
       ctx.beginPath();
       ctx.arc(point.x, point.y, nodes[index].radius * pulse, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(214, 224, 255, .38)";
+      ctx.fillStyle = "rgba(221, 229, 255, .64)";
       ctx.fill();
     });
 
-    if (glow && !coarsePointer) {
-      glowX += (targetGlowX - glowX) * .075;
-      glowY += (targetGlowY - glowY) * .075;
-      glow.style.left = `${glowX}%`;
-      glow.style.top = `${glowY}%`;
+    if (!coarsePointer) {
+      smoothX += (mouseX - smoothX) * 0.065;
+      smoothY += (mouseY - smoothY) * 0.065;
+      parallaxX += (((smoothX - 0.5) * 14) - parallaxX) * 0.055;
+      parallaxY += (((smoothY - 0.5) * 10) - parallaxY) * 0.055;
+
+      hero.style.setProperty("--cursor-x", `${smoothX * 100}%`);
+      hero.style.setProperty("--cursor-y", `${smoothY * 100}%`);
+      hero.style.setProperty("--parallax-x", `${parallaxX}px`);
+      hero.style.setProperty("--parallax-y", `${parallaxY}px`);
     }
 
     raf = requestAnimationFrame(draw);
@@ -253,13 +260,13 @@ loadTestimonials();
   if (!coarsePointer) {
     hero.addEventListener("pointermove", (event) => {
       const rect = hero.getBoundingClientRect();
-      targetGlowX = ((event.clientX - rect.left) / rect.width) * 100;
-      targetGlowY = ((event.clientY - rect.top) / rect.height) * 100;
+      mouseX = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+      mouseY = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
     }, { passive: true });
 
     hero.addEventListener("pointerleave", () => {
-      targetGlowX = 50;
-      targetGlowY = 48;
+      mouseX = 0.5;
+      mouseY = 0.48;
     }, { passive: true });
   }
 
