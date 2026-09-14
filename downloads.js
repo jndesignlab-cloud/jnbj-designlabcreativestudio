@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.0";
+const SITE_VERSION = "3.16.1";
 const LAST_EDIT = "September 13, 2026";
 
 const DOWNLOADS = [

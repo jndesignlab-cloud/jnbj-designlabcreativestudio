@@ -1,6 +1,6 @@
 
 /* =========================================================
-   DesignLab v3.16.0 — Editorial Agency System
+   DesignLab v3.16.1 — Editorial Agency System
    Inspired by modern editorial agency structure, rebuilt for
    DesignLab's blue-forward identity and compact preferences.
    ========================================================= */
@@ -750,7 +750,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.16.0 — Bou-inspired homepage structure, DesignLab style
+   v3.16.1 — Bou-inspired homepage structure, DesignLab style
    ========================================================= */
 
 .bou-home-hero {
@@ -1096,7 +1096,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.16.0 — Homepage fullscreen fix
+   v3.16.1 — Homepage fullscreen fix
    ========================================================= */
 body.designlab-agency-home .rp-main {
   width: 100% !important;
@@ -1232,7 +1232,7 @@ body.designlab-agency-home .bou-home-meta span {
 
 
 /* =========================================================
-   v3.16.0 — Bou-style homepage refinement
+   v3.16.1 — Bou-style homepage refinement
    ========================================================= */
 body.designlab-agency-home {
   background: #f5f6fb;
@@ -1437,7 +1437,7 @@ body.designlab-agency-home .agency-closing {
 }
 
 /* =========================================================
-   v3.16.0 — Homepage structure overhaul
+   v3.16.1 — Homepage structure overhaul
    ========================================================= */
 body.designlab-home-v316 {
   background: #f3f6fb;
@@ -1932,4 +1932,266 @@ body.agency-system .visitor-float {
 
 body.agency-system .site-header .rp-header-inner {
   width: min(100%, 1380px);
+}
+
+
+/* =========================================================
+   v3.16.1 — Hero readability, alignment, and motion fix
+   ========================================================= */
+html,
+body.designlab-home-v3161 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #070c18;
+}
+
+body.designlab-home-v3161 .dl-home-main,
+body.designlab-home-v3161 .rp-main {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.designlab-home-v3161 .site-header {
+  position: fixed !important;
+  inset: 0 0 auto 0 !important;
+  z-index: 100 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: background .28s ease, border-color .28s ease, backdrop-filter .28s ease !important;
+}
+
+body.designlab-home-v3161 .site-header .rp-header-inner {
+  width: min(100%, 1380px) !important;
+  min-height: 78px !important;
+  margin: 0 auto !important;
+  padding: 18px 34px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+body.designlab-home-v3161 .rp-brand img {
+  width: 170px !important;
+  height: auto !important;
+  filter: brightness(0) invert(1) !important;
+  opacity: .96;
+}
+
+body.designlab-home-v3161 .rp-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  margin-left: auto !important;
+}
+
+body.designlab-home-v3161 .site-header .rp-nav a {
+  color: rgba(255,255,255,.88) !important;
+  font-size: .92rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.18);
+}
+
+body.designlab-home-v3161 .site-header .rp-nav a:hover,
+body.designlab-home-v3161 .site-header .rp-nav a:focus-visible {
+  color: #fff !important;
+}
+
+body.designlab-home-v3161 .site-header.is-scrolled {
+  background: rgba(247,249,253,.92) !important;
+  border-bottom: 1px solid rgba(14,28,67,.08) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+body.designlab-home-v3161 .site-header.is-scrolled .rp-brand img {
+  filter: none !important;
+}
+
+body.designlab-home-v3161 .site-header.is-scrolled .rp-nav a {
+  color: #17233d !important;
+  text-shadow: none;
+}
+
+body.designlab-home-v3161 .dl-hero-panel {
+  position: relative !important;
+  width: 100vw !important;
+  height: 100svh !important;
+  min-height: 720px !important;
+  margin: 0 !important;
+  padding: 92px 24px 46px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  isolation: isolate;
+}
+
+body.designlab-home-v3161 .dl-hero-media,
+body.designlab-home-v3161 .dl-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+body.designlab-home-v3161 .dl-hero-media {
+  background: url("assets/designlab-bou-hero.webp") center center / cover no-repeat !important;
+  transform: scale(1.035);
+  filter: saturate(.95) contrast(1.03);
+}
+
+body.designlab-home-v3161 .dl-hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(4,8,18,.34) 0%, rgba(4,8,18,.48) 48%, rgba(4,8,18,.82) 100%),
+    radial-gradient(circle at 50% 45%, rgba(5,13,31,.16) 0%, rgba(5,13,31,.52) 70%),
+    radial-gradient(circle at 18% 14%, rgba(255,137,50,.20), transparent 34%),
+    radial-gradient(circle at 78% 18%, rgba(65,96,255,.18), transparent 32%) !important;
+}
+
+body.designlab-home-v3161 .dl-hero-inner {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(100%, 790px) !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  transform: translateY(1vh);
+}
+
+body.designlab-home-v3161 .dl-hero-inner h1 {
+  margin: 0 !important;
+  font-size: clamp(3rem, 4.55vw, 4.55rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 500 !important;
+  text-wrap: balance;
+}
+
+body.designlab-home-v3161 .dl-hero-base {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+body.designlab-home-v3161 .dl-hero-highlight {
+  display: inline;
+  background: linear-gradient(90deg, #ffffff 0%, #d7defe 18%, #8ca8ff 55%, #8580ff 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.designlab-home-v3161 .dl-hero-links {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-top: 28px !important;
+  flex-wrap: wrap !important;
+}
+
+body.designlab-home-v3161 .dl-hero-links a {
+  min-height: 42px !important;
+  padding: 0 17px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-radius: 999px !important;
+  color: #fff !important;
+  background: rgba(255,255,255,.08) !important;
+  font-size: .82rem !important;
+  font-weight: 650 !important;
+  text-decoration: none !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease !important;
+}
+
+body.designlab-home-v3161 .dl-hero-links a:first-child {
+  color: #1535a9 !important;
+  background: #fff !important;
+  border-color: #fff !important;
+}
+
+body.designlab-home-v3161 .dl-hero-links a:hover {
+  transform: translateY(-1px) !important;
+  border-color: rgba(255,255,255,.48) !important;
+}
+
+/* Motion is intentionally opacity-only: no slide-in or stagger jumps. */
+html.motion-soft .agency-reveal,
+html.motion-soft .reveal-up {
+  opacity: 0;
+  transform: none !important;
+  transition: opacity .36s ease !important;
+}
+
+html.motion-soft .agency-reveal.is-visible,
+html.motion-soft .reveal-up.is-visible {
+  opacity: 1;
+}
+
+html.motion-soft .agency-stagger,
+html.motion-soft .motion-stagger-child {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (max-width: 860px) {
+  body.designlab-home-v3161 .site-header .rp-header-inner {
+    padding: 16px 20px !important;
+  }
+
+  body.designlab-home-v3161 .rp-brand img {
+    width: 150px !important;
+  }
+
+  body.designlab-home-v3161 .rp-nav {
+    gap: 16px !important;
+  }
+
+  body.designlab-home-v3161 .site-header .rp-nav a {
+    font-size: .82rem !important;
+  }
+
+  body.designlab-home-v3161 .dl-hero-panel {
+    min-height: 640px !important;
+    padding-inline: 18px !important;
+  }
+
+  body.designlab-home-v3161 .dl-hero-inner {
+    width: min(100%, 680px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.designlab-home-v3161 .dl-hero-panel {
+    height: 100svh !important;
+    min-height: 620px !important;
+    padding-top: 106px !important;
+  }
+
+  body.designlab-home-v3161 .dl-hero-inner h1 {
+    font-size: clamp(2.55rem, 10vw, 3.65rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  body.designlab-home-v3161 .dl-hero-links a {
+    min-height: 40px !important;
+    padding-inline: 15px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion-soft .agency-reveal,
+  html.motion-soft .reveal-up {
+    opacity: 1 !important;
+    transition: none !important;
+  }
 }

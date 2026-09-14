@@ -1,46 +1,29 @@
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  document.documentElement.classList.add("motion-enabled");
+  const targets = [...document.querySelectorAll(".agency-reveal, .reveal-up")];
 
-  function init() {
-    const targets = [
-      ...document.querySelectorAll(".agency-reveal"),
-      ...document.querySelectorAll(".reveal-up")
-    ];
+  document.documentElement.classList.add("motion-soft");
 
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      targets.forEach((target) => target.classList.add("is-visible"));
-      document.querySelectorAll(".agency-stagger").forEach((child) => child.classList.add("is-visible"));
-      return;
-    }
+  // Hero should never wait on an observer.
+  document.querySelector(".dl-hero-panel")?.classList.add("is-visible");
 
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        entry.target.querySelectorAll(".agency-stagger").forEach((child) => child.classList.add("is-visible"));
-        obs.unobserve(entry.target);
-      });
-    }, {
-      threshold: .08,
-      rootMargin: "0px 0px -6% 0px"
-    });
-
-    targets.forEach((target) => observer.observe(target));
-
-    const mutation = new MutationObserver(() => {
-      document.querySelectorAll(".agency-reveal.is-visible .agency-stagger").forEach((child) => {
-        child.classList.add("is-visible");
-      });
-    });
-
-    const main = document.querySelector("main");
-    if (main) mutation.observe(main, { childList: true, subtree: true });
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    targets.forEach((target) => target.classList.add("is-visible"));
+    return;
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init, { once: true });
-  } else {
-    init();
-  }
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      obs.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.06,
+    rootMargin: "0px 0px -4% 0px"
+  });
+
+  targets.forEach((target) => {
+    if (!target.classList.contains("is-visible")) observer.observe(target);
+  });
 })();
