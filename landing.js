@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.7";
+const SITE_VERSION = "3.16.8";
 const LAST_EDIT = "September 14, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -141,10 +141,22 @@ function heroHighlightMarkup(item) {
     </a>`;
 }
 
-function testimonialMarkup(item) {
+function featureStripMarkup(project) {
   return `
-    <article class="dl-testimonial-card">
-      <span class="dl-testimonial-sample">Sample feedback</span>
+    <a class="dl-feature-strip-item" href="project.html?id=${encodeURIComponent(project.id)}">
+      <span class="dl-feature-strip-media">
+        ${project.image
+          ? `<img src="${escapeAgency(project.image)}" alt="${escapeAgency(project.title)}" loading="lazy" decoding="async">`
+          : `<span class="dl-feature-strip-empty">No image</span>`}
+      </span>
+      <span class="dl-feature-strip-name">${escapeAgency(project.title)}</span>
+    </a>`;
+}
+
+function testimonialCardMarkup(item, compact = false) {
+  return `
+    <article class="dl-testimonial-card${compact ? " is-compact" : " is-featured"}">
+      ${compact ? "" : `<p class="dl-testimonial-kicker">Highlighted comment</p>`}
       <p class="dl-testimonial-quote">“${escapeAgency(item.quote)}”</p>
       <div class="dl-testimonial-meta">
         <strong>${escapeAgency(item.name)}</strong>
@@ -155,38 +167,52 @@ function testimonialMarkup(item) {
 
 async function loadFeaturedProject() {
   const featureRoot = document.querySelector("#homeFeaturedProject");
-  if (!featureRoot || !window.DesignLabProjects) return;
+  const featureStripRoot = document.querySelector("#homeFeatureStrip");
+  if ((!featureRoot && !featureStripRoot) || !window.DesignLabProjects) return;
 
   try {
-    const featured = await window.DesignLabProjects.listPublished({ featured: true, limit: 8 });
+    const featured = await window.DesignLabProjects.listPublished({ featured: true, limit: 12 });
     const published = await window.DesignLabProjects.listPublished({ limit: 12 });
-    const project = featured.length
-      ? featured[Math.floor(Math.random() * featured.length)]
-      : (published[0] || null);
+    const featuredPool = featured.length ? featured : published;
+    const project = featuredPool.length
+      ? featuredPool[Math.floor(Math.random() * featuredPool.length)]
+      : null;
 
     if (!project) {
+      if (featureRoot) {
+        featureRoot.innerHTML = `
+          <article class="dl-feature-card">
+            <div class="dl-feature-copy">
+              <p class="dl-eyebrow">Highlighted Work</p>
+              <h3>No featured project yet</h3>
+              <p class="dl-feature-description">Add or publish at least one project to show it here.</p>
+            </div>
+          </article>`;
+      }
+      if (featureStripRoot) featureStripRoot.innerHTML = "";
+      return;
+    }
+
+    if (featureRoot) featureRoot.innerHTML = featureMarkup(project);
+
+    if (featureStripRoot) {
+      const stripSource = featuredPool.slice(0, 8);
+      const stripItems = stripSource.length > 1 ? stripSource.concat(stripSource) : stripSource;
+      featureStripRoot.innerHTML = stripItems.map(featureStripMarkup).join("");
+    }
+  } catch (error) {
+    console.error("Featured project load error:", error);
+    if (featureRoot) {
       featureRoot.innerHTML = `
         <article class="dl-feature-card">
           <div class="dl-feature-copy">
             <p class="dl-eyebrow">Highlighted Work</p>
-            <h3>No featured project yet</h3>
-            <p class="dl-feature-description">Add or publish at least one project to show it here.</p>
+            <h3>Unable to load the featured project</h3>
+            <p class="dl-feature-description">Please check the Supabase connection and published project entries.</p>
           </div>
         </article>`;
-      return;
     }
-
-    featureRoot.innerHTML = featureMarkup(project);
-  } catch (error) {
-    console.error("Featured project load error:", error);
-    featureRoot.innerHTML = `
-      <article class="dl-feature-card">
-        <div class="dl-feature-copy">
-          <p class="dl-eyebrow">Highlighted Work</p>
-          <h3>Unable to load the featured project</h3>
-          <p class="dl-feature-description">Please check the Supabase connection and published project entries.</p>
-        </div>
-      </article>`;
+    if (featureStripRoot) featureStripRoot.innerHTML = "";
   }
 }
 
@@ -206,7 +232,17 @@ function loadTestimonials() {
   const grid = document.querySelector("#homeTestimonialsGrid");
   if (!grid) return;
   const items = Array.isArray(window.DESIGNLAB_TESTIMONIALS) ? window.DESIGNLAB_TESTIMONIALS : [];
-  grid.innerHTML = items.map(testimonialMarkup).join("");
+  if (!items.length) {
+    grid.innerHTML = "";
+    return;
+  }
+
+  const [featured, ...rest] = items;
+  grid.innerHTML = `
+    ${testimonialCardMarkup(featured, false)}
+    <div class="dl-testimonial-mini-grid">
+      ${rest.map((item) => testimonialCardMarkup(item, true)).join("")}
+    </div>`;
 }
 
 loadHeroHighlights();
