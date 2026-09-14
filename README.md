@@ -1,6 +1,7 @@
-# DesignLab Portfolio Website v3.16.16
+# DesignLab Portfolio Website v3.16.18
 
-Focused maintenance release:
-- hero `campaign-ready design.` clipping fix
-- unified public navbar
-- Work / Clients / Services / Downloads / About / Contact
+Homepage hero refinement release:
+- floating showcase cards are smaller
+- cards sit farther from the hero text area
+- motion is more subtle
+- uses local optimized `.webp` files

@@ -1,11 +1,17 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.16 — Hero Clip Fix + Shared Navbar
+## v3.16.18 — Hero Floating Card Refinement
 
-- fixed the hero emphasis line so **campaign-ready design.** stays inside the safe text area instead of clipping at wider type scales or browser zoom changes
-- kept the phrase prominent through stronger weight, gradient contrast, and subtle glow rather than unsafe oversizing
-- standardized the public-site navbar across the main pages
-- navbar sections are now: **Work · Clients · Services · Downloads · About · Contact**
-- added a dedicated Clients anchor on the homepage so the navbar can jump directly to the Trusted By section
-- applied the same thin frosted navbar styling to project, service, download, creator, contact, insight, status, and preview pages
-- shared navbar keeps the existing smart behavior: visible at the top / hero, hides while scrolling down, reappears while scrolling up
+- made the floating hero showcase cards smaller for a cleaner and more professional presentation
+- pushed the cards farther away from the main hero copy so the text area feels more open
+- softened the floating motion for a subtler effect
+- reduced opacity and shadow weight so the floating visuals feel lighter and less distracting
+- kept all showcase visuals as local optimized `.webp` assets
+
+## v3.16.17 — Hero Floating Showcase Cards
+
+- added three floating project showcase visuals to the homepage hero section
+- converted the provided sample images into local optimized `.webp` assets for easier site use
+- positioned the floating cards so they stay away from the hero copy and primary CTA area
+- added soft floating motion, rounded card styling, and responsive behavior for cleaner presentation across screen sizes
+- kept the hero text unobstructed while still showcasing actual DesignLab layout samples inside the hero area

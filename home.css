@@ -2039,3 +2039,284 @@ body.designlab-home .dl-hero-base {
     padding-inline: .07em !important;
   }
 }
+
+/* =========================================================
+   v3.16.17 — floating local WEBP showcase cards on hero
+   ========================================================= */
+body.designlab-home .dl-hero-floats {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+
+body.designlab-home .dl-hero-float {
+  position: absolute !important;
+  width: clamp(148px, 15.2vw, 238px) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 26px 62px rgba(8, 14, 30, 0.34) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transform-origin: center center !important;
+  will-change: transform !important;
+  opacity: 0.94 !important;
+}
+
+body.designlab-home .dl-hero-float img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+}
+
+body.designlab-home .dl-hero-float-one {
+  top: calc(var(--dl-header) + 54px) !important;
+  left: clamp(28px, 4.2vw, 84px) !important;
+  transform: rotate(-7deg) !important;
+  animation: dlHeroFloatOne 7.4s ease-in-out infinite !important;
+}
+
+body.designlab-home .dl-hero-float-two {
+  right: clamp(34px, 5vw, 98px) !important;
+  top: 16.5% !important;
+  width: clamp(158px, 16vw, 248px) !important;
+  transform: rotate(7deg) !important;
+  animation: dlHeroFloatTwo 8.2s ease-in-out infinite !important;
+}
+
+body.designlab-home .dl-hero-float-three {
+  left: clamp(78px, 9vw, 168px) !important;
+  bottom: clamp(38px, 6.2vh, 76px) !important;
+  width: clamp(162px, 15.6vw, 244px) !important;
+  transform: rotate(-4deg) !important;
+  animation: dlHeroFloatThree 7.9s ease-in-out infinite !important;
+}
+
+@keyframes dlHeroFloatOne {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-7deg); }
+  50% { transform: translate3d(0, -14px, 0) rotate(-5.5deg); }
+}
+
+@keyframes dlHeroFloatTwo {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(7deg); }
+  50% { transform: translate3d(0, -16px, 0) rotate(8.4deg); }
+}
+
+@keyframes dlHeroFloatThree {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-4deg); }
+  50% { transform: translate3d(0, -13px, 0) rotate(-2.8deg); }
+}
+
+@media (max-width: 1240px) {
+  body.designlab-home .dl-hero-float-one {
+    top: calc(var(--dl-header) + 46px) !important;
+    left: 18px !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    right: 18px !important;
+  }
+
+  body.designlab-home .dl-hero-float-three {
+    left: 34px !important;
+    bottom: 24px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  body.designlab-home .dl-hero-float {
+    width: clamp(126px, 18vw, 186px) !important;
+    border-radius: 20px !important;
+    opacity: 0.88 !important;
+  }
+
+  body.designlab-home .dl-hero-float-one {
+    top: calc(var(--dl-header) + 34px) !important;
+    left: 14px !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    right: 14px !important;
+    top: 17.5% !important;
+  }
+
+  body.designlab-home .dl-hero-float-three {
+    left: 16px !important;
+    bottom: 18px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-hero-float-one,
+  body.designlab-home .dl-hero-float-two {
+    width: 116px !important;
+  }
+
+  body.designlab-home .dl-hero-float-one {
+    top: calc(var(--dl-header) + 26px) !important;
+    left: 10px !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    top: auto !important;
+    right: 10px !important;
+    bottom: 122px !important;
+  }
+
+  body.designlab-home .dl-hero-float-three {
+    display: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body.designlab-home .dl-hero-float-one,
+  body.designlab-home .dl-hero-float-two {
+    width: 98px !important;
+    border-radius: 16px !important;
+    opacity: 0.78 !important;
+  }
+
+  body.designlab-home .dl-hero-float-one {
+    top: calc(var(--dl-header) + 18px) !important;
+    left: 8px !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    right: 8px !important;
+    bottom: 134px !important;
+  }
+}
+
+/* =========================================================
+   v3.16.18 — smaller + subtler hero floating showcase cards
+   ========================================================= */
+body.designlab-home .dl-hero-floats {
+  z-index: 2 !important;
+}
+
+body.designlab-home .dl-hero-float {
+  width: clamp(120px, 11.2vw, 178px) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 18px 40px rgba(8, 14, 30, 0.24) !important;
+  opacity: 0.82 !important;
+}
+
+body.designlab-home .dl-hero-float-one {
+  top: calc(var(--dl-header) + 34px) !important;
+  left: clamp(16px, 2.3vw, 40px) !important;
+  transform: rotate(-6deg) !important;
+  animation: dlHeroFloatOneSoft 10.8s ease-in-out infinite !important;
+}
+
+body.designlab-home .dl-hero-float-two {
+  right: clamp(18px, 2.5vw, 42px) !important;
+  top: calc(var(--dl-header) + 58px) !important;
+  width: clamp(126px, 11.8vw, 184px) !important;
+  transform: rotate(5deg) !important;
+  animation: dlHeroFloatTwoSoft 11.6s ease-in-out infinite !important;
+}
+
+body.designlab-home .dl-hero-float-three {
+  left: clamp(28px, 3.2vw, 64px) !important;
+  bottom: clamp(118px, 14vh, 162px) !important;
+  width: clamp(132px, 12.2vw, 188px) !important;
+  transform: rotate(-4deg) !important;
+  animation: dlHeroFloatThreeSoft 11.1s ease-in-out infinite !important;
+}
+
+@keyframes dlHeroFloatOneSoft {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-6deg); }
+  50% { transform: translate3d(0, -8px, 0) rotate(-5deg); }
+}
+
+@keyframes dlHeroFloatTwoSoft {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(5deg); }
+  50% { transform: translate3d(0, -9px, 0) rotate(5.9deg); }
+}
+
+@keyframes dlHeroFloatThreeSoft {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-4deg); }
+  50% { transform: translate3d(0, -8px, 0) rotate(-3deg); }
+}
+
+@media (max-width: 1240px) {
+  body.designlab-home .dl-hero-float {
+    width: clamp(112px, 10.8vw, 160px) !important;
+    opacity: 0.78 !important;
+  }
+
+  body.designlab-home .dl-hero-float-one {
+    left: 14px !important;
+    top: calc(var(--dl-header) + 24px) !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    right: 16px !important;
+    top: calc(var(--dl-header) + 48px) !important;
+  }
+
+  body.designlab-home .dl-hero-float-three {
+    left: 18px !important;
+    bottom: 120px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  body.designlab-home .dl-hero-float {
+    width: 112px !important;
+    border-radius: 18px !important;
+    opacity: 0.72 !important;
+  }
+
+  body.designlab-home .dl-hero-float-one {
+    top: calc(var(--dl-header) + 18px) !important;
+    left: 10px !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    right: 10px !important;
+    top: calc(var(--dl-header) + 30px) !important;
+    width: 118px !important;
+  }
+
+  body.designlab-home .dl-hero-float-three {
+    left: 12px !important;
+    bottom: 106px !important;
+    width: 116px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-hero-float {
+    width: 94px !important;
+    border-radius: 16px !important;
+    opacity: 0.66 !important;
+  }
+
+  body.designlab-home .dl-hero-float-one {
+    left: 8px !important;
+    top: calc(var(--dl-header) + 16px) !important;
+  }
+
+  body.designlab-home .dl-hero-float-two {
+    right: 8px !important;
+    top: calc(var(--dl-header) + 28px) !important;
+    width: 98px !important;
+  }
+
+  body.designlab-home .dl-hero-float-three {
+    display: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body.designlab-home .dl-hero-float-one,
+  body.designlab-home .dl-hero-float-two {
+    width: 82px !important;
+    opacity: 0.58 !important;
+  }
+}
