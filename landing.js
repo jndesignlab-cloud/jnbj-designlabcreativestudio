@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.1";
+const SITE_VERSION = "3.16.2";
 const LAST_EDIT = "September 14, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -75,7 +75,9 @@ async function loadFeaturedProject() {
   try {
     const featured = await window.DesignLabProjects.listPublished({ featured: true, limit: 8 });
     const published = await window.DesignLabProjects.listPublished({ limit: 12 });
-    const project = featured[0] || published[0] || null;
+    const project = featured.length
+      ? featured[Math.floor(Math.random() * featured.length)]
+      : (published[0] || null);
 
     if (!project) {
       featureRoot.innerHTML = `
@@ -132,3 +134,145 @@ function loadTestimonials() {
 
 loadFeaturedProject();
 loadTestimonials();
+
+
+/* =========================================================
+   v3.16.2 — Premium hero motion
+   Subtle connected particles + cursor-follow glow.
+   ========================================================= */
+(() => {
+  const hero = document.querySelector(".dl-hero-panel");
+  const canvas = document.querySelector("#dlHeroParticles");
+  const glow = document.querySelector("#dlHeroCursorGlow");
+
+  if (!hero || !canvas) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+  if (reduceMotion) return;
+
+  const ctx = canvas.getContext("2d", { alpha: true });
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+  let raf = 0;
+  let isVisible = true;
+  let targetGlowX = 50;
+  let targetGlowY = 48;
+  let glowX = targetGlowX;
+  let glowY = targetGlowY;
+
+  const nodes = Array.from({ length: 14 }, (_, index) => ({
+    x: Math.random(),
+    y: Math.random(),
+    vx: (Math.random() - .5) * .000075,
+    vy: (Math.random() - .5) * .000075,
+    radius: 1 + Math.random() * 1.15,
+    phase: Math.random() * Math.PI * 2,
+    seed: index
+  }));
+
+  function resize() {
+    const rect = hero.getBoundingClientRect();
+    width = Math.max(1, rect.width);
+    height = Math.max(1, rect.height);
+    dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function updateNode(node, time) {
+    node.x += node.vx;
+    node.y += node.vy;
+
+    if (node.x < -.03) node.x = 1.03;
+    if (node.x > 1.03) node.x = -.03;
+    if (node.y < -.03) node.y = 1.03;
+    if (node.y > 1.03) node.y = -.03;
+
+    return {
+      x: node.x * width + Math.sin(time * .00035 + node.phase) * 5,
+      y: node.y * height + Math.cos(time * .00028 + node.phase) * 4
+    };
+  }
+
+  function draw(time = 0) {
+    if (!isVisible) {
+      raf = requestAnimationFrame(draw);
+      return;
+    }
+
+    ctx.clearRect(0, 0, width, height);
+    const positions = nodes.map((node) => updateNode(node, time));
+
+    // Lines remain sparse and soft.
+    for (let i = 0; i < positions.length; i++) {
+      for (let j = i + 1; j < positions.length; j++) {
+        const a = positions[i];
+        const b = positions[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const distance = Math.hypot(dx, dy);
+        const maxDistance = Math.min(width, 1280) * .22;
+        if (distance > maxDistance) continue;
+
+        const alpha = (1 - distance / maxDistance) * .105;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.strokeStyle = `rgba(184, 201, 255, ${alpha})`;
+        ctx.lineWidth = .8;
+        ctx.stroke();
+      }
+    }
+
+    positions.forEach((point, index) => {
+      const pulse = .65 + Math.sin(time * .001 + nodes[index].phase) * .18;
+      ctx.beginPath();
+      ctx.arc(point.x, point.y, nodes[index].radius * pulse, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(214, 224, 255, .38)";
+      ctx.fill();
+    });
+
+    if (glow && !coarsePointer) {
+      glowX += (targetGlowX - glowX) * .075;
+      glowY += (targetGlowY - glowY) * .075;
+      glow.style.left = `${glowX}%`;
+      glow.style.top = `${glowY}%`;
+    }
+
+    raf = requestAnimationFrame(draw);
+  }
+
+  if (!coarsePointer) {
+    hero.addEventListener("pointermove", (event) => {
+      const rect = hero.getBoundingClientRect();
+      targetGlowX = ((event.clientX - rect.left) / rect.width) * 100;
+      targetGlowY = ((event.clientY - rect.top) / rect.height) * 100;
+    }, { passive: true });
+
+    hero.addEventListener("pointerleave", () => {
+      targetGlowX = 50;
+      targetGlowY = 48;
+    }, { passive: true });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.target === hero) isVisible = entry.isIntersecting;
+    });
+  }, { threshold: 0 });
+
+  observer.observe(hero);
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+  raf = requestAnimationFrame(draw);
+
+  window.addEventListener("pagehide", () => cancelAnimationFrame(raf), { once: true });
+})();
