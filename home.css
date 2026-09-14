@@ -1884,3 +1884,49 @@ body.designlab-home .dl-feature-strip-name {
     justify-self: stretch !important;
   }
 }
+
+/* =========================================================
+   v3.16.14 — DesignLab hero gradient + white supporting copy
+   ========================================================= */
+body.designlab-home .dl-hero-overlay {
+  background:
+    linear-gradient(180deg,
+      rgba(7, 13, 33, 0.20) 0%,
+      rgba(8, 17, 48, 0.28) 36%,
+      rgba(7, 12, 31, 0.62) 100%),
+    linear-gradient(115deg,
+      rgba(31, 85, 255, 0.54) 0%,
+      rgba(55, 87, 230, 0.38) 42%,
+      rgba(107, 70, 220, 0.42) 72%,
+      rgba(120, 72, 210, 0.48) 100%),
+    radial-gradient(circle at 28% 24%,
+      rgba(74, 133, 255, 0.30),
+      transparent 34%),
+    radial-gradient(circle at 74% 26%,
+      rgba(132, 91, 255, 0.28),
+      transparent 34%) !important;
+}
+
+body.designlab-home .dl-hero-kicker {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 8px 24px rgba(7, 12, 30, 0.26) !important;
+}
+
+body.designlab-home .dl-hero-lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 8px 24px rgba(7, 12, 30, 0.30) !important;
+}
+
+body.designlab-home .dl-hero-highlight {
+  background: linear-gradient(90deg,
+    #dfe9ff 0%,
+    #b9cbff 32%,
+    #9fa5ff 66%,
+    #c0a2ff 100%) !important;
+  background-size: 220% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}

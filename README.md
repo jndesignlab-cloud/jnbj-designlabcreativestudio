@@ -1,6 +1,6 @@
-DesignLab Portfolio Website — v3.16.13
+DesignLab Portfolio Website — v3.16.14
 
-Focused refinements:
-- more stable centered Highlighted Work section
-- brighter hero supporting text
-- differentiated hero service links
+Focused hero color pass:
+- DesignLab blue → violet treatment
+- white kicker and supporting copy
+- refined highlighted headline gradient

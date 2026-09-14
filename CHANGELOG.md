@@ -1,9 +1,10 @@
-# Changelog — v3.16.13
+# Changelog — v3.16.14
 
-## Home page refinement
-- fixed the Highlighted Work section so its container stays centered more reliably across zoom levels
-- reduced the featured media/copy footprint for a more compact, whitespace-friendly layout
-- improved hero subtext readability by pushing the supporting text to a brighter white treatment
-- changed the hero service links so they no longer look too similar to the main CTA buttons
+## Hero color refinement
+- shifted the hero overlay to a cleaner DesignLab blue-to-violet palette
+- removed the warm/orange emphasis from the hero color treatment
+- made “DesignLab Creative Studio” solid white
+- made the supporting hero description solid white
+- refined the highlighted headline gradient to blue/lavender/violet tones
 
-This is still a focused polish pass, not a full redesign change.
+No structural layout changes were made in this release.
