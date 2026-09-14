@@ -1,11 +1,9 @@
-# Changelog — v3.16.11
+# Changelog — v3.16.12
 
 ## Home page
-- changed hero supporting text to bright white for better readability
-- added compact service buttons on the hero linking to Graphic Design, Social Media Design, and Web Development service sections
-- kept the hero clean by using service pills instead of a second project scroller
-- widened and re-centered the Highlighted Work section so the content block feels properly centered at 100% zoom
-- fine-tuned featured project copy and project-strip sizing for a more balanced layout
+- fixed the Highlighted Work section layout so the content block stays centered instead of feeling pushed to one side
+- tightened the featured-project grid using a more controlled media/copy width balance
+- reduced strip-card sizing slightly to prevent the section from feeling oversized or unstable at 100% zoom
+- added stronger overflow protection around the Highlighted Work panel
 
-## Services page
-- added anchor targets for the main service groups so hero service buttons jump to the correct section
+This is a focused bug-fix pass only before any new design changes.

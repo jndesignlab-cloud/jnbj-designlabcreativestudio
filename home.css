@@ -1583,3 +1583,131 @@ body.designlab-home .dl-feature-strip-name {
     padding: 0 11px !important;
   }
 }
+
+/* =========================================================
+   v3.16.12 — Highlighted Work section stability fix
+   Fixes off-center layout, overflow feel, and keeps the entire section
+   visually centered at normal 100% browser zoom.
+   ========================================================= */
+body.designlab-home .dl-feature-panel {
+  overflow: hidden !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-panel-inner {
+  width: min(100%, 1180px) !important;
+  margin-inline: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-section-head {
+  width: min(100%, 1120px) !important;
+  margin: 0 auto 26px !important;
+}
+
+body.designlab-home .dl-feature-shell {
+  width: min(100%, 1120px) !important;
+  margin: 0 auto !important;
+}
+
+body.designlab-home .dl-feature-card {
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 720px) minmax(320px, 360px) !important;
+  justify-content: center !important;
+  align-items: start !important;
+  column-gap: 38px !important;
+  row-gap: 24px !important;
+  box-sizing: border-box !important;
+}
+
+body.designlab-home .dl-feature-media {
+  width: 100% !important;
+  max-width: 720px !important;
+  justify-self: center !important;
+  aspect-ratio: 16 / 9 !important;
+}
+
+body.designlab-home .dl-feature-copy {
+  width: 100% !important;
+  max-width: 360px !important;
+  min-width: 0 !important;
+  justify-self: start !important;
+  align-self: center !important;
+}
+
+body.designlab-home .dl-feature-copy h3 {
+  max-width: 12ch !important;
+  font-size: clamp(1.6rem, 2vw, 2.35rem) !important;
+  line-height: 1.05 !important;
+}
+
+body.designlab-home .dl-feature-description {
+  max-width: 100% !important;
+  font-size: 0.86rem !important;
+  line-height: 1.68 !important;
+}
+
+body.designlab-home .dl-feature-meta {
+  gap: 8px !important;
+}
+
+body.designlab-home .dl-feature-actions {
+  margin-top: 18px !important;
+}
+
+body.designlab-home .dl-feature-strip {
+  width: min(100%, 1120px) !important;
+  margin: 24px auto 0 !important;
+  overflow: hidden !important;
+}
+
+body.designlab-home .dl-feature-strip-track {
+  min-width: max-content !important;
+}
+
+body.designlab-home .dl-feature-strip-item {
+  width: 172px !important;
+  flex: 0 0 auto !important;
+}
+
+body.designlab-home .dl-feature-strip-media {
+  aspect-ratio: 16 / 9 !important;
+}
+
+body.designlab-home .dl-feature-strip-name {
+  font-size: 0.72rem !important;
+  line-height: 1.28 !important;
+}
+
+@media (max-width: 1180px) {
+  body.designlab-home .dl-feature-panel .dl-panel-inner,
+  body.designlab-home .dl-feature-panel .dl-section-head,
+  body.designlab-home .dl-feature-shell,
+  body.designlab-home .dl-feature-strip {
+    width: min(100%, 1000px) !important;
+  }
+
+  body.designlab-home .dl-feature-card {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px) !important;
+  }
+}
+
+@media (max-width: 920px) {
+  body.designlab-home .dl-feature-panel .dl-section-head {
+    margin-bottom: 20px !important;
+  }
+
+  body.designlab-home .dl-feature-card {
+    grid-template-columns: 1fr !important;
+    width: min(100%, 760px) !important;
+  }
+
+  body.designlab-home .dl-feature-media,
+  body.designlab-home .dl-feature-copy {
+    max-width: none !important;
+    justify-self: stretch !important;
+  }
+}

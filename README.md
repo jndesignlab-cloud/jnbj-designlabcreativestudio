@@ -1,6 +1,4 @@
-DesignLab Portfolio Website — v3.16.11
+DesignLab Portfolio Website — v3.16.12
 
-Focus of this pass:
-- brighter white hero text
-- hero service buttons
-- improved Highlighted Work centering
+Focused fix:
+- Highlighted Work section centering and stability
