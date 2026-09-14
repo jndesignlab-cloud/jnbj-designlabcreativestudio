@@ -1,6 +1,6 @@
 # DesignLab Creative Studio Website
 
-Current production package: **v3.16.3**
+Current production package: **v3.16.4**
 
 Website: https://madebydesignlab.com  
 Personal portfolio: https://jannjaravata.madebydesignlab.com
@@ -52,7 +52,7 @@ depend on them for the public site.
 
 ## Editorial agency visual system
 
-`agency.css` is the active DesignLab visual layer for v3.16.3.
+`agency.css` is the active DesignLab visual layer for v3.16.4.
 
 The design direction borrows high-level editorial agency principles—large type,
 work-first presentation, simple service grouping, client proof, and confident
@@ -60,31 +60,36 @@ calls to action—while keeping original DesignLab branding, content, structure,
 and implementation.
 
 
-## v3.16.3 homepage note
+## v3.16.4 homepage note
 
 The homepage now follows a Bou-inspired structure: cinematic hero, selected work grid, brand wall, and project spotlight, while still using DesignLab content and Supabase-driven work data.
 
 
-## v3.16.3 note
+## v3.16.4 note
 
 This patch specifically fixes the homepage hero layout so it is full-screen and no longer constrained by the shared main container width.
 
 
-## v3.16.3 note
+## v3.16.4 note
 
 This update focuses on the homepage first impression and brings the hero much closer to the provided Bou-style reference while staying in DesignLab branding.
 
 
-## v3.16.3
+## v3.16.4
 
 This version focuses on a cleaner homepage structure with a full-screen hero, selected clients grid, single featured project section, and testimonial placeholders.
 
 
-## v3.16.3 homepage repair
+## v3.16.4 homepage repair
 
 The hero animation is scoped entirely to the first viewport. Clients, Featured Project, and Testimonials return to standard document flow below it. Hero motion uses a light canvas particle network, cursor-follow glow, and animated gradient highlight with reduced-motion support.
 
 
-## v3.16.3
+## v3.16.4
 
 Hero motion and alignment refinement: stronger particles, cursor glow, parallax, thinner navbar, and corrected visual centering.
+
+
+## v3.16.4 homepage stability
+
+The homepage now uses the stable `designlab-home` class plus a dedicated `home.css` loaded after all legacy styles. Future homepage changes should be made there instead of version-specific selectors.

@@ -1,6 +1,13 @@
 # Changelog
 
-## v3.16.3 — Hero Motion & Alignment Fix
+## v3.16.4 — Stable Homepage Layer
+
+- Fixed the homepage break caused by version-specific body selectors.
+- Added a dedicated `home.css` loaded last so the homepage no longer depends on legacy or version-numbered selectors.
+- Restored the full-screen hero background, centered headline, header contrast, particles, cursor glow, and section grids.
+- Kept the Supabase featured-project logic and testimonial placeholders unchanged.
+
+## v3.16.4 — Hero Motion & Alignment Fix
 
 - Made the connected particle network more visible and slightly faster.
 - Added stronger cursor-follow glow and subtle background parallax.
@@ -9,7 +16,7 @@
 - Recentered the hero content against the viewport rather than the header block.
 - Preserved the Clients, Featured Project, and Testimonials section repairs.
 
-## v3.16.3 — Section Repair + Premium Hero Motion
+## v3.16.4 — Section Repair + Premium Hero Motion
 
 - Fully isolated the homepage hero styles so they no longer affect the sections below.
 - Repaired the Clients grid with controlled logo sizes, responsive columns, and consistent card spacing.
@@ -21,7 +28,7 @@
 - Kept section entrance motion intentionally simple: opacity only, with no chunky vertical sliding.
 - Featured Project continues to use one project marked Featured from Supabase.
 
-## v3.16.3 — Hero Readability & Motion Fix
+## v3.16.4 — Hero Readability & Motion Fix
 
 - Made the homepage header transparent over the hero and frosted only after scrolling.
 - Corrected the hero to use the full viewport height without the white top block.
@@ -30,7 +37,7 @@
 - Reworked alignment and sizing for a cleaner centered composition.
 - Replaced slide/stagger reveals with subtle opacity-only transitions.
 
-## v3.16.3 — Homepage Overhaul
+## v3.16.4 — Homepage Overhaul
 
 - Rebuilt the homepage with a new full-screen hero panel instead of the previous reused structure.
 - Shortened the hero message and added a gradient text highlight for a cleaner, more premium first impression.
@@ -39,7 +46,7 @@
 - Reduced the homepage clutter by removing the floating theme and visitor UI from the public-facing experience.
 - Refined the shared navigation for the main portfolio pages to a simpler Work / Services / About / Contact structure.
 
-## v3.16.3 — Bou-style Hero Refinement
+## v3.16.4 — Bou-style Hero Refinement
 
 - Rebuilt the homepage hero to more closely match the Bou-style reference while keeping DesignLab branding.
 - Reduced the headline size and centered the composition for a cleaner premium first screen.
@@ -47,14 +54,14 @@
 - Removed homepage floating utility UI so the landing screen feels cleaner and more focused.
 - Created a new cinematic hero background asset using DesignLab visuals with a warm-to-blue gradient treatment.
 
-## v3.16.3 — Homepage Fullscreen Fix
+## v3.16.4 — Homepage Fullscreen Fix
 
 - Fixed the homepage hero so it now spans the full screen instead of sitting inside a constrained centered container.
 - Made the homepage header float transparently over the hero for a closer Bou-style first impression.
 - Improved hero readability with stronger overlay treatment and a larger white headline.
 - Kept the remaining homepage sections intact while preserving the Supabase project connection.
 
-## v3.16.3 — Bou-style Home Refresh
+## v3.16.4 — Bou-style Home Refresh
 
 - Rebuilt the homepage structure to follow a Bou-inspired flow while keeping DesignLab content and branding.
 - Added a fullscreen cinematic hero with centered message and compact CTA pills.
@@ -64,7 +71,7 @@
 - Kept the existing Supabase project source and site structure intact.
 - Maintained the closing CTA and overall compact spacing preference.
 
-## v3.16.3 — Editorial Agency System
+## v3.16.4 — Editorial Agency System
 
 - Reset the visual direction from v3.14 and rebuilt from the v3.13 Supabase baseline.
 - Added a bold editorial agency-style homepage with DesignLab branding.

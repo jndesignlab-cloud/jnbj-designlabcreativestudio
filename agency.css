@@ -1,6 +1,6 @@
 
 /* =========================================================
-   DesignLab v3.16.3 — Editorial Agency System
+   DesignLab v3.16.4 — Editorial Agency System
    Inspired by modern editorial agency structure, rebuilt for
    DesignLab's blue-forward identity and compact preferences.
    ========================================================= */
@@ -750,7 +750,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.16.3 — Bou-inspired homepage structure, DesignLab style
+   v3.16.4 — Bou-inspired homepage structure, DesignLab style
    ========================================================= */
 
 .bou-home-hero {
@@ -1096,7 +1096,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.16.3 — Homepage fullscreen fix
+   v3.16.4 — Homepage fullscreen fix
    ========================================================= */
 body.designlab-agency-home .rp-main {
   width: 100% !important;
@@ -1232,7 +1232,7 @@ body.designlab-agency-home .bou-home-meta span {
 
 
 /* =========================================================
-   v3.16.3 — Bou-style homepage refinement
+   v3.16.4 — Bou-style homepage refinement
    ========================================================= */
 body.designlab-agency-home {
   background: #f5f6fb;
@@ -1437,7 +1437,7 @@ body.designlab-agency-home .agency-closing {
 }
 
 /* =========================================================
-   v3.16.3 — Homepage structure overhaul
+   v3.16.4 — Homepage structure overhaul
    ========================================================= */
 body.designlab-home-v316 {
   background: #f3f6fb;
@@ -1936,7 +1936,7 @@ body.agency-system .site-header .rp-header-inner {
 
 
 /* =========================================================
-   v3.16.3 — Hero readability, alignment, and motion fix
+   v3.16.4 — Hero readability, alignment, and motion fix
    ========================================================= */
 html,
 body.designlab-home-v3161 {
@@ -2197,7 +2197,7 @@ html.motion-soft .motion-stagger-child {
 }
 
 /* =========================================================
-   v3.16.3 — Section Repair + Premium Hero Motion
+   v3.16.4 — Section Repair + Premium Hero Motion
    Homepage styles are fully isolated to .designlab-home-v3162
    ========================================================= */
 html,
@@ -2862,7 +2862,7 @@ html.motion-soft .motion-stagger-child {
 
 
 /* =========================================================
-   v3.16.3 — Hero alignment + navbar + motion visibility fix
+   v3.16.4 — Hero alignment + navbar + motion visibility fix
    ========================================================= */
 body.designlab-home-v3162,
 body.designlab-home-v3163 {
