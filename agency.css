@@ -1,6 +1,6 @@
 
 /* =========================================================
-   DesignLab v3.15.3 — Editorial Agency System
+   DesignLab v3.16.0 — Editorial Agency System
    Inspired by modern editorial agency structure, rebuilt for
    DesignLab's blue-forward identity and compact preferences.
    ========================================================= */
@@ -750,7 +750,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.15.3 — Bou-inspired homepage structure, DesignLab style
+   v3.16.0 — Bou-inspired homepage structure, DesignLab style
    ========================================================= */
 
 .bou-home-hero {
@@ -1096,7 +1096,7 @@ body.agency-system .editorial-form-shell {
 
 
 /* =========================================================
-   v3.15.3 — Homepage fullscreen fix
+   v3.16.0 — Homepage fullscreen fix
    ========================================================= */
 body.designlab-agency-home .rp-main {
   width: 100% !important;
@@ -1232,7 +1232,7 @@ body.designlab-agency-home .bou-home-meta span {
 
 
 /* =========================================================
-   v3.15.3 — Bou-style homepage refinement
+   v3.16.0 — Bou-style homepage refinement
    ========================================================= */
 body.designlab-agency-home {
   background: #f5f6fb;
@@ -1434,4 +1434,502 @@ body.designlab-agency-home .agency-closing {
     padding: 0 14px;
     font-size: .78rem;
   }
+}
+
+/* =========================================================
+   v3.16.0 — Homepage structure overhaul
+   ========================================================= */
+body.designlab-home-v316 {
+  background: #f3f6fb;
+}
+
+body.designlab-home-v316 .theme-dock,
+body.designlab-home-v316 .visitor-float {
+  display: none !important;
+}
+
+body.designlab-home-v316 .site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 90;
+  background: rgba(245, 247, 251, 0.78);
+  border-bottom: 1px solid rgba(9, 30, 66, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: none;
+}
+
+body.designlab-home-v316 .rp-header-inner {
+  width: min(100%, 1380px);
+  margin: 0 auto;
+  padding: 22px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+body.designlab-home-v316 .rp-brand img {
+  width: 172px;
+  height: auto;
+}
+
+body.designlab-home-v316 .rp-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-left: auto;
+}
+
+body.designlab-home-v316 .rp-nav a {
+  color: #16223d;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+body.designlab-home-v316 .rp-nav a:hover,
+body.designlab-home-v316 .rp-nav a:focus-visible {
+  color: #2c5cff;
+}
+
+body.designlab-home-v316 .rp-main,
+body.designlab-home-v316 .dl-home-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+body.designlab-home-v316 .dl-home-main {
+  overflow: clip;
+}
+
+body.designlab-home-v316 .dl-hero-panel {
+  position: relative;
+  min-height: 100svh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 112px 24px 48px;
+  overflow: hidden;
+}
+
+body.designlab-home-v316 .dl-hero-media,
+body.designlab-home-v316 .dl-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+body.designlab-home-v316 .dl-hero-media {
+  background: url("assets/designlab-bou-hero.webp") center center / cover no-repeat;
+  transform: scale(1.04);
+}
+
+body.designlab-home-v316 .dl-hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(7, 11, 22, 0.12) 0%, rgba(7, 11, 22, 0.34) 52%, rgba(7, 11, 22, 0.78) 100%),
+    radial-gradient(circle at 18% 18%, rgba(255, 145, 60, 0.28), transparent 34%),
+    radial-gradient(circle at 76% 22%, rgba(66, 102, 255, 0.26), transparent 32%);
+}
+
+body.designlab-home-v316 .dl-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 860px);
+  text-align: center;
+  margin: 0 auto;
+}
+
+body.designlab-home-v316 .dl-hero-kicker {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+body.designlab-home-v316 .dl-hero-inner h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 6.3vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+body.designlab-home-v316 .dl-hero-inner h1 span {
+  background: linear-gradient(90deg, #ffffff 0%, #bcc8ff 30%, #6da0ff 70%, #7d79ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.designlab-home-v316 .dl-hero-summary {
+  width: min(100%, 720px);
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+body.designlab-home-v316 .dl-hero-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+body.designlab-home-v316 .dl-hero-links a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.98rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 3px;
+}
+
+body.designlab-home-v316 .dl-hero-links a:hover,
+body.designlab-home-v316 .dl-hero-links a:focus-visible {
+  border-bottom-color: #ffffff;
+}
+
+body.designlab-home-v316 .dl-clients-panel,
+body.designlab-home-v316 .dl-feature-panel,
+body.designlab-home-v316 .dl-testimonials-panel {
+  width: min(100%, 1380px);
+  margin: 0 auto;
+  padding: 88px 28px 0;
+}
+
+body.designlab-home-v316 .dl-testimonials-panel {
+  padding-bottom: 92px;
+}
+
+body.designlab-home-v316 .dl-section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+  align-items: end;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+body.designlab-home-v316 .dl-section-head.compact h2 {
+  margin: 6px 0 0;
+  font-size: clamp(1.85rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+body.designlab-home-v316 .dl-section-head p:last-child {
+  margin: 0;
+  color: #5c6882;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+body.designlab-home-v316 .dl-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+body.designlab-home-v316 .dl-client-card {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(14, 28, 67, 0.08);
+  box-shadow: 0 18px 50px rgba(21, 34, 76, 0.06);
+}
+
+body.designlab-home-v316 .dl-client-card img {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #f7f9fd;
+  padding: 14px;
+}
+
+body.designlab-home-v316 .dl-client-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+}
+
+body.designlab-home-v316 .dl-client-card p {
+  margin: 0;
+  color: #5c6882;
+  line-height: 1.62;
+  font-size: 0.98rem;
+}
+
+body.designlab-home-v316 .dl-feature-shell {
+  width: 100%;
+}
+
+body.designlab-home-v316 .dl-feature-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.94fr);
+  gap: 0;
+  overflow: hidden;
+  border-radius: 34px;
+  background: #ffffff;
+  border: 1px solid rgba(14, 28, 67, 0.08);
+  box-shadow: 0 26px 70px rgba(16, 28, 64, 0.09);
+}
+
+body.designlab-home-v316 .dl-feature-card.loading {
+  min-height: 420px;
+}
+
+body.designlab-home-v316 .dl-feature-media {
+  min-height: 460px;
+  background: linear-gradient(135deg, #edf2ff, #f8f9fc);
+}
+
+body.designlab-home-v316 .dl-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body.designlab-home-v316 .dl-feature-copy {
+  padding: 40px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.designlab-home-v316 .dl-feature-copy.only-copy {
+  min-height: 320px;
+}
+
+body.designlab-home-v316 .dl-feature-copy h3 {
+  margin: 8px 0 12px;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+body.designlab-home-v316 .dl-feature-copy p {
+  margin: 0 0 12px;
+  color: #4f5c76;
+  line-height: 1.68;
+}
+
+body.designlab-home-v316 .dl-feature-description {
+  color: #23314e;
+  font-size: 1.02rem;
+}
+
+body.designlab-home-v316 .dl-feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+body.designlab-home-v316 .dl-feature-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #f1f4fb;
+  color: #1d2a47;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+body.designlab-home-v316 .dl-feature-actions {
+  margin-top: 18px;
+}
+
+body.designlab-home-v316 .dl-feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #2656ff;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 14px 34px rgba(38, 86, 255, 0.24);
+}
+
+body.designlab-home-v316 .dl-feature-link:hover,
+body.designlab-home-v316 .dl-feature-link:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 38px rgba(38, 86, 255, 0.28);
+}
+
+body.designlab-home-v316 .dl-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+body.designlab-home-v316 .dl-testimonial-card {
+  padding: 28px 26px;
+  border-radius: 36px;
+  background: radial-gradient(circle at top left, rgba(88, 121, 255, 0.12), transparent 42%), #ffffff;
+  border: 1px solid rgba(14, 28, 67, 0.08);
+  box-shadow: 0 16px 44px rgba(19, 34, 74, 0.06);
+}
+
+body.designlab-home-v316 .dl-testimonial-quote {
+  margin: 0;
+  color: #1b2947;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+body.designlab-home-v316 .dl-testimonial-meta {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+body.designlab-home-v316 .dl-testimonial-meta strong {
+  color: #18233d;
+  font-size: 0.96rem;
+}
+
+body.designlab-home-v316 .dl-testimonial-meta span {
+  color: #6b7892;
+  font-size: 0.88rem;
+}
+
+body.designlab-home-v316 .dl-home-footer {
+  width: min(100%, 1380px);
+  margin: 0 auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+@media (max-width: 1120px) {
+  body.designlab-home-v316 .dl-clients-grid,
+  body.designlab-home-v316 .dl-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.designlab-home-v316 .dl-feature-card {
+    grid-template-columns: 1fr;
+  }
+
+  body.designlab-home-v316 .dl-feature-media {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 860px) {
+  body.designlab-home-v316 .rp-header-inner {
+    padding: 18px 20px;
+  }
+
+  body.designlab-home-v316 .rp-brand img {
+    width: 150px;
+  }
+
+  body.designlab-home-v316 .rp-nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  body.designlab-home-v316 .rp-nav a {
+    font-size: 0.95rem;
+  }
+
+  body.designlab-home-v316 .dl-hero-panel {
+    padding: 116px 18px 40px;
+  }
+
+  body.designlab-home-v316 .dl-section-head {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  body.designlab-home-v316 .dl-clients-panel,
+  body.designlab-home-v316 .dl-feature-panel,
+  body.designlab-home-v316 .dl-testimonials-panel {
+    padding: 70px 20px 0;
+  }
+
+  body.designlab-home-v316 .dl-client-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+    padding: 20px;
+  }
+
+  body.designlab-home-v316 .dl-client-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+  }
+
+  body.designlab-home-v316 .dl-feature-copy {
+    padding: 28px 22px;
+  }
+
+  body.designlab-home-v316 .dl-home-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  body.designlab-home-v316 .site-header {
+    background: rgba(245, 247, 251, 0.9);
+  }
+
+  body.designlab-home-v316 .rp-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  body.designlab-home-v316 .rp-nav {
+    margin-left: 0;
+    gap: 14px;
+    justify-content: flex-start;
+  }
+
+  body.designlab-home-v316 .dl-hero-kicker {
+    margin-bottom: 14px;
+    font-size: 0.72rem;
+  }
+
+  body.designlab-home-v316 .dl-hero-inner h1 {
+    font-size: clamp(2.6rem, 12vw, 4.1rem);
+  }
+
+  body.designlab-home-v316 .dl-hero-summary {
+    font-size: 0.96rem;
+  }
+
+  body.designlab-home-v316 .dl-clients-grid,
+  body.designlab-home-v316 .dl-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Shared cleanup for user-facing portfolio pages */
+body.agency-system .theme-dock,
+body.agency-system .visitor-float {
+  display: none !important;
+}
+
+body.agency-system .site-header .rp-header-inner {
+  width: min(100%, 1380px);
 }

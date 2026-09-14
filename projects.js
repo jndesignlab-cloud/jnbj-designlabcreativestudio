@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.15.3";
+const SITE_VERSION = "3.16.0";
 
 const grid = document.querySelector("#allProjectGrid");
 const filterTabs = document.querySelector("#filterTabs");
