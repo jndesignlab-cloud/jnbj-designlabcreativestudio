@@ -1981,3 +1981,61 @@ body.designlab-home .dl-hero-highlight {
     font-size: 1.04em !important;
   }
 }
+
+/* =========================================================
+   v3.16.16 — hero emphasis safe-width / clipping fix
+   ========================================================= */
+body.designlab-home .dl-hero-inner {
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+  padding-inline: clamp(18px, 3vw, 34px) !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+body.designlab-home .dl-hero-inner h1 {
+  width: 100% !important;
+  max-width: 1040px !important;
+  margin-inline: auto !important;
+  overflow: visible !important;
+  font-size: clamp(2.95rem, 5vw, 5.35rem) !important;
+  line-height: .97 !important;
+  letter-spacing: -.066em !important;
+}
+
+body.designlab-home .dl-hero-highlight {
+  display: block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: .06em auto 0 !important;
+  padding: 0 .055em .045em !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  text-align: center !important;
+  font-size: 1.01em !important;
+  line-height: .98 !important;
+  font-weight: 850 !important;
+  letter-spacing: -.065em !important;
+  filter: drop-shadow(0 7px 18px rgba(94, 105, 255, .25)) !important;
+}
+
+body.designlab-home .dl-hero-base {
+  display: block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+  padding-inline: .035em !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-hero-inner h1 {
+    font-size: clamp(2.55rem, 10.5vw, 4rem) !important;
+  }
+
+  body.designlab-home .dl-hero-highlight {
+    font-size: 1em !important;
+    padding-inline: .07em !important;
+  }
+}

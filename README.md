@@ -1,5 +1,6 @@
-DesignLab Portfolio Website — v3.16.15
+# DesignLab Portfolio Website v3.16.16
 
-Focused hero typography pass:
-- true-white supporting text
-- stronger campaign-ready design emphasis
+Focused maintenance release:
+- hero `campaign-ready design.` clipping fix
+- unified public navbar
+- Work / Clients / Services / Downloads / About / Contact

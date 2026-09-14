@@ -94,55 +94,61 @@
 })();
 
 
-// v3.16.4 editorial agency header refinement
+// v3.16.16 shared header refinement
 (() => {
   const headers = document.querySelectorAll(".site-header");
   const current = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+  const hash = window.location.hash;
 
   document.querySelectorAll(".nav-links a[href]").forEach((link) => {
-    const target = (link.getAttribute("href") || "").split("?")[0].split("#")[0].split("/").pop().toLowerCase();
-    const active =
-      target === current ||
-      (["projects.html", "project.html"].includes(current) && target === "projects.html");
+    const raw = link.getAttribute("href") || "";
+    const clean = raw.split("?")[0];
+    const target = clean.split("#")[0].split("/").pop().toLowerCase();
+    const targetHash = clean.includes("#") ? `#${clean.split("#")[1]}` : "";
+
+    let active = false;
+    if (["projects.html", "project.html"].includes(current) && target === "projects.html") active = true;
+    else if (current === target && target !== "index.html") active = true;
+    else if (current === "index.html" && target === "index.html" && targetHash && hash === targetHash) active = true;
 
     if (active) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
   });
 
   let ticking = false;
-  function update() {
+  function updateScrolledState() {
     headers.forEach((header) => header.classList.toggle("is-scrolled", window.scrollY > 14));
     ticking = false;
   }
 
-  update();
+  updateScrolledState();
   window.addEventListener("scroll", () => {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(update);
+    requestAnimationFrame(updateScrolledState);
   }, { passive: true });
 })();
 
 
-/* v3.16.9 homepage smart navbar */
+
+/* v3.16.16 shared smart-navbar visibility */
 (() => {
-  const body = document.body;
   const header = document.querySelector(".site-header");
+  if (!header) return;
+
   const hero = document.querySelector(".dl-hero-panel");
-
-  if (!body?.classList.contains("designlab-home") || !header || !hero) return;
-
-  let lastY = window.scrollY;
+  let lastY = Math.max(0, window.scrollY);
   let ticking = false;
 
-  function updateHeaderVisibility() {
+  function updateVisibility() {
     const y = Math.max(0, window.scrollY);
-    const heroBottom = hero.offsetTop + hero.offsetHeight;
-    const onHero = y < Math.max(heroBottom - 90, 0);
+    const menuOpen = header.classList.contains("mobile-menu-open");
     const movingDown = y > lastY + 4;
     const movingUp = y < lastY - 4;
-    const menuOpen = header.classList.contains("mobile-menu-open");
+    const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
+    const onHero = hero ? y < Math.max(heroBottom - 72, 0) : y < 24;
 
-    if (onHero || y < 24 || menuOpen) {
+    if (menuOpen || onHero || y < 24) {
       header.classList.remove("nav-hidden");
     } else if (movingDown) {
       header.classList.add("nav-hidden");
@@ -157,13 +163,13 @@
   window.addEventListener("scroll", () => {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(updateHeaderVisibility);
+    requestAnimationFrame(updateVisibility);
   }, { passive: true });
 
   window.addEventListener("resize", () => {
     header.classList.remove("nav-hidden");
-    lastY = window.scrollY;
+    lastY = Math.max(0, window.scrollY);
   }, { passive: true });
 
-  updateHeaderVisibility();
+  updateVisibility();
 })();
