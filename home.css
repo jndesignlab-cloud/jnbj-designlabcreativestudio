@@ -1456,3 +1456,130 @@ body.designlab-home .dl-testimonial-meta span {
     margin-inline: auto !important;
   }
 }
+
+/* =========================================================
+   v3.16.11 — hero service buttons + white hero text + centered highlight
+   ========================================================= */
+body.designlab-home .dl-hero-kicker {
+  color: rgba(255, 255, 255, 0.64) !important;
+}
+
+body.designlab-home .dl-hero-inner h1 {
+  color: #ffffff !important;
+  text-shadow: 0 10px 28px rgba(8, 15, 32, 0.22) !important;
+}
+
+body.designlab-home .dl-hero-base {
+  color: #ffffff !important;
+}
+
+body.designlab-home .dl-hero-highlight {
+  background: linear-gradient(92deg, #ffffff 0%, #dbe6ff 55%, #b9cfff 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+body.designlab-home .dl-hero-lead {
+  color: rgba(255, 255, 255, 0.82) !important;
+  text-shadow: 0 8px 24px rgba(8, 15, 32, 0.18) !important;
+}
+
+body.designlab-home .dl-hero-service-pills {
+  width: min(100%, 760px) !important;
+  margin: 16px auto 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+body.designlab-home .dl-hero-service-pills a {
+  min-height: 36px !important;
+  padding: 0 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  text-decoration: none !important;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease !important;
+}
+
+body.designlab-home .dl-hero-service-pills a:hover {
+  transform: translateY(-1px) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.34) !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-panel-inner {
+  width: min(100%, 1220px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-section-head,
+body.designlab-home .dl-feature-shell,
+body.designlab-home .dl-feature-strip {
+  width: min(100%, 1220px) !important;
+  margin-inline: auto !important;
+}
+
+body.designlab-home .dl-feature-card {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr) !important;
+  gap: 42px !important;
+}
+
+body.designlab-home .dl-feature-copy {
+  max-width: 420px !important;
+  justify-self: start !important;
+}
+
+body.designlab-home .dl-feature-copy h3 {
+  font-size: clamp(1.62rem, 2.1vw, 2.3rem) !important;
+}
+
+body.designlab-home .dl-feature-description {
+  max-width: 420px !important;
+  font-size: 0.84rem !important;
+}
+
+body.designlab-home .dl-feature-strip {
+  margin-top: 22px !important;
+}
+
+body.designlab-home .dl-feature-strip-item {
+  width: 176px !important;
+}
+
+body.designlab-home .dl-feature-strip-name {
+  font-size: 0.72rem !important;
+}
+
+@media (max-width: 1100px) {
+  body.designlab-home .dl-feature-panel .dl-panel-inner,
+  body.designlab-home .dl-feature-panel .dl-section-head,
+  body.designlab-home .dl-feature-shell,
+  body.designlab-home .dl-feature-strip {
+    width: min(100%, 980px) !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-hero-service-pills {
+    width: min(100%, 420px) !important;
+    gap: 8px !important;
+  }
+
+  body.designlab-home .dl-hero-service-pills a {
+    font-size: 0.72rem !important;
+    min-height: 34px !important;
+    padding: 0 11px !important;
+  }
+}

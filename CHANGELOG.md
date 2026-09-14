@@ -1,12 +1,11 @@
-# DesignLab Portfolio Website — Changelog
+# Changelog — v3.16.11
 
-## v3.16.10 — 100% Zoom Compact + Single Project Scroller
+## Home page
+- changed hero supporting text to bright white for better readability
+- added compact service buttons on the hero linking to Graphic Design, Social Media Design, and Web Development service sections
+- kept the hero clean by using service pills instead of a second project scroller
+- widened and re-centered the Highlighted Work section so the content block feels properly centered at 100% zoom
+- fine-tuned featured project copy and project-strip sizing for a more balanced layout
 
-- Reduced hero and homepage section scale again so 100% browser zoom has more breathing room.
-- Removed the hero project scroller to avoid repeating the same interaction twice.
-- Kept the scrolling project strip only under Highlighted Work.
-- Re-centered Highlighted Work, the featured project, and the project strip.
-- Replaced PACE with C&B Cafe in both Clients and Testimonials.
-- Kept SoleProtect as the highlighted testimonial.
-- Reduced client and testimonial card density while preserving the fullscreen section behavior.
-- Simplified the Trusted By heading to a single line.
+## Services page
+- added anchor targets for the main service groups so hero service buttons jump to the correct section
