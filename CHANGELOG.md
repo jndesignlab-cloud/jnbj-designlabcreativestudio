@@ -1,3 +1,7 @@
+# v3.16.19 — foundation refinement
+
+CSS cleanup, shared navbar ownership, safer hero decorations, featured-project loading/strip fixes, and aligned release metadata. See docs/RELEASE-v3.16.19.md for validation and limitations.
+
 # DesignLab Portfolio Website — Changelog
 
 ## v3.16.18 — Hero Floating Card Refinement

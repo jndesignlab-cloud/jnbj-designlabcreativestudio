@@ -4,6 +4,7 @@
   function closeMenu(header, button, panel) {
     header.classList.remove("mobile-menu-open");
     button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", "Open navigation menu");
     panel.hidden = true;
     panel.setAttribute("aria-hidden", "true");
   }
@@ -156,7 +157,7 @@
       header.classList.remove("nav-hidden");
     }
 
-    lastY = y;
+    if (movingDown || movingUp || onHero || menuOpen) lastY = y;
     ticking = false;
   }
 

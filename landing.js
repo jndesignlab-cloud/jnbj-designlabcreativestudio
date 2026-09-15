@@ -1,5 +1,5 @@
-const SITE_VERSION = "3.16.16";
-const LAST_EDIT = "September 14, 2026";
+const SITE_VERSION = "3.16.19";
+const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
 document.querySelectorAll("#lastEdit").forEach((el) => (el.textContent = LAST_EDIT));
@@ -121,9 +121,9 @@ function clientMarkup(item) {
     </article>`;
 }
 
-function featureStripMarkup(project) {
+function featureStripMarkup(project, duplicate = false) {
   return `
-    <a class="dl-feature-strip-item" href="project.html?id=${encodeURIComponent(project.id)}">
+    <a class="dl-feature-strip-item" ${duplicate ? 'aria-hidden="true" tabindex="-1"' : ""} href="project.html?id=${encodeURIComponent(project.id)}">
       <span class="dl-feature-strip-media">
         ${project.image
           ? `<img src="${escapeAgency(project.image)}" alt="${escapeAgency(project.title)}" loading="lazy" decoding="async">`
@@ -152,8 +152,7 @@ async function loadFeaturedProject() {
 
   try {
     const featured = await window.DesignLabProjects.listPublished({ featured: true, limit: 12 });
-    const published = await window.DesignLabProjects.listPublished({ limit: 12 });
-    const featuredPool = featured.length ? featured : published;
+    const featuredPool = featured.length ? featured : await window.DesignLabProjects.listPublished({ limit: 12 });
     const project = featuredPool.length
       ? featuredPool[Math.floor(Math.random() * featuredPool.length)]
       : null;
@@ -165,7 +164,7 @@ async function loadFeaturedProject() {
             <div class="dl-feature-copy">
               <p class="dl-eyebrow">Highlighted Work</p>
               <h3>No featured project yet</h3>
-              <p class="dl-feature-description">Add or publish at least one project to show it here.</p>
+              <p class="dl-feature-description">Explore the work archive for more projects.</p>
             </div>
           </article>`;
       }
@@ -177,8 +176,9 @@ async function loadFeaturedProject() {
 
     if (featureStripRoot) {
       const stripSource = featuredPool.slice(0, 8);
-      const stripItems = stripSource.length > 1 ? stripSource.concat(stripSource) : stripSource;
-      featureStripRoot.innerHTML = stripItems.map(featureStripMarkup).join("");
+      featureStripRoot.classList.toggle("is-single", stripSource.length === 1);
+      featureStripRoot.innerHTML = stripSource.map((item) => featureStripMarkup(item)).join("")
+        + (stripSource.length > 1 ? stripSource.map((item) => featureStripMarkup(item, true)).join("") : "");
     }
   } catch (error) {
     console.error("Featured project load error:", error);
@@ -188,7 +188,7 @@ async function loadFeaturedProject() {
           <div class="dl-feature-copy">
             <p class="dl-eyebrow">Highlighted Work</p>
             <h3>Unable to load the featured project</h3>
-            <p class="dl-feature-description">Please check the Supabase connection and published project entries.</p>
+            <p class="dl-feature-description">Please try again shortly, or browse the work archive.</p>
           </div>
         </article>`;
     }
@@ -358,4 +358,32 @@ loadTestimonials();
   window.addEventListener("resize", resize, { passive: true });
   raf = requestAnimationFrame(draw);
   window.addEventListener("pagehide", () => cancelAnimationFrame(raf), { once: true });
+})();
+
+/* Hide decorative cards when responsive text or font loading brings them too close. */
+(() => {
+  const hero = document.querySelector('.dl-hero-panel');
+  const content = document.querySelector('.dl-hero-inner');
+  if (!hero || !content) return;
+  const cards = [...hero.querySelectorAll('.dl-hero-float')];
+  let frame = 0;
+  function check() {
+    frame = 0;
+    const protectedAreas = [...content.children].map((el) => el.getBoundingClientRect());
+    for (const card of cards) {
+      const rect = card.getBoundingClientRect();
+      // Includes a buffer for the restrained floating animation.
+      const blocked = protectedAreas.some((area) => rect.left < area.right + 24
+        && rect.right > area.left - 24 && rect.top < area.bottom + 24 && rect.bottom > area.top - 24);
+      card.classList.toggle('is-obstructing', blocked);
+    }
+  }
+  function schedule() { if (!frame) frame = requestAnimationFrame(check); }
+  const observer = new ResizeObserver(schedule);
+  observer.observe(hero);
+  observer.observe(content);
+  cards.forEach((card) => observer.observe(card));
+  document.fonts.ready.then(schedule);
+  window.addEventListener('resize', schedule, { passive: true });
+  schedule();
 })();
