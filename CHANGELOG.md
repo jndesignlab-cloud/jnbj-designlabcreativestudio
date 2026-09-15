@@ -1,8 +1,8 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.35 — Client Title 50% Reduction
+## v3.16.36 — Uniform Client Title Hierarchy
 
-- reduced client-card company title sizes aggressively, targeting roughly half the previous visual size
-- made long client names smaller again so they can fit cleanly on one desktop line
-- removed title ellipsis/clipping on desktop
-- kept mobile titles readable and allowed wrapping on small screens
+- standardized all client names to the same font size as the card body text
+- kept client names bold/strong for hierarchy
+- removed the different sizing treatment for long and extra-long company names
+- retained one-line desktop titles and responsive wrapping on mobile
