@@ -1931,3 +1931,146 @@ body.designlab-home .dl-testimonials-panel {
     justify-content: flex-start !important;
   }
 }
+
+
+/* =========================================================
+   v3.16.24 — compact manifesto + trusted brands 5-column grid
+   ========================================================= */
+
+/* Smaller bridge statement with calmer rhythm */
+body.designlab-home .dl-manifesto-panel {
+  padding: clamp(34px, 5.5vh, 56px) 24px clamp(28px, 4.5vh, 48px) !important;
+}
+
+body.designlab-home .dl-manifesto-inner {
+  width: min(100%, 860px) !important;
+}
+
+body.designlab-home .dl-manifesto-copy {
+  max-width: 720px !important;
+  font-size: clamp(1.18rem, 2.45vw, 2rem) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -.05em !important;
+  color: #66748e !important;
+}
+
+body.designlab-home .dl-manifesto-copy strong {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: #111827 !important;
+  font-weight: 800 !important;
+}
+
+/* Tighter section flow */
+body.designlab-home .dl-feature-panel {
+  padding-top: clamp(24px, 4vh, 38px) !important;
+}
+
+body.designlab-home .dl-clients-panel {
+  padding-top: clamp(42px, 5vh, 56px) !important;
+  padding-bottom: clamp(42px, 5vh, 56px) !important;
+}
+
+/* Clients section matched to inspiration */
+body.designlab-home .dl-clients-panel {
+  background: #edf6eb !important;
+}
+
+body.designlab-home .dl-trusted-head,
+body.designlab-home .dl-trusted-head.dl-trusted-head--centered {
+  max-width: 840px !important;
+  margin: 0 auto 28px !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+body.designlab-home .dl-trusted-head h2 {
+  margin: 0 !important;
+  color: #111111 !important;
+  font-size: clamp(1.28rem, 2.7vw, 2.2rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.05em !important;
+  font-weight: 500 !important;
+  text-wrap: balance !important;
+}
+
+body.designlab-home .dl-trusted-head h2 strong {
+  font-weight: 800 !important;
+}
+
+body.designlab-home .dl-trusted-logo-grid {
+  max-width: 1180px !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  column-gap: clamp(18px, 2vw, 26px) !important;
+  row-gap: clamp(18px, 2.8vh, 30px) !important;
+}
+
+body.designlab-home .dl-trusted-logo {
+  min-height: 70px !important;
+  opacity: 1 !important;
+}
+
+body.designlab-home .dl-trusted-logo-media {
+  min-height: 62px !important;
+}
+
+body.designlab-home .dl-trusted-logo-media img {
+  max-width: min(100%, 172px) !important;
+  max-height: 54px !important;
+  filter: brightness(0) saturate(0) !important;
+}
+
+body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img {
+  max-width: min(100%, 182px) !important;
+  max-height: 58px !important;
+}
+
+/* Optical balancing for marks with extra whitespace */
+body.designlab-home .dl-trusted-logo[data-client-id="myithub-australia"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="panpacific-university"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="cb-cafe"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="cozisleep"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="perlas-ng-silanganan-car-rentals"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-logo-media img {
+  max-width: min(100%, 192px) !important;
+  max-height: 58px !important;
+}
+
+body.designlab-home .dl-trusted-logo:hover,
+body.designlab-home .dl-trusted-logo:focus-visible {
+  transform: translateY(-1px) !important;
+}
+
+@media (max-width: 1080px) {
+  body.designlab-home .dl-trusted-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-manifesto-panel {
+    padding: 28px 18px 24px !important;
+  }
+  body.designlab-home .dl-manifesto-copy {
+    font-size: clamp(1.06rem, 4.9vw, 1.44rem) !important;
+    line-height: 1.16 !important;
+  }
+  body.designlab-home .dl-trusted-head {
+    margin-bottom: 20px !important;
+  }
+  body.designlab-home .dl-trusted-head h2 {
+    font-size: clamp(1.1rem, 6vw, 1.5rem) !important;
+  }
+  body.designlab-home .dl-trusted-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 18px !important;
+    row-gap: 16px !important;
+  }
+  body.designlab-home .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo[data-client-id] .dl-trusted-logo-media img {
+    max-width: min(100%, 146px) !important;
+    max-height: 48px !important;
+  }
+}

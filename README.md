@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.23
+# DesignLab Creative Studio — v3.16.24
 
-**Update name:** Manifesto Bridge & Hero Float Refinement
+**Update name:** Compact Manifesto & Trusted Brands Grid
