@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.22";
+const SITE_VERSION = "3.16.23";
 const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -96,7 +96,7 @@ function featureStripMarkup(project, duplicate = false) {
 function testimonialCardMarkup(item, compact = false) {
   return `
     <article class="dl-testimonial-card${compact ? " is-compact" : " is-featured"}">
-      ${compact ? "" : `<p class="dl-testimonial-kicker">Highlighted comment</p>`}
+      ${compact ? "" : ""}
       <p class="dl-testimonial-quote">“${escapeAgency(item.quote)}”</p>
       <div class="dl-testimonial-meta">
         <strong>${escapeAgency(item.name)}</strong>

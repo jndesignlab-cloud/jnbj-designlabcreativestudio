@@ -1756,3 +1756,178 @@ body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-
 body.designlab-home {
   scroll-snap-type: none !important;
 }
+
+
+/* =========================================================
+   v3.16.23 — manifesto bridge + refined hero float motion
+   ========================================================= */
+
+/* universal typography update inspired by the reference */
+body.unified-page,
+body.unified-page button,
+body.unified-page input,
+body.unified-page textarea,
+body.unified-page select,
+body.unified-page a {
+  font-family: "Manrope", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+/* hero floating samples: slightly closer in, with subtle levitation */
+body.designlab-home .dl-hero-float {
+  width: clamp(116px, 9.2vw, 148px) !important;
+  opacity: .84 !important;
+  box-shadow: 0 22px 48px rgba(8, 14, 30, .20) !important;
+}
+
+body.designlab-home .dl-hero-float-one {
+  left: clamp(28px, 4vw, 68px) !important;
+  top: calc(var(--dl-header) + 42px) !important;
+  animation: dlHeroFloatOneLevitating 7.8s ease-in-out infinite !important;
+}
+
+body.designlab-home .dl-hero-float-two {
+  right: clamp(34px, 4.4vw, 76px) !important;
+  top: calc(var(--dl-header) + 72px) !important;
+  width: clamp(118px, 9.5vw, 152px) !important;
+  animation: dlHeroFloatTwoLevitating 8.4s ease-in-out infinite !important;
+}
+
+body.designlab-home .dl-hero-float-three {
+  left: clamp(46px, 5vw, 88px) !important;
+  bottom: clamp(112px, 13vh, 148px) !important;
+  width: clamp(120px, 9.8vw, 156px) !important;
+  animation: dlHeroFloatThreeLevitating 8.1s ease-in-out infinite !important;
+}
+
+@keyframes dlHeroFloatOneLevitating {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-6deg); }
+  50% { transform: translate3d(0, -12px, 0) rotate(-4.8deg); }
+}
+
+@keyframes dlHeroFloatTwoLevitating {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(5deg); }
+  50% { transform: translate3d(0, -13px, 0) rotate(6.2deg); }
+}
+
+@keyframes dlHeroFloatThreeLevitating {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-4deg); }
+  50% { transform: translate3d(0, -11px, 0) rotate(-2.7deg); }
+}
+
+@media (max-width: 1240px) {
+  body.designlab-home .dl-hero-float { width: 114px !important; }
+  body.designlab-home .dl-hero-float-one { left: 20px !important; top: calc(var(--dl-header) + 28px) !important; }
+  body.designlab-home .dl-hero-float-two { right: 22px !important; top: calc(var(--dl-header) + 54px) !important; width: 118px !important; }
+  body.designlab-home .dl-hero-float-three { left: 28px !important; bottom: 106px !important; width: 120px !important; }
+}
+
+@media (max-width: 900px) {
+  body.designlab-home .dl-hero-float { width: 96px !important; opacity: .72 !important; }
+  body.designlab-home .dl-hero-float-one { left: 10px !important; top: calc(var(--dl-header) + 20px) !important; }
+  body.designlab-home .dl-hero-float-two { right: 10px !important; top: calc(var(--dl-header) + 36px) !important; width: 100px !important; }
+  body.designlab-home .dl-hero-float-three { left: 14px !important; bottom: 94px !important; width: 104px !important; }
+}
+
+/* bridge statement between hero and work */
+body.designlab-home .dl-manifesto-panel {
+  min-height: auto !important;
+  background: #f5f7fb !important;
+  padding: clamp(72px, 10vh, 112px) 24px clamp(64px, 9vh, 96px) !important;
+}
+
+body.designlab-home .dl-manifesto-inner {
+  width: min(100%, 980px) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+body.designlab-home .dl-manifesto-copy {
+  margin: 0 !important;
+  max-width: 780px !important;
+  text-align: center !important;
+  color: #121723 !important;
+  font-size: clamp(2.2rem, 5vw, 4.4rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 500 !important;
+  text-wrap: balance !important;
+}
+
+body.designlab-home .dl-manifesto-copy strong {
+  font-weight: 800 !important;
+  background: linear-gradient(90deg, #234dff 0%, #7759ff 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* feature section: no top title block; see-more moved below */
+body.designlab-home .dl-feature-panel {
+  padding-top: clamp(18px, 4vh, 34px) !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-section-head.is-hidden {
+  display: none !important;
+}
+
+body.designlab-home .dl-feature-panel .dl-panel-inner {
+  width: min(100%, 1180px) !important;
+}
+
+body.designlab-home .dl-feature-bottom-cta-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: clamp(22px, 3vh, 34px) !important;
+}
+
+body.designlab-home .dl-feature-bottom-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  color: var(--dl-ink) !important;
+  text-decoration: none !important;
+  font-size: clamp(1rem, 1.2vw, 1.08rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.03em !important;
+}
+
+body.designlab-home .dl-feature-bottom-cta-icon {
+  width: 30px !important;
+  height: 30px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  background: #111111 !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  transition: transform .2s ease, background .2s ease !important;
+}
+
+body.designlab-home .dl-feature-bottom-cta:hover .dl-feature-bottom-cta-icon,
+body.designlab-home .dl-feature-bottom-cta:focus-visible .dl-feature-bottom-cta-icon {
+  transform: translateX(3px) !important;
+  background: #234dff !important;
+}
+
+/* slightly tighter feature-to-clients rhythm */
+body.designlab-home .dl-feature-panel,
+body.designlab-home .dl-clients-panel,
+body.designlab-home .dl-testimonials-panel {
+  padding-left: clamp(24px, 4vw, 54px) !important;
+  padding-right: clamp(24px, 4vw, 54px) !important;
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-manifesto-panel {
+    padding: 54px 18px 48px !important;
+  }
+  body.designlab-home .dl-manifesto-copy {
+    font-size: clamp(1.8rem, 8vw, 2.8rem) !important;
+    line-height: 1.02 !important;
+  }
+  body.designlab-home .dl-feature-bottom-cta-wrap {
+    justify-content: flex-start !important;
+  }
+}
