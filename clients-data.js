@@ -27,12 +27,36 @@ window.DESIGNLAB_CLIENTS = [
     projects: "Product visuals, campaign ads, launch graphics"
   },
   {
+    id: "cozisleep",
+    name: "CoziSleep",
+    logoSrc: "assets/client-cozisleep.webp",
+    logoText: "CoziSleep",
+    description: "A sleep and mattress brand centered on comfortable, lifestyle-oriented product presentation.",
+    projects: "Social media design and campaign visuals"
+  },
+  {
     id: "myithub-australia",
     name: "MyITHub Australia",
     logoSrc: "assets/client-myithub.webp",
     logoText: "MyITHub Australia",
     description: "An Australia-based IT business supporting clients through digital services and professional technology solutions.",
     projects: "Social graphics, digital materials, brand support"
+  },
+  {
+    id: "perlas-ng-silanganan-car-rentals",
+    name: "Perlas ng Silanganan Car Rentals",
+    logoSrc: "assets/client-perlas-car-rentals.webp",
+    logoText: "Perlas ng Silanganan Car Rentals",
+    description: "A car rental service focused on practical vehicle-rental options and customer mobility needs.",
+    projects: "Creative design support"
+  },
+  {
+    id: "overdrive-ph",
+    name: "OVERDRIVE.PH",
+    logoSrc: "assets/client-overdrive-ph.webp",
+    logoText: "OVERDRIVE.PH",
+    description: "A car rental brand focused on vehicle-rental services and customer-facing automotive communication.",
+    projects: "Creative design support"
   },
   {
     id: "cb-cafe",

@@ -112,3 +112,33 @@
   .client-profile-logo { min-height: 84px; justify-items: start; }
   .client-profile-logo span { text-align: left; }
 }
+
+
+/* v3.16.22 — client logo consistency */
+.client-profile-logo img {
+  filter: grayscale(1) saturate(0) contrast(1.08);
+  width: min(100%, 154px);
+  max-height: 82px;
+}
+
+.client-profile#myithub-australia .client-profile-logo img,
+.client-profile#panpacific-university .client-profile-logo img,
+.client-profile#cb-cafe .client-profile-logo img {
+  width: min(100%, 166px);
+  max-height: 92px;
+}
+
+.client-profile#cozisleep .client-profile-logo img {
+  width: min(100%, 146px);
+  max-height: 96px;
+}
+
+.client-profile#perlas-ng-silanganan-car-rentals .client-profile-logo img {
+  width: min(100%, 168px);
+  max-height: 92px;
+}
+
+.client-profile#overdrive-ph .client-profile-logo img {
+  width: min(100%, 172px);
+  max-height: 70px;
+}

@@ -1,23 +1,33 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.21 — Clients Page + Trusted Brands Logo Wall
+## v3.16.22 — Seamless Homepage & Client Expansion
 
-- restored the floating hero posters on normal desktop/laptop viewports; v3.16.19 had a global responsive rule that hid the entire floating layer at ≤1100px width or ≤700px height
-- retained the collision guard so an individual floating poster can still hide itself if it would overlap live hero content
-- moved the detailed Clients section into a new `clients.html` page
-- changed the shared navbar Clients link to the new Clients page across public pages
-- simplified the homepage client section to **Trusted by brands.** with a seamless, borderless logo grid
-- reordered homepage clients to prioritize Catch of the Day, Ion Ready Distribution Group, and SoleProtect, with Panpacific University last
-- pre-wired future local WebP logo paths for COTD, Ion Ready, and MyITHub; text wordmarks appear automatically until those files are added
-- kept existing C&B Cafe, SoleProtect, and Panpacific University local logos
+- fixed the hero floating posters so they remain visible at normal 100% desktop zoom instead of disappearing from tiny edge collisions
+- reduced floating-poster size and pushed the cards toward the outer hero edges to keep them safely away from the main copy
+- changed collision handling so a poster only hides when there is meaningful overlap with live hero content
+- removed full-viewport sizing from the non-hero homepage sections and tightened vertical padding for a more seamless page flow
+- disabled homepage section scroll snapping so transitions between sections feel continuous
+- tightened spacing inside the Trusted by brands logo wall
+- added **CoziSleep** to the client lineup
+- added **Perlas ng Silanganan Car Rentals**
+- added **OVERDRIVE.PH**
+- converted the two newly supplied car-rental logos into local grayscale WebP assets
+- enlarged / optically rebalanced **MyITHub Australia**, **Panpacific University**, and **C&B Cafe** logos
+- cropped excess whitespace from several logo files so their apparent sizes are more consistent
+- kept **Catch of the Day**, **Ion Ready**, and **SoleProtect** prioritized in the client order
+- kept **Panpacific University** last in the homepage/client listing
 
-### Future logo filenames
-Place these files in `assets/` when ready:
-- `client-cotd.webp`
-- `client-ion-ready.webp`
-- `client-myithub.webp`
+### New local assets
+- `assets/client-perlas-car-rentals.webp`
+- `assets/client-overdrive-ph.webp`
 
-No JavaScript changes will be required after adding those three files.
-
-
-- Added grayscale local WebP logo assets for Catch of the Day, Ion Ready Distribution Group, and MyITHub Australia.
+### Client order
+1. Catch of the Day
+2. Ion Ready Distribution Group
+3. SoleProtect
+4. CoziSleep
+5. MyITHub Australia
+6. Perlas ng Silanganan Car Rentals
+7. OVERDRIVE.PH
+8. C&B Cafe
+9. Panpacific University

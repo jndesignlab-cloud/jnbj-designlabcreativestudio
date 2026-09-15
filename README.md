@@ -1,7 +1,10 @@
-# DesignLab Creative Studio — v3.16.21
+# DesignLab Creative Studio — v3.16.22
 
-Current release focuses on the client presentation and hero showcase:
-- restored subtle floating hero posters
-- dedicated Clients page
-- borderless homepage Trusted by brands logo wall
-- client order prioritizes COTD, Ion Ready, and SoleProtect; Panpacific University is last
+**Update name:** Seamless Homepage & Client Expansion
+
+This release focuses on:
+- reliable hero floating posters at 100% zoom
+- tighter, more seamless homepage section spacing
+- expanded Trusted by brands lineup
+- more consistent client-logo sizing
+- local grayscale WebP assets for the newly added car-rental clients

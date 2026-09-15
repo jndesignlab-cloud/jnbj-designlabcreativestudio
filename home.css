@@ -1468,7 +1468,7 @@ body.designlab-home a:focus-visible { outline: 2px solid #7195ff; outline-offset
 
 
 /* =========================================================
-   v3.16.20 — compact trusted-brands logo wall
+   v3.16.22 — compact trusted-brands logo wall
    ========================================================= */
 body.designlab-home .dl-clients-panel {
   background: #f8fafc !important;
@@ -1594,4 +1594,165 @@ body.designlab-home .dl-trusted-logo-media.has-image .dl-trusted-logo-fallback {
     align-items: flex-start !important;
     flex-direction: column !important;
   }
+}
+
+
+/* =========================================================
+   v3.16.22 — seamless homepage rhythm + 100% zoom float fix
+   ========================================================= */
+
+/* Keep non-hero sections content-led instead of forcing a full viewport.
+   This removes the large dead space between panels while preserving the
+   full-screen hero. */
+body.designlab-home .dl-home-panel {
+  min-height: auto !important;
+  padding:
+    clamp(58px, 6.5vh, 76px)
+    clamp(26px, 5vw, 76px)
+    clamp(58px, 6.5vh, 76px) !important;
+}
+
+body.designlab-home .dl-feature-panel {
+  padding-top: clamp(62px, 7vh, 82px) !important;
+  padding-bottom: clamp(52px, 6vh, 70px) !important;
+}
+
+body.designlab-home .dl-clients-panel {
+  padding-top: clamp(52px, 6vh, 70px) !important;
+  padding-bottom: clamp(52px, 6vh, 70px) !important;
+}
+
+body.designlab-home .dl-testimonials-panel {
+  padding-top: clamp(52px, 6vh, 70px) !important;
+  padding-bottom: clamp(56px, 6.5vh, 76px) !important;
+}
+
+body.designlab-home .dl-section-head {
+  margin-bottom: 20px !important;
+}
+
+body.designlab-home .dl-trusted-head {
+  margin-bottom: 30px !important;
+}
+
+/* Floating showcase posters: smaller, pushed against the outer edges,
+   and intentionally clear of the central hero copy at normal 100% zoom. */
+body.designlab-home .dl-hero-float {
+  width: clamp(104px, 8.6vw, 138px) !important;
+  opacity: .80 !important;
+  box-shadow: 0 15px 34px rgba(8, 14, 30, .22) !important;
+}
+
+body.designlab-home .dl-hero-float-one {
+  left: clamp(6px, 1vw, 16px) !important;
+  top: calc(var(--dl-header) + 26px) !important;
+}
+
+body.designlab-home .dl-hero-float-two {
+  right: clamp(6px, 1vw, 16px) !important;
+  top: calc(var(--dl-header) + 44px) !important;
+  width: clamp(108px, 8.9vw, 142px) !important;
+}
+
+body.designlab-home .dl-hero-float-three {
+  left: clamp(8px, 1.25vw, 20px) !important;
+  bottom: clamp(74px, 9vh, 104px) !important;
+  width: clamp(110px, 9vw, 144px) !important;
+}
+
+@media (min-width: 1500px) {
+  body.designlab-home .dl-hero-float {
+    width: 144px !important;
+  }
+  body.designlab-home .dl-hero-float-two,
+  body.designlab-home .dl-hero-float-three {
+    width: 150px !important;
+  }
+}
+
+@media (max-width: 1120px) {
+  body.designlab-home .dl-hero-float {
+    width: 96px !important;
+    opacity: .70 !important;
+  }
+  body.designlab-home .dl-hero-float-two { width: 100px !important; }
+  body.designlab-home .dl-hero-float-three { width: 98px !important; }
+}
+
+@media (max-width: 900px) {
+  body.designlab-home .dl-home-panel {
+    padding:
+      clamp(46px, 6vh, 58px)
+      20px
+      clamp(46px, 6vh, 58px) !important;
+  }
+}
+
+/* Seamless logo wall: grayscale, consistent optical scale, no cards. */
+body.designlab-home .dl-trusted-logo-grid {
+  row-gap: clamp(28px, 4.5vh, 42px) !important;
+  column-gap: clamp(30px, 5vw, 64px) !important;
+}
+
+body.designlab-home .dl-trusted-logo {
+  min-height: 92px !important;
+}
+
+body.designlab-home .dl-trusted-logo-media {
+  min-height: 82px !important;
+}
+
+body.designlab-home .dl-trusted-logo-media img {
+  max-width: min(100%, 216px) !important;
+  max-height: 82px !important;
+  filter: grayscale(1) saturate(0) contrast(1.08) !important;
+}
+
+body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img {
+  max-width: min(100%, 238px) !important;
+  max-height: 90px !important;
+}
+
+/* Optical size corrections for logos with more whitespace / vertical marks. */
+body.designlab-home .dl-trusted-logo[data-client-id="myithub-australia"] .dl-trusted-logo-media img {
+  max-width: min(100%, 252px) !important;
+  max-height: 98px !important;
+}
+body.designlab-home .dl-trusted-logo[data-client-id="panpacific-university"] .dl-trusted-logo-media img {
+  max-width: min(100%, 248px) !important;
+  max-height: 100px !important;
+}
+body.designlab-home .dl-trusted-logo[data-client-id="cb-cafe"] .dl-trusted-logo-media img {
+  max-width: min(100%, 236px) !important;
+  max-height: 100px !important;
+}
+body.designlab-home .dl-trusted-logo[data-client-id="cozisleep"] .dl-trusted-logo-media img {
+  max-width: min(100%, 184px) !important;
+  max-height: 102px !important;
+}
+body.designlab-home .dl-trusted-logo[data-client-id="perlas-ng-silanganan-car-rentals"] .dl-trusted-logo-media img {
+  max-width: min(100%, 236px) !important;
+  max-height: 94px !important;
+}
+body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-logo-media img {
+  max-width: min(100%, 250px) !important;
+  max-height: 76px !important;
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-trusted-logo-grid {
+    row-gap: 26px !important;
+    column-gap: 22px !important;
+  }
+  body.designlab-home .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo[data-client-id] .dl-trusted-logo-media img {
+    max-width: min(100%, 172px) !important;
+    max-height: 72px !important;
+  }
+}
+
+/* v3.16.22 — remove panel snap so compact sections flow naturally. */
+body.designlab-home {
+  scroll-snap-type: none !important;
 }

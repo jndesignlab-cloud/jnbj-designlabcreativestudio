@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.21";
+const SITE_VERSION = "3.16.22";
 const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -61,7 +61,7 @@ const HOME_CLIENTS = Array.isArray(window.DESIGNLAB_CLIENTS) ? window.DESIGNLAB_
 function clientLogoMarkup(item) {
   const priorityClass = item.priority ? " is-priority" : "";
   return `
-    <a class="dl-trusted-logo${priorityClass}" href="clients.html#${escapeAgency(item.id)}" aria-label="View ${escapeAgency(item.name)} client details">
+    <a class="dl-trusted-logo${priorityClass}" data-client-id="${escapeAgency(item.id)}" href="clients.html#${escapeAgency(item.id)}" aria-label="View ${escapeAgency(item.name)} client details">
       <span class="dl-trusted-logo-media" data-client-logo>
         <img src="${escapeAgency(item.logoSrc)}" alt="${escapeAgency(item.name)} logo" loading="lazy" decoding="async">
         <span class="dl-trusted-logo-fallback">${escapeAgency(item.logoText || item.name)}</span>
@@ -334,8 +334,13 @@ loadTestimonials();
     for (const card of cards) {
       const rect = card.getBoundingClientRect();
       // Includes a buffer for the restrained floating animation.
-      const blocked = protectedAreas.some((area) => rect.left < area.right + 24
-        && rect.right > area.left - 24 && rect.top < area.bottom + 24 && rect.bottom > area.top - 24);
+      const blocked = protectedAreas.some((area) => {
+        const overlapW = Math.max(0, Math.min(rect.right, area.right) - Math.max(rect.left, area.left));
+        const overlapH = Math.max(0, Math.min(rect.bottom, area.bottom) - Math.max(rect.top, area.top));
+        const overlapArea = overlapW * overlapH;
+        const cardArea = Math.max(1, rect.width * rect.height);
+        return (overlapArea / cardArea) > 0.12;
+      });
       card.classList.toggle('is-obstructing', blocked);
     }
   }
