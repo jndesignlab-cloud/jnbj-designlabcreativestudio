@@ -1,7 +1,8 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.29 — Clients Page Header Line Control
+## v3.16.31 — Clients 2-Line Title Lock + Card Links
 
-- adjusted the **Clients** page hero heading so it wraps to a maximum of about two lines on desktop
-- reduced the clients-page subheading/body intro size by roughly **10%** for a lighter, cleaner read
-- kept the existing spacing, alignment, and DesignLab styling intact
+- hard-fixed the **Clients page heading** to display in a clean two-line desktop layout
+- kept the revised smaller subheading copy
+- added small upper-right link icons on supported client cards
+- connected available cards to confirmed public company pages

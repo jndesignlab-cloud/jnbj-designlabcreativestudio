@@ -114,7 +114,7 @@
 }
 
 
-/* v3.16.22 — client logo consistency */
+/* v3.16.31 — client logo consistency */
 .client-profile-logo img {
   filter: grayscale(1) saturate(0) contrast(1.08);
   width: min(100%, 154px);
@@ -145,7 +145,7 @@
 
 
 /* =========================================================
-   v3.16.29 — clients manifesto intro
+   v3.16.31 — clients manifesto intro
    ========================================================= */
 .clients-hero {
   width: min(100% - 48px, 1160px);
@@ -202,5 +202,73 @@
     font-size: 0.9rem;
     line-height: 1.62;
     margin-top: 20px;
+  }
+}
+
+
+/* =========================================================
+   v3.16.31 — clients header line lock + external card links
+   ========================================================= */
+.clients-hero h1 {
+  max-width: none;
+}
+
+.client-profile {
+  position: relative;
+}
+
+.client-profile-copy {
+  padding-right: 102px;
+}
+
+.client-profile-links {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.client-profile-link {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(19, 32, 58, 0.14);
+  background: rgba(247, 249, 252, 0.92);
+  color: #13203a;
+  text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.client-profile-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(19, 32, 58, 0.28);
+  background: #ffffff;
+}
+
+.client-profile-link svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  fill: currentColor;
+}
+
+@media (max-width: 560px) {
+  .clients-hero h1 {
+    max-width: 12ch;
+  }
+
+  .client-profile-copy {
+    padding-right: 0;
+  }
+
+  .client-profile-links {
+    top: 16px;
+    right: 16px;
   }
 }

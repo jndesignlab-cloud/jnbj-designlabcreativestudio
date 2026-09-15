@@ -1468,7 +1468,7 @@ body.designlab-home a:focus-visible { outline: 2px solid #7195ff; outline-offset
 
 
 /* =========================================================
-   v3.16.22 — compact trusted-brands logo wall
+   v3.16.31 — compact trusted-brands logo wall
    ========================================================= */
 body.designlab-home .dl-clients-panel {
   background: #f8fafc !important;
@@ -1598,7 +1598,7 @@ body.designlab-home .dl-trusted-logo-media.has-image .dl-trusted-logo-fallback {
 
 
 /* =========================================================
-   v3.16.22 — seamless homepage rhythm + 100% zoom float fix
+   v3.16.31 — seamless homepage rhythm + 100% zoom float fix
    ========================================================= */
 
 /* Keep non-hero sections content-led instead of forcing a full viewport.
@@ -1752,7 +1752,7 @@ body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-
   }
 }
 
-/* v3.16.22 — remove panel snap so compact sections flow naturally. */
+/* v3.16.31 — remove panel snap so compact sections flow naturally. */
 body.designlab-home {
   scroll-snap-type: none !important;
 }
@@ -2215,7 +2215,7 @@ body.designlab-home .dl-feature-shell {
 
 
 /* =========================================================
-   v3.16.29 — manifesto scale + spacing
+   v3.16.31 — manifesto scale + spacing
    ========================================================= */
 
 /* Make the manifesto statement around 15% bigger and give it more breathing room */
@@ -2254,7 +2254,7 @@ body.designlab-home .dl-feature-panel {
 
 
 /* =========================================================
-   v3.16.29 — clients CTA on home
+   v3.16.31 — clients CTA on home
    ========================================================= */
 body.designlab-home .dl-trusted-cta-wrap {
   display: flex !important;

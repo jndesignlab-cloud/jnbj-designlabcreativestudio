@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.29
+# DesignLab Creative Studio — v3.16.31
 
-**Update name:** Clients Page Header Line Control
+**Update name:** Clients 2-Line Title Lock + Card Links
