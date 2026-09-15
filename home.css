@@ -1437,10 +1437,7 @@ body.designlab-home .dl-hero-float-two {
 }
 }
 
-/* Content safety: decorations yield to content on compact/short viewports. */
-@media (max-width: 1100px), (max-height: 700px) {
-  body.designlab-home .dl-hero-floats { display: none !important; }
-}
+/* Content safety: collision detection in landing.js hides only an individual poster if it gets too close to live hero copy. */
 body.designlab-home .dl-hero-float { margin: 0 !important; }
 body.designlab-home .dl-hero-float.is-obstructing { visibility: hidden !important; }
 body.designlab-home .dl-feature-copy { overflow-wrap: anywhere; }
@@ -1467,4 +1464,134 @@ body.designlab-home a:focus-visible { outline: 2px solid #7195ff; outline-offset
   body.designlab-home .dl-feature-strip-track { animation: none !important; }
   body.designlab-home .dl-feature-strip { overflow-x: auto !important; }
   body.designlab-home .dl-feature-strip [aria-hidden="true"] { display: none !important; }
+}
+
+
+/* =========================================================
+   v3.16.20 — compact trusted-brands logo wall
+   ========================================================= */
+body.designlab-home .dl-clients-panel {
+  background: #f8fafc !important;
+}
+
+body.designlab-home .dl-clients-panel .dl-trusted-inner {
+  width: min(100%, 1160px) !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(24px, 4vw, 54px) !important;
+  box-sizing: border-box !important;
+}
+
+body.designlab-home .dl-trusted-head {
+  width: 100% !important;
+  max-width: 1060px !important;
+  margin: 0 auto 48px !important;
+  display: flex !important;
+  align-items: end !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+}
+
+body.designlab-home .dl-trusted-head h2 {
+  margin: 4px 0 0 !important;
+  color: var(--dl-ink) !important;
+  font-size: clamp(2rem, 3.4vw, 3.6rem) !important;
+  letter-spacing: -.055em !important;
+  line-height: 1 !important;
+}
+
+body.designlab-home .dl-trusted-logo-grid {
+  width: 100% !important;
+  max-width: 1060px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  column-gap: clamp(42px, 6vw, 86px) !important;
+  row-gap: clamp(42px, 6vh, 68px) !important;
+  align-items: center !important;
+}
+
+body.designlab-home .dl-trusted-logo {
+  min-width: 0 !important;
+  min-height: 104px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  opacity: .78 !important;
+  transition: opacity .2s ease, transform .2s ease !important;
+}
+
+body.designlab-home .dl-trusted-logo:hover,
+body.designlab-home .dl-trusted-logo:focus-visible {
+  opacity: 1 !important;
+  transform: translateY(-2px) !important;
+}
+
+body.designlab-home .dl-trusted-logo-media {
+  width: 100% !important;
+  min-height: 90px !important;
+  display: grid !important;
+  place-items: center !important;
+  position: relative !important;
+}
+
+body.designlab-home .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo-fallback {
+  grid-area: 1 / 1 !important;
+}
+
+body.designlab-home .dl-trusted-logo-media img {
+  width: auto !important;
+  max-width: min(100%, 190px) !important;
+  max-height: 74px !important;
+  object-fit: contain !important;
+  opacity: 0 !important;
+}
+
+body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img {
+  max-width: min(100%, 224px) !important;
+  max-height: 84px !important;
+}
+
+body.designlab-home .dl-trusted-logo-fallback {
+  max-width: 210px !important;
+  color: #17233d !important;
+  text-align: center !important;
+  font-size: clamp(.9rem, 1.2vw, 1.08rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+
+body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-fallback {
+  font-size: clamp(1rem, 1.45vw, 1.22rem) !important;
+}
+
+body.designlab-home .dl-trusted-logo-media.has-image img { opacity: 1 !important; }
+body.designlab-home .dl-trusted-logo-media.has-image .dl-trusted-logo-fallback { display: none !important; }
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-trusted-head { margin-bottom: 36px !important; }
+  body.designlab-home .dl-trusted-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 28px !important;
+    row-gap: 34px !important;
+  }
+  body.designlab-home .dl-trusted-logo { min-height: 84px !important; }
+  body.designlab-home .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img {
+    max-width: min(100%, 164px) !important;
+    max-height: 64px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  body.designlab-home .dl-trusted-head {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
 }

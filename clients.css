@@ -1,0 +1,114 @@
+.clients-main {
+  min-height: calc(100vh - 58px);
+  background: #f7f9fc;
+  color: #13203a;
+}
+
+.clients-hero {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-top: clamp(72px, 9vw, 118px) !important;
+  padding-bottom: 32px !important;
+}
+
+.clients-hero > div {
+  max-width: 760px;
+}
+
+.clients-hero h1 {
+  margin: 8px 0 0;
+  max-width: 13ch;
+  font-size: clamp(2.6rem, 5.5vw, 5.4rem);
+  line-height: .96;
+  letter-spacing: -.065em;
+}
+
+.clients-directory {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-top: 22px !important;
+  padding-bottom: clamp(72px, 9vw, 116px) !important;
+}
+
+.clients-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.client-profile {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  padding: 26px;
+  border: 1px solid rgba(20, 33, 60, .08);
+  border-radius: 24px;
+  background: #fff;
+}
+
+.client-profile-logo {
+  min-height: 110px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.client-profile-logo img {
+  grid-area: 1 / 1;
+  width: min(100%, 140px);
+  max-height: 74px;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.client-profile-logo span {
+  grid-area: 1 / 1;
+  max-width: 140px;
+  text-align: center;
+  font-weight: 800;
+  font-size: .86rem;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+.client-profile-logo.has-image img { opacity: 1; }
+.client-profile-logo.has-image span { display: none; }
+
+.client-profile-copy h2 {
+  margin: 0 0 8px;
+  font-size: 1.24rem;
+  letter-spacing: -.035em;
+}
+
+.client-profile-copy p {
+  margin: 0;
+  color: #647089;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.client-profile-copy small {
+  display: block;
+  margin-top: 13px;
+  color: #334463;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+@media (max-width: 850px) {
+  .clients-directory-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .clients-hero,
+  .clients-directory { width: min(100% - 32px, 1160px); }
+  .client-profile {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+  .client-profile-logo { min-height: 84px; justify-items: start; }
+  .client-profile-logo span { text-align: left; }
+}

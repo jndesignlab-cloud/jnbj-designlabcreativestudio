@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.19";
+const SITE_VERSION = "3.16.21";
 const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -56,69 +56,29 @@ function featureMarkup(project) {
     </article>`;
 }
 
-const HOME_CLIENTS = [
-  {
-    name: "Panpacific University",
-    markType: "image",
-    markSrc: "assets/client-panpacific.webp",
-    description: "A private higher education institution serving students through academic programs, institutional communication, and campus-wide initiatives.",
-    projects: "Projects done: campaigns, publications, event visuals, internal systems"
-  },
-  {
-    name: "C&B Cafe",
-    markType: "image",
-    markSrc: "assets/client-cb-cafe.webp",
-    description: "A café and food brand focused on approachable customer communication, menu-led promotions, and consistent social content.",
-    projects: "Projects done: promotional graphics, food content, branded social materials"
-  },
-  {
-    name: "Ion Ready Distribution Group",
-    markType: "text",
-    markClass: "ionready",
-    markText: "ION READY",
-    description: "A distribution-focused business handling product marketing, sales communication, and branded collateral across different product lines.",
-    projects: "Projects done: catalogue brochures, product collaterals, branded layouts"
-  },
-  {
-    name: "Catch of the Day",
-    markType: "text",
-    markClass: "catchoftheday",
-    markText: "CATCH OF THE DAY",
-    description: "A food-focused brand built around customer-facing communication, visual appetite appeal, and promotional content.",
-    projects: "Projects done: brand visuals, food content, promotional graphics"
-  },
-  {
-    name: "MyITHub Australia",
-    markType: "text",
-    markClass: "myithub",
-    markText: "MyITHub Australia",
-    description: "An Australia-based IT business supporting clients through digital services and professional technology solutions.",
-    projects: "Projects done: social graphics, digital materials, brand support"
-  },
-  {
-    name: "Sole Protect",
-    markType: "image",
-    markSrc: "assets/client-soleprotect.webp",
-    description: "A sneaker-care product brand focused on clean product presentation, digital campaigns, and e-commerce-friendly creative materials.",
-    projects: "Projects done: product visuals, campaign ads, launch graphics"
-  }
-];
+const HOME_CLIENTS = Array.isArray(window.DESIGNLAB_CLIENTS) ? window.DESIGNLAB_CLIENTS : [];
 
-
-function clientMarkup(item) {
-  const mark = item.markType === "image"
-    ? `<div class="dl-client-mark image"><img src="${escapeAgency(item.markSrc)}" alt="${escapeAgency(item.name)}" loading="lazy" decoding="async"></div>`
-    : `<div class="dl-client-mark wordmark ${escapeAgency(item.markClass || "")}"><span>${escapeAgency(item.markText || item.name)}</span></div>`;
-
+function clientLogoMarkup(item) {
+  const priorityClass = item.priority ? " is-priority" : "";
   return `
-    <article class="dl-client-card">
-      ${mark}
-      <div class="dl-client-copy">
-        <h3>${escapeAgency(item.name)}</h3>
-        <p>${escapeAgency(item.description)}</p>
-        <small>${escapeAgency(item.projects)}</small>
-      </div>
-    </article>`;
+    <a class="dl-trusted-logo${priorityClass}" href="clients.html#${escapeAgency(item.id)}" aria-label="View ${escapeAgency(item.name)} client details">
+      <span class="dl-trusted-logo-media" data-client-logo>
+        <img src="${escapeAgency(item.logoSrc)}" alt="${escapeAgency(item.name)} logo" loading="lazy" decoding="async">
+        <span class="dl-trusted-logo-fallback">${escapeAgency(item.logoText || item.name)}</span>
+      </span>
+    </a>`;
+}
+
+function hydrateClientLogoFallbacks(root) {
+  if (!root) return;
+  root.querySelectorAll('[data-client-logo]').forEach((wrap) => {
+    const img = wrap.querySelector('img');
+    if (!img) return;
+    const sync = () => wrap.classList.toggle('has-image', img.complete && img.naturalWidth > 0);
+    img.addEventListener('load', sync, { once: true });
+    img.addEventListener('error', sync, { once: true });
+    sync();
+  });
 }
 
 function featureStripMarkup(project, duplicate = false) {
@@ -199,7 +159,8 @@ async function loadFeaturedProject() {
 function loadClients() {
   const root = document.querySelector("#homeClientsGrid");
   if (!root) return;
-  root.innerHTML = HOME_CLIENTS.map(clientMarkup).join("");
+  root.innerHTML = HOME_CLIENTS.map(clientLogoMarkup).join("");
+  hydrateClientLogoFallbacks(root);
 }
 
 function loadTestimonials() {

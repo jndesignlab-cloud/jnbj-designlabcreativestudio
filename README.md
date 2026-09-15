@@ -1,9 +1,7 @@
-> Current package: **v3.16.19**. Start with [release notes](docs/RELEASE-v3.16.19.md). Existing configuration is retained. Earlier notes below describe project history.
+# DesignLab Creative Studio — v3.16.21
 
-# DesignLab Portfolio Website v3.16.18
-
-Homepage hero refinement release:
-- floating showcase cards are smaller
-- cards sit farther from the hero text area
-- motion is more subtle
-- uses local optimized `.webp` files
+Current release focuses on the client presentation and hero showcase:
+- restored subtle floating hero posters
+- dedicated Clients page
+- borderless homepage Trusted by brands logo wall
+- client order prioritizes COTD, Ion Ready, and SoleProtect; Panpacific University is last
