@@ -1,8 +1,9 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.27 — Manifesto Scale and Spacing
+## v3.16.28 — Clients CTA and Clients Page Manifesto Intro
 
-- increased the manifesto text size by about 15% for better presence
-- added more top and bottom breathing room around the manifesto section
-- added more spacing between the manifesto section and highlighted work
-- kept the section centered and aligned with the current DesignLab layout
+- added a centered **Our Clients** CTA below the home-page client logo section
+- updated the clients page with a manifesto-style intro section
+- added the new heading: **We work with brands that have somewhere to go.**
+- added the supplied supporting copy before the client showcase grid
+- kept the current DesignLab styling and spacing system intact

@@ -2215,7 +2215,7 @@ body.designlab-home .dl-feature-shell {
 
 
 /* =========================================================
-   v3.16.27 — manifesto scale + spacing
+   v3.16.28 — manifesto scale + spacing
    ========================================================= */
 
 /* Make the manifesto statement around 15% bigger and give it more breathing room */
@@ -2250,4 +2250,14 @@ body.designlab-home .dl-feature-panel {
   body.designlab-home .dl-feature-panel {
     padding-top: 52px !important;
   }
+}
+
+
+/* =========================================================
+   v3.16.28 — clients CTA on home
+   ========================================================= */
+body.designlab-home .dl-trusted-cta-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: clamp(28px, 3.4vh, 42px) !important;
 }

@@ -142,3 +142,65 @@
   width: min(100%, 172px);
   max-height: 70px;
 }
+
+
+/* =========================================================
+   v3.16.28 — clients manifesto intro
+   ========================================================= */
+.clients-hero {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-top: clamp(78px, 10vw, 130px) !important;
+  padding-bottom: clamp(42px, 5vw, 64px) !important;
+}
+
+.clients-hero-intro {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clients-hero h1 {
+  margin: 0 auto;
+  max-width: 11ch;
+  font-size: clamp(2.4rem, 5.2vw, 4.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.clients-hero-copy {
+  margin: 28px auto 0;
+  max-width: 980px;
+  color: #344361;
+  font-size: clamp(1rem, 1.55vw, 1.32rem);
+  line-height: 1.58;
+  letter-spacing: -0.025em;
+}
+
+.clients-hero-copy + .clients-hero-copy {
+  margin-top: 18px;
+}
+
+.clients-directory {
+  padding-top: clamp(18px, 3vw, 30px) !important;
+}
+
+@media (max-width: 560px) {
+  .clients-hero {
+    width: min(100% - 32px, 1160px);
+    padding-top: 58px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .clients-hero h1 {
+    max-width: 12ch;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .clients-hero-copy {
+    font-size: 1rem;
+    line-height: 1.62;
+    margin-top: 20px;
+  }
+}
