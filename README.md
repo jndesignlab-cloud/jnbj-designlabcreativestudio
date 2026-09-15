@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.28
+# DesignLab Creative Studio — v3.16.29
 
-**Update name:** Clients CTA and Clients Page Manifesto Intro
+**Update name:** Clients Page Header Line Control

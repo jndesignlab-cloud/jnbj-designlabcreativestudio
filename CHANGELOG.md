@@ -1,9 +1,7 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.28 — Clients CTA and Clients Page Manifesto Intro
+## v3.16.29 — Clients Page Header Line Control
 
-- added a centered **Our Clients** CTA below the home-page client logo section
-- updated the clients page with a manifesto-style intro section
-- added the new heading: **We work with brands that have somewhere to go.**
-- added the supplied supporting copy before the client showcase grid
-- kept the current DesignLab styling and spacing system intact
+- adjusted the **Clients** page hero heading so it wraps to a maximum of about two lines on desktop
+- reduced the clients-page subheading/body intro size by roughly **10%** for a lighter, cleaner read
+- kept the existing spacing, alignment, and DesignLab styling intact

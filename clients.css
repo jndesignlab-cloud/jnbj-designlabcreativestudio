@@ -145,7 +145,7 @@
 
 
 /* =========================================================
-   v3.16.28 — clients manifesto intro
+   v3.16.29 — clients manifesto intro
    ========================================================= */
 .clients-hero {
   width: min(100% - 48px, 1160px);
@@ -162,7 +162,7 @@
 
 .clients-hero h1 {
   margin: 0 auto;
-  max-width: 11ch;
+  max-width: 16.5ch;
   font-size: clamp(2.4rem, 5.2vw, 4.9rem);
   line-height: 0.98;
   letter-spacing: -0.06em;
@@ -173,7 +173,7 @@
   margin: 28px auto 0;
   max-width: 980px;
   color: #344361;
-  font-size: clamp(1rem, 1.55vw, 1.32rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.19rem);
   line-height: 1.58;
   letter-spacing: -0.025em;
 }
@@ -194,12 +194,12 @@
   }
 
   .clients-hero h1 {
-    max-width: 12ch;
+    max-width: 16ch;
     font-size: clamp(2rem, 10vw, 3rem);
   }
 
   .clients-hero-copy {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.62;
     margin-top: 20px;
   }
