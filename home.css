@@ -2162,3 +2162,53 @@ body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-
     max-height: 50px !important;
   }
 }
+
+
+/* =========================================================
+   v3.16.26 — section spacing tune
+   ========================================================= */
+
+/* Add more breathing room between homepage sections */
+body.designlab-home .dl-manifesto-panel {
+  padding-top: clamp(72px, 9vh, 104px) !important;
+  padding-bottom: clamp(68px, 8.4vh, 96px) !important;
+}
+
+body.designlab-home .dl-feature-panel {
+  padding-top: clamp(54px, 7vh, 82px) !important;
+  padding-bottom: clamp(68px, 8vh, 94px) !important;
+}
+
+body.designlab-home .dl-clients-panel {
+  padding-top: clamp(62px, 7.4vh, 88px) !important;
+  padding-bottom: clamp(70px, 8vh, 96px) !important;
+}
+
+body.designlab-home .dl-testimonials-panel {
+  padding-top: clamp(62px, 7.4vh, 88px) !important;
+  padding-bottom: clamp(74px, 8.5vh, 104px) !important;
+}
+
+/* Slightly more space for headings within sections */
+body.designlab-home .dl-trusted-head {
+  margin: 0 auto 32px !important;
+}
+
+body.designlab-home .dl-feature-shell {
+  row-gap: clamp(24px, 3vh, 36px) !important;
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-manifesto-panel {
+    padding: 54px 18px 48px !important;
+  }
+  body.designlab-home .dl-feature-panel {
+    padding-top: 38px !important;
+    padding-bottom: 48px !important;
+  }
+  body.designlab-home .dl-clients-panel,
+  body.designlab-home .dl-testimonials-panel {
+    padding-top: 42px !important;
+    padding-bottom: 52px !important;
+  }
+}
