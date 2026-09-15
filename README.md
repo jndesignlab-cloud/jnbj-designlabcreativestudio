@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.31
+# DesignLab Creative Studio — v3.16.32
 
-**Update name:** Clients 2-Line Title Lock + Card Links
+**Update name:** Client Card Links + One-Line Name Fit

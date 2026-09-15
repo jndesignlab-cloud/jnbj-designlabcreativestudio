@@ -114,7 +114,7 @@
 }
 
 
-/* v3.16.31 — client logo consistency */
+/* v3.16.32 — client logo consistency */
 .client-profile-logo img {
   filter: grayscale(1) saturate(0) contrast(1.08);
   width: min(100%, 154px);
@@ -145,7 +145,7 @@
 
 
 /* =========================================================
-   v3.16.31 — clients manifesto intro
+   v3.16.32 — clients manifesto intro
    ========================================================= */
 .clients-hero {
   width: min(100% - 48px, 1160px);
@@ -207,7 +207,7 @@
 
 
 /* =========================================================
-   v3.16.31 — clients header line lock + external card links
+   v3.16.32 — client card title fit + card links
    ========================================================= */
 .clients-hero h1 {
   max-width: none;
@@ -215,10 +215,45 @@
 
 .client-profile {
   position: relative;
+  grid-template-columns: minmax(110px, 138px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 24px;
+}
+
+.client-profile-logo {
+  min-height: 92px;
 }
 
 .client-profile-copy {
-  padding-right: 102px;
+  min-width: 0;
+  padding-right: 58px;
+}
+
+.client-profile-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.05rem, 1.5vw, 1.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(0.96rem, 1.28vw, 1.5rem);
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(0.78rem, 1.02vw, 1.14rem);
+  letter-spacing: -0.06em;
+}
+
+.client-profile-copy p {
+  font-size: 0.88rem;
+}
+
+.client-profile-copy small {
+  margin-top: 12px;
+  font-size: 0.9rem;
 }
 
 .client-profile-links {
@@ -226,49 +261,66 @@
   top: 18px;
   right: 18px;
   display: flex;
-  align-items: center;
   gap: 8px;
   z-index: 2;
 }
 
 .client-profile-link {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  border: 1px solid rgba(19, 32, 58, 0.14);
-  background: rgba(247, 249, 252, 0.92);
+  border: 1px solid rgba(19, 32, 58, 0.12);
+  background: rgba(247, 249, 252, 0.94);
   color: #13203a;
   text-decoration: none;
-  transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
 }
 
 .client-profile-link:hover {
   transform: translateY(-1px);
-  border-color: rgba(19, 32, 58, 0.28);
   background: #ffffff;
+  border-color: rgba(19, 32, 58, 0.24);
 }
 
 .client-profile-link svg {
   width: 15px;
   height: 15px;
-  display: block;
   fill: currentColor;
 }
 
+@media (max-width: 980px) {
+  .client-profile {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .client-profile-copy h2.title-xlong {
+    font-size: clamp(0.92rem, 2vw, 1.2rem);
+  }
+}
+
 @media (max-width: 560px) {
-  .clients-hero h1 {
-    max-width: 12ch;
+  .client-profile {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
   }
 
   .client-profile-copy {
     padding-right: 0;
   }
 
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal;
+    font-size: 1.18rem;
+  }
+
   .client-profile-links {
-    top: 16px;
-    right: 16px;
+    top: 14px;
+    right: 14px;
   }
 }
