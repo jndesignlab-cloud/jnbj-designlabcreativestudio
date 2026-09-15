@@ -2212,3 +2212,42 @@ body.designlab-home .dl-feature-shell {
     padding-bottom: 52px !important;
   }
 }
+
+
+/* =========================================================
+   v3.16.27 — manifesto scale + spacing
+   ========================================================= */
+
+/* Make the manifesto statement around 15% bigger and give it more breathing room */
+body.designlab-home .dl-manifesto-panel {
+  padding: clamp(86px, 10vh, 124px) 24px clamp(82px, 9.6vh, 118px) !important;
+}
+
+body.designlab-home .dl-manifesto-inner {
+  width: min(100%, 980px) !important;
+}
+
+body.designlab-home .dl-manifesto-copy {
+  max-width: 860px !important;
+  font-size: clamp(1.36rem, 2.82vw, 2.3rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.055em !important;
+}
+
+/* Add more separation between the manifesto and highlighted work */
+body.designlab-home .dl-feature-panel {
+  padding-top: clamp(72px, 8vh, 106px) !important;
+}
+
+@media (max-width: 780px) {
+  body.designlab-home .dl-manifesto-panel {
+    padding: 62px 18px 58px !important;
+  }
+  body.designlab-home .dl-manifesto-copy {
+    font-size: clamp(1.22rem, 7vw, 1.72rem) !important;
+    line-height: 1.14 !important;
+  }
+  body.designlab-home .dl-feature-panel {
+    padding-top: 52px !important;
+  }
+}

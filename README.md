@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.26
+# DesignLab Creative Studio — v3.16.27
 
-**Update name:** Section Spacing Tune
+**Update name:** Manifesto Scale and Spacing
