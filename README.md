@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.24
+# DesignLab Creative Studio — v3.16.25
 
-**Update name:** Compact Manifesto & Trusted Brands Grid
+**Update name:** Brand Tint, Logo Cleanup & Manifesto Spacing

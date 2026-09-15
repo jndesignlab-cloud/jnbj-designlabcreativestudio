@@ -2074,3 +2074,91 @@ body.designlab-home .dl-trusted-logo:focus-visible {
     max-height: 48px !important;
   }
 }
+
+
+/* =========================================================
+   v3.16.25 — brand tint + logo cleanup + manifesto/floating tune
+   ========================================================= */
+
+/* Hero floating samples: slightly bigger and still safely away from copy */
+body.designlab-home .dl-hero-float {
+  width: clamp(136px, 10.6vw, 176px) !important;
+  opacity: .9 !important;
+  box-shadow: 0 24px 54px rgba(8, 14, 30, .20) !important;
+}
+body.designlab-home .dl-hero-float-one {
+  left: clamp(38px, 4.4vw, 78px) !important;
+  top: calc(var(--dl-header) + 48px) !important;
+}
+body.designlab-home .dl-hero-float-two {
+  right: clamp(44px, 4.8vw, 84px) !important;
+  top: calc(var(--dl-header) + 88px) !important;
+  width: clamp(140px, 10.9vw, 182px) !important;
+}
+body.designlab-home .dl-hero-float-three {
+  left: clamp(60px, 5.8vw, 106px) !important;
+  bottom: clamp(118px, 14.5vh, 160px) !important;
+  width: clamp(142px, 11vw, 184px) !important;
+}
+@media (max-width: 1240px) {
+  body.designlab-home .dl-hero-float { width: 126px !important; }
+}
+
+/* Manifesto: add a bit more breathing room above and below */
+body.designlab-home .dl-manifesto-panel {
+  padding: clamp(52px, 7vh, 74px) 24px clamp(46px, 6vh, 66px) !important;
+}
+body.designlab-home .dl-manifesto-inner {
+  width: min(100%, 900px) !important;
+}
+body.designlab-home .dl-manifesto-copy {
+  max-width: 760px !important;
+}
+
+/* Clients section: subtle DesignLab blue tint */
+body.designlab-home .dl-clients-panel {
+  background: linear-gradient(180deg, #eff4ff 0%, #edf3ff 100%) !important;
+  padding-top: clamp(44px, 5.4vh, 60px) !important;
+  padding-bottom: clamp(46px, 5.6vh, 62px) !important;
+}
+body.designlab-home .dl-trusted-head {
+  margin: 0 auto 24px !important;
+}
+body.designlab-home .dl-trusted-head h2 {
+  font-size: clamp(1.24rem, 2.45vw, 2rem) !important;
+  line-height: 1.16 !important;
+}
+
+/* Use cleaned transparent black wordmarks instead of CSS-darkened boxes */
+body.designlab-home .dl-trusted-logo-media img {
+  filter: none !important;
+  max-width: min(100%, 178px) !important;
+  max-height: 56px !important;
+}
+body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img {
+  max-width: min(100%, 188px) !important;
+  max-height: 60px !important;
+}
+body.designlab-home .dl-trusted-logo[data-client-id="myithub-australia"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="panpacific-university"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="cb-cafe"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="cozisleep"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="perlas-ng-silanganan-car-rentals"] .dl-trusted-logo-media img,
+body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-logo-media img {
+  max-width: min(100%, 196px) !important;
+  max-height: 60px !important;
+}
+@media (max-width: 780px) {
+  body.designlab-home .dl-manifesto-panel {
+    padding: 38px 18px 34px !important;
+  }
+  body.designlab-home .dl-trusted-logo-grid {
+    row-gap: 18px !important;
+  }
+  body.designlab-home .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo.is-priority .dl-trusted-logo-media img,
+  body.designlab-home .dl-trusted-logo[data-client-id] .dl-trusted-logo-media img {
+    max-width: min(100%, 154px) !important;
+    max-height: 50px !important;
+  }
+}
