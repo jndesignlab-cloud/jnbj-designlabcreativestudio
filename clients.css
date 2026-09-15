@@ -689,3 +689,21 @@
     font-size: 0.84rem !important;
   }
 }
+
+
+/* =========================================================
+   v3.16.38 — client-name hierarchy bump
+   ========================================================= */
+.client-profile-title {
+  font-size: 0.96rem !important;
+  line-height: 1.42 !important;
+  letter-spacing: -0.018em !important;
+}
+.client-profile-title strong {
+  font-weight: 800 !important;
+}
+@media (max-width: 560px) {
+  .client-profile-title {
+    font-size: 1rem !important;
+  }
+}
