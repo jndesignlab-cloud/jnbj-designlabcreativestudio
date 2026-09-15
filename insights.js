@@ -1,3 +1,3 @@
-const SITE_VERSION = "3.16.32";
+const SITE_VERSION = "3.16.33";
 document.querySelectorAll("#year").forEach((el) => el.textContent = new Date().getFullYear());
 document.querySelectorAll("#siteVersion").forEach((el) => el.textContent = SITE_VERSION);

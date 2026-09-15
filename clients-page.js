@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.32";
+const SITE_VERSION = "3.16.33";
 const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -32,6 +32,37 @@ function renderLinks(item) {
     </div>`;
 }
 
+function serviceHref(label = "") {
+  const value = String(label).toLowerCase();
+  if (/(website|web|system|digital)/.test(value)) {
+    return "services.html#web-development-services";
+  }
+  if (/(social|campaign|content|promotional|launch|ads)/.test(value)) {
+    return "services.html#social-campaign-services";
+  }
+  return "services.html#graphic-design-services";
+}
+
+function renderProjectPills(projects = "") {
+  const items = String(projects)
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (!items.length) return "";
+
+  return `
+    <div class="client-projects" aria-label="Services used">
+      <span class="client-projects-label">Projects done</span>
+      <div class="client-project-pills">
+        ${items.map((item) => `
+          <a class="client-project-pill" href="${serviceHref(item)}" title="View related DesignLab service">
+            ${escapeClient(item)}
+          </a>`).join("")}
+      </div>
+    </div>`;
+}
+
 function clientCard(item) {
   return `
     <article class="client-profile reveal-up" id="${escapeClient(item.id)}">
@@ -43,7 +74,7 @@ function clientCard(item) {
       <div class="client-profile-copy">
         <h2 class="${escapeClient(item.titleClass || '')}">${escapeClient(item.name)}</h2>
         <p>${escapeClient(item.description)}</p>
-        <small>Projects done: ${escapeClient(item.projects)}</small>
+        ${renderProjectPills(item.projects)}
       </div>
     </article>`;
 }

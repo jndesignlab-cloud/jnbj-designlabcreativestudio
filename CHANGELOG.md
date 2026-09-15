@@ -1,10 +1,10 @@
 # DesignLab Portfolio Website — Changelog
 
-## v3.16.32 — Client Card Links + One-Line Name Fit
+## v3.16.33 — Client Service Pills & Typography Tune
 
-- added the provided public links for Catch of the Day, Ion Ready, CoziSleep, Perlas ng Silanganan Car Rentals, and C&B Cafe
-- kept existing links for SoleProtect, MyITHub Australia, OVERDRIVE.PH, and Panpacific University
-- added small icon buttons on client cards for website/Facebook links
-- tightened the client card layout so the right side is used better
-- adjusted company-name sizing so client names stay on a single line on desktop where possible
-- preserved mobile readability by allowing the titles to wrap on small screens
+- reduced client-card heading sizes so longer company names no longer collide with the external-link icon
+- tightened the client-card text layout for better use of horizontal space
+- converted **Projects done** items into individual service pills
+- added subtle hover lift/tint effects to the pills
+- linked each project pill to the closest related Services section: Graphic Design, Social & Campaigns, or Websites & Digital
+- kept mobile titles readable by allowing wrapping on smaller screens

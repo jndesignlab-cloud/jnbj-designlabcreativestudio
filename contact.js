@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.32";
+const SITE_VERSION = "3.16.33";
 const LAST_EDIT = "September 15, 2026";
 const DRAFT_STORAGE_KEY = "designlab-inquiry-draft";
 

@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.32
+# DesignLab Creative Studio — v3.16.33
 
-**Update name:** Client Card Links + One-Line Name Fit
+**Update name:** Client Service Pills & Typography Tune
