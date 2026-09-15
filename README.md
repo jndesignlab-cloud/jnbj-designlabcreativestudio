@@ -1,3 +1,3 @@
-# DesignLab Portfolio Website
+# DesignLab Creative Studio — v3.16.35
 
-Current package: v3.16.34
+**Update name:** Client Title 50% Reduction

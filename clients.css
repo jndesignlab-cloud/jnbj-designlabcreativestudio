@@ -550,3 +550,57 @@
     font-size: 0.84rem;
   }
 }
+
+
+/* =========================================================
+   v3.16.35 — 50% client title reduction
+   ========================================================= */
+.client-profile-copy {
+  padding-right: 34px !important;
+}
+
+.client-profile-copy h2,
+.client-profile-copy h2.title-long,
+.client-profile-copy h2.title-xlong {
+  margin: 0 0 8px !important;
+  max-width: calc(100% - 2px) !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.client-profile-copy h2 {
+  font-size: clamp(0.68rem, 0.72vw, 0.78rem) !important;
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(0.61rem, 0.64vw, 0.70rem) !important;
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(0.54rem, 0.58vw, 0.64rem) !important;
+  letter-spacing: -0.015em !important;
+}
+
+@media (max-width: 980px) {
+  .client-profile-copy h2 {
+    font-size: 0.74rem !important;
+  }
+  .client-profile-copy h2.title-long {
+    font-size: 0.67rem !important;
+  }
+  .client-profile-copy h2.title-xlong {
+    font-size: 0.60rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal !important;
+    font-size: 0.92rem !important;
+  }
+}
