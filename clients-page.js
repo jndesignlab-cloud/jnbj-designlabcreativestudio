@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.36";
+const SITE_VERSION = "3.16.37";
 const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -72,7 +72,7 @@ function clientCard(item) {
         <span>${escapeClient(item.logoText || item.name)}</span>
       </div>
       <div class="client-profile-copy">
-        <h2 class="${escapeClient(item.titleClass || '')}">${escapeClient(item.name)}</h2>
+        <p class="client-profile-title"><strong>${escapeClient(item.name)}</strong></p>
         <p>${escapeClient(item.description)}</p>
         ${renderProjectPills(item.projects)}
       </div>

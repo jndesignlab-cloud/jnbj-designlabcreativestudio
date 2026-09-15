@@ -2,7 +2,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "catch-of-the-day",
     name: "Catch of the Day",
-    titleClass: "",
     logoSrc: "assets/client-cotd.webp",
     logoText: "CATCH OF THE DAY",
     priority: true,
@@ -15,7 +14,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "ion-ready",
     name: "Ion Ready Distribution Group",
-    titleClass: "title-long",
     logoSrc: "assets/client-ion-ready.webp",
     logoText: "ION READY",
     priority: true,
@@ -28,7 +26,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "soleprotect",
     name: "SoleProtect",
-    titleClass: "",
     logoSrc: "assets/client-soleprotect.webp",
     logoText: "SoleProtect",
     priority: true,
@@ -41,7 +38,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "cozisleep",
     name: "CoziSleep",
-    titleClass: "",
     logoSrc: "assets/client-cozisleep.webp",
     logoText: "CoziSleep",
     description: "DesignLab created social media campaign visuals and dorm-focused product creatives for a sleep and mattress brand.",
@@ -53,7 +49,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "myithub-australia",
     name: "MyITHub Australia",
-    titleClass: "",
     logoSrc: "assets/client-myithub.webp",
     logoText: "MyITHub Australia",
     description: "DesignLab supported an Australia-based IT business with branded social graphics, digital materials, and ongoing visual support.",
@@ -65,7 +60,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "perlas-ng-silanganan-car-rentals",
     name: "Perlas ng Silanganan Car Rentals",
-    titleClass: "title-xlong",
     logoSrc: "assets/client-perlas-car-rentals.webp",
     logoText: "Perlas ng Silanganan Car Rentals",
     description: "DesignLab provided promotional and branded creative support for a local car-rental service focused on practical mobility needs.",
@@ -77,7 +71,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "overdrive-ph",
     name: "OVERDRIVE.PH",
-    titleClass: "",
     logoSrc: "assets/client-overdrive-ph.webp",
     logoText: "OVERDRIVE.PH",
     description: "DesignLab created branded visuals and promotional support for a customer-facing car-rental brand.",
@@ -89,7 +82,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "cb-cafe",
     name: "C&B Cafe",
-    titleClass: "",
     logoSrc: "assets/client-cb-cafe.webp",
     logoText: "C&B Cafe",
     description: "DesignLab created café promotions, food visuals, and branded social content for a casual food and beverage business.",
@@ -101,7 +93,6 @@ window.DESIGNLAB_CLIENTS = [
   {
     id: "panpacific-university",
     name: "Panpacific University",
-    titleClass: "",
     logoSrc: "assets/client-panpacific.webp",
     logoText: "Panpacific University",
     description: "DesignLab produced campaign visuals, publications, event materials, and internal system interfaces for a private higher education institution.",

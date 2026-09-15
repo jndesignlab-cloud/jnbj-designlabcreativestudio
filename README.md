@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.36
+# DesignLab Creative Studio — v3.16.37
 
-**Update name:** Uniform Client Title Hierarchy
+**Update name:** Structural Client Title Fix

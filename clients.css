@@ -553,7 +553,7 @@
 
 
 /* =========================================================
-   v3.16.36 — 50% client title reduction
+   v3.16.37 — 50% client title reduction
    ========================================================= */
 .client-profile-copy {
   padding-right: 34px !important;
@@ -607,7 +607,7 @@
 
 
 /* =========================================================
-   v3.16.36 — uniform client title hierarchy
+   v3.16.37 — uniform client title hierarchy
    ========================================================= */
 .client-profile-copy h2,
 .client-profile-copy h2.title-long,
@@ -646,6 +646,46 @@
   }
 
   .client-profile-copy p {
+    font-size: 0.84rem !important;
+  }
+}
+
+
+/* =========================================================
+   v3.16.37 — structural client title fix
+   ========================================================= */
+.client-profile-title {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  color: #13203a !important;
+  font-size: 0.79rem !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.012em !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.client-profile-title strong {
+  font: inherit !important;
+  font-weight: 800 !important;
+  color: inherit !important;
+}
+
+.client-profile-copy p:not(.client-profile-title) {
+  font-size: 0.79rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 560px) {
+  .client-profile-title {
+    white-space: normal !important;
+    font-size: 0.84rem !important;
+  }
+
+  .client-profile-copy p:not(.client-profile-title) {
     font-size: 0.84rem !important;
   }
 }
