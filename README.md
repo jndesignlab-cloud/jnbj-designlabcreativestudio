@@ -1,3 +1,3 @@
-# DesignLab Creative Studio — v3.16.33
+# DesignLab Portfolio Website
 
-**Update name:** Client Service Pills & Typography Tune
+Current package: v3.16.34

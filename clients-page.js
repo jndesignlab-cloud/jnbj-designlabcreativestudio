@@ -1,4 +1,4 @@
-const SITE_VERSION = "3.16.33";
+const SITE_VERSION = "3.16.34";
 const LAST_EDIT = "September 15, 2026";
 
 document.querySelectorAll("#siteVersion").forEach((el) => (el.textContent = SITE_VERSION));
@@ -53,7 +53,7 @@ function renderProjectPills(projects = "") {
 
   return `
     <div class="client-projects" aria-label="Services used">
-      <span class="client-projects-label">Projects done</span>
+      <span class="client-projects-label">What we worked on</span>
       <div class="client-project-pills">
         ${items.map((item) => `
           <a class="client-project-pill" href="${serviceHref(item)}" title="View related DesignLab service">

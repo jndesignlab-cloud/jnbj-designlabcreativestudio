@@ -6,7 +6,7 @@ window.DESIGNLAB_CLIENTS = [
     logoSrc: "assets/client-cotd.webp",
     logoText: "CATCH OF THE DAY",
     priority: true,
-    description: "A food-focused brand built around customer-facing communication, visual appetite appeal, and promotional content.",
+    description: "DesignLab created food campaign visuals, branded content, and promotional graphics for a customer-facing food brand.",
     projects: "Brand visuals, food content, promotional graphics",
     links: [
       { type: "website", url: "https://cotd.co.nz", label: "Website" }
@@ -19,7 +19,7 @@ window.DESIGNLAB_CLIENTS = [
     logoSrc: "assets/client-ion-ready.webp",
     logoText: "ION READY",
     priority: true,
-    description: "A distribution-focused business handling product marketing, sales communication, and branded collateral across different product lines.",
+    description: "DesignLab produced catalogue brochures, product collaterals, and branded layouts for a distribution group serving the vape and lifestyle market.",
     projects: "Catalogue brochures, product collaterals, branded layouts",
     links: [
       { type: "website", url: "https://ionready.co.nz", label: "Website" }
@@ -32,7 +32,7 @@ window.DESIGNLAB_CLIENTS = [
     logoSrc: "assets/client-soleprotect.webp",
     logoText: "SoleProtect",
     priority: true,
-    description: "A sneaker-care product brand focused on clean product presentation, digital campaigns, and e-commerce-friendly creative materials.",
+    description: "DesignLab created clean product visuals, campaign ads, and launch graphics for a sneaker-care and cleaning product brand.",
     projects: "Product visuals, campaign ads, launch graphics",
     links: [
       { type: "website", url: "https://soleprotect.com.ph/", label: "Website" }
@@ -44,7 +44,7 @@ window.DESIGNLAB_CLIENTS = [
     titleClass: "",
     logoSrc: "assets/client-cozisleep.webp",
     logoText: "CoziSleep",
-    description: "A sleep and mattress brand centered on comfortable, lifestyle-oriented product presentation.",
+    description: "DesignLab created social media campaign visuals and dorm-focused product creatives for a sleep and mattress brand.",
     projects: "Social media design and campaign visuals",
     links: [
       { type: "website", url: "https://cozisleep.ph", label: "Website" }
@@ -56,7 +56,7 @@ window.DESIGNLAB_CLIENTS = [
     titleClass: "",
     logoSrc: "assets/client-myithub.webp",
     logoText: "MyITHub Australia",
-    description: "An Australia-based IT business supporting clients through digital services and professional technology solutions.",
+    description: "DesignLab supported an Australia-based IT business with branded social graphics, digital materials, and ongoing visual support.",
     projects: "Social graphics, digital materials, brand support",
     links: [
       { type: "website", url: "https://www.myithub.com.au/", label: "Website" }
@@ -68,8 +68,8 @@ window.DESIGNLAB_CLIENTS = [
     titleClass: "title-xlong",
     logoSrc: "assets/client-perlas-car-rentals.webp",
     logoText: "Perlas ng Silanganan Car Rentals",
-    description: "A car rental service focused on practical vehicle-rental options and customer mobility needs.",
-    projects: "Creative design support",
+    description: "DesignLab provided promotional and branded creative support for a local car-rental service focused on practical mobility needs.",
+    projects: "Promotional graphics, brand support",
     links: [
       { type: "facebook", url: "https://www.facebook.com/PNSCR23", label: "Facebook" }
     ]
@@ -80,8 +80,8 @@ window.DESIGNLAB_CLIENTS = [
     titleClass: "",
     logoSrc: "assets/client-overdrive-ph.webp",
     logoText: "OVERDRIVE.PH",
-    description: "A car rental brand focused on vehicle-rental services and customer-facing automotive communication.",
-    projects: "Creative design support",
+    description: "DesignLab created branded visuals and promotional support for a customer-facing car-rental brand.",
+    projects: "Promotional graphics, brand support",
     links: [
       { type: "facebook", url: "https://www.facebook.com/overdrivevanrental", label: "Facebook" }
     ]
@@ -92,7 +92,7 @@ window.DESIGNLAB_CLIENTS = [
     titleClass: "",
     logoSrc: "assets/client-cb-cafe.webp",
     logoText: "C&B Cafe",
-    description: "A café and food brand focused on approachable customer communication, menu-led promotions, and consistent social content.",
+    description: "DesignLab created café promotions, food visuals, and branded social content for a casual food and beverage business.",
     projects: "Promotional graphics, food content, branded social materials",
     links: [
       { type: "facebook", url: "https://www.facebook.com/candbcafe", label: "Facebook" }
@@ -104,7 +104,7 @@ window.DESIGNLAB_CLIENTS = [
     titleClass: "",
     logoSrc: "assets/client-panpacific.webp",
     logoText: "Panpacific University",
-    description: "A private higher education institution serving students through academic programs, institutional communication, and campus-wide initiatives.",
+    description: "DesignLab produced campaign visuals, publications, event materials, and internal system interfaces for a private higher education institution.",
     projects: "Campaigns, publications, event visuals, internal systems",
     links: [
       { type: "website", url: "https://www.panpacificu.edu.ph/", label: "Website" }

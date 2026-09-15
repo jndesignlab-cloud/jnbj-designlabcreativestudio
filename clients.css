@@ -453,3 +453,100 @@
     padding: 6px 9px;
   }
 }
+
+
+/* =========================================================
+   v3.16.34 — smaller client titles + refined copy spacing
+   ========================================================= */
+.client-profile {
+  grid-template-columns: minmax(100px, 120px) minmax(0, 1fr);
+  gap: 16px;
+  padding: 22px 22px;
+}
+
+.client-profile-copy {
+  padding-right: 38px;
+}
+
+.client-profile-copy h2,
+.client-profile-copy h2.title-long,
+.client-profile-copy h2.title-xlong {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 8px;
+  line-height: 1.08;
+}
+
+.client-profile-copy h2 {
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(0.75rem, 0.84vw, 0.92rem);
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(0.7rem, 0.78vw, 0.84rem);
+  letter-spacing: -0.02em;
+}
+
+.client-profile-copy p {
+  font-size: 0.79rem;
+  line-height: 1.55;
+}
+
+.client-projects {
+  margin-top: 12px;
+}
+
+.client-projects-label {
+  margin-bottom: 7px;
+  font-size: 0.7rem;
+}
+
+.client-project-pill {
+  min-height: 26px;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+}
+
+.client-profile-link {
+  width: 30px;
+  height: 30px;
+}
+
+.client-profile-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 980px) {
+  .client-profile-copy h2 {
+    font-size: 0.9rem;
+  }
+
+  .client-profile-copy h2.title-long {
+    font-size: 0.84rem;
+  }
+
+  .client-profile-copy h2.title-xlong {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    font-size: 1rem;
+  }
+
+  .client-profile-copy p {
+    font-size: 0.84rem;
+  }
+}
