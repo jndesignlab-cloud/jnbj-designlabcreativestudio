@@ -470,11 +470,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — inline service detail workspace (no image panel)
-=======
-   v3.16.41 — inline service detail workspace (no image panel)
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .dl-services-shell {
   grid-template-columns: minmax(190px, .58fr) minmax(340px, .9fr) minmax(430px, 1.25fr) !important;
@@ -613,11 +609,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — service detail hierarchy + September pricing
-=======
-   v3.16.41 — service detail hierarchy + September pricing
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .dl-services-shell {
   grid-template-columns: minmax(170px, .5fr) minmax(360px, .95fr) minmax(400px, 1.15fr) !important;

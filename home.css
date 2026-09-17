@@ -1468,11 +1468,7 @@ body.designlab-home a:focus-visible { outline: 2px solid #7195ff; outline-offset
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — compact trusted-brands logo wall
-=======
-   v3.16.41 — compact trusted-brands logo wall
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 body.designlab-home .dl-clients-panel {
   background: #f8fafc !important;
@@ -1602,11 +1598,7 @@ body.designlab-home .dl-trusted-logo-media.has-image .dl-trusted-logo-fallback {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — seamless homepage rhythm + 100% zoom float fix
-=======
-   v3.16.41 — seamless homepage rhythm + 100% zoom float fix
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 
 /* Keep non-hero sections content-led instead of forcing a full viewport.
@@ -1760,22 +1752,14 @@ body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-
   }
 }
 
-<<<<<<< HEAD
 /* v4.0.0 — remove panel snap so compact sections flow naturally. */
-=======
-/* v3.16.41 — remove panel snap so compact sections flow naturally. */
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
 body.designlab-home {
   scroll-snap-type: none !important;
 }
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — manifesto bridge + refined hero float motion
-=======
-   v3.16.41 — manifesto bridge + refined hero float motion
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 
 /* universal typography update inspired by the reference */
@@ -1950,11 +1934,7 @@ body.designlab-home .dl-testimonials-panel {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — compact manifesto + trusted brands 5-column grid
-=======
-   v3.16.41 — compact manifesto + trusted brands 5-column grid
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 
 /* Smaller bridge statement with calmer rhythm */
@@ -2097,11 +2077,7 @@ body.designlab-home .dl-trusted-logo:focus-visible {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — brand tint + logo cleanup + manifesto/floating tune
-=======
-   v3.16.41 — brand tint + logo cleanup + manifesto/floating tune
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 
 /* Hero floating samples: slightly bigger and still safely away from copy */
@@ -2189,11 +2165,7 @@ body.designlab-home .dl-trusted-logo[data-client-id="overdrive-ph"] .dl-trusted-
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — section spacing tune
-=======
-   v3.16.41 — section spacing tune
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 
 /* Add more breathing room between homepage sections */
@@ -2243,11 +2215,7 @@ body.designlab-home .dl-feature-shell {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — manifesto scale + spacing
-=======
-   v3.16.41 — manifesto scale + spacing
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 
 /* Make the manifesto statement around 15% bigger and give it more breathing room */
@@ -2286,11 +2254,7 @@ body.designlab-home .dl-feature-panel {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — clients CTA on home
-=======
-   v3.16.41 — clients CTA on home
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 body.designlab-home .dl-trusted-cta-wrap {
   display: flex !important;

@@ -114,11 +114,7 @@
 }
 
 
-<<<<<<< HEAD
 /* v4.0.0 — client logo consistency */
-=======
-/* v3.16.41 — client logo consistency */
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
 .client-profile-logo img {
   filter: grayscale(1) saturate(0) contrast(1.08);
   width: min(100%, 154px);
@@ -149,11 +145,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — clients manifesto intro
-=======
-   v3.16.41 — clients manifesto intro
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .clients-hero {
   width: min(100% - 48px, 1160px);
@@ -215,11 +207,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — client card title fit + card links
-=======
-   v3.16.41 — client card title fit + card links
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .clients-hero h1 {
   max-width: none;
@@ -339,11 +327,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — tighter titles + service pills
-=======
-   v3.16.41 — tighter titles + service pills
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .client-profile {
   grid-template-columns: minmax(104px, 128px) minmax(0, 1fr);
@@ -472,11 +456,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — smaller client titles + refined copy spacing
-=======
-   v3.16.41 — smaller client titles + refined copy spacing
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .client-profile {
   grid-template-columns: minmax(100px, 120px) minmax(0, 1fr);
@@ -573,11 +553,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — 50% client title reduction
-=======
-   v3.16.41 — 50% client title reduction
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .client-profile-copy {
   padding-right: 34px !important;
@@ -631,11 +607,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — uniform client title hierarchy
-=======
-   v3.16.41 — uniform client title hierarchy
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .client-profile-copy h2,
 .client-profile-copy h2.title-long,
@@ -680,11 +652,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — structural client title fix
-=======
-   v3.16.41 — structural client title fix
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .client-profile-title {
   margin: 0 0 8px !important;
@@ -724,11 +692,7 @@
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — client-name hierarchy bump
-=======
-   v3.16.41 — client-name hierarchy bump
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .client-profile-title {
   font-size: 0.96rem !important;

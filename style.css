@@ -17860,11 +17860,7 @@ html[data-theme="blue"] .compact-file-visual-violet {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — global collaboration CTA + visitor meta
-=======
-   v3.16.41 — global collaboration CTA + visitor meta
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .dl-global-cta {
   width: min(calc(100% - 48px), 1660px);
@@ -17933,11 +17929,7 @@ html[data-theme="blue"] .compact-file-visual-violet {
 
 
 /* =========================================================
-<<<<<<< HEAD
    v4.0.0 — universal floating visitor counter
-=======
-   v3.16.41 — universal floating visitor counter
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
    ========================================================= */
 .visitor-float,
 .dl-global-visitor-float {
@@ -18006,11 +17998,7 @@ html[data-theme="blue"] .compact-file-visual-violet {
 }
 
 
-<<<<<<< HEAD
 /* v4.0.0 — force public floating visitor badge above legacy hidden rules */
-=======
-/* v3.16.41 — force public floating visitor badge above legacy hidden rules */
->>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
 html[data-theme] body.signal-theme .dl-global-visitor-float,
 body.agency-system .dl-global-visitor-float,
 body.designlab-home .dl-global-visitor-float,
