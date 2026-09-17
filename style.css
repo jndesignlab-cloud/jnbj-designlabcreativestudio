@@ -17857,3 +17857,171 @@ html[data-theme="blue"] .compact-file-visual-violet {
     justify-content: space-between;
   }
 }
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — global collaboration CTA + visitor meta
+=======
+   v3.16.41 — global collaboration CTA + visitor meta
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.dl-global-cta {
+  width: min(calc(100% - 48px), 1660px);
+  margin: clamp(40px, 6vw, 78px) auto 24px;
+  padding: 0;
+}
+
+.dl-global-cta-inner {
+  min-height: 132px;
+  padding: clamp(26px, 3vw, 42px);
+  border: 1px solid rgba(20,33,60,.07);
+  border-radius: 8px;
+  background:
+    linear-gradient(100deg, rgba(46,92,255,.035), rgba(104,217,168,.09)),
+    #eaf6f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.dl-global-cta-copy { display:grid; gap:6px; }
+.dl-global-cta-copy h2 {
+  margin: 0;
+  color: #13203a;
+  font-size: clamp(1.2rem, 2vw, 1.72rem);
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  font-weight: 550;
+}
+.dl-global-cta-copy p {
+  margin: 0;
+  color: #46556f;
+  font-size: clamp(.84rem, 1vw, .98rem);
+}
+
+.dl-global-cta-button {
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid rgba(19,32,58,.2);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #13203a;
+  text-decoration: none;
+  font-weight: 650;
+  white-space: nowrap;
+  transition: transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+.dl-global-cta-button:hover,
+.dl-global-cta-button:focus-visible {
+  transform: translateY(-1px);
+  background: #13203a;
+  color: #fff;
+  border-color: #13203a;
+}
+
+.dl-footer-visits strong { font-weight: 700; color: inherit; }
+
+@media (max-width: 680px) {
+  .dl-global-cta { width: min(calc(100% - 28px), 1660px); margin-top: 42px; }
+  .dl-global-cta-inner { min-height: 0; padding: 24px; flex-direction: column; align-items: flex-start; }
+  .dl-global-cta-button { min-height: 44px; }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — universal floating visitor counter
+=======
+   v3.16.41 — universal floating visitor counter
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.visitor-float,
+.dl-global-visitor-float {
+  position: fixed !important;
+  left: 14px !important;
+  right: auto !important;
+  bottom: 14px !important;
+  top: auto !important;
+  z-index: 999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 30px !important;
+  padding: 6px 9px !important;
+  border: 1px solid rgba(35, 77, 255, 0.13) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 24px rgba(12, 24, 56, 0.10) !important;
+  color: #13203a !important;
+  pointer-events: none !important;
+  opacity: 0.92 !important;
+}
+
+.visitor-float-dot {
+  width: 6px !important;
+  height: 6px !important;
+  flex: 0 0 6px !important;
+}
+
+.visitor-float-label {
+  font-size: 0.66rem !important;
+  line-height: 1 !important;
+  font-weight: 650 !important;
+  color: #647089 !important;
+}
+
+.visitor-float strong,
+.visitor-float [data-site-visits] {
+  font-size: 0.72rem !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  color: #234dff !important;
+}
+
+@media (max-width: 640px) {
+  .visitor-float,
+  .dl-global-visitor-float {
+    left: 8px !important;
+    bottom: 8px !important;
+    min-height: 28px !important;
+    padding: 5px 8px !important;
+  }
+
+  .visitor-float-label {
+    font-size: 0.62rem !important;
+  }
+
+  .visitor-float strong,
+  .visitor-float [data-site-visits] {
+    font-size: 0.68rem !important;
+  }
+}
+
+
+<<<<<<< HEAD
+/* v4.0.0 — force public floating visitor badge above legacy hidden rules */
+=======
+/* v3.16.41 — force public floating visitor badge above legacy hidden rules */
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+html[data-theme] body.signal-theme .dl-global-visitor-float,
+body.agency-system .dl-global-visitor-float,
+body.designlab-home .dl-global-visitor-float,
+body.designlab-agency-home .dl-global-visitor-float {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: .96 !important;
+  position: fixed !important;
+  left: 14px !important;
+  right: auto !important;
+  bottom: 14px !important;
+  top: auto !important;
+  z-index: 2147483000 !important;
+}

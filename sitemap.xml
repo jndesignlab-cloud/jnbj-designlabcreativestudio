@@ -12,6 +12,14 @@
 <url><loc>https://madebydesignlab.com/insights/from-personal-tool-to-digital-product/</loc><lastmod>2026-07-17</lastmod></url>
 <url><loc>https://madebydesignlab.com/insights/what-60-days-of-design-taught-me/</loc><lastmod>2026-07-17</lastmod></url>
 <url>
+<<<<<<< HEAD
+<loc>https://madebydesignlab.com/opportunities.html</loc>
+<lastmod>2026-09-17</lastmod></url>
+=======
 <loc>https://madebydesignlab.com/downloads.html</loc>
 <lastmod>2026-09-13</lastmod></url>
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+  <url>
+    <loc>https://madebydesignlab.com/clients.html</loc>
+  </url>
 </urlset>

@@ -1,5 +1,5 @@
-const SITE_VERSION = "3.15.3";
-const LAST_EDIT = "September 13, 2026";
+const SITE_VERSION = "3.16.41";
+const LAST_EDIT = "September 16, 2026";
 
 const DOWNLOADS = [
   {

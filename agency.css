@@ -1,9 +1,4 @@
-
-/* =========================================================
-   DesignLab v3.15.3 — Editorial Agency System
-   Inspired by modern editorial agency structure, rebuilt for
-   DesignLab's blue-forward identity and compact preferences.
-   ========================================================= */
+/* DesignLab: maintained component rules. Homepage navigation is owned by navbar.css. */
 
 :root {
   --agency-bg: #f7f8fc;
@@ -49,7 +44,6 @@ body.agency-system .editorial-page-shell {
   margin-inline: auto;
 }
 
-/* Header */
 body.agency-system .site-header {
   position: sticky;
   top: 0;
@@ -102,7 +96,6 @@ body.agency-system .signal-header-cta {
   font-weight: 750;
 }
 
-/* Typography */
 .agency-kicker,
 body.agency-system .rp-eyebrow,
 body.agency-system .services-simple-kicker,
@@ -144,7 +137,6 @@ body.agency-system .eyebrow {
   letter-spacing: -.06em;
 }
 
-/* Homepage hero */
 .agency-home-hero {
   padding: clamp(48px, 6vw, 78px) 0 38px;
   border-bottom: 1px solid var(--agency-line);
@@ -192,7 +184,6 @@ body.agency-system .eyebrow {
   background: var(--agency-blue-dark);
 }
 
-/* One major featured case */
 .agency-featured {
   padding: 34px 0 42px;
   border-bottom: 1px solid var(--agency-line);
@@ -270,7 +261,6 @@ body.agency-system .eyebrow {
   font-weight: 700;
 }
 
-/* Work stream */
 .agency-work-stream {
   padding: 42px 0;
   border-bottom: 1px solid var(--agency-line);
@@ -344,7 +334,6 @@ body.agency-system .eyebrow {
   letter-spacing: -.04em;
 }
 
-/* Client proof */
 .agency-proof {
   padding: 40px 0;
   border-bottom: 1px solid var(--agency-line);
@@ -408,7 +397,6 @@ body.agency-system .eyebrow {
   max-height: 40px;
 }
 
-/* Services */
 .agency-services {
   padding: 44px 0;
   border-bottom: 1px solid var(--agency-line);
@@ -458,7 +446,6 @@ body.agency-system .eyebrow {
   transform: translate(3px, -3px);
 }
 
-/* Testimonial ready block */
 .agency-testimonials {
   padding: 44px 0;
   border-bottom: 1px solid var(--agency-line);
@@ -502,7 +489,6 @@ body.agency-system .eyebrow {
   font-size: .61rem;
 }
 
-/* About / studio statement */
 .agency-studio {
   padding: 48px 0;
   display: grid;
@@ -538,7 +524,6 @@ body.agency-system .eyebrow {
   text-decoration: none;
 }
 
-/* Closing CTA */
 .agency-closing {
   padding: 52px 0;
 }
@@ -569,7 +554,6 @@ body.agency-system .eyebrow {
   background: #fff;
 }
 
-/* Footer */
 body.agency-system .footer {
   width: min(var(--agency-page), calc(100% - var(--agency-gutter) * 2));
   margin-inline: auto;
@@ -579,7 +563,6 @@ body.agency-system .footer {
   background: transparent;
 }
 
-/* Work page */
 body.agency-system .editorial-page-head {
   padding: 52px 0 34px;
   border-bottom: 1px solid var(--agency-line);
@@ -609,7 +592,6 @@ body.agency-system .editorial-row-copy h2 {
   color: var(--agency-ink);
 }
 
-/* Services page: flatten card look */
 body.agency-system .one-stop-services-main {
   padding-top: 52px;
 }
@@ -637,7 +619,6 @@ body.agency-system .one-stop-card {
   box-shadow: none;
 }
 
-/* Downloads / contact / creator cleanup */
 body.agency-system .downloads-compact-head,
 body.agency-system .one-stop-pricing-note,
 body.agency-system .creator-simple-details {
@@ -657,7 +638,6 @@ body.agency-system .editorial-form-shell {
   box-shadow: none;
 }
 
-/* Motion */
 .motion-enabled .agency-reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -682,76 +662,52 @@ body.agency-system .editorial-form-shell {
   transform: none;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-  .agency-featured-card,
-  .agency-proof-grid,
-  .agency-studio {
-    grid-template-columns: 1fr;
-  }
-
-  .agency-featured-media,
-  .agency-featured-media img {
-    min-height: 360px;
-  }
-
-  .agency-service-row {
-    grid-template-columns: 38px minmax(0, 1fr) 22px;
-  }
-
-  .agency-service-row p {
-    grid-column: 2 / 3;
-  }
-
-  .agency-testimonial-grid {
-    grid-template-columns: 1fr;
-  }
+.agency-featured-card,
+.agency-proof-grid,
+.agency-studio {
+  grid-template-columns: 1fr;
+}.agency-featured-media,
+.agency-featured-media img {
+  min-height: 360px;
+}.agency-service-row {
+  grid-template-columns: 38px minmax(0, 1fr) 22px;
+}.agency-service-row p {
+  grid-column: 2 / 3;
+}.agency-testimonial-grid {
+  grid-template-columns: 1fr;
+}
 }
 
 @media (max-width: 720px) {
-  .agency-work-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .agency-work-head,
-  .agency-services-head,
-  .agency-proof-head,
-  .agency-closing-box {
-    grid-template-columns: 1fr;
-  }
-
-  .agency-featured-media,
-  .agency-featured-media img {
-    min-height: 280px;
-  }
-
-  .agency-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .agency-client-logos {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .agency-service-row {
-    min-height: 0;
-    padding: 20px 0;
-  }
+.agency-work-grid {
+  grid-template-columns: 1fr;
+}.agency-work-head,
+.agency-services-head,
+.agency-proof-head,
+.agency-closing-box {
+  grid-template-columns: 1fr;
+}.agency-featured-media,
+.agency-featured-media img {
+  min-height: 280px;
+}.agency-stats {
+  grid-template-columns: 1fr;
+}.agency-client-logos {
+  grid-template-columns: 1fr 1fr;
+}.agency-service-row {
+  min-height: 0;
+  padding: 20px 0;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .motion-enabled .agency-reveal,
-  .motion-enabled .agency-stagger {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
+.motion-enabled .agency-reveal,
+.motion-enabled .agency-stagger {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
-
-
-/* =========================================================
-   v3.15.3 — Bou-inspired homepage structure, DesignLab style
-   ========================================================= */
+}
 
 .bou-home-hero {
   position: relative;
@@ -835,7 +791,9 @@ body.agency-system .editorial-form-shell {
   transition: transform .22s var(--agency-ease), background .22s ease, color .22s ease;
 }
 
-.bou-pill:hover { transform: translateY(-2px); }
+.bou-pill:hover {
+  transform: translateY(-2px);
+}
 
 .bou-pill-primary {
   background: #ffffff;
@@ -1079,42 +1037,33 @@ body.agency-system .editorial-form-shell {
 }
 
 @media (max-width: 980px) {
-  .bou-work-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .bou-brand-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-  .bou-spotlight-card { grid-template-columns: 1fr; }
+.bou-work-grid {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}.bou-brand-grid {
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}.bou-spotlight-card {
+  grid-template-columns: 1fr;
+}
 }
 
 @media (max-width: 720px) {
-  .bou-home-hero { min-height: 78vh; padding-top: 96px; }
-  .bou-home-hero-inner h1 { font-size: clamp(2.15rem, 8.2vw, 3.6rem); }
-  .bou-section-head { flex-direction: column; align-items: flex-start; }
-  .bou-work-grid { grid-template-columns: 1fr; }
-  .bou-brand-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .bou-brand-wall-title { font-size: clamp(1.85rem, 7vw, 3rem); }
-  .bou-spotlight-media img { min-height: 280px; }
+.bou-home-hero {
+  min-height: 78vh;
+  padding-top: 96px;
+}.bou-home-hero-inner h1 {
+  font-size: clamp(2.15rem, 8.2vw, 3.6rem);
+}.bou-section-head {
+  flex-direction: column;
+  align-items: flex-start;
+}.bou-work-grid {
+  grid-template-columns: 1fr;
+}.bou-brand-grid {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}.bou-brand-wall-title {
+  font-size: clamp(1.85rem, 7vw, 3rem);
+}.bou-spotlight-media img {
+  min-height: 280px;
 }
-
-
-/* =========================================================
-   v3.15.3 — Homepage fullscreen fix
-   ========================================================= */
-body.designlab-agency-home .rp-main {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-}
-
-body.designlab-agency-home .site-header {
-  position: fixed;
-  inset: 0 0 auto 0;
-  border-bottom-color: transparent;
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
-body.designlab-agency-home .site-header .rp-header-inner {
-  width: min(100%, 1360px);
 }
 
 body.designlab-agency-home .site-header:not(.is-scrolled) .rp-nav a {
@@ -1131,37 +1080,8 @@ body.designlab-agency-home .site-header:not(.is-scrolled) .rp-brand img {
   filter: brightness(0) invert(1);
 }
 
-body.designlab-agency-home .site-header.is-scrolled {
-  background: color-mix(in srgb, var(--agency-bg) 88%, transparent);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-body.designlab-agency-home .site-header.is-scrolled .rp-brand img {
-  filter: none;
-}
-
 body.designlab-agency-home .bou-home-hero {
-  width: 100%;
-  min-height: 100svh;
-  padding: 132px 24px 72px;
   margin: 0;
-}
-
-body.designlab-agency-home .bou-home-hero-bg {
-  background-position: center center;
-  transform: none;
-}
-
-body.designlab-agency-home .bou-home-hero-overlay {
-  background:
-    linear-gradient(180deg, rgba(4, 10, 26, .14) 0%, rgba(4, 10, 26, .54) 100%),
-    linear-gradient(90deg, rgba(7, 24, 82, .58) 0%, rgba(8, 18, 38, .46) 100%);
-}
-
-body.designlab-agency-home .bou-home-hero-inner {
-  width: min(1080px, calc(100% - 36px));
-  max-width: 1080px;
 }
 
 body.designlab-agency-home .bou-home-kicker {
@@ -1170,14 +1090,7 @@ body.designlab-agency-home .bou-home-kicker {
 }
 
 body.designlab-agency-home .bou-home-hero-inner h1 {
-  max-width: 980px;
   margin-inline: auto;
-  color: #fff !important;
-  font-size: clamp(3rem, 6vw, 5.55rem) !important;
-  line-height: .97 !important;
-  letter-spacing: -.065em !important;
-  text-wrap: balance;
-  text-shadow: 0 10px 28px rgba(0,0,0,.18);
 }
 
 body.designlab-agency-home .bou-home-actions {
@@ -1196,44 +1109,29 @@ body.designlab-agency-home .bou-pill-primary {
   color: #1748ee;
 }
 
-body.designlab-agency-home .bou-home-meta {
-  margin-top: 26px;
-}
-
 body.designlab-agency-home .bou-home-meta span {
-  background: rgba(255,255,255,.12);
   border-color: rgba(255,255,255,.2);
 }
 
 @media (max-width: 900px) {
-  body.designlab-agency-home .site-header .rp-header-inner {
-    width: min(100%, calc(100% - 24px));
-  }
+body.designlab-agency-home .site-header .rp-header-inner {
+  width: min(100%, calc(100% - 24px));
+}
 }
 
 @media (max-width: 720px) {
-  body.designlab-agency-home .bou-home-hero {
-    min-height: 100svh;
-    padding: 118px 16px 54px;
-  }
-
-  body.designlab-agency-home .bou-home-hero-inner {
-    width: min(100%, 620px);
-  }
-
-  body.designlab-agency-home .bou-home-hero-inner h1 {
-    font-size: clamp(2.5rem, 10.2vw, 4.15rem) !important;
-  }
-
-  body.designlab-agency-home .site-header:not(.is-scrolled) .rp-brand img {
-    filter: brightness(0) invert(1);
-  }
+body.designlab-agency-home .bou-home-hero {
+  min-height: 100svh;
+  padding: 118px 16px 54px;
+}body.designlab-agency-home .bou-home-hero-inner {
+  width: min(100%, 620px);
+}body.designlab-agency-home .bou-home-hero-inner h1 {
+  font-size: clamp(2.5rem, 10.2vw, 4.15rem) !important;
+}body.designlab-agency-home .site-header:not(.is-scrolled) .rp-brand img {
+  filter: brightness(0) invert(1);
+}
 }
 
-
-/* =========================================================
-   v3.15.3 — Bou-style homepage refinement
-   ========================================================= */
 body.designlab-agency-home {
   background: #f5f6fb;
 }
@@ -1397,41 +1295,84 @@ body.designlab-agency-home .agency-closing {
 }
 
 @media (max-width: 980px) {
-  body.designlab-agency-home .site-header .rp-header-inner {
-    padding: 20px 22px;
-  }
-
-  body.designlab-agency-home .rp-nav {
-    gap: 20px;
-  }
-
-  body.designlab-agency-home .rp-brand img {
-    width: 160px;
-  }
+body.designlab-agency-home .site-header .rp-header-inner {
+  padding: 20px 22px;
+}body.designlab-agency-home .rp-nav {
+  gap: 20px;
+}body.designlab-agency-home .rp-brand img {
+  width: 160px;
+}
 }
 
 @media (max-width: 760px) {
-  body.designlab-agency-home .bou-home-hero {
-    min-height: 100svh;
-    padding: 0 16px;
-  }
+body.designlab-agency-home .bou-home-hero {
+  min-height: 100svh;
+  padding: 0 16px;
+}body.designlab-agency-home .bou-home-hero-inner {
+  width: min(100%, 640px);
+}body.designlab-agency-home .bou-home-hero-inner h1 {
+  font-size: clamp(2.35rem, 9vw, 3.6rem) !important;
+  max-width: 100%;
+}body.designlab-agency-home .bou-home-meta {
+  gap: 8px;
+}body.designlab-agency-home .bou-home-meta span {
+  min-height: 38px;
+  padding: 0 14px;
+  font-size: .78rem;
+}
+}
 
-  body.designlab-agency-home .bou-home-hero-inner {
-    width: min(100%, 640px);
-  }
+body.agency-system .theme-dock,
+body.agency-system .visitor-float {
+  display: none !important;
+}
 
-  body.designlab-agency-home .bou-home-hero-inner h1 {
-    font-size: clamp(2.35rem, 9vw, 3.6rem) !important;
-    max-width: 100%;
-  }
+body.agency-system .site-header .rp-header-inner {
+  width: min(100%, 1380px);
+}
 
-  body.designlab-agency-home .bou-home-meta {
-    gap: 8px;
-  }
+html {
+  background: #070c18;
+}
 
-  body.designlab-agency-home .bou-home-meta span {
-    min-height: 38px;
-    padding: 0 14px;
-    font-size: .78rem;
-  }
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@keyframes dlHeroGradient {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+html.motion-soft .agency-reveal,
+html.motion-soft .reveal-up {
+  opacity: 0;
+  transform: none !important;
+  transition: opacity .34s ease !important;
+}
+
+html.motion-soft .agency-reveal.is-visible,
+html.motion-soft .reveal-up.is-visible {
+  opacity: 1 !important;
+}
+
+html.motion-soft .agency-stagger,
+html.motion-soft .motion-stagger-child {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+html.motion-soft .agency-reveal,
+html.motion-soft .reveal-up {
+  opacity: 1 !important;
+  transition: none !important;
+}
+}
+
+@keyframes dlGradientFlow {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
 }

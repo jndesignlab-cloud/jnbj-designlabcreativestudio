@@ -4,7 +4,11 @@ const dashboardContent = document.querySelector("#adminDashboardContent");
 const unlockStatus = document.querySelector("#adminUnlockStatus");
 const passwordInput = document.querySelector("#adminPassword");
 
-const SITE_VERSION = "3.15.3";
+<<<<<<< HEAD
+const SITE_VERSION = "4.0.0";
+=======
+const SITE_VERSION = "3.16.41";
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
 const TOOL_TIMEZONE = "Asia/Manila";
 
 document.querySelector("#year").textContent = new Date().getFullYear();

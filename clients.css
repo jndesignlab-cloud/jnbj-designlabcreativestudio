@@ -1,0 +1,745 @@
+.clients-main {
+  min-height: calc(100vh - 58px);
+  background: #f7f9fc;
+  color: #13203a;
+}
+
+.clients-hero {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-top: clamp(72px, 9vw, 118px) !important;
+  padding-bottom: 32px !important;
+}
+
+.clients-hero > div {
+  max-width: 760px;
+}
+
+.clients-hero h1 {
+  margin: 8px 0 0;
+  max-width: 13ch;
+  font-size: clamp(2.6rem, 5.5vw, 5.4rem);
+  line-height: .96;
+  letter-spacing: -.065em;
+}
+
+.clients-directory {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-top: 22px !important;
+  padding-bottom: clamp(72px, 9vw, 116px) !important;
+}
+
+.clients-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.client-profile {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  padding: 26px;
+  border: 1px solid rgba(20, 33, 60, .08);
+  border-radius: 24px;
+  background: #fff;
+}
+
+.client-profile-logo {
+  min-height: 110px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.client-profile-logo img {
+  grid-area: 1 / 1;
+  width: min(100%, 140px);
+  max-height: 74px;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.client-profile-logo span {
+  grid-area: 1 / 1;
+  max-width: 140px;
+  text-align: center;
+  font-weight: 800;
+  font-size: .86rem;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+.client-profile-logo.has-image img { opacity: 1; }
+.client-profile-logo.has-image span { display: none; }
+
+.client-profile-copy h2 {
+  margin: 0 0 8px;
+  font-size: 1.24rem;
+  letter-spacing: -.035em;
+}
+
+.client-profile-copy p {
+  margin: 0;
+  color: #647089;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.client-profile-copy small {
+  display: block;
+  margin-top: 13px;
+  color: #334463;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+@media (max-width: 850px) {
+  .clients-directory-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .clients-hero,
+  .clients-directory { width: min(100% - 32px, 1160px); }
+  .client-profile {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+  .client-profile-logo { min-height: 84px; justify-items: start; }
+  .client-profile-logo span { text-align: left; }
+}
+
+
+<<<<<<< HEAD
+/* v4.0.0 — client logo consistency */
+=======
+/* v3.16.41 — client logo consistency */
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+.client-profile-logo img {
+  filter: grayscale(1) saturate(0) contrast(1.08);
+  width: min(100%, 154px);
+  max-height: 82px;
+}
+
+.client-profile#myithub-australia .client-profile-logo img,
+.client-profile#panpacific-university .client-profile-logo img,
+.client-profile#cb-cafe .client-profile-logo img {
+  width: min(100%, 166px);
+  max-height: 92px;
+}
+
+.client-profile#cozisleep .client-profile-logo img {
+  width: min(100%, 146px);
+  max-height: 96px;
+}
+
+.client-profile#perlas-ng-silanganan-car-rentals .client-profile-logo img {
+  width: min(100%, 168px);
+  max-height: 92px;
+}
+
+.client-profile#overdrive-ph .client-profile-logo img {
+  width: min(100%, 172px);
+  max-height: 70px;
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — clients manifesto intro
+=======
+   v3.16.41 — clients manifesto intro
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.clients-hero {
+  width: min(100% - 48px, 1160px);
+  margin: 0 auto;
+  padding-top: clamp(78px, 10vw, 130px) !important;
+  padding-bottom: clamp(42px, 5vw, 64px) !important;
+}
+
+.clients-hero-intro {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clients-hero h1 {
+  margin: 0 auto;
+  max-width: 16.5ch;
+  font-size: clamp(2.4rem, 5.2vw, 4.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.clients-hero-copy {
+  margin: 28px auto 0;
+  max-width: 980px;
+  color: #344361;
+  font-size: clamp(0.9rem, 1.4vw, 1.19rem);
+  line-height: 1.58;
+  letter-spacing: -0.025em;
+}
+
+.clients-hero-copy + .clients-hero-copy {
+  margin-top: 18px;
+}
+
+.clients-directory {
+  padding-top: clamp(18px, 3vw, 30px) !important;
+}
+
+@media (max-width: 560px) {
+  .clients-hero {
+    width: min(100% - 32px, 1160px);
+    padding-top: 58px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .clients-hero h1 {
+    max-width: 16ch;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .clients-hero-copy {
+    font-size: 0.9rem;
+    line-height: 1.62;
+    margin-top: 20px;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — client card title fit + card links
+=======
+   v3.16.41 — client card title fit + card links
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.clients-hero h1 {
+  max-width: none;
+}
+
+.client-profile {
+  position: relative;
+  grid-template-columns: minmax(110px, 138px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 24px;
+}
+
+.client-profile-logo {
+  min-height: 92px;
+}
+
+.client-profile-copy {
+  min-width: 0;
+  padding-right: 58px;
+}
+
+.client-profile-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.05rem, 1.5vw, 1.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(0.96rem, 1.28vw, 1.5rem);
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(0.78rem, 1.02vw, 1.14rem);
+  letter-spacing: -0.06em;
+}
+
+.client-profile-copy p {
+  font-size: 0.88rem;
+}
+
+.client-profile-copy small {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.client-profile-links {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.client-profile-link {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(19, 32, 58, 0.12);
+  background: rgba(247, 249, 252, 0.94);
+  color: #13203a;
+  text-decoration: none;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+.client-profile-link:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+  border-color: rgba(19, 32, 58, 0.24);
+}
+
+.client-profile-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+@media (max-width: 980px) {
+  .client-profile {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .client-profile-copy h2.title-xlong {
+    font-size: clamp(0.92rem, 2vw, 1.2rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+
+  .client-profile-copy {
+    padding-right: 0;
+  }
+
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal;
+    font-size: 1.18rem;
+  }
+
+  .client-profile-links {
+    top: 14px;
+    right: 14px;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — tighter titles + service pills
+=======
+   v3.16.41 — tighter titles + service pills
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.client-profile {
+  grid-template-columns: minmax(104px, 128px) minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px 24px;
+}
+
+.client-profile-logo {
+  min-height: 84px;
+}
+
+.client-profile-copy {
+  padding-right: 48px;
+}
+
+.client-profile-copy h2,
+.client-profile-copy h2.title-long,
+.client-profile-copy h2.title-xlong {
+  max-width: 100%;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.client-profile-copy h2 {
+  font-size: clamp(1rem, 1.22vw, 1.48rem);
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(.92rem, 1.02vw, 1.2rem);
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(.78rem, .86vw, 1rem);
+  letter-spacing: -0.04em;
+}
+
+.client-profile-copy p {
+  font-size: .84rem;
+  line-height: 1.58;
+}
+
+.client-profile-links {
+  top: 16px;
+  right: 16px;
+}
+
+.client-projects {
+  margin-top: 14px;
+}
+
+.client-projects-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #52617b;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .01em;
+}
+
+.client-project-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.client-project-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  border: 1px solid rgba(35, 77, 255, .14);
+  border-radius: 999px;
+  background: #f3f6ff;
+  color: #33466d;
+  text-decoration: none;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.15;
+  transition: transform .18s ease, color .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+.client-project-pill:hover,
+.client-project-pill:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(35, 77, 255, .32);
+  background: #e9efff;
+  color: #234dff;
+  box-shadow: 0 7px 18px rgba(35, 77, 255, .09);
+}
+
+@media (max-width: 1080px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile-copy {
+    padding-right: 0;
+  }
+
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal;
+  }
+
+  .client-project-pill {
+    font-size: .7rem;
+    padding: 6px 9px;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — smaller client titles + refined copy spacing
+=======
+   v3.16.41 — smaller client titles + refined copy spacing
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.client-profile {
+  grid-template-columns: minmax(100px, 120px) minmax(0, 1fr);
+  gap: 16px;
+  padding: 22px 22px;
+}
+
+.client-profile-copy {
+  padding-right: 38px;
+}
+
+.client-profile-copy h2,
+.client-profile-copy h2.title-long,
+.client-profile-copy h2.title-xlong {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 8px;
+  line-height: 1.08;
+}
+
+.client-profile-copy h2 {
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(0.75rem, 0.84vw, 0.92rem);
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(0.7rem, 0.78vw, 0.84rem);
+  letter-spacing: -0.02em;
+}
+
+.client-profile-copy p {
+  font-size: 0.79rem;
+  line-height: 1.55;
+}
+
+.client-projects {
+  margin-top: 12px;
+}
+
+.client-projects-label {
+  margin-bottom: 7px;
+  font-size: 0.7rem;
+}
+
+.client-project-pill {
+  min-height: 26px;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+}
+
+.client-profile-link {
+  width: 30px;
+  height: 30px;
+}
+
+.client-profile-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 980px) {
+  .client-profile-copy h2 {
+    font-size: 0.9rem;
+  }
+
+  .client-profile-copy h2.title-long {
+    font-size: 0.84rem;
+  }
+
+  .client-profile-copy h2.title-xlong {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    font-size: 1rem;
+  }
+
+  .client-profile-copy p {
+    font-size: 0.84rem;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — 50% client title reduction
+=======
+   v3.16.41 — 50% client title reduction
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.client-profile-copy {
+  padding-right: 34px !important;
+}
+
+.client-profile-copy h2,
+.client-profile-copy h2.title-long,
+.client-profile-copy h2.title-xlong {
+  margin: 0 0 8px !important;
+  max-width: calc(100% - 2px) !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.client-profile-copy h2 {
+  font-size: clamp(0.68rem, 0.72vw, 0.78rem) !important;
+}
+
+.client-profile-copy h2.title-long {
+  font-size: clamp(0.61rem, 0.64vw, 0.70rem) !important;
+}
+
+.client-profile-copy h2.title-xlong {
+  font-size: clamp(0.54rem, 0.58vw, 0.64rem) !important;
+  letter-spacing: -0.015em !important;
+}
+
+@media (max-width: 980px) {
+  .client-profile-copy h2 {
+    font-size: 0.74rem !important;
+  }
+  .client-profile-copy h2.title-long {
+    font-size: 0.67rem !important;
+  }
+  .client-profile-copy h2.title-xlong {
+    font-size: 0.60rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal !important;
+    font-size: 0.92rem !important;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — uniform client title hierarchy
+=======
+   v3.16.41 — uniform client title hierarchy
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.client-profile-copy h2,
+.client-profile-copy h2.title-long,
+.client-profile-copy h2.title-xlong {
+  margin: 0 0 8px !important;
+  max-width: 100% !important;
+  font-size: 0.79rem !important;
+  font-weight: 800 !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.012em !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.client-profile-copy p {
+  font-size: 0.79rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 980px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong,
+  .client-profile-copy p {
+    font-size: 0.79rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .client-profile-copy h2,
+  .client-profile-copy h2.title-long,
+  .client-profile-copy h2.title-xlong {
+    white-space: normal !important;
+    font-size: 0.84rem !important;
+  }
+
+  .client-profile-copy p {
+    font-size: 0.84rem !important;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — structural client title fix
+=======
+   v3.16.41 — structural client title fix
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.client-profile-title {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  color: #13203a !important;
+  font-size: 0.79rem !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.012em !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.client-profile-title strong {
+  font: inherit !important;
+  font-weight: 800 !important;
+  color: inherit !important;
+}
+
+.client-profile-copy p:not(.client-profile-title) {
+  font-size: 0.79rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 560px) {
+  .client-profile-title {
+    white-space: normal !important;
+    font-size: 0.84rem !important;
+  }
+
+  .client-profile-copy p:not(.client-profile-title) {
+    font-size: 0.84rem !important;
+  }
+}
+
+
+/* =========================================================
+<<<<<<< HEAD
+   v4.0.0 — client-name hierarchy bump
+=======
+   v3.16.41 — client-name hierarchy bump
+>>>>>>> 7f39293e2f5678adeb0e99f8ea9505061eeddde1
+   ========================================================= */
+.client-profile-title {
+  font-size: 0.96rem !important;
+  line-height: 1.42 !important;
+  letter-spacing: -0.018em !important;
+}
+.client-profile-title strong {
+  font-weight: 800 !important;
+}
+@media (max-width: 560px) {
+  .client-profile-title {
+    font-size: 1rem !important;
+  }
+}

@@ -4,7 +4,7 @@
 const SUPABASE_URL = "https://fyhxipoayyhlrablgvll.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_62LdQNox7y8HFWzO9tPS0Q_1nQ8qV9g";
 
-// Legacy Apps Script remains active for inquiries, visitor analytics,
+// Legacy Apps Script remains active for inquiries, opportunity applications, visitor analytics,
 // and the private dashboard until those systems are migrated separately.
 const API_URL = "https://script.google.com/macros/s/AKfycbzu5Beh0F65rsUkUFJf2GdfwTOK0g-GEamgzsTtpH2T1uIrj76AvJvkgITCVLrd268X/exec";
 
@@ -13,3 +13,4 @@ const TASK_API_URL = "https://script.google.com/macros/s/AKfycbxlo1kTf-oLJZw4K2K
 
 window.SUPABASE_URL = SUPABASE_URL;
 window.SUPABASE_PUBLISHABLE_KEY = SUPABASE_PUBLISHABLE_KEY;
+window.API_URL = API_URL;

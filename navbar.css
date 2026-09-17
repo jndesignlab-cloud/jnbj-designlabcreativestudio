@@ -1,0 +1,139 @@
+/* =========================================================
+   DesignLab shared public navbar — v3.16.16
+   ========================================================= */
+:root {
+  --designlab-nav-height: 58px;
+}
+
+body .site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  min-height: var(--designlab-nav-height) !important;
+  height: var(--designlab-nav-height) !important;
+  margin: 0 !important;
+  background: rgba(246, 248, 252, .90) !important;
+  border-bottom: 1px solid rgba(20, 33, 60, .08) !important;
+  box-shadow: 0 8px 26px rgba(13, 24, 48, .045) !important;
+  backdrop-filter: blur(16px) saturate(1.04) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.04) !important;
+  transform: translateY(0) !important;
+  transition:
+    transform .28s cubic-bezier(.22, 1, .36, 1),
+    background .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease !important;
+  will-change: transform !important;
+}
+
+body.designlab-home .site-header {
+  position: fixed !important;
+}
+
+body .site-header.nav-hidden {
+  transform: translateY(calc(-100% - 8px)) !important;
+}
+
+body .site-header.mobile-menu-open {
+  transform: translateY(0) !important;
+}
+
+body .site-header .rp-header-inner {
+  width: min(100%, 1240px) !important;
+  height: var(--designlab-nav-height) !important;
+  min-height: var(--designlab-nav-height) !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  box-sizing: border-box !important;
+}
+
+body .site-header .rp-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  text-decoration: none !important;
+}
+
+body .site-header .rp-brand img {
+  display: block !important;
+  width: 144px !important;
+  max-width: 144px !important;
+  max-height: 32px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+body .site-header .rp-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 22px !important;
+  margin: 0 0 0 auto !important;
+  padding: 0 !important;
+}
+
+body .site-header .rp-nav a {
+  position: relative !important;
+  padding: 0 !important;
+  color: #15223d !important;
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: .84rem !important;
+  line-height: 1 !important;
+  font-weight: 650 !important;
+  letter-spacing: -.015em !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: color .18s ease !important;
+}
+
+body .site-header .rp-nav a::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -8px !important;
+  height: 1px !important;
+  background: currentColor !important;
+  transform: scaleX(0) !important;
+  transform-origin: center !important;
+  transition: transform .18s ease !important;
+}
+
+body .site-header .rp-nav a:hover,
+body .site-header .rp-nav a:focus-visible,
+body .site-header .rp-nav a[aria-current="page"] {
+  color: #315cff !important;
+}
+
+body .site-header .rp-nav a:hover::after,
+body .site-header .rp-nav a:focus-visible::after,
+body .site-header .rp-nav a[aria-current="page"]::after {
+  transform: scaleX(1) !important;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --designlab-nav-height: 56px;
+  }
+
+  body .site-header .rp-header-inner {
+    padding: 0 16px !important;
+  }
+
+  body .site-header .rp-brand img {
+    width: 128px !important;
+    max-width: 128px !important;
+    max-height: 29px !important;
+  }
+
+  body .site-header .rp-nav {
+    display: none !important;
+  }
+}

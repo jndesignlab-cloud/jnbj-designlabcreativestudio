@@ -2,6 +2,7 @@ const SHEET_NAME = "Projects";
 const ADMIN_PASSWORD = "CHANGE_THIS_PASSWORD";
 const INQUIRY_SHEET_NAME = "Inquiries";
 const INQUIRY_NOTIFICATION_EMAIL = "jannjaravata@gmail.com";
+const OPPORTUNITY_SHEET_NAME = "Opportunity Applications";
 const PORTFOLIO_BASE_URL = "https://jndesignlab-cloud.github.io/jnbj-designlabcreativestudio";
 const INQUIRY_TRACKING_PAGE = PORTFOLIO_BASE_URL + "/inquiry-status.html";
 
@@ -65,6 +66,10 @@ function doPost(e) {
       return handleInquiryTracking(data);
     }
 
+    if (data.action === "submitOpportunity") {
+      return handleOpportunitySubmission(data);
+    }
+
     if (data.action === "getAdminDashboard") {
       if (data.password !== ADMIN_PASSWORD) {
         return jsonResponse({
@@ -126,6 +131,42 @@ function doPost(e) {
       message: error.message
     });
   }
+}
+
+
+const OPPORTUNITY_HEADERS = [
+  "Created At", "Application ID", "Full Name", "Email", "Contact Number",
+  "Address / Location", "Interest", "Message", "Source Page"
+];
+
+function handleOpportunitySubmission(data) {
+  const required = [
+    ["fullName", "Full name"], ["address", "Address / location"], ["email", "Email address"],
+    ["contactNumber", "Contact number"], ["interest", "Interest"], ["message", "Message"], ["consent", "Consent"]
+  ];
+  required.forEach(function(field) {
+    if (!String(data[field[0]] || "").trim()) throw new Error(field[1] + " is required.");
+  });
+  const email = String(data.email || "").trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error("Please provide a valid email address.");
+  if (String(data.message || "").trim().length < 20) throw new Error("Please share a little more about your interest.");
+
+  const id = "APP-" + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyyMMdd") + "-" + Math.random().toString(36).slice(2, 8).toUpperCase();
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(OPPORTUNITY_SHEET_NAME);
+  if (!sheet) { sheet = ss.insertSheet(OPPORTUNITY_SHEET_NAME); sheet.appendRow(OPPORTUNITY_HEADERS); }
+  sheet.appendRow([new Date(), id, cleanInquiryValue(data.fullName, 160), email, cleanInquiryValue(data.contactNumber, 60), cleanInquiryValue(data.address, 220), cleanInquiryValue(data.interest, 120), cleanInquiryValue(data.message, 3500), cleanInquiryValue(data.sourcePage, 500)]);
+
+  const subject = "New DesignLab Opportunity Application · " + cleanInquiryValue(data.fullName, 120);
+  const body = [
+    "NEW CLIENT ACQUISITION PARTNER APPLICATION", "", "Reference: " + id,
+    "Name: " + cleanInquiryValue(data.fullName, 160), "Email: " + email,
+    "Contact number: " + cleanInquiryValue(data.contactNumber, 60),
+    "Address / Location: " + cleanInquiryValue(data.address, 220),
+    "Interest: " + cleanInquiryValue(data.interest, 120), "", "MESSAGE", cleanInquiryValue(data.message, 3500), "", "Source: " + cleanInquiryValue(data.sourcePage, 500)
+  ].join("\n");
+  MailApp.sendEmail({to: INQUIRY_NOTIFICATION_EMAIL, subject: subject, body: body, replyTo: email, name: "DesignLab Opportunities"});
+  return jsonResponse({success: true, message: "Application received.", applicationId: id});
 }
 
 
